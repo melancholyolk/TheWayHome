@@ -1,0 +1,21 @@
+[C1-1]
+Begin
+	target	Hero     
+	target	NPC
+
+	condition	Hero	chuizi    //Hero要有锤子
+
+	dialog NPC	首先从搜集信息开始吧。
+	dialog NPC	那么，准备好了吗？
+
+	choice	Hero	是	否	
+End
+
+[C1-1]
+Begin
+	target	Hero     
+
+	condition	Hero	chuizi    //Hero要有锤子
+
+	dialog Hero	出发吧。
+End

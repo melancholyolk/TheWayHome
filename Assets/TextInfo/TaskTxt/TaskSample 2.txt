@@ -1,0 +1,34 @@
+Begin
+    number [2-1-1]	;;
+    
+	target  Player2
+
+	condition Player2 time>10
+
+	content Player2 想办法生火
+
+	dialog 这里好冷啊，不生点火恐怕要冻死...
+End
+Begin
+    number [2-1-2]	;;
+    
+	target  Player2
+
+	condition Player2 [2-1-1]
+
+	content Player2 修复电力
+
+	dialog 隔壁房间好像有一台发电机...
+End
+Begin
+    number [2-1-3]	;;
+    
+	target  Player2
+
+	condition Player2 [2-1-2]
+
+	content Player2 修补窗户
+
+	dialog 好像有窗户破了，这样下去可不行
+End
+

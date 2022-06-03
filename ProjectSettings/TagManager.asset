@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Button
+  - NetworkManager
+  - Obstacls
+  - SyncManager
+  - PropManager
+  - Canvas
+  - Dialog
+  - ClueShow
+  - DecodeCamera
+  - PlayerChose
+  - Decode
+  - PlayerInfo
+  - PlayerManager
+  - SnowGround
+  - WoodGround
+  - Book
+  - Wall
+  - OtherPlayer
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Camera
+  - Wall
+  - Decode
+  - Current
+  - HideProp
+  - AirWall
+  - Player
+  - WallPlayer
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 2215213571
+    locked: 0
+  - name: Wall
+    uniqueID: 3874637401
+    locked: 0
+  - name: Player
+    uniqueID: 3843525207
+    locked: 0
+  - name: Sprite
+    uniqueID: 2794474031
+    locked: 0
+  - name: Snow
+    uniqueID: 28554119
+    locked: 0

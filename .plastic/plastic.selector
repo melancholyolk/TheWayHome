@@ -1,0 +1,3 @@
+rep "CUSGA@ssl://melancholyolk@sh03-plasticscm.unity.cn:8787"
+  path "/"
+    smartbranch "/main/PropControl/UnderGround2/雪地场景搭建/Connect/melan分支" changeset "58"                                                                                                                             

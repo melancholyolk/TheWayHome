@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="38174f88-50f0-4ca8-91bc-2e93ef8abcab" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Event_Altar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Event_SimpleObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Event_Sofa.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Club/FIreControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Event_Altar_FirePan.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStartEffect/FontInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Event_SimpleTask.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/EvironmentSoundControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Decode/DecodeObjectControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DIalog/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Decode/Lock/CallBakc_OnUnderGroundLockUnlocked.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Event_WoodenCabin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Map/WindTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TextMeshPro.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameStartEffect/LoadingGame_FontEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Event/Event_Stove.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Sound/PeopleTalk.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Particle/SnowVFXManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FootStep.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Decode/Lock/DecodeCallBack.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Canvas/PropPanel/PropOperation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DIalog/Dialog_View.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Canvas/CharacterResources.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DIalog/View_Control.cs" />
+        <option value="$PROJECT_DIR$/Assets/TextInfo/TaskTxt/TaskSample 1.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Particle/CloseSnowParticle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/WallChange.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Particle/OpenSnowParticle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Lock/RollInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/TextInfo/PropTxt/Prop.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Task/TodoList/TodoListManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Event/Event.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Lock/DecodeCallBack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Task/TaskManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/TransformArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Event/Event_Stove.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Lock/MouseRollControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameStartEffect/3DFontEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/TextInfo/LoadTxt/LoadGame.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Canvas/NetWork/EscControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Lock/DecodeObjectControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/JudgePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameStartEffect/LoadingGame_FontEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameStartEffect/FontInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Image/ImageFrame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Image/ImageController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/DecodeObjectControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Event/Event_FirePan.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Canvas/PropPanel/PropPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Event/Event_SimpleTask.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Lock/CallBack_SnowGroundElectricMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/DoorControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Event/Event_Altar_FirePan.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Floor/FloorControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/LayerControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/TextInfo/TaskTxt/TaskSample 2.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Event/Event_SimpleObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Canvas/CanvasManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Prop/PropGameobject/PropProperty.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Prop/PropGameobject/PropJudgePlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Prop/PropGameobject/PropPick.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Button/ChoseButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Canvas/GameStart/SceneTransition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Canvas/GameStart/DistinguishSetting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Canvas/GameStart/Panel_Setting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Canvas/MainMenuButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Canvas/GameStart/Setting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerChose.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="26V4VgjR7kYZildGDqjv33UtyGi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502052" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.3002736" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Test\CUSGA.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Administrator\Desktop\Test" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="EmmyLua" type="lua.emmy.debugger" factoryName="Emmy Debugger(NEW)">
+      <module name="riderModule" />
+      <option name="TYPE" value="0" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="9966" />
+      <option name="PIPE" value="emmy" />
+      <option name="WIN_ARCH" value="1" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor &amp; Play" />
+      <item itemvalue="Emmy Debugger(NEW).EmmyLua" />
+      <item itemvalue="Standalone Player.Standalone Player" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38174f88-50f0-4ca8-91bc-2e93ef8abcab" name="Default Changelist" comment="" />
+      <created>1647495488047</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647495488047</updated>
+      <workItem from="1647495491357" duration="658000" />
+      <workItem from="1647506499147" duration="300000" />
+      <workItem from="1647506848171" duration="5787000" />
+      <workItem from="1647574295467" duration="16209000" />
+      <workItem from="1647838811494" duration="14381000" />
+      <workItem from="1648102906627" duration="10188000" />
+      <workItem from="1648266720982" duration="13264000" />
+      <workItem from="1648360598769" duration="4130000" />
+      <workItem from="1648364869502" duration="5727000" />
+      <workItem from="1648440306027" duration="20646000" />
+      <workItem from="1648525287897" duration="1963000" />
+      <workItem from="1648611242055" duration="23900000" />
+      <workItem from="1648785637820" duration="17254000" />
+      <workItem from="1648888883124" duration="18214000" />
+      <workItem from="1649050558606" duration="17920000" />
+      <workItem from="1649323457895" duration="25888000" />
+      <workItem from="1649480292910" duration="23059000" />
+      <workItem from="1649655608411" duration="38914000" />
+      <workItem from="1649820993371" duration="7086000" />
+      <workItem from="1649832320308" duration="2470000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="296" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1647509746966">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="296" y="135" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1647509746966" />
+    <state width="1493" height="62" key="GridCell.Tab.0.bottom" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.0.center" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.0.left" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.0.right" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.1.bottom" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.1.center" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.1.left" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.1.right" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.2.bottom" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.2.center" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.2.left" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.2.right" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.3.bottom" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.3.center" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.3.left" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state width="1493" height="62" key="GridCell.Tab.3.right" timestamp="1647523267599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="62" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1647523267599" />
+    <state x="150" y="111" key="SettingsEditor" timestamp="1647511482125">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="150" y="111" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1647511482125" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1649676470402">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1649676470402" />
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollow.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Canvas/MainMenuButton.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Map/WallChange.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Prop/PropGameobject/PropProperty.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/TextInfo/PropTxt/Prop.txt" charset="UTF-8" />
+  </component>
+</project>
