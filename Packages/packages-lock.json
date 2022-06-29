@@ -1,8 +1,14 @@
 {
   "dependencies": {
+    "com.mpstudio.fundamental": {
+      "version": "file:_Fundamental",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
       "version": "5.0.10",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.2d.common": "4.0.4",
@@ -20,15 +26,6 @@
       "dependencies": {
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.modules.uielements": "1.0.0"
-      },
-      "url": "https://packages.unity.cn"
-    },
-    "com.unity.2d.ik": {
-      "version": "3.0.2-preview.3",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.2d.common": "3.0.1"
       },
       "url": "https://packages.unity.cn"
     },
@@ -235,6 +232,13 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "com.veriorpies.parrelsync": {
+      "version": "https://github.com/VeriorPies/ParrelSync.git?path=/ParrelSync",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f45424822189ebd875d864a17d7f03b72eafbff7"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

@@ -1,0 +1,13 @@
+{
+	"name": "com.mpstudio.fundamental",
+	"version": "0.0.1",
+	"displayName": "_Fundamental",
+	"description": "MP¹¤×÷ÊÒ»ù´¡¿â",
+	"unity": "2020.3",
+	"dependencies": {},
+	"keywords": [],
+	"author": {
+		"name": "mpStudio",
+		"url": "https://www.unity3d.com"
+	}
+}
