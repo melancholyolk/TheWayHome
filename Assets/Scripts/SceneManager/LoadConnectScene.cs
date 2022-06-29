@@ -14,4 +14,20 @@ public class LoadConnectScene : MonoBehaviour
     {
         Application.Quit();
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            var set = GameObject.Find("SettingPanel").GetComponent<Setting>();
+            if (set.isActive)
+            {
+                set.HideSetting();
+            }
+            else
+            {
+                set.ShowSetting();
+            }
+        }
+    }
 }

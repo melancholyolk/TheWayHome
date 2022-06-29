@@ -1,10 +1,10 @@
-using Mirror;
+锘縰sing Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// 玩家信息管理
+/// 鐜╁淇℃伅绠＄悊
 /// </summary>
 public class PlayerManager : NetworkBehaviour
 {

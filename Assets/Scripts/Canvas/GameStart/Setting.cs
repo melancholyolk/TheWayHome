@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,16 +8,13 @@ public class Setting : MonoBehaviour
     public GameObject settingPanel;
     public GameObject returnStartScene;
     public bool isActive = false;
-    private void Awake()
-    {
-        SceneManager.sceneLoaded += IsShow;
-    }
-
 
     public void ShowSetting()
     {
-        bkPanel.SetActive(true);
-        settingPanel.SetActive(true);
+        //bkPanel.SetActive(true);
+        //settingPanel.SetActive(true);
+        settingPanel.GetComponent<Panel_Setting>().Show();
+        isActive = true;
         // GameObject.Find("StopToggle").SendMessage("Pause");
     }
 
@@ -24,6 +22,7 @@ public class Setting : MonoBehaviour
     {
         bkPanel.SetActive(false);
         settingPanel.SetActive(false);
+        isActive = false;
         // GameObject.Find("StopToggle").SendMessage("Run");
     }
 
@@ -44,4 +43,5 @@ public class Setting : MonoBehaviour
             returnStartScene.SetActive(true);
         }
     }
+
 }
