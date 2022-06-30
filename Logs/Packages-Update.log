@@ -66,3 +66,13 @@ Update Mode: mergeDefaultDependencies
 The following packages were added:
   com.unity.cinemachine@2.5.0
   com.unity.shadergraph@7.3.1
+
+=== Thu Jun 30 13:17:25 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were 已更新:
+  com.unity.collab-proxy 从版本 1.7.1 到 1.9.0
+  com.unity.shadergraph 从版本 7.3.1 到 10.6.0
+  com.unity.test-framework 从版本 1.1.27 到 1.1.29
