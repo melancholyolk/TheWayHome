@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 /// <summary>
 /// 开始界面动画控制
@@ -11,9 +12,8 @@ using UnityEngine.SceneManagement;
 public class MainMenuButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHandler,IPointerClickHandler
 {
     public Text text;
-    private bool is_show = false;
-    public Vector2 ori_pos;
-    public Vector2 end_pos;
+    public Animator textAnimator;
+   
 
     public enum ButtonType
     { 
@@ -23,20 +23,19 @@ public class MainMenuButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHa
     }
     public ButtonType btn_type = ButtonType.Start;
 
-    void Start()
-    {
-        ori_pos = this.transform.position;
-        end_pos = ori_pos + new Vector2(0, 70);
-    }
+
+    private bool m_IsShow = false;
+    
+    
     public void OnPointerEnter(PointerEventData eventData)
     {
-        is_show = true;
+        m_IsShow = true;
         StartCoroutine(FadaIn());
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        is_show = false;
+        m_IsShow = false;
         StartCoroutine(FadaOut());
     }
     public void OnPointerClick(PointerEventData eventData)
@@ -50,6 +49,9 @@ public class MainMenuButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHa
                 }
             case ButtonType.Exit:
                 {
+#if UNITY_EDITOR
+	                UnityEditor.EditorApplication.isPlaying = false;
+#endif
                     Application.Quit();
                     break;
                 }
@@ -63,12 +65,12 @@ public class MainMenuButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHa
 
     IEnumerator FadaIn()
     {
-        text.GetComponent<Animator>().Play("StartGame",0, 0);
+        textAnimator.Play("StartGame",0, 0);
         float rate = 0;
         float time = 0;
         while (rate < 1f)
         {
-            if (!is_show)
+            if (!m_IsShow)
             {
                 break;
             }
@@ -81,18 +83,19 @@ public class MainMenuButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHa
     }
     IEnumerator FadaOut()
     {
-        text.GetComponent<Animator>().Play("EndGame", 0, 0);
+	    textAnimator.Play("EndGame", 0, 0);
         float rate = 1;
         float time = 0;
+        Vector2 oriPos = text.transform.position;
         while (rate > 0f)
         {
-            if (is_show)
+            if (m_IsShow)
             {
                 break;
             }
             time += Time.deltaTime*3;
             rate = Mathf.Lerp(1, 0, time);
-            text.transform.position = Vector2.Lerp(text.transform.position, ori_pos, time);
+            text.transform.position = Vector2.Lerp(text.transform.position, oriPos, time);
             text.color = new Color(1, 1, 1, rate);
             yield return new WaitForSeconds(Time.deltaTime);
         }

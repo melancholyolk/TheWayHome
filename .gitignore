@@ -135,3 +135,6 @@ serverStatic
 
 Assets/UGUI-Editor/Configure.cs
 Recordings
+*.log
+.plastic
+Logs

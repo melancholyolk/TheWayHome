@@ -7,18 +7,20 @@ using System.Net;
 using System.Net.Sockets;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ConnectButton : MonoBehaviour
 {
-    NetworkManager network;
-    public GameObject btn_conn;
+    public NetworkManager network;
+    public GameObject uiConnect;
+    public GameObject uiRoomList;
+    public GameObject uiHostRoom;
     public InputField field;
     public Text text;
     void Start()
     {
-        network = GameObject.FindWithTag("NetworkManager").GetComponent<NetworkManager>();
-        text.text = "本机IP ： " + GetLocalIP();
+	    text.text = "本机IP ： " + GetLocalIP();
     }
 
     public void CreateHost()
@@ -39,7 +41,7 @@ public class ConnectButton : MonoBehaviour
 
     private void HideConnectButton()
     {
-        btn_conn.SetActive(false);
+        uiConnect.SetActive(false);
     }
     public void ReturnMainInterface()
     {
