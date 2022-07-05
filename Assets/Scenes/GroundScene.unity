@@ -2551,6 +2551,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3593983614692907181, guid: 70dd6b3b58fbd86468878b49be4829b6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3593983614698812481, guid: 70dd6b3b58fbd86468878b49be4829b6, type: 3}
       propertyPath: hide_wall.Array.size
       value: 8
