@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PropLoad : MonoBehaviour
 {
     private List<PropInfo> prop_info = new List<PropInfo>();
 
-    public TextAsset[] m_propText = new TextAsset[0];
+    [FormerlySerializedAs("m_propText")] 
+    public TextAsset[] propText;
 
     public List<PropInfo> FindTextByName(string[] text_names)
     {
@@ -14,7 +16,7 @@ public class PropLoad : MonoBehaviour
 
         foreach (string text_name in text_names)
         {
-            var text = System.Array.Find(m_propText, x => x.name == text_name);
+            var text = System.Array.Find(propText, x => x.name == text_name);
 
             if (text_list != null)
             {
@@ -22,7 +24,7 @@ public class PropLoad : MonoBehaviour
             }
             else
             {
-                print("’“≤ªµΩ¥ÀŒƒº˛");
+                print("Êâæ‰∏çÂà∞Ê≠§Êñá‰ª∂");
             }
         }
 
@@ -34,7 +36,7 @@ public class PropLoad : MonoBehaviour
 
         for (int i = 0; i < texts.Length; i++)
         {
-            //»•≥˝ø’œÓ
+            //ÂéªÈô§Á©∫È°π
             string[] lines = texts[i].text.Split(new char[] { '\r', '\n' }, System.StringSplitOptions.RemoveEmptyEntries);
 
             linesOfAllFiles.AddRange(lines);
@@ -47,7 +49,7 @@ public class PropLoad : MonoBehaviour
         prop_info.Clear();
         foreach (string line in lines)
         {
-            // ˝æ›¥¶¿Ì  »•≥˝ø’∏Ò∫Õ◊¢ Õ
+            //Êï∞ÊçÆÂ§ÑÁêÜ  ÂéªÈô§Á©∫Ê†ºÂíåÊ≥®Èáä
             int index = line.IndexOf(";;");
             string str = index < 0 ? line : line.Substring(0, index);
             str = str.Trim();

@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteAlways]
 public class MergeSprite : MonoBehaviour
 {
+	
     public Texture2D topTexture;
     public Texture2D bottomTexture;
     public Texture2D leftTexture;
@@ -11,11 +13,13 @@ public class MergeSprite : MonoBehaviour
     public Texture2D frontTexture;
     public Texture2D backTexture;
 
+   
+    private Sprite sprite;
     private MeshRenderer mesh;
-	private void Update()
+    
+	private void Start()
 	{
-		
-        mesh = GetComponent<MeshRenderer>();
+		mesh = GetComponent<MeshRenderer>();
         Texture2D[] texture2Ds = new Texture2D[6];
         texture2Ds[0] = topTexture;
         texture2Ds[1] = bottomTexture;
@@ -23,24 +27,31 @@ public class MergeSprite : MonoBehaviour
         texture2Ds[3] = rightTexture;
         texture2Ds[4] = frontTexture;
         texture2Ds[5] = backTexture;
-        mesh.material.SetTexture("_BaseMap", MergeMoreTex(texture2Ds));
+        mesh.sharedMaterial.SetTexture("_MainTex", MergeMoreTex(texture2Ds));
+        
     }
+#if UNITY_EDITOR
+	private void OnValidate()
+	{
+		Start();
+	}
+#endif
 	public static Texture2D MergeMoreTex(Texture2D[] texs)
     {
         if (texs.Length < 1) return null;
         Texture2D nTex = new Texture2D(4096, 4096, TextureFormat.ARGB32, true);
         Color[] colors = new Color[nTex.width * nTex.height];
         int startw, starth;
-        startw = 0;//ºáÏòÐ´ÈëÆ«ÒÆ
-        starth = 0;//×ÝÏòÐ´ÈëÆ«ÒÆ
-        //ÒÔÏÂ¼ÆËãºáÏò¸ú×ÝÏò¸öÊý¿ÉÄÜ»á³öÏÖ´ó²¿·Ö¿ÕÓà£¬ÕâÀïµÄ¼ÆËãÄÜÂú×ãÎÒ×Ô¼ºµÄÐèÇó£¬Ã»ÓÐ²âÊÔ¹ý¸´ÔÓÇé¿ö¡£ÓÐÐèÒª¿ÉÒÔÐÞ¸Ä
-        //¸ù¾ÝÊýÁ¿¼ÆËãºáÏò¸öÊý
+        startw = 0;//æ¨ªå‘å†™å…¥åç§»
+        starth = 0;//çºµå‘å†™å…¥åç§»
+        //ä»¥ä¸‹è®¡ç®—æ¨ªå‘è·Ÿçºµå‘ä¸ªæ•°å¯èƒ½ä¼šå‡ºçŽ°å¤§éƒ¨åˆ†ç©ºä½™ï¼Œè¿™é‡Œçš„è®¡ç®—èƒ½æ»¡è¶³æˆ‘è‡ªå·±çš„éœ€æ±‚ï¼Œæ²¡æœ‰æµ‹è¯•è¿‡å¤æ‚æƒ…å†µã€‚æœ‰éœ€è¦å¯ä»¥ä¿®æ”¹
+        //æ ¹æ®æ•°é‡è®¡ç®—æ¨ªå‘ä¸ªæ•°
         int wcnt = Mathf.CeilToInt(Mathf.Sqrt(texs.Length / 1.8f));
-        //×ÝÏò¸öÊý
+        //çºµå‘ä¸ªæ•°
         int hcnt = Mathf.FloorToInt(wcnt * (1280f / 720f));
-        //µ¥ÕÅ¸ß¶È
+        //å•å¼ é«˜åº¦
         int oneh = Mathf.FloorToInt(4096 / hcnt);
-        //µ¥ÕÅ¿í¶È
+        //å•å¼ å®½åº¦
         int onew = Mathf.FloorToInt(4096 / wcnt);
         for (int i = 0; i < texs.Length; i++)
         {
@@ -52,7 +63,7 @@ public class MergeSprite : MonoBehaviour
                     int index = h * nTex.width + w + startw + (starth * 4096);
                     if (index >= colors.Length)
                     {
-                        Debug.LogError("Êý×éÔ½½ç");
+                        Debug.LogError("æ•°ç»„è¶Šç•Œ");
                         continue;
                     }
                     if (colors[index] == null)

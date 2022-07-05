@@ -67,7 +67,7 @@ MonoBehaviour:
   player: 0
   player_prefab:
   - {fileID: 108181841305710052, guid: 3def12239b1786545a88f2f4c61c0e65, type: 3}
-  - {fileID: 8614202190791210872, guid: b536f5ea83c12b24dafc5fa36b05b00b, type: 3}
+  - {fileID: 8614202190791210872, guid: 41a6919d2c510e241953feef1fe3e432, type: 3}
   m_player: {fileID: 0}
   is_ready: 0
   prop_manager: {fileID: 4820628443750231420, guid: 819dc60cfddd50647a9a0a5907c7c960, type: 3}
