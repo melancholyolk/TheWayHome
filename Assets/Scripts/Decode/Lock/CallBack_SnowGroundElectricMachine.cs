@@ -29,7 +29,7 @@ public class CallBack_SnowGroundElectricMachine : DecodeCallBack
             light.GetComponent<SpriteRenderer>().sprite = lightOn;
             light.GetComponentInChildren<Light>().enabled = true;
         }
-        GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player.GetComponent<PlayerTest>().AddCondition("电力");
+        GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player.GetComponent<PlayerMove>().AddCondition("电力");
         GetComponent<AudioSource>().Play();
     }
 }

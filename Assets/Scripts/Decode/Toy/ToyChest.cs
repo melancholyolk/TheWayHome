@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Íæ¾ß¹ñ£¨½âÃÜÀà£©
+/// ç©å…·æŸœï¼ˆè§£å¯†ç±»ï¼‰
 /// </summary>
-public class ToyChest : SyncDecodeInfo
+public class ToyChest : SyncItem
 {
     public bool canUse = false;
 

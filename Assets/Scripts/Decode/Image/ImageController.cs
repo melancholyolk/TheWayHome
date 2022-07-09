@@ -1,66 +1,82 @@
 using System.Collections;
 using System.Collections.Generic;
+using Decode;
 using UnityEngine;
 
-public class ImageController : MonoBehaviour
+namespace Decode
 {
-    public ImageFrame[] frames;
-    public int cur_num = 0;
-    public int count = 0;
-
-    public AudioClip open;
-
-    // Start is called before the first frame update
-    void Start()
+	public class ImageController : DecodeWay
     {
-        frames[cur_num].FrameChoosed(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
+        public ImageFrame[] frames;
+        public int cur_num = 0;
+        public int count = 0;
+    	
+        public AudioClip open;
+    
+        [Header("KeyInput")]
+        public KeyCode left;
+    
+        public KeyCode right;
+    
+        public KeyCode rotate;
+        // Start is called before the first frame update
+        void Start()
         {
-            if (cur_num < frames.Length - 1)
+            frames[cur_num].FrameChoosed(true);
+        }
+    
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.GetKeyDown(left))
             {
-                frames[cur_num].FrameChoosed(false);
-                cur_num++;
-                frames[cur_num].FrameChoosed(true);
+                if (cur_num < frames.Length - 1)
+                {
+                    frames[cur_num].FrameChoosed(false);
+                    cur_num++;
+                    frames[cur_num].FrameChoosed(true);
+                }
+            }
+    
+            if (Input.GetKeyDown(right))
+            {
+                if (cur_num > 0)
+                {
+                    frames[cur_num].FrameChoosed(false);
+                    cur_num--;
+                    frames[cur_num].FrameChoosed(true);
+                }
+            }
+    
+            if (Input.GetKeyDown(rotate))
+            {
+                frames[cur_num].FrameRotate();
+            }
+        }
+    
+        public void Judge()
+        {
+            count = 0;
+            for (int i = 0; i < frames.Length; i++)
+            {
+                if (frames[i].is_right)
+                {
+                    count++;
+                }
+            }
+    
+            if (count == frames.Length)
+            {
+                OnComplete();
+                GetComponent<AudioSource>().PlayOneShot(open);
+                Destroy(gameObject, 2);
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        public override void OnComplete()
         {
-            if (cur_num > 0)
-            {
-                frames[cur_num].FrameChoosed(false);
-                cur_num--;
-                frames[cur_num].FrameChoosed(true);
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            frames[cur_num].FrameRotate();
+	        Debug.Log("解密完成");
         }
     }
-
-    public void Judge()
-    {
-        count = 0;
-        for (int i = 0; i < frames.Length; i++)
-        {
-            if (frames[i].is_right)
-            {
-                count++;
-            }
-        }
-
-        if (count == frames.Length)
-        {
-            this.transform.parent.SendMessage("Complete");
-            transform.parent.GetComponent<AudioSource>().PlayOneShot(open);
-            Destroy(gameObject, 2);
-        }
-    }
+	
 }

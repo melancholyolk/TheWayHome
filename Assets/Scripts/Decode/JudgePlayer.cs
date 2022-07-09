@@ -7,11 +7,11 @@ public class JudgePlayer : MonoBehaviour
     public GameObject player;
     public bool can_use = false;
 
-    private SyncDecodeInfo propInfo;
+    private SyncItem propInfo;
 
     private void Start()
     {
-        propInfo = GetComponent<SyncDecodeInfo>();
+        propInfo = GetComponent<SyncItem>();
     }
     void Update()
     {
@@ -24,7 +24,7 @@ public class JudgePlayer : MonoBehaviour
         {
             can_use = true;
             player = other.gameObject;
-            propInfo.player = player.GetComponent<PlayerTest>();
+            propInfo.player = player.GetComponent<PlayerMove>();
             SendMessage("PlayerNear");
         }
     }

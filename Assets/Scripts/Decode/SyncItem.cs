@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-public class SyncDecodeInfo : NetworkBehaviour
+public class SyncItem : NetworkBehaviour
 {
-    public PlayerTest player;
+    public PlayerMove player;
     [SyncVar]
     public bool isUsing = false;
     [SyncVar]

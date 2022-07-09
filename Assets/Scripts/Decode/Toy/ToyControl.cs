@@ -24,7 +24,7 @@ public class ToyControl : MonoBehaviour
         }
         if (is_chosed)
         {
-            Vector2 Pos = decodeCamera.ScreenToWorldPoint(Input.mousePosition);//×ª»»³ÉÊÀ½ç×ø±ê
+            Vector2 Pos = decodeCamera.ScreenToWorldPoint(Input.mousePosition);//è½¬æ¢æˆä¸–ç•Œåæ ‡
             transform.position = new Vector2(Pos.x, Pos.y);
         }
         if (Input.GetMouseButtonUp(0) && is_chosed)
