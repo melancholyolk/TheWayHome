@@ -27,7 +27,7 @@ public class WallLayerAdjust : MonoBehaviour
             if (hit.collider.tag == "Player")
             {
                 print(hit.collider.name);
-                var players = Player.GetComponent<PlayerTest>().players;
+                var players = Player.GetComponent<PlayerMove>().players;
                 foreach (var VARIABLE in players)
                 {
                     VARIABLE.GetComponent<SortingGroup>().sortingOrder = 0;
@@ -35,7 +35,7 @@ public class WallLayerAdjust : MonoBehaviour
             }
             else if (hit.collider.tag == "Wall")
             {
-                var players = Player.GetComponent<PlayerTest>().players;
+                var players = Player.GetComponent<PlayerMove>().players;
                 foreach (var VARIABLE in players)
                 {
                     VARIABLE.GetComponent<SortingGroup>().sortingOrder = -1;

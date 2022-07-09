@@ -18,7 +18,7 @@ public class RenderQueueControl : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Material material = other.GetComponent<PlayerTest>().playerMaterial;
+            Material material = other.GetComponent<PlayerMove>().playerMaterial;
             material.renderQueue = order;
         }
     }
@@ -27,7 +27,7 @@ public class RenderQueueControl : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Material material = other.GetComponent<PlayerTest>().playerMaterial;
+            Material material = other.GetComponent<PlayerMove>().playerMaterial;
             material.renderQueue = 3000;
         }
     }

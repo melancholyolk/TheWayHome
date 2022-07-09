@@ -23,7 +23,7 @@ public class PropJudgePlayer : MonoBehaviour
         {
             SendMessage("PlayerNear");
             player = other.gameObject;
-            propInfo.player = player.GetComponent<PlayerTest>();
+            propInfo.player = player.GetComponent<PlayerMove>();
         }
     }
     private void OnTriggerExit(Collider other)

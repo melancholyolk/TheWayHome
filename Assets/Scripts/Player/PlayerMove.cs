@@ -13,13 +13,14 @@ using UnityEngine.Serialization;
 /// 1二倍原速度
 /// </summary>
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerTest : NetworkBehaviour
+public class PlayerMove : NetworkBehaviour
 {
-    public Transform obj_pos;
+    [FormerlySerializedAs("obj_pos")]
+    public Transform objPosition;
     
     public List<GameObject> handles;
 
-    public bool is_local;
+    [FormerlySerializedAs("is_local")] public bool isLocal;
     
     public List<string> condition;
 
@@ -39,33 +40,33 @@ public class PlayerTest : NetworkBehaviour
 
     public Transform rightHandBack;
 
-    private Rigidbody _rigidbody;
+    private Rigidbody m_Rigidbody;
 
-    private PlayerAnimatorControl _animatorControl;
+    private PlayerAnimatorControl m_AnimatorControl;
 
-    private bool _isWalking = false;
+    private bool m_IsWalking = false;
 
-    private Vector3 _originScale;
+    private Vector3 m_OriginScale;
 
-    private int _currentPlayer = 0;
+    private int m_CurrentPlayer = 0;
 
-    private int _currentDirection = -1; //面向北方为0顺时针递加
+    private int m_CurrentDirection = -1; //面向北方为0顺时针递加
 
-    private int _currentWindDirection = -1;
+    private int m_CurrentWindDirection = -1;
 
-    private float _currentWindForce = 0;
+    private float m_CurrentWindForce = 0;
 
-    private float _currentSpeed;
+    private float m_CurrentSpeed;
 
-    private bool _changeMotion;
+    private bool m_ChangeMotion;
 
-    private GameObject[] _holdObject;
+    private GameObject[] m_HoldObject;
 
-    private bool _isHold = false;
+    private bool m_IsHold = false;
 
-    private NetworkAnimator _networkAnimator;
+    private NetworkAnimator m_NetworkAnimator;
 
-    private CanvasManager _canvasManager;
+    private CanvasManager m_CanvasManager;
 
     private enum PlayerState
     {
@@ -74,44 +75,43 @@ public class PlayerTest : NetworkBehaviour
         TRAILWIND = 2,
     }
 
-    private PlayerState _currentState = PlayerState.NORMAL;
+    private PlayerState m_CurrentState = PlayerState.NORMAL;
 
     private void Awake()
     {
-        _canvasManager = GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>();
-        Start();
+        m_CanvasManager = GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>();
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        _originScale = transform.localScale;
-        _currentSpeed = speed;
+        m_OriginScale = transform.localScale;
+        m_CurrentSpeed = speed;
         condition = new List<string>();
-        _holdObject = new GameObject[2];
-        _rigidbody = GetComponent<Rigidbody>();
-        _networkAnimator = GetComponent<NetworkAnimator>();
-        _animatorControl = GetComponent<PlayerAnimatorControl>();
-        CmdInitComponent(_currentPlayer, Vector3.one, _isHold);
+        m_HoldObject = new GameObject[2];
+        m_Rigidbody = GetComponent<Rigidbody>();
+        m_NetworkAnimator = GetComponent<NetworkAnimator>();
+        m_AnimatorControl = GetComponent<PlayerAnimatorControl>();
+        CmdInitComponent(m_CurrentPlayer, Vector3.one, m_IsHold);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!is_local)
+        if (!isLocal)
         {
             return;
         }
 
-        if (!_canvasManager.CanOperate())
+        if (!m_CanvasManager.CanOperate())
         {
             return;
         }
         var moveX = Input.GetAxisRaw("Horizontal");
         var moveY = Input.GetAxisRaw("Vertical");
         Vector3 move_speed = new Vector3(moveX, 0, moveY).normalized;
-        _rigidbody.velocity = move_speed * _currentSpeed;
+        m_Rigidbody.velocity = move_speed * m_CurrentSpeed;
         PlayAnimation(move_speed);
     }
 
@@ -135,15 +135,15 @@ public class PlayerTest : NetworkBehaviour
 
     void PlayAnimation(Vector3 speed)
     {
-        var last = _currentPlayer;
-        var lastDirect = _currentDirection;
+        var last = m_CurrentPlayer;
+        var lastDirect = m_CurrentDirection;
         var scale = transform.localScale;
         if (speed == Vector3.zero)
         {
-            if (_isWalking)
+            if (m_IsWalking)
             {
                 CmdSetAnimation(PlayerAnimatorControl.AnimationName.IDLE);
-                _isWalking = false;
+                m_IsWalking = false;
             }
         }
         else
@@ -152,94 +152,94 @@ public class PlayerTest : NetworkBehaviour
             // 北
             if (speed.x == 0 && speed.z > 0)
             {
-                scale = _originScale;
-                _currentPlayer = 1;
-                _currentDirection = 0;
+                scale = m_OriginScale;
+                m_CurrentPlayer = 1;
+                m_CurrentDirection = 0;
             }
             //东北
             else if (speed.x > 0 && speed.z > 0)
             {
-                scale = _originScale;
+                scale = m_OriginScale;
                 scale.x *= -1;
 
-                _currentPlayer = 0;
-                _currentDirection = 1;
+                m_CurrentPlayer = 0;
+                m_CurrentDirection = 1;
             }
             // 东
             else if (speed.x > 0 && speed.z == 0)
             {
-                scale = _originScale;
+                scale = m_OriginScale;
                 scale.x *= -1;
 
-                _currentPlayer = 0;
-                _currentDirection = 2;
+                m_CurrentPlayer = 0;
+                m_CurrentDirection = 2;
             }
             //东南
             else if (speed.x > 0 && speed.z < 0)
             {
-                scale = _originScale;
+                scale = m_OriginScale;
                 scale.x *= -1;
-                _currentPlayer = 0;
-                _currentDirection = 3;
+                m_CurrentPlayer = 0;
+                m_CurrentDirection = 3;
             }
             // 南
             else if (speed.x == 0 && speed.z < 0)
             {
-                scale = _originScale;
-                _currentPlayer = 0;
-                _currentDirection = 4;
+                scale = m_OriginScale;
+                m_CurrentPlayer = 0;
+                m_CurrentDirection = 4;
             }
             // 西南
             else if (speed.x < 0 && speed.z < 0)
             {
-                scale = _originScale;
-                _currentPlayer = 0;
-                _currentDirection = 5;
+                scale = m_OriginScale;
+                m_CurrentPlayer = 0;
+                m_CurrentDirection = 5;
             }
             // 西
             else if (speed.x < 0 && speed.z == 0)
             {
-                scale = _originScale;
+                scale = m_OriginScale;
                 scale.x *= -1;
 
-                _currentPlayer = 1;
-                _currentDirection = 6;
+                m_CurrentPlayer = 1;
+                m_CurrentDirection = 6;
             }
             // 西北
             else if (speed.x < 0 && speed.z > 0)
             {
-                scale = _originScale;
+                scale = m_OriginScale;
                 scale.x *= -1;
-                _currentPlayer = 1;
-                _currentDirection = 7;
+                m_CurrentPlayer = 1;
+                m_CurrentDirection = 7;
             }
 
-            if (!_isWalking)
+            if (!m_IsWalking)
             {
                 CmdSetAnimation1(ChoosePlayerState(), 0.06f);
-                _isWalking = true;
+                m_IsWalking = true;
             }
 
-            if (last != _currentPlayer || lastDirect != _currentDirection)
+            if (last != m_CurrentPlayer || lastDirect != m_CurrentDirection)
             {
-                CmdInitComponent(_currentPlayer, scale, _isHold);
+                CmdInitComponent(m_CurrentPlayer, scale, m_IsHold);
                 CmdSetAnimation1(ChoosePlayerState(), 0);
             }
-            else if (_changeMotion)
+            else if (m_ChangeMotion)
             {
                 CmdSetAnimation(ChoosePlayerState());
             }
             else
             {
                 var ani = ChoosePlayerState();
-                if (ani != _animatorControl.currentAnimation)
+                if (ani != m_AnimatorControl.currentAnimation)
                 {
                     CmdSetAnimation(ani);
                 }
             }
         }
 
-        _changeMotion = false;
+        m_ChangeMotion = false;
     }
 
     [Command]
@@ -251,7 +251,7 @@ public class PlayerTest : NetworkBehaviour
     [ClientRpc]
     private void RpcSetAnimation(PlayerAnimatorControl.AnimationName ani)
     {
-        _animatorControl.SetAnimation(ani);
+        m_AnimatorControl.SetAnimation(ani);
     }
 
 
@@ -264,7 +264,7 @@ public class PlayerTest : NetworkBehaviour
     [ClientRpc]
     private void RpcSetAnimation1(PlayerAnimatorControl.AnimationName ani, float time)
     {
-        _animatorControl.SetAnimation(ani, time);
+        m_AnimatorControl.SetAnimation(ani, time);
     }
 
     [Command]
@@ -284,8 +284,8 @@ public class PlayerTest : NetworkBehaviour
         transform.localScale = scale;
         players[1 - cur].transform.localPosition = Vector3.down * 100;
         players[cur].transform.localPosition = Vector3.zero;
-        _animatorControl.SetAnimator(cur);
-        _networkAnimator.animator = _animatorControl.GetAnimator();
+        m_AnimatorControl.SetAnimator(cur);
+        m_NetworkAnimator.animator = m_AnimatorControl.GetAnimator();
         CheckHold(hold);
     }
 
@@ -293,11 +293,11 @@ public class PlayerTest : NetworkBehaviour
     {
         if (hold)
         {
-            _animatorControl.PartialAnimation(PlayerAnimatorControl.AnimationName.HOLD);
+            m_AnimatorControl.PartialAnimation(PlayerAnimatorControl.AnimationName.HOLD);
         }
         else
         {
-            _animatorControl.PartialAnimation(PlayerAnimatorControl.AnimationName.PUTDOWN);
+            m_AnimatorControl.PartialAnimation(PlayerAnimatorControl.AnimationName.PUTDOWN);
         }
     }
 
@@ -305,60 +305,60 @@ public class PlayerTest : NetworkBehaviour
     {
         string direction = (string) hashtable["direct"];
         direction = direction.ToLower();
-        _currentWindForce = (float) hashtable["force"];
-        var lastDirect = _currentWindDirection;
+        m_CurrentWindForce = (float) hashtable["force"];
+        var lastDirect = m_CurrentWindDirection;
         switch (direction)
         {
             case "north":
-                _currentWindDirection = 0;
+                m_CurrentWindDirection = 0;
                 break;
             case "northeast":
-                _currentWindDirection = 1;
+                m_CurrentWindDirection = 1;
                 break;
             case "east":
-                _currentWindDirection = 2;
+                m_CurrentWindDirection = 2;
                 break;
             case "southeast":
-                _currentWindDirection = 3;
+                m_CurrentWindDirection = 3;
                 break;
             case "south":
-                _currentWindDirection = 4;
+                m_CurrentWindDirection = 4;
                 break;
             case "southwest":
-                _currentWindDirection = 5;
+                m_CurrentWindDirection = 5;
                 break;
             case "west":
-                _currentWindDirection = 6;
+                m_CurrentWindDirection = 6;
                 break;
             case "northwest":
-                _currentWindDirection = 7;
+                m_CurrentWindDirection = 7;
                 break;
             default:
-                _currentWindDirection = -1;
+                m_CurrentWindDirection = -1;
                 break;
         }
 
-        if (lastDirect != _currentWindDirection) _changeMotion = true;
+        if (lastDirect != m_CurrentWindDirection) m_ChangeMotion = true;
     }
 
     private PlayerAnimatorControl.AnimationName ChoosePlayerState()
     {
-        if (_currentWindDirection == -1)
+        if (m_CurrentWindDirection == -1)
         {
-            _currentSpeed = speed;
+            m_CurrentSpeed = speed;
             return PlayerAnimatorControl.AnimationName.WALK;
         }
 
-        if (_currentDirection == _currentWindDirection || _currentDirection == _currentWindDirection + 1 ||
-            _currentDirection == _currentWindDirection + 7)
+        if (m_CurrentDirection == m_CurrentWindDirection || m_CurrentDirection == m_CurrentWindDirection + 1 ||
+            m_CurrentDirection == m_CurrentWindDirection + 7)
         {
-            _currentSpeed = speed + _currentWindForce * speed;
+            m_CurrentSpeed = speed + m_CurrentWindForce * speed;
             return PlayerAnimatorControl.AnimationName.TRAILWIND;
         }
 
         else
         {
-            _currentSpeed = speed - _currentWindForce * speed;
+            m_CurrentSpeed = speed - m_CurrentWindForce * speed;
             return PlayerAnimatorControl.AnimationName.WALKHARD;
         }
     }
@@ -377,35 +377,35 @@ public class PlayerTest : NetworkBehaviour
 
     private void HoldObject(int index)
     {
-        if (_isHold)
+        if (m_IsHold)
         {
             print("已经持有道具");
             return;
         }
 
-        _isHold = true;
-        _animatorControl.PartialAnimationInit(PlayerAnimatorControl.AnimationName.HOLD);
-        _holdObject[0] = Instantiate(handles[index], rightHandFront.position, Quaternion.Euler(new Vector3(45, -45, -32)));
-        _holdObject[0].transform.parent = rightHandFront;
-        _holdObject[0].GetComponent<SortingGroup>().sortingOrder = -6;
-        _holdObject[1] = Instantiate(handles[index], rightHandBack.position, Quaternion.Euler(new Vector3(45, -45, -32)));
-        _holdObject[1].transform.parent = rightHandBack;
-        _holdObject[1].GetComponent<SortingGroup>().sortingOrder = 11;
+        m_IsHold = true;
+        m_AnimatorControl.PartialAnimationInit(PlayerAnimatorControl.AnimationName.HOLD);
+        m_HoldObject[0] = Instantiate(handles[index], rightHandFront.position, Quaternion.Euler(new Vector3(45, -45, -32)));
+        m_HoldObject[0].transform.parent = rightHandFront;
+        m_HoldObject[0].GetComponent<SortingGroup>().sortingOrder = -6;
+        m_HoldObject[1] = Instantiate(handles[index], rightHandBack.position, Quaternion.Euler(new Vector3(45, -45, -32)));
+        m_HoldObject[1].transform.parent = rightHandBack;
+        m_HoldObject[1].GetComponent<SortingGroup>().sortingOrder = 11;
         
     }
 
     private void PutDownObject()
     {
-        if (!_isHold)
+        if (!m_IsHold)
         {
             print("还没有持有道具");
             return;
         }
 
-        _isHold = false;
-        _animatorControl.PartialAnimationInit(PlayerAnimatorControl.AnimationName.PUTDOWN);
-        Destroy(_holdObject[0]);
-        Destroy(_holdObject[1]);
+        m_IsHold = false;
+        m_AnimatorControl.PartialAnimationInit(PlayerAnimatorControl.AnimationName.PUTDOWN);
+        Destroy(m_HoldObject[0]);
+        Destroy(m_HoldObject[1]);
     }
 
 
@@ -425,7 +425,7 @@ public class PlayerTest : NetworkBehaviour
     {
         GameObject obj = Instantiate(propPrefab);
         obj.GetComponent<PropPick>().SetPropInfo(num);
-        obj.transform.position = obj_pos.position;
+        obj.transform.position = objPosition.position;
         obj.transform.localEulerAngles = new Vector3(45,-45,0);
         obj.GetComponent<SpriteRenderer>().sortingOrder = players[0].GetComponent<SortingGroup>().sortingOrder;
     }

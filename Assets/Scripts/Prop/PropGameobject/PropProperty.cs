@@ -12,10 +12,10 @@ public class PropProperty : NetworkBehaviour
         Clue,
         Tool
     }
-    [Header("»ù´¡Éè¶¨")]
+    [Header("?????Ú…")]
     public PropType type = PropType.None;
 
-    public PlayerTest player;
+    public PlayerMove player;
     [SyncVar]
     public bool is_pick = false;
 

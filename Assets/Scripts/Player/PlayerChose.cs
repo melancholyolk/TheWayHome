@@ -10,8 +10,8 @@ public class PlayerChose : NetworkBehaviour
     public int player = 0;
     public GameObject[] player_prefab;
     private bool is_server = false;
-    [FormerlySerializedAs("m_player")]
-    public PlayerTest playerTest;
+    [FormerlySerializedAs("playerTest")] [FormerlySerializedAs("m_player")]
+    public PlayerMove playerMove;
     [SyncVar]
     public bool is_ready = false;
     private bool is_complete = false;
@@ -59,20 +59,20 @@ public class PlayerChose : NetworkBehaviour
             is_complete = true;
 
         }
-        else if(!playerTest && GameObject.Find("Player" + player + "(Clone)"))
+        else if(!playerMove && GameObject.Find("Player" + player + "(Clone)"))
         {
-            playerTest = GameObject.Find("Player" + player + "(Clone)").GetComponent<PlayerTest>();
+            playerMove = GameObject.Find("Player" + player + "(Clone)").GetComponent<PlayerMove>();
             GameObject.Find("TaskLoader").GetComponent<TaskManager>().InitTaskLoader(player);
-            playerTest.gameObject.AddComponent<AudioListener>();
-            playerTest.gameObject.AddComponent<FowViewer>();
-            playerTest.gameObject.GetComponent<FowViewer>().viewerRange = 20;
+            playerMove.gameObject.AddComponent<AudioListener>();
+            playerMove.gameObject.AddComponent<FowViewer>();
+            playerMove.gameObject.GetComponent<FowViewer>().viewerRange = 20;
         }
 
-        if (playerTest)
+        if (playerMove)
         {
-            playerTest.tag = "Player";
-            Camera.main.GetComponent<CameraFollow>().SetPlayer(playerTest.transform);
-            GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player = playerTest.GetComponent<PlayerTest>();
+            playerMove.tag = "Player";
+            Camera.main.GetComponent<CameraFollow>().SetPlayer(playerMove.transform);
+            GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player = playerMove.GetComponent<PlayerMove>();
             if(player == 1)
             {
                 GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player_type = CanvasManager.Player.Player1;
@@ -81,7 +81,7 @@ public class PlayerChose : NetworkBehaviour
             {
                 GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player_type = CanvasManager.Player.Player2;
             }
-            playerTest.is_local = true;
+            playerMove.isLocal = true;
             Destroy(this.gameObject);
         }
     }

@@ -20,7 +20,7 @@ public class CanvasManager : MonoBehaviour
 
     public GameObject clue_menu;
 
-    public PlayerTest player;
+    public PlayerMove player;
 
     public enum Player
     {

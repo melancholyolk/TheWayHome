@@ -43,7 +43,7 @@ public class Event_FirePan : Event
         {
             canvas.GetComponent<View_Control>().ShowDialog(_triggerDialog);
             // Debug.LogWarning(torch);
-            GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player.GetComponent<PlayerTest>().CmdHoldObject(0);
+            GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player.GetComponent<PlayerMove>().CmdHoldObject(0);
         }
 
         if (eventType == EventType.TaskObject)

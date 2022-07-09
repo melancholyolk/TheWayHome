@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Decode;
 using UnityEngine;
 
 public class Event_Sofa : Event
@@ -11,12 +12,12 @@ public class Event_Sofa : Event
 
     private GameObject canvas;
 
-    private DecodeObjectControl _decode;
+    private ObtainItems _decode;
     private void Start()
     {
         canvas = GameObject.Find("Canvas");
-        _decode = GetComponent<DecodeObjectControl>();
-        _decode.enabled = false;
+        _decode = GetComponent<ObtainItems>();
+        // _decode.enabled = false;
     }
 
     private void Update()
@@ -49,7 +50,7 @@ public class Event_Sofa : Event
         if (_triggerDialog.Count > 0)
         {
             canvas.GetComponent<View_Control>().ShowDialog(_triggerDialog);
-            _decode.enabled = true;
+            // _decode.enabled = true;
             this.enabled = false;
         }
     }

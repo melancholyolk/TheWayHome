@@ -12,7 +12,7 @@ public class LayerControler : MonoBehaviour
     {
         if (other.tag == "Player"||other.tag =="OtherPlayer")
         {
-            var players = other.gameObject.GetComponent<PlayerTest>().players;
+            var players = other.gameObject.GetComponent<PlayerMove>().players;
             foreach (var VARIABLE in players)
             {
                 VARIABLE.GetComponent<SortingGroup>().sortingOrder = layerOrder;
@@ -26,7 +26,7 @@ public class LayerControler : MonoBehaviour
         {
             if (other.tag == "Player" || other.tag == "OtherPlayer")
             {
-                var players = other.gameObject.GetComponent<PlayerTest>().players;
+                var players = other.gameObject.GetComponent<PlayerMove>().players;
                 foreach (var VARIABLE in players)
                 {
                     VARIABLE.GetComponent<SortingGroup>().sortingOrder = 0;

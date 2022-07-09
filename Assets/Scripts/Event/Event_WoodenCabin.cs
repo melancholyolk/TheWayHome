@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Decode;
 using UnityEngine;
 
 public class Event_WoodenCabin : Event
 {
     protected GameObject canvas;
-    private DecodeObjectControl _decodeObjectControl;
+    private ObtainItems _obtainItems;
     protected void Start()
     {
         canvas = GameObject.Find("Canvas");
-        _decodeObjectControl = GetComponent<DecodeObjectControl>();
+        _obtainItems = GetComponent<ObtainItems>();
         eventType = EventType.TaskObject;
 
-        _decodeObjectControl.enabled = false;
+        // _obtainItems.enabled = false;
     }
 
     private void Update()
@@ -42,7 +43,7 @@ public class Event_WoodenCabin : Event
         if (_triggerDialog.Count > 0)
         {
             canvas.GetComponent<View_Control>().ShowDialog(_triggerDialog);
-            _decodeObjectControl.enabled = true;
+            // _obtainItems.enabled = true;
             GameObject.FindWithTag("Player").SendMessage("RemoveCondition", "灰色钥匙");
             canvas.GetComponent<CanvasManager>().RemovePropInfo("灰色钥匙");   
         }

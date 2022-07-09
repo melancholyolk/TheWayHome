@@ -29,7 +29,7 @@ public class Event : NetworkBehaviour
         foreach (var VARIABLE in _triggerCondition)
         {
             if(string.IsNullOrEmpty(VARIABLE)) continue;
-            if(!player.GetComponent<PlayerTest>().JudgeCondition(VARIABLE))
+            if(!player.GetComponent<PlayerMove>().JudgeCondition(VARIABLE))
             {
                 return false;
             }

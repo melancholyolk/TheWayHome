@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Decode;
 using Mirror;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -11,13 +12,13 @@ using UnityEngine.Audio;
 public class Event_SimpleObject : Event
 {
     protected GameObject canvas;
-    protected DecodeObjectControl _decode;
+    protected ObtainItems _decode;
 
     public void Start()
     {
         canvas = GameObject.Find("Canvas");
-        _decode = GetComponent<DecodeObjectControl>();
-        _decode.enabled = false;
+        _decode = GetComponent<ObtainItems>();
+        // _decode.enabled = false;
         eventType = EventType.EventObject;
     }
 
@@ -49,7 +50,7 @@ public class Event_SimpleObject : Event
         {
             canvas.GetComponent<View_Control>().ShowDialog(_triggerDialog);
             CmdEventOver();
-            if (GetComponent<DecodeObjectControl>().pre == null)
+            if (GetComponent<ObtainItems>().pre == null)
             {
                 SendMessage("Complete");
             }
@@ -65,7 +66,7 @@ public class Event_SimpleObject : Event
     [ClientRpc]
     void RpcEventOver()
     {
-        _decode.enabled = true;
+        // _decode.enabled = true;
         this.enabled = false;
     }
 }

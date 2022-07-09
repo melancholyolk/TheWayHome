@@ -47,7 +47,7 @@ public class PropPick : PropProperty
         {
             if (canUse && !is_pick)
             {
-                player.GetComponent<PlayerTest>().CmdDestory(this.transform.name);
+                player.GetComponent<PlayerMove>().CmdDestory(this.transform.name);
                 canvasManager.PickUpStart(num, 1);
             }
         }
