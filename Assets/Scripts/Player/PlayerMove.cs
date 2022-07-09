@@ -116,13 +116,13 @@ public class PlayerTest : NetworkBehaviour
     }
 
     [Command]
-    public void CmdDecodeIsUse(SyncDecodeInfo obj, bool temp)
+    public void CmdDecodeIsUse(SyncItem obj, bool temp)
     {
         obj.isUsing = temp;
     }
 
     [Command]
-    public void CmdDecodeIsComplete(SyncDecodeInfo obj, bool temp)
+    public void CmdDecodeIsComplete(SyncItem obj, bool temp)
     {
         obj.isComplete = temp;
     }
