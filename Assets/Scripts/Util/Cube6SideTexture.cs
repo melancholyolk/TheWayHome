@@ -40,7 +40,7 @@ namespace GameUtil
 		private Texture2D m_Texture;
 
 		// Start is called before the first frame update
-		void Start()
+		 public void Start()
 		{
 			MeshFilter meshFilter = GetComponent<MeshFilter>();
 			if (meshFilter == null)
@@ -184,10 +184,10 @@ namespace GameUtil
 			else if (faceType == CubeFaceType.Bottom)
 			{
 				Vector2[] newUVS = GetUVS(bottomPoint.x, bottomPoint.y);
-				uvs[12] = newUVS[1];
-				uvs[14] = newUVS[2];
-				uvs[15] = newUVS[3];
-				uvs[13] = newUVS[0];
+				uvs[12] = newUVS[0];
+				uvs[14] = newUVS[3];
+				uvs[15] = newUVS[1];
+				uvs[13] = newUVS[2];
 			}
 			else if (faceType == CubeFaceType.Left)
 			{
@@ -217,9 +217,11 @@ namespace GameUtil
 			texture2Ds[3] = rightTexture;
 			texture2Ds[4] = frontTexture;
 			texture2Ds[5] = backTexture;
+			m_Texture = MergeMoreTex(texture2Ds);
 
-			mesh.sharedMaterial.SetTexture("_BaseMap", m_Texture = MergeMoreTex(texture2Ds));
-		}
+			mesh.sharedMaterial.SetTexture("_MainTex", m_Texture);
+			mesh.sharedMaterial.SetTexture("_BaseMap", m_Texture);		
+			}
 
 		public void SaveMergedTexture()
 		{
