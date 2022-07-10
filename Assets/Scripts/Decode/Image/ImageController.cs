@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Decode
 {
-	public class ImageController : DecodeWay
+	public class ImageController : MonoBehaviour
     {
         public ImageFrame[] frames;
         public int cur_num = 0;
@@ -73,7 +73,7 @@ namespace Decode
             }
         }
 
-        public override void OnComplete()
+        public void OnComplete()
         {
 	        Debug.Log("解密完成");
         }

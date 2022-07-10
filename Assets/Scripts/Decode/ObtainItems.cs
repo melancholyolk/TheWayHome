@@ -30,13 +30,13 @@ namespace Decode
 		
 
 		private GameObject m_Ori;
-		private List<DecodeConfig> m_DecodeList;
+		
 		#region MonoAPI
 		
 
 		private void Start()
 		{
-			m_DecodeList = new List<DecodeConfig>();
+
 		}
 
 		private void Update()
@@ -127,11 +127,6 @@ namespace Decode
 			foreach (var config in configs)
 			{
 				config.DoConditions();
-				if (config is DecodeConfig)
-				{
-					var dc = (DecodeConfig) config;
-					dc.decode.AddListener();
-				}
 			}
 		}
 		
