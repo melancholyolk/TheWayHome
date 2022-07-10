@@ -19,7 +19,7 @@ public class PropPick : PropProperty
         syncManager = GameObject.FindObjectOfType<SyncManager>();
         if (num != 0)
         {
-            propInfo = syncManager.GetPropInfoByNum(num);
+            propInfo = SyncManager.GetPropInfoByNum(num);
             sprite.sprite = propInfo.prop_sprite;
             this.transform.name = propInfo.prop_name;
         }
@@ -28,7 +28,7 @@ public class PropPick : PropProperty
     public void SetPropInfo(int num1)
     {
         syncManager = GameObject.FindObjectOfType<SyncManager>();
-        PropInfo info = syncManager.GetPropInfoByNum(num1);
+        PropInfo info = SyncManager.GetPropInfoByNum(num1);
         propInfo = info;
         sprite.sprite = info.prop_sprite;
         num = int.Parse(info.prop_number);
@@ -54,7 +54,7 @@ public class PropPick : PropProperty
 
         if (is_pick)
         {
-            Destroy(this.gameObject);
+            ObjectPool._instance.RecycleGo(this.gameObject);
         }
     }   
 

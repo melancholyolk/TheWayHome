@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SyncManager : NetworkBehaviour
 {
-    private List<PropInfo> prop_info = new List<PropInfo>();
+    private static List<PropInfo> prop_info = new List<PropInfo>();
     /// <summary>
     /// 线索管理
     /// </summary>
@@ -29,7 +29,8 @@ public class SyncManager : NetworkBehaviour
     {
         string[] str = {"Prop"};
         prop_info = GetComponent<PropLoad>().FindTextByName(str);
-
+        for(int i = 1; i < prop_info.Count; i++)
+            prop_info[i].prop_sprite = sprites[i - 1];
     }
 
     private void Awake()
@@ -68,13 +69,18 @@ public class SyncManager : NetworkBehaviour
         return prop_temp;
     }
 
-    public PropInfo GetPropInfoByNum(int num)
+    public static PropInfo GetPropInfoByNum(int num)
+    {
+        return prop_info[num];
+    }
+
+    public PropInfo EditorGetPropInfoByNum(int num)
     {
         string[] str = { "Prop" };
         prop_info = GetComponent<PropLoad>().FindTextByName(str);
-        prop_info[num].prop_sprite = sprites[num-1];
         return prop_info[num];
     }
+
 
     private PropInfo SetPropInfo(int num)
     {

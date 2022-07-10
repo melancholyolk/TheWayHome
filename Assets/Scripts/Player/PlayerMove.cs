@@ -423,7 +423,7 @@ public class PlayerMove : NetworkBehaviour
     [ClientRpc]
     private void RpcDiscardProp(int num)
     {
-        GameObject obj = Instantiate(propPrefab);
+        GameObject obj = ObjectPool._instance.GetGO();
         obj.GetComponent<PropPick>().SetPropInfo(num);
         obj.transform.position = objPosition.position;
         obj.transform.localEulerAngles = new Vector3(45,-45,0);

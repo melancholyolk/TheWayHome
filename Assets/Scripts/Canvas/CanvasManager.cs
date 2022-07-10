@@ -97,7 +97,7 @@ public class CanvasManager : MonoBehaviour
     
     public void PickUpStart(int num, float size)
     {
-        PropInfo info = syncManager.GetPropInfoByNum(num);
+        PropInfo info = SyncManager.GetPropInfoByNum(num);
         is_picking = true;
         pickUpShow.PickUpStart(info.prop_sprite , size, info.prop_name,info.prop_describe);
         if (info.prop_type == "t")
