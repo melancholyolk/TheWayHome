@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Decode;
 using Unity.Mathematics;
 using UnityEngine;
 /// <summary>
@@ -14,15 +15,14 @@ public class GameLoader : MonoBehaviour
 	}
 
 	public Mode mode;
-	public GameObject spawner;
+	public GameObject MonoEcs;
 	// Start is called before the first frame update
     void Start()
     {
 	    switch (mode)
 	    {
 		    case Mode.local:
-			    var go = Instantiate(spawner);
-			    go.transform.position = Vector3.zero;
+			    MonoEcs.SetActive(true);
 			    break;
 		    case Mode.network:
 			    break;

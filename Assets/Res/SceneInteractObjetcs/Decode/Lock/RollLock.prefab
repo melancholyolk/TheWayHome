@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.0252, y: 0, z: 0}
   m_LocalScale: {x: 0.5723026, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7257622785016131853}
   m_RootOrder: 9
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -109,6 +111,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.0335, y: 0, z: 0}
   m_LocalScale: {x: 0.5723026, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7257622785016131853}
   m_RootOrder: 8
@@ -132,6 +135,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -191,6 +195,7 @@ Transform:
   m_LocalRotation: {x: -0.00012341142, y: 0.00012341142, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06379733, y: 0.011672077, z: 0.06379734}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4481219023938941141}
   m_RootOrder: 26
@@ -214,6 +219,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -287,6 +293,7 @@ Transform:
   m_LocalRotation: {x: -0.00012341142, y: 0.00012341142, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06379733, y: 0.011672077, z: 0.06379734}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4265490268187342558}
   m_RootOrder: 26
@@ -310,6 +317,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -380,6 +388,7 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4481219023938941141}
   - {fileID: 4265490268187342558}
@@ -425,6 +434,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0041, y: -0.0333, z: 0}
   m_LocalScale: {x: 0.5883601, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1760054160284879547}
   - {fileID: 2205103740942185686}
@@ -475,6 +485,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -627,10 +638,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   speed: 1
   minAngel: 0
   roll: {fileID: 8300000, guid: b56c2e8dd69c63445bc1e5232eb7cb7f, type: 3}
   currentAngel: 0
+  rollInput: {fileID: 8579770461440581410}
+  index: 0
 --- !u!1 &4022932207292000868
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +681,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.0673, y: -0.03400002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7257622785016131853}
   m_RootOrder: 7
@@ -682,6 +705,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -740,6 +764,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.07118177, y: 0.0073334295, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7257622785016131853}
   m_RootOrder: 6
@@ -763,6 +788,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -822,6 +848,7 @@ Transform:
   m_LocalRotation: {x: -0.00012341142, y: 0.00012341142, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06379733, y: 0.011672077, z: 0.06379734}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7943409691419359987}
   m_RootOrder: 26
@@ -845,6 +872,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -917,6 +945,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7257622785016131853}
   m_Father: {fileID: 8579770461440581408}
@@ -941,6 +970,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1002,6 +1032,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.043, y: -0.0333, z: 0}
   m_LocalScale: {x: 0.5883601, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6077269554953629827}
   - {fileID: 8474631160685032932}
@@ -1052,6 +1083,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1204,10 +1236,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   speed: 1
   minAngel: 0
   roll: {fileID: 8300000, guid: b56c2e8dd69c63445bc1e5232eb7cb7f, type: 3}
   currentAngel: 0
+  rollInput: {fileID: 8579770461440581410}
+  index: 0
 --- !u!1 &5798712278672239305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,6 +1280,7 @@ Transform:
   m_LocalRotation: {x: -0.00012341142, y: 0.00012341142, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06379733, y: 0.011672077, z: 0.06379734}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3976814835494119824}
   m_RootOrder: 26
@@ -1260,6 +1304,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1333,6 +1378,7 @@ Transform:
   m_LocalRotation: {x: -0.00012341142, y: 0.00012341142, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06379733, y: 0.011672077, z: 0.06379734}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 168663839591621748}
   m_RootOrder: 26
@@ -1356,6 +1402,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1429,6 +1476,7 @@ Transform:
   m_LocalRotation: {x: -0.00012341142, y: 0.00012341142, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06379733, y: 0.011672077, z: 0.06379734}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2050907731067355041}
   m_RootOrder: 26
@@ -1452,6 +1500,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1527,6 +1576,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0161, y: -0.0333, z: 0}
   m_LocalScale: {x: 0.5883601, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6703307874351268439}
   - {fileID: 7441513286171727311}
@@ -1577,6 +1627,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1729,10 +1780,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   speed: 1
   minAngel: 0
   roll: {fileID: 8300000, guid: b56c2e8dd69c63445bc1e5232eb7cb7f, type: 3}
   currentAngel: 0
+  rollInput: {fileID: 8579770461440581410}
+  index: 0
 --- !u!1 &7838515550514806054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1764,6 +1826,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0242, y: -0.0333, z: 0}
   m_LocalScale: {x: 0.5883601, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 957735264612567388}
   - {fileID: 7453486337203329920}
@@ -1814,6 +1877,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1966,10 +2030,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   speed: 1
   minAngel: 0
   roll: {fileID: 8300000, guid: b56c2e8dd69c63445bc1e5232eb7cb7f, type: 3}
   currentAngel: 0
+  rollInput: {fileID: 8579770461440581410}
+  index: 0
 --- !u!1 &7896403286528308128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,6 +2076,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0524, y: -0.0333, z: 0}
   m_LocalScale: {x: 0.5883601, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2272993759729162608}
   - {fileID: 9077119601388951409}
@@ -2051,6 +2127,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2203,10 +2280,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   speed: 1
   minAngel: 0
   roll: {fileID: 8300000, guid: b56c2e8dd69c63445bc1e5232eb7cb7f, type: 3}
   currentAngel: 0
+  rollInput: {fileID: 8579770461440581410}
+  index: 0
 --- !u!1 &8579770461440581409
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,6 +2324,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5580793419195066096}
   m_Father: {fileID: 0}
@@ -2253,18 +2342,157 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aaf6c078bdfc644286b2df9ac499ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rolls:
-  - {fileID: 4481219023938941141}
-  - {fileID: 4265490268187342558}
-  - {fileID: 2050907731067355041}
-  - {fileID: 168663839591621748}
-  - {fileID: 7943409691419359987}
-  - {fileID: 3976814835494119824}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 6819467779414207228}
+    - {fileID: 5174792724306947200}
+    - {fileID: 6352578172805422051}
+    - {fileID: 6143796677133326973}
+    - {fileID: 101881334115707129}
+    - {fileID: 6027645503183818139}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: rolls
+      Entry: 7
+      Data: 0|Decode.Roll[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 6
+    - Name: 
+      Entry: 7
+      Data: Decode.Roll, Assembly-CSharp
+    - Name: rollControl
+      Entry: 10
+      Data: 0
+    - Name: type
+      Entry: 3
+      Data: 1
+    - Name: answerFloat
+      Entry: 4
+      Data: 0
+    - Name: answerIndex
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.Roll, Assembly-CSharp
+    - Name: rollControl
+      Entry: 10
+      Data: 1
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: answerFloat
+      Entry: 4
+      Data: 0
+    - Name: answerIndex
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.Roll, Assembly-CSharp
+    - Name: rollControl
+      Entry: 10
+      Data: 2
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: answerFloat
+      Entry: 4
+      Data: 0
+    - Name: answerIndex
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.Roll, Assembly-CSharp
+    - Name: rollControl
+      Entry: 10
+      Data: 3
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: answerFloat
+      Entry: 4
+      Data: 0
+    - Name: answerIndex
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.Roll, Assembly-CSharp
+    - Name: rollControl
+      Entry: 10
+      Data: 4
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: answerFloat
+      Entry: 4
+      Data: 0
+    - Name: answerIndex
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.Roll, Assembly-CSharp
+    - Name: rollControl
+      Entry: 10
+      Data: 5
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: answerFloat
+      Entry: 4
+      Data: 0
+    - Name: answerIndex
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: actions
+      Entry: 7
+      Data: 1|Decode.Actions[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   name: 
-  open: {fileID: 8300000, guid: 7fb6c965469a01e4ba64214f27267c18, type: 3}
 --- !u!95 &1910851880
 Animator:
-  serializedVersion: 3
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2277,6 +2505,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -2408,6 +2637,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.034, y: -0.0333, z: 0}
   m_LocalScale: {x: 0.5883601, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6488725313101523200}
   - {fileID: 2796431316327977009}
@@ -2458,6 +2688,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -2610,10 +2841,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   speed: 1
   minAngel: 0
   roll: {fileID: 8300000, guid: b56c2e8dd69c63445bc1e5232eb7cb7f, type: 3}
   currentAngel: 0
+  rollInput: {fileID: 8579770461440581410}
+  index: 0
 --- !u!1001 &6024874857453648
 PrefabInstance:
   m_ObjectHideFlags: 0

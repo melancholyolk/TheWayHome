@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using Decode;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -16,6 +17,9 @@ public class MouseRollControl : MonoBehaviour
     public float minAngel;
     public AudioClip roll;
     public float currentAngel;
+    public int index;
+    public int total;
+    public RollInput input;
     private bool _isMouse = true;
     private Vector3 _lastPos;
 
@@ -23,11 +27,12 @@ public class MouseRollControl : MonoBehaviour
     private bool _isRolling = false;
     private float _angel;
     private int _unit = 0;
-    private float ScrollSpeed = 0;
+    private float _scrollSpeed = 0;
 
     private void Start()
     {
-        minAngel = 360f / (transform.childCount - 1);
+	    total = transform.childCount - 1;
+        minAngel = 360f / total;
         _angel = 0;
     }
 
@@ -47,8 +52,7 @@ public class MouseRollControl : MonoBehaviour
                     
                     if (_lastPos.Equals(Vector3.zero))
                     {
-                        print("last" + _lastPos);
-                        _lastPos = Input.mousePosition;
+	                    _lastPos = Input.mousePosition;
                         return;
                     } 
                     _thisRolling = true;
@@ -86,11 +90,11 @@ public class MouseRollControl : MonoBehaviour
             {
                 if (Input.GetAxis("Mouse ScrollWheel") < 0)
                 {
-                    ScrollSpeed = -3+-minAngel / 8;
+                    _scrollSpeed = -3+-minAngel / 8;
                 }
                 else
                 {
-                    ScrollSpeed = 3+minAngel / 8;
+                    _scrollSpeed = 3+minAngel / 8;
                 }
             }
 
@@ -102,16 +106,16 @@ public class MouseRollControl : MonoBehaviour
                 if (hit.collider.gameObject == gameObject)
                 {
                     _isMouse = false;
-                    ScrollSpeed += Input.GetAxis("Mouse ScrollWheel") * minAngel * 2 / 3;
+                    _scrollSpeed += Input.GetAxis("Mouse ScrollWheel") * minAngel * 2 / 3;
                     _thisRolling = true;
                     _isRolling = true;
                 }
             }
         }
 
-        if (Mathf.Abs(ScrollSpeed) > 1f && !_isMouse && _thisRolling)
+        if (Mathf.Abs(_scrollSpeed) > 1f && !_isMouse && _thisRolling)
         {
-            float y = ScrollSpeed;
+            float y = _scrollSpeed;
             transform.Rotate(Vector3.right * -y * speed, Space.Self);
             _angel += y * speed;
             _angel %= 360;
@@ -122,7 +126,7 @@ public class MouseRollControl : MonoBehaviour
             }
         }
 
-        if (Mathf.Abs(ScrollSpeed) <= 0.25f && !_isMouse)
+        if (Mathf.Abs(_scrollSpeed) <= 0.25f && !_isMouse)
         {
             NormalizeAngel();
            
@@ -131,12 +135,12 @@ public class MouseRollControl : MonoBehaviour
             _isMouse = true;
         }
 
-        if (ScrollSpeed != 0f)
+        if (_scrollSpeed != 0f)
         {
-            if (ScrollSpeed > 0) ScrollSpeed -= 0.5f;
+            if (_scrollSpeed > 0) _scrollSpeed -= 0.5f;
             else
             {
-                ScrollSpeed += 0.5f;
+                _scrollSpeed += 0.5f;
             }
         }
     }
@@ -147,8 +151,7 @@ public class MouseRollControl : MonoBehaviour
         _thisRolling = false;
         _lastPos = Vector3.zero;
         _angel %= 360;
-        int index = (int) ((_angel + minAngel/2) / minAngel);
-        print(index);
+        index = (int) ((_angel + minAngel/2) / minAngel);
         Quaternion r = transform.localRotation;
         r.x = 0;
         transform.localRotation = r;
@@ -160,20 +163,8 @@ public class MouseRollControl : MonoBehaviour
     private void SendAnswer()
     {
         print("发送答案");
-        var p = transform;
-        for (int i = 0; i < 5; i++)
-        {
-            p = p.parent;
-            if (p.GetComponent<RollInput>())
-            {
-                p.SendMessage("SendAnswer");
-                break;
-            }
-        }
+        input.CheckInput();
     }
 
-    public float GetAngel()
-    {
-        return _angel;
-    }
+  
 }

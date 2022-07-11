@@ -12,6 +12,7 @@ using UnityEngine;
 ///字母转换为数字 a-z => 0-25 A-Z => 26-51
 /// 
 /// </summary>
+
 public class DeCode : MonoBehaviour
 {
     public string answer;

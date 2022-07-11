@@ -1,62 +1,93 @@
+using System;
 using System.Collections;
+using Decode;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
-/// <summary>
-/// 通过滚轮输入
-/// 挂在锁上
-/// 通过结束
-/// </summary>
-public class RollInput : MyInput
+namespace Decode
 {
-    public Transform[] rolls;
-    public string name;
-    public AudioClip open;
+	/// <summary>
+	/// 通过滚轮输入
+	/// 挂在锁上
+	/// 通过结束
+	/// </summary>
+	
+	public struct Roll
+	{
+		public enum AnswerType
+		{
+			Rotation,
+			Index
+		}
+		public MouseRollControl rollControl;
+		public AnswerType type;
+		[ShowIf("type",AnswerType.Rotation)]
+		public float answerFloat;
+		
+		[ShowIf("type",AnswerType.Index)]
+		public int answerIndex;
+	}
+	[RequireComponent(typeof(AudioSource))]
+#if UNITY_EDITOR
+	[ExecuteAlways]
+#endif
+	public class RollInput : BaseInput
+	{
+		public Roll[] rolls;
+		public string name;
+		public Actions[] actions;
+#if UNITY_EDITOR
+		private void OnValidate()
+		{
+			foreach (var roll in rolls)
+			{
+				if (roll.rollControl)
+					roll.rollControl.input = this;
+			}
+		}
+		
+#endif
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            SendAnswer();
-        }
-    }
+		public override void CheckInput()
+		{
+			foreach (var roll in rolls)
+			{
+				
+				switch (roll.type)
+				{
+					case Roll.AnswerType.Index:
+						var index = (roll.rollControl.index + roll.rollControl.total) % roll.rollControl.total;
+						if (roll.answerIndex != index)
+						{
+							return;
+						}
+						break;
+					case Roll.AnswerType.Rotation:
+						var angle = roll.rollControl.currentAngel;
+						print(angle);
+						angle %= 360;
+						if (angle > 180)
+							angle -= 360;
+						if (angle < -180)
+							angle += 360;
+						if (Mathf.Abs((angle - roll.answerFloat)) > 0.1f)
+						{
+							return;
+						}
+						break;
+				}
+				
+			}
+			DoActions();
+		}
 
 
-    protected override void SendAnswer()
-    {
-        string rest = "";
-        foreach (var VARIABLE in rolls)
-        {
-            float angle = VARIABLE.GetComponent<MouseRollControl>().currentAngel;
-            print(angle);
-            angle %= 360;
-            if (angle > 180)
-                angle -= 360;
-            if (angle < -180)
-                angle += 360;
-            rest += angle + ";";
-        }
-
-        if (transform.parent.GetComponent<DeCode>().Check(rest))
-        {
-            StartCoroutine(Success());
-        }
-    }
-
-    /// <summary>
-    /// 解密成功后调用
-    /// </summary>
-    protected override IEnumerator Success()
-    {
-        if (GetComponent<Animator>() != null)
-            GetComponent<Animator>().enabled = true;
-
-        gameObject.GetComponent<AudioSource>().PlayOneShot(open);
-        foreach (var VARIABLE in rolls)
-        {
-            VARIABLE.GetComponent<Collider>().enabled = false;
-        }
-        yield return new WaitForSeconds(1f);
-        Destroy(gameObject);
-    }
+		public override void DoActions()
+		{
+			foreach (var action in actions)
+			{
+				action.DoAction();
+			}
+		}
+	}
 }

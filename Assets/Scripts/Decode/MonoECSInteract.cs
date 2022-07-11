@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Sirenix.OdinInspector;
+using Mirror;
 using UnityEngine;
 
 namespace Decode
@@ -9,14 +9,14 @@ namespace Decode
 	/// <summary>
 	/// 获取循环
 	/// </summary>
-	public class MonoECSInteract : MonoBehaviour
+	public class MonoECSInteract : NetworkBehaviour
 	{
 		public static MonoECSInteract Instance;
 
 		private CanvasManager m_CanvasManager;
 
 #if UNITY_EDITOR
-		[ShowInInspector]
+		[Sirenix.OdinInspector.ShowInInspector]
 #endif
 		private List<ObtainItems> m_ObItems;
 
