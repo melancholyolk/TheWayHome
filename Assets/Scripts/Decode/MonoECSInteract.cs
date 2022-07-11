@@ -7,19 +7,17 @@ using UnityEngine;
 namespace Decode
 {
 	/// <summary>
-	/// 解密循环
+	/// 获取循环
 	/// </summary>
-	public class MonoECSDecode : MonoBehaviour
+	public class MonoECSInteract : MonoBehaviour
 	{
-		public KeyCode input;
+		public static MonoECSInteract Instance;
 
-		public static MonoECSDecode Instance;
-		
 		private CanvasManager m_CanvasManager;
 
-		#if UNITY_EDITOR
+#if UNITY_EDITOR
 		[ShowInInspector]
-		#endif
+#endif
 		private List<ObtainItems> m_ObItems;
 
 		private void Awake()
@@ -31,23 +29,19 @@ namespace Decode
 		// Start is called before the first frame update
 		void Start()
 		{
-			m_CanvasManager = GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>();
+			
 		}
 
 		// Update is called once per frame
 		void Update()
 		{
-			if (Input.GetKeyDown(input))
+			foreach (var item in m_ObItems)
 			{
-				// if (m_CanvasManager.CanOperate())
-				// {
-					foreach (var item in m_ObItems)
-					{
-						item.CheckAllConfigs();
-					}
-				// }
+				item.CheckAllConfigs();
 			}
 		}
+
+
 		#region publicAPI
 
 		public void AddScript(ObtainItems item)
@@ -59,8 +53,7 @@ namespace Decode
 		{
 			m_ObItems.Remove(item);
 		}
+
 		#endregion
 	}
-	
 }
-

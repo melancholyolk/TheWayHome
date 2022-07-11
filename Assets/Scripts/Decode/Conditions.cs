@@ -14,6 +14,15 @@ namespace Decode
 		{
 			return false;
 		}
+
+		public virtual void Start()
+		{
+			
+		}
+		public virtual void Update()
+		{
+			
+		}
 	}
 }
 

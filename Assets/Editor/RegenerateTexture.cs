@@ -14,7 +14,7 @@ public class RegenerateTexture : Editor
 		if (GUILayout.Button("重新生成图片"))
 		{
 			myScript.GenMergedTexture();
-			myScript.OnValidate();
+			myScript.Start();
 		}
 		if (GUILayout.Button("保存图片"))
 		{
