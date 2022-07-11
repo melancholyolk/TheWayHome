@@ -11,7 +11,7 @@ public class ObjectPool : MonoBehaviour
 
 	const float m_ReleaseInterval = 30;
 	float m_Time;
-	public bool needReset = false;
+	bool m_needReset = false;
 
 	private void Start()
 	{
@@ -20,10 +20,10 @@ public class ObjectPool : MonoBehaviour
 	private void Update()
 	{
 		m_Time += Time.deltaTime;
-		if (needReset)
+		if (m_needReset)
 		{
 			m_Time = 0;
-			needReset = false;
+			m_needReset = false;
 		}
 		if(m_Time > m_ReleaseInterval && tObj.Count > 0)
 		{
@@ -52,7 +52,7 @@ public class ObjectPool : MonoBehaviour
 	{
 		go.SetActive(false);
 		tObj.Push(go);
-		needReset = true;
+		m_needReset = true;
 	}
 
 }

@@ -28,17 +28,13 @@ public class PlayerMove : NetworkBehaviour
 
     public GameObject[] players;
 
-    public GameObject propPrefab;
-
     public Material playerMaterial;
 
-    public Transform leftHandFront;
+    public Hand hand;
 
-    public Transform rightHandFront;
+    public PlayerAttribute m_attribute;
 
-    public Transform leftHandBack;
-
-    public Transform rightHandBack;
+    public bool useLocalPosition = false;
 
     private Rigidbody m_Rigidbody;
 
@@ -68,6 +64,10 @@ public class PlayerMove : NetworkBehaviour
 
     private CanvasManager m_CanvasManager;
 
+    private float curHp;
+
+    private float curWarm;
+
     private enum PlayerState
     {
         NORMAL = 0,
@@ -96,8 +96,8 @@ public class PlayerMove : NetworkBehaviour
         CmdInitComponent(m_CurrentPlayer, Vector3.one, m_IsHold);
     }
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
     {
         if (!isLocal)
         {
@@ -111,10 +111,23 @@ public class PlayerMove : NetworkBehaviour
         var moveX = Input.GetAxisRaw("Horizontal");
         var moveY = Input.GetAxisRaw("Vertical");
         Vector3 move_speed = new Vector3(moveX, 0, moveY).normalized;
+        if(useLocalPosition)
+            move_speed = Quaternion.AngleAxis(-45,Vector3.up) * move_speed ;
         m_Rigidbody.velocity = move_speed * m_CurrentSpeed;
         PlayAnimation(move_speed);
     }
 
+    void InitComponent(int cur, Vector3 scale, bool hold)
+    {
+        transform.localScale = scale;
+        players[1 - cur].transform.localPosition = Vector3.down * 100;
+        players[cur].transform.localPosition = Vector3.zero;
+        m_AnimatorControl.SetAnimator(cur);
+        m_NetworkAnimator.animator = m_AnimatorControl.GetAnimator();
+        CheckHold(hold);
+    }
+
+    #region Cmd
     [Command]
     public void CmdDecodeIsUse(SyncItem obj, bool temp)
     {
@@ -133,6 +146,84 @@ public class PlayerMove : NetworkBehaviour
         obj.GetComponent<PropProperty>().is_pick = true;
     }
 
+    [Command]
+    private void CmdSetAnimation(PlayerAnimatorControl.AnimationName ani)
+    {
+        RpcSetAnimation(ani);
+    }
+
+    [ClientRpc]
+    private void RpcSetAnimation(PlayerAnimatorControl.AnimationName ani)
+    {
+        m_AnimatorControl.SetAnimation(ani);
+    }
+
+
+    [Command]
+    private void CmdSetAnimation1(PlayerAnimatorControl.AnimationName ani, float time)
+    {
+        RpcSetAnimation1(ani, time);
+    }
+
+    [ClientRpc]
+    private void RpcSetAnimation1(PlayerAnimatorControl.AnimationName ani, float time)
+    {
+        m_AnimatorControl.SetAnimation(ani, time);
+    }
+
+    [Command]
+    private void CmdInitComponent(int currentPlayer, Vector3 scale, bool hold)
+    {
+        RpcInitComponent(currentPlayer, scale, hold);
+    }
+
+    [ClientRpc]
+    private void RpcInitComponent(int currentPlayer, Vector3 scale, bool hold)
+    {
+        InitComponent(currentPlayer, scale, hold);
+    }
+
+    [Command]
+    public void CmdHoldObject(int index)
+    {
+        RpcHoldObject(index);
+    }
+
+    [ClientRpc]
+    private void RpcHoldObject(int index)
+    {
+        HoldObject(index);
+    }
+
+    [Command]
+    private void CmdDiscardProp(int num)
+    {
+        RpcDiscardProp(num);
+    }
+    [ClientRpc]
+    private void RpcDiscardProp(int num)
+    {
+        GameObject obj = ObjectPool._instance.GetGO();
+        obj.GetComponent<PropPick>().SetPropInfo(num);
+        obj.transform.position = objPosition.position;
+        obj.transform.localEulerAngles = new Vector3(45, -45, 0);
+        obj.GetComponent<SpriteRenderer>().sortingOrder = players[0].GetComponent<SortingGroup>().sortingOrder;
+    }
+
+    [Command]
+    public void CmdDestory(string obj)
+    {
+        RpcDestory(obj);
+    }
+
+    [ClientRpc]
+    private void RpcDestory(string obj)
+    {
+        GameObject.Find(obj).GetComponent<PropPick>().is_pick = true;
+    }
+    #endregion
+
+    #region Animator&Move
     void PlayAnimation(Vector3 speed)
     {
         var last = m_CurrentPlayer;
@@ -242,53 +333,6 @@ public class PlayerMove : NetworkBehaviour
         m_ChangeMotion = false;
     }
 
-    [Command]
-    private void CmdSetAnimation(PlayerAnimatorControl.AnimationName ani)
-    {
-        RpcSetAnimation(ani);
-    }
-
-    [ClientRpc]
-    private void RpcSetAnimation(PlayerAnimatorControl.AnimationName ani)
-    {
-        m_AnimatorControl.SetAnimation(ani);
-    }
-
-
-    [Command]
-    private void CmdSetAnimation1(PlayerAnimatorControl.AnimationName ani, float time)
-    {
-        RpcSetAnimation1(ani, time);
-    }
-
-    [ClientRpc]
-    private void RpcSetAnimation1(PlayerAnimatorControl.AnimationName ani, float time)
-    {
-        m_AnimatorControl.SetAnimation(ani, time);
-    }
-
-    [Command]
-    private void CmdInitComponent(int currentPlayer, Vector3 scale, bool hold)
-    {
-        RpcInitComponent(currentPlayer, scale, hold);
-    }
-
-    [ClientRpc]
-    private void RpcInitComponent(int currentPlayer, Vector3 scale, bool hold)
-    {
-        InitComponent(currentPlayer, scale, hold);
-    }
-
-    void InitComponent(int cur, Vector3 scale, bool hold)
-    {
-        transform.localScale = scale;
-        players[1 - cur].transform.localPosition = Vector3.down * 100;
-        players[cur].transform.localPosition = Vector3.zero;
-        m_AnimatorControl.SetAnimator(cur);
-        m_NetworkAnimator.animator = m_AnimatorControl.GetAnimator();
-        CheckHold(hold);
-    }
-
     private void CheckHold(bool hold)
     {
         if (hold)
@@ -303,9 +347,9 @@ public class PlayerMove : NetworkBehaviour
 
     public void ChangeState(Hashtable hashtable)
     {
-        string direction = (string) hashtable["direct"];
+        string direction = (string)hashtable["direct"];
         direction = direction.ToLower();
-        m_CurrentWindForce = (float) hashtable["force"];
+        m_CurrentWindForce = (float)hashtable["force"];
         var lastDirect = m_CurrentWindDirection;
         switch (direction)
         {
@@ -362,74 +406,9 @@ public class PlayerMove : NetworkBehaviour
             return PlayerAnimatorControl.AnimationName.WALKHARD;
         }
     }
+    #endregion
 
-    [Command]
-    public void CmdHoldObject(int index)
-    {
-       RpcHoldObject(index);
-    }
-
-    [ClientRpc]
-    private void RpcHoldObject(int index)
-    {
-        HoldObject(index);
-    }
-
-    private void HoldObject(int index)
-    {
-        if (m_IsHold)
-        {
-            print("已经持有道具");
-            return;
-        }
-
-        m_IsHold = true;
-        m_AnimatorControl.PartialAnimationInit(PlayerAnimatorControl.AnimationName.HOLD);
-        m_HoldObject[0] = Instantiate(handles[index], rightHandFront.position, Quaternion.Euler(new Vector3(45, -45, -32)));
-        m_HoldObject[0].transform.parent = rightHandFront;
-        m_HoldObject[0].GetComponent<SortingGroup>().sortingOrder = -6;
-        m_HoldObject[1] = Instantiate(handles[index], rightHandBack.position, Quaternion.Euler(new Vector3(45, -45, -32)));
-        m_HoldObject[1].transform.parent = rightHandBack;
-        m_HoldObject[1].GetComponent<SortingGroup>().sortingOrder = 11;
-        
-    }
-
-    private void PutDownObject()
-    {
-        if (!m_IsHold)
-        {
-            print("还没有持有道具");
-            return;
-        }
-
-        m_IsHold = false;
-        m_AnimatorControl.PartialAnimationInit(PlayerAnimatorControl.AnimationName.PUTDOWN);
-        Destroy(m_HoldObject[0]);
-        Destroy(m_HoldObject[1]);
-    }
-
-
-    public void DiscarderProp(PropInfo info)
-    {
-        CmdDiscardProp(int.Parse(info.prop_number));
-        RemoveCondition(info.prop_name);
-    }
-
-    [Command]
-    private void CmdDiscardProp(int num)
-    {
-        RpcDiscardProp(num);
-    }
-    [ClientRpc]
-    private void RpcDiscardProp(int num)
-    {
-        GameObject obj = ObjectPool._instance.GetGO();
-        obj.GetComponent<PropPick>().SetPropInfo(num);
-        obj.transform.position = objPosition.position;
-        obj.transform.localEulerAngles = new Vector3(45,-45,0);
-        obj.GetComponent<SpriteRenderer>().sortingOrder = players[0].GetComponent<SortingGroup>().sortingOrder;
-    }
-
+    #region PlayerCondition
     public void AddCondition(string str)
     {
         condition.Add(str);
@@ -449,16 +428,164 @@ public class PlayerMove : NetworkBehaviour
 
         return false;
     }
+    #endregion
 
-    [Command]
-    public void CmdDestory(string obj)
+    #region Hp Warm
+
+    public State curState = State.None;
+    public enum State
     {
-        RpcDestory(obj);
-    }
-    
-    [ClientRpc]
-    private void RpcDestory(string obj)
+        None,
+        LossHp,
+        LossWarm,
+        NeedHelp
+	}
+
+    /// <summary>
+    /// 缓慢丢失温暖值，低于0则丢失血量
+    /// </summary>
+    public void LossWarm()
     {
-        GameObject.Find(obj).GetComponent<PropPick>().is_pick = true;
+        if(curHp <= 0)
+        {
+            curHp = 0;
+            return;
+		}
+        if(curWarm > 0)
+        {
+            curWarm -= Time.deltaTime * m_attribute.lossWarmSpeed;
+            return;
+		}
+
+        if(curHp > 0)
+        {
+            curHp -= Time.deltaTime * m_attribute.lossHpSpeed;
+		}
+	}
+    /// <summary>
+    /// 扣血
+    /// </summary>
+    /// <param name="lossNum"></param>
+    public void LossHp(int lossNum)
+    {
+        curHp -= lossNum;
+        if(curHp < 0)
+            curHp = 0;
+	}
+    /// <summary>
+    /// 缓慢恢复血量
+    /// </summary>
+    public void RecoveryHp()
+    {
+        if(curHp >= m_attribute.maxHp)
+        {
+            curHp = m_attribute.maxHp;
+            return;
+        }
+
+        curHp += Time.deltaTime * m_attribute.recoveryHpSpeed;
+	}
+    /// <summary>
+    /// 缓慢恢复温暖值
+    /// </summary>
+    public void RecoveryWarm()
+    {
+        if (curWarm >= m_attribute.maxWarm)
+        {
+            curWarm = m_attribute.maxWarm;
+            return;
+        }
+        curHp += Time.deltaTime * m_attribute.recoveryWarmSpeed;
+	}
+    /// <summary>
+    /// 恢复一定数值的血量
+    /// </summary>
+    /// <param name="recoveryNum"></param>
+    public void RecoveryHp(float recoveryNum)
+    {
+        curHp += recoveryNum;
+        if (curHp >= m_attribute.maxHp)
+            curHp = m_attribute.maxHp;
     }
+    /// <summary>
+    /// 恢复一定数值的温暖值
+    /// </summary>
+    /// <param name="recoveryNum"></param>
+    public void RecoveryWarm(float recoveryNum)
+    {
+        curWarm += recoveryNum;
+        if (curWarm >= m_attribute.maxWarm)
+            curWarm = m_attribute.maxWarm;
+    }
+
+    #endregion
+
+    private void HoldObject(int index)
+    {
+        if (m_IsHold)
+        {
+            print("已经持有道具");
+            return;
+        }
+
+        m_IsHold = true;
+        m_AnimatorControl.PartialAnimationInit(PlayerAnimatorControl.AnimationName.HOLD);
+        m_HoldObject[0] = Instantiate(handles[index], hand.rightHandFront.position, Quaternion.Euler(new Vector3(45, -45, -32)));
+        m_HoldObject[0].transform.parent = hand.rightHandFront;
+        m_HoldObject[0].GetComponent<SortingGroup>().sortingOrder = -6;
+        m_HoldObject[1] = Instantiate(handles[index], hand.rightHandBack.position, Quaternion.Euler(new Vector3(45, -45, -32)));
+        m_HoldObject[1].transform.parent = hand.rightHandBack;
+        m_HoldObject[1].GetComponent<SortingGroup>().sortingOrder = 11;
+
+    }
+
+    private void PutDownObject()
+    {
+        if (!m_IsHold)
+        {
+            print("还没有持有道具");
+            return;
+        }
+
+        m_IsHold = false;
+        m_AnimatorControl.PartialAnimationInit(PlayerAnimatorControl.AnimationName.PUTDOWN);
+        Destroy(m_HoldObject[0]);
+        Destroy(m_HoldObject[1]);
+    }
+
+    public void DiscarderProp(PropInfo info)
+    {
+        CmdDiscardProp(int.Parse(info.prop_number));
+        RemoveCondition(info.prop_name);
+    }
+
+}
+
+[Serializable]
+public class Hand
+{
+    public Transform leftHandFront;
+
+    public Transform rightHandFront;
+
+    public Transform leftHandBack;
+
+    public Transform rightHandBack;
+}
+[Serializable]
+public class PlayerAttribute 
+{
+    public float moveSpeed;
+
+    public int maxHp;
+
+    public float lossHpSpeed;
+
+    public float recoveryHpSpeed;
+
+    public int maxWarm;     //100
+
+    public float lossWarmSpeed;     //1 -> 2
+
+    public float recoveryWarmSpeed;
 }
