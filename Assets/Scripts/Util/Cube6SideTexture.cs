@@ -204,18 +204,25 @@ namespace GameUtil
 			}
 		}
 
-		void SetInspectorTexture(TextureData texture, Vector2 StartPoint)
+		void SetInspectorTexture(ref TextureData texture, Vector2 StartPoint)
 		{
-			Texture2D nTex = new Texture2D(4096 / 2, 4096 / 3, TextureFormat.ARGB32, true);
-			int height = 4096 / 3;
-			int width = 4096 / 2;
-			Vector2Int start = new Vector2Int((int) (StartPoint.x * 4096), (int) (StartPoint.y * 4096));
+			int textureWid = m_Texture.width;
+			int textureHig = m_Texture.height;
+			if (m_Texture.width % 64 != 0 || m_Texture.height %64 != 0)
+			{
+				Debug.LogError("图片大小必须64*64或整数倍规格");
+				return;
+			}
+			Texture2D nTex = new Texture2D(textureWid / 2, textureHig / 3, TextureFormat.ARGB32, true);
+			int height = textureHig / 3;
+			int width = textureWid / 2;
+			Vector2Int start = new Vector2Int((int) (StartPoint.x * textureWid), (int) (StartPoint.y * textureHig));
 			List<Color> colors = new List<Color>();
 			for (int h = 0; h < height; h++)
 			{
 				for (int w = 0; w < width; w++)
 				{
-					Color color = m_Texture.GetPixelBilinear(start.x + (float) w / 4096, start.y + (float) h / 4096);
+					Color color = m_Texture.GetPixelBilinear((float)(start.x + w) / textureWid, (float)(start.y +  h) / textureHig);
 					colors.Add(color);
 				}
 			}
@@ -253,12 +260,6 @@ namespace GameUtil
 				{
 					ReversUV(uvs,front,newUVS,false,true);
 				}
-
-				if (frontTexture.texture == null)
-				{
-					SetInspectorTexture(frontTexture,new Vector2(0,1));
-				}
-				
 			}
 			else if (faceType == CubeFaceType.Back)
 			{
@@ -287,10 +288,7 @@ namespace GameUtil
 					ReversUV(uvs,back,newUVS,false,true);
 				}
 				
-				if (backTexture.texture == null)
-				{
-					SetInspectorTexture(backTexture,new Vector2(0.5f,1));
-				}
+				
 
 			}
 			else if (faceType == CubeFaceType.Top)
@@ -320,10 +318,7 @@ namespace GameUtil
 					ReversUV(uvs,top,newUVS,false,true);
 				}
 				
-				if (topTexture.texture == null)
-				{
-					SetInspectorTexture(topTexture,new Vector2(0,0));
-				}
+				
 			}
 			else if (faceType == CubeFaceType.Bottom)
 			{
@@ -351,6 +346,7 @@ namespace GameUtil
 				{
 					ReversUV(uvs,bottom,newUVS,false,true);
 				}
+				
 			}
 			else if (faceType == CubeFaceType.Left)
 			{
@@ -378,6 +374,7 @@ namespace GameUtil
 				{
 					ReversUV(uvs,left,newUVS,false,true);
 				}
+				
 			}
 			else if (faceType == CubeFaceType.Right)
 			{
@@ -405,6 +402,8 @@ namespace GameUtil
 				{
 					ReversUV(uvs,right,newUVS,false,true);
 				}
+				
+				
 			}
 		}
 
@@ -444,8 +443,40 @@ namespace GameUtil
 
 		public void GetCurrentMaterialTexture()
 		{
+			MeshFilter meshFilter = GetComponent<MeshFilter>();
+			if (meshFilter == null)
+			{
+				Debug.LogError("Script needs MeshFilter component");
+				return;
+			}
+
+#if UNITY_EDITOR
+			Mesh meshCopy = Mesh.Instantiate(meshFilter.sharedMesh) as Mesh; // Make a deep copy
+			meshCopy.name = "Cube";
+			m_mesh = meshFilter.mesh = meshCopy; // Assign the copy to the meshes
+#else
+		m_mesh = meshFilter.mesh;
+#endif
+			if (m_mesh == null || m_mesh.uv.Length != 24)
+			{
+				Debug.LogError("Script needs to be attached to built-in cube");
+				return;
+			}
+
 			m_Texture = mesh.sharedMaterial.mainTexture as Texture2D;
-			UpdateMeshUVS();
+
+			SetInspectorTexture(ref frontTexture, new Vector2(0, 2f / 3));
+
+			SetInspectorTexture(ref backTexture, new Vector2(0.5f, 2f / 3));
+
+			SetInspectorTexture(ref topTexture, new Vector2(0, 0));
+
+			SetInspectorTexture(ref bottomTexture, new Vector2(0.5f, 0));
+
+			SetInspectorTexture(ref leftTexture, new Vector2(0, 1f / 3));
+			
+			SetInspectorTexture(ref rightTexture, new Vector2(0.5f,1f/3));
+				
 		}
 
 		public void SetDefault()
