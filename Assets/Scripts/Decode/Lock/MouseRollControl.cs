@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
 using Decode;
-using Unity.Mathematics;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 /// <summary>
@@ -14,25 +10,30 @@ using UnityEngine;
 public class MouseRollControl : MonoBehaviour
 {
     public float speed;
-    public float minAngel;
+    
     public AudioClip roll;
+    [ReadOnly]
     public float currentAngel;
-    public int index;
+    [ReadOnly]
     public int total;
+    [ReadOnly]
+    public int index;
     public RollInput input;
+    
     private bool _isMouse = true;
     private Vector3 _lastPos;
-
+    private float _minAngel;
     private bool _thisRolling = false;
     private bool _isRolling = false;
     private float _angel;
     private int _unit = 0;
     private float _scrollSpeed = 0;
-
+	
+    
     private void Start()
     {
 	    total = transform.childCount - 1;
-        minAngel = 360f / total;
+        _minAngel = 360f / total;
         _angel = 0;
     }
 
@@ -60,9 +61,9 @@ public class MouseRollControl : MonoBehaviour
                     transform.Rotate(Vector3.right * -y * speed, Space.Self);
                     _angel += y * speed;
                     _angel %= 360;
-                    if (_unit != (int) (_angel / minAngel))
+                    if (_unit != (int) (_angel / _minAngel))
                     {
-                        _unit = (int) (_angel / minAngel);
+                        _unit = (int) (_angel / _minAngel);
                         GetComponent<AudioSource>().PlayOneShot(roll);
                     }
                     _lastPos = Input.mousePosition;
@@ -90,11 +91,11 @@ public class MouseRollControl : MonoBehaviour
             {
                 if (Input.GetAxis("Mouse ScrollWheel") < 0)
                 {
-                    _scrollSpeed = -3+-minAngel / 8;
+                    _scrollSpeed = -3+-_minAngel / 8;
                 }
                 else
                 {
-                    _scrollSpeed = 3+minAngel / 8;
+                    _scrollSpeed = 3+_minAngel / 8;
                 }
             }
 
@@ -106,7 +107,7 @@ public class MouseRollControl : MonoBehaviour
                 if (hit.collider.gameObject == gameObject)
                 {
                     _isMouse = false;
-                    _scrollSpeed += Input.GetAxis("Mouse ScrollWheel") * minAngel * 2 / 3;
+                    _scrollSpeed += Input.GetAxis("Mouse ScrollWheel") * _minAngel * 2 / 3;
                     _thisRolling = true;
                     _isRolling = true;
                 }
@@ -119,9 +120,9 @@ public class MouseRollControl : MonoBehaviour
             transform.Rotate(Vector3.right * -y * speed, Space.Self);
             _angel += y * speed;
             _angel %= 360;
-            if (_unit != (int) (_angel / minAngel))
+            if (_unit != (int) (_angel / _minAngel))
             {
-                _unit = (int) (_angel / minAngel);
+                _unit = (int) (_angel / _minAngel);
                 GetComponent<AudioSource>().PlayOneShot(roll);
             }
         }
@@ -151,13 +152,13 @@ public class MouseRollControl : MonoBehaviour
         _thisRolling = false;
         _lastPos = Vector3.zero;
         _angel %= 360;
-        index = (int) ((_angel + minAngel/2) / minAngel);
+        index = (int) ((_angel + _minAngel/2) / _minAngel);
         Quaternion r = transform.localRotation;
         r.x = 0;
         transform.localRotation = r;
-        transform.Rotate(Vector3.right * (-index * minAngel), Space.Self);
+        transform.Rotate(Vector3.right * (-index * _minAngel), Space.Self);
 
-        currentAngel = (-index * minAngel);
+        currentAngel = (-index * _minAngel);
     }
 
     private void SendAnswer()
@@ -165,6 +166,4 @@ public class MouseRollControl : MonoBehaviour
         print("发送答案");
         input.CheckInput();
     }
-
-  
 }

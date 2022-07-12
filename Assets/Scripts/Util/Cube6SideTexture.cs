@@ -18,13 +18,15 @@ namespace GameUtil
 	[ExecuteAlways]
 	public class Cube6SideTexture : MonoBehaviour
 	{
-		[Header("Textures")] public TextureData topTexture;
+		[Header("Textures")] 
+		public TextureData topTexture;
 		public TextureData bottomTexture;
 		public TextureData leftTexture;
 		public TextureData rightTexture;
 		public TextureData frontTexture;
 		public TextureData backTexture;
-		[Header("UVSplitPoints")] public Vector2 topPoint;
+		[Header("UVSplitPoints")]
+		public Vector2 topPoint;
 		public Vector2 bottomPoint;
 		public Vector2 leftPoint;
 		public Vector2 rightPoint;
@@ -201,6 +203,27 @@ namespace GameUtil
 				}
 			}
 		}
+
+		void SetInspectorTexture(TextureData texture, Vector2 StartPoint)
+		{
+			Texture2D nTex = new Texture2D(4096 / 2, 4096 / 3, TextureFormat.ARGB32, true);
+			int height = 4096 / 3;
+			int width = 4096 / 2;
+			Vector2Int start = new Vector2Int((int) (StartPoint.x * 4096), (int) (StartPoint.y * 4096));
+			List<Color> colors = new List<Color>();
+			for (int h = 0; h < height; h++)
+			{
+				for (int w = 0; w < width; w++)
+				{
+					Color color = m_Texture.GetPixelBilinear(start.x + (float) w / 4096, start.y + (float) h / 4096);
+					colors.Add(color);
+				}
+			}
+
+			nTex.SetPixels(colors.ToArray());
+			nTex.Apply();
+			texture.texture = nTex;
+		}
 		void SetFaceTexture(CubeFaceType faceType, Vector2[] uvs)
 		{
 			if (faceType == CubeFaceType.Front)
@@ -230,6 +253,11 @@ namespace GameUtil
 				{
 					ReversUV(uvs,front,newUVS,false,true);
 				}
+
+				if (frontTexture.texture == null)
+				{
+					SetInspectorTexture(frontTexture,new Vector2(0,1));
+				}
 				
 			}
 			else if (faceType == CubeFaceType.Back)
@@ -258,6 +286,11 @@ namespace GameUtil
 				{
 					ReversUV(uvs,back,newUVS,false,true);
 				}
+				
+				if (backTexture.texture == null)
+				{
+					SetInspectorTexture(backTexture,new Vector2(0.5f,1));
+				}
 
 			}
 			else if (faceType == CubeFaceType.Top)
@@ -285,6 +318,11 @@ namespace GameUtil
 				else
 				{
 					ReversUV(uvs,top,newUVS,false,true);
+				}
+				
+				if (topTexture.texture == null)
+				{
+					SetInspectorTexture(topTexture,new Vector2(0,0));
 				}
 			}
 			else if (faceType == CubeFaceType.Bottom)
@@ -402,6 +440,22 @@ namespace GameUtil
 			fileStream.Close();
 			UnityEditor.AssetDatabase.SaveAssets();
 			UnityEditor.AssetDatabase.Refresh();
+		}
+
+		public void GetCurrentMaterialTexture()
+		{
+			m_Texture = mesh.sharedMaterial.mainTexture as Texture2D;
+			UpdateMeshUVS();
+		}
+
+		public void SetDefault()
+		{
+			topPoint = new Vector2(0, 0);
+			bottomPoint = new Vector2(1, 0);
+			leftPoint = new Vector2(0, 1);
+			rightPoint = new Vector2(1, 1);
+			frontPoint = new Vector2(0, 2);
+			backPoint = new Vector2(1, 2);
 		}
 	}
 }

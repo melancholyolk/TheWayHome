@@ -13,6 +13,7 @@ namespace Decode
 		[Searchable]
 		public ObtainConfig[] configs;
 
+		[HideInInspector]
 		public GameObject pre;
 		
 		#region MonoAPI
