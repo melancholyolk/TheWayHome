@@ -1,27 +1,44 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace GameUtil
 {
+	[Serializable]
+	public struct TextureData
+	{
+		public Texture2D texture;
+		public bool reversHorizontal;
+		public bool reversVertical;
+	}
+
 	[ExecuteAlways]
 	public class Cube6SideTexture : MonoBehaviour
 	{
-		[Header("Textures")] 
-		public Texture2D topTexture;
-		public Texture2D bottomTexture;
-		public Texture2D leftTexture;
-		public Texture2D rightTexture;
-		public Texture2D frontTexture;
-		public Texture2D backTexture;
-		[Header("UVSplitPoints")] 
-		public Vector2 topPoint;
+		[Header("Textures")] public TextureData topTexture;
+		public TextureData bottomTexture;
+		public TextureData leftTexture;
+		public TextureData rightTexture;
+		public TextureData frontTexture;
+		public TextureData backTexture;
+		[Header("UVSplitPoints")] public Vector2 topPoint;
 		public Vector2 bottomPoint;
 		public Vector2 leftPoint;
 		public Vector2 rightPoint;
 		public Vector2 frontPoint;
 		public Vector2 backPoint;
+
+
+		private static int[] front = new[] {0, 1, 2, 3};
+		private static int[] back = new[] {7, 6, 11, 10};
+		private static int[] top = new[] {8, 9, 4, 5};
+		private static int[] bottom = new[] {12, 15, 13, 14};
+		private static int[] left = new[] {16, 19, 17, 18};
+		private static int[] right = new[] {20, 23, 21, 22};
+
 
 		public enum CubeFaceType
 		{
@@ -40,7 +57,7 @@ namespace GameUtil
 		private Texture2D m_Texture;
 
 		// Start is called before the first frame update
-		 public void Start()
+		public void Start()
 		{
 			MeshFilter meshFilter = GetComponent<MeshFilter>();
 			if (meshFilter == null)
@@ -155,55 +172,201 @@ namespace GameUtil
 			return uvs;
 		}
 
+		void ReversUV(Vector2[] origin,int[] indexer, Vector2[] uvs, bool reversHorizon, bool reversVertic)
+		{
+			if (reversHorizon && reversVertic)
+			{
+				for (int i = 0; i < 4; i++)
+				{
+					origin[indexer[i]] = uvs[3-i];
+				}
+			}
+			else if (reversHorizon)
+			{
+				int sign = 1;
+				for (int i = 0; i < 4; i++)
+				{
+					origin[indexer[i]] = uvs[i + sign];
+					sign *= -1;
+				}
+			}
+			else if (reversVertic)
+			{
+				for (int i = 0; i < 4; i++)
+				{
+					var index = i - 2;
+					if (index < 0)
+						index += 4;
+					origin[indexer[i]] = uvs[index];
+				}
+			}
+		}
 		void SetFaceTexture(CubeFaceType faceType, Vector2[] uvs)
 		{
 			if (faceType == CubeFaceType.Front)
 			{
 				Vector2[] newUVS = GetUVS(frontPoint.x, frontPoint.y);
-				uvs[0] = newUVS[0];
-				uvs[1] = newUVS[1];
-				uvs[2] = newUVS[2];
-				uvs[3] = newUVS[3];
+
+				for (int i = 0; i < 4; i++)
+				{
+					uvs[front[i]] = newUVS[i];
+				}
+				if (!frontTexture.reversHorizontal && !frontTexture.reversVertical)
+				{
+					for (int i = 0; i < 4; i++)
+					{
+						uvs[front[i]] = newUVS[i];
+					}
+				}
+				else if (frontTexture.reversHorizontal && frontTexture.reversVertical)
+				{
+					ReversUV(uvs,front,newUVS,true,true);
+				}
+				else if (frontTexture.reversHorizontal)
+				{
+					ReversUV(uvs,front,newUVS,true,false);
+				}
+				else
+				{
+					ReversUV(uvs,front,newUVS,false,true);
+				}
+				
 			}
 			else if (faceType == CubeFaceType.Back)
 			{
 				Vector2[] newUVS = GetUVS(backPoint.x, backPoint.y);
-				uvs[10] = newUVS[3];
-				uvs[11] = newUVS[2];
-				uvs[6] = newUVS[1];
-				uvs[7] = newUVS[0];
+				for (int i = 0; i < 4; i++)
+				{
+					uvs[back[i]] = newUVS[i];
+				}
+				if (!backTexture.reversHorizontal && !backTexture.reversVertical)
+				{
+					for (int i = 0; i < 4; i++)
+					{
+						uvs[back[i]] = newUVS[i];
+					}
+				}
+				else if (backTexture.reversHorizontal && backTexture.reversVertical)
+				{
+					ReversUV(uvs,back,newUVS,true,true);
+				}
+				else if (backTexture.reversHorizontal)
+				{
+					ReversUV(uvs,back,newUVS,true,false);
+				}
+				else
+				{
+					ReversUV(uvs,back,newUVS,false,true);
+				}
+
 			}
 			else if (faceType == CubeFaceType.Top)
 			{
 				Vector2[] newUVS = GetUVS(topPoint.x, topPoint.y);
-				uvs[8] = newUVS[0];
-				uvs[9] = newUVS[1];
-				uvs[4] = newUVS[2];
-				uvs[5] = newUVS[3];
+				for (int i = 0; i < 4; i++)
+				{
+					uvs[top[i]] = newUVS[i];
+				}
+				if (!topTexture.reversHorizontal && !topTexture.reversVertical)
+				{
+					for (int i = 0; i < 4; i++)
+					{
+						uvs[top[i]] = newUVS[i];
+					}
+				}
+				else if (topTexture.reversHorizontal && topTexture.reversVertical)
+				{
+					ReversUV(uvs,top,newUVS,true,true);
+				}
+				else if (topTexture.reversHorizontal)
+				{
+					ReversUV(uvs,top,newUVS,true,false);
+				}
+				else
+				{
+					ReversUV(uvs,top,newUVS,false,true);
+				}
 			}
 			else if (faceType == CubeFaceType.Bottom)
 			{
 				Vector2[] newUVS = GetUVS(bottomPoint.x, bottomPoint.y);
-				uvs[12] = newUVS[0];
-				uvs[14] = newUVS[3];
-				uvs[15] = newUVS[1];
-				uvs[13] = newUVS[2];
+				for (int i = 0; i < 4; i++)
+				{
+					uvs[bottom[i]] = newUVS[i];
+				}
+				if (!bottomTexture.reversHorizontal && !bottomTexture.reversVertical)
+				{
+					for (int i = 0; i < 4; i++)
+					{
+						uvs[bottom[i]] = newUVS[i];
+					}
+				}
+				else if (bottomTexture.reversHorizontal && bottomTexture.reversVertical)
+				{
+					ReversUV(uvs,bottom,newUVS,true,true);
+				}
+				else if (bottomTexture.reversHorizontal)
+				{
+					ReversUV(uvs,bottom,newUVS,true,false);
+				}
+				else
+				{
+					ReversUV(uvs,bottom,newUVS,false,true);
+				}
 			}
 			else if (faceType == CubeFaceType.Left)
 			{
 				Vector2[] newUVS = GetUVS(leftPoint.x, leftPoint.y);
-				uvs[16] = newUVS[0];
-				uvs[18] = newUVS[3];
-				uvs[19] = newUVS[1];
-				uvs[17] = newUVS[2];
+				for (int i = 0; i < 4; i++)
+				{
+					uvs[left[i]] = newUVS[i];
+				}
+				if (!leftTexture.reversHorizontal && !leftTexture.reversVertical)
+				{
+					for (int i = 0; i < 4; i++)
+					{
+						uvs[left[i]] = newUVS[i];
+					}
+				}
+				else if (leftTexture.reversHorizontal && leftTexture.reversVertical)
+				{
+					ReversUV(uvs,left,newUVS,true,true);
+				}
+				else if (leftTexture.reversHorizontal)
+				{
+					ReversUV(uvs,left,newUVS,true,false);
+				}
+				else
+				{
+					ReversUV(uvs,left,newUVS,false,true);
+				}
 			}
 			else if (faceType == CubeFaceType.Right)
 			{
 				Vector2[] newUVS = GetUVS(rightPoint.x, rightPoint.y);
-				uvs[20] = newUVS[0];
-				uvs[22] = newUVS[3];
-				uvs[23] = newUVS[1];
-				uvs[21] = newUVS[2];
+				for (int i = 0; i < 4; i++)
+				{
+					uvs[right[i]] = newUVS[i];
+				}
+				if (!rightTexture.reversHorizontal && !rightTexture.reversVertical)
+				{
+					for (int i = 0; i < 4; i++)
+					{
+						uvs[right[i]] = newUVS[i];
+					}
+				}
+				else if (rightTexture.reversHorizontal && rightTexture.reversVertical)
+				{
+					ReversUV(uvs,right,newUVS,true,true);
+				}
+				else if (rightTexture.reversHorizontal)
+				{
+					ReversUV(uvs,right,newUVS,true,false);
+				}
+				else
+				{
+					ReversUV(uvs,right,newUVS,false,true);
+				}
 			}
 		}
 
@@ -211,17 +374,17 @@ namespace GameUtil
 		{
 			mesh = GetComponent<MeshRenderer>();
 			Texture2D[] texture2Ds = new Texture2D[6];
-			texture2Ds[0] = topTexture;
-			texture2Ds[1] = bottomTexture;
-			texture2Ds[2] = leftTexture;
-			texture2Ds[3] = rightTexture;
-			texture2Ds[4] = frontTexture;
-			texture2Ds[5] = backTexture;
+			texture2Ds[0] = topTexture.texture;
+			texture2Ds[1] = bottomTexture.texture;
+			texture2Ds[2] = leftTexture.texture;
+			texture2Ds[3] = rightTexture.texture;
+			texture2Ds[4] = frontTexture.texture;
+			texture2Ds[5] = backTexture.texture;
 			m_Texture = MergeMoreTex(texture2Ds);
 
 			mesh.sharedMaterial.SetTexture("_MainTex", m_Texture);
-			mesh.sharedMaterial.SetTexture("_BaseMap", m_Texture);		
-			}
+			mesh.sharedMaterial.SetTexture("_BaseMap", m_Texture);
+		}
 
 		public void SaveMergedTexture()
 		{
