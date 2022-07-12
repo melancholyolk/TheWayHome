@@ -11,6 +11,14 @@ public class RegenerateTexture : Editor
 		DrawDefaultInspector();
 
 		Cube6SideTexture myScript = (Cube6SideTexture) target;
+		if (GUILayout.Button("获得当前材质贴图"))
+		{
+			myScript.GetCurrentMaterialTexture();
+		}
+		if (GUILayout.Button("默认UV点"))
+		{
+			myScript.SetDefault();
+		}
 		if (GUILayout.Button("重新生成图片"))
 		{
 			myScript.GenMergedTexture();
