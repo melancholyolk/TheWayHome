@@ -11,32 +11,29 @@ public class EscControl : NetworkBehaviour
 
     private bool escmenu_show = false;
 
-    private CanvasManager _canvasManager;
-
     private float time = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        _canvasManager = GetComponent<CanvasManager>();
         network = GameObject.FindWithTag("NetworkManager").GetComponent<NetworkManager>();
     }
 
     private void Update()
     {
         time += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Escape) && (_canvasManager.CanOperate() ||  _canvasManager.is_setting))
+        if (Input.GetKeyDown(KeyCode.Escape) && (CanvasManager.Instance.CanOperate() || CanvasManager.Instance.is_setting))
         {
             if (time < 1f) return;
             if (!esc_menu.activeSelf)
             {
-                _canvasManager.is_setting = true;
+                CanvasManager.Instance.is_setting = true;
                 esc_menu.SetActive(!esc_menu.activeSelf);
             }
             else
             {
                 escmenu_show = true;
-                _canvasManager.is_setting = false;
+                CanvasManager.Instance.is_setting = false;
             }
             time = 0;
         }

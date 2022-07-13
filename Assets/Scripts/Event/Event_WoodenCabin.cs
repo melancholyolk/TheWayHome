@@ -18,7 +18,7 @@ public class Event_WoodenCabin : Event
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canvas.GetComponent<CanvasManager>().CanOperate())
+        if (Input.GetKeyDown(KeyCode.E) && CanvasManager.Instance.CanOperate())
         {
             if (canUse)
             {
@@ -45,7 +45,7 @@ public class Event_WoodenCabin : Event
             canvas.GetComponent<View_Control>().ShowDialog(_triggerDialog);
             // _obtainItems.enabled = true;
             GameObject.FindWithTag("Player").SendMessage("RemoveCondition", "灰色钥匙");
-            canvas.GetComponent<CanvasManager>().RemovePropInfo("灰色钥匙");   
+            CanvasManager.Instance.RemovePropInfo("灰色钥匙");   
         }
     }
 }

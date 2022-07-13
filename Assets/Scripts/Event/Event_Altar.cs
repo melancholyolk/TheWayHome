@@ -17,7 +17,7 @@ public class Event_Altar : Event
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canvas.GetComponent<CanvasManager>().CanOperate())
+        if (Input.GetKeyDown(KeyCode.E) && CanvasManager.Instance.CanOperate())
         {
             if (canUse)
             {
@@ -80,7 +80,7 @@ public class Event_Altar : Event
                     return;
                 }
             }
-            canvas.GetComponent<CanvasManager>().player.SendMessage("AddCondition", "祭坛");
+            CanvasManager.Instance.player.SendMessage("AddCondition", "祭坛");
             canvas.GetComponent<View_Control>().ShowDialog(new List<string>(new []{"祭坛好像被激活了"}));
             order.Clear();
         }

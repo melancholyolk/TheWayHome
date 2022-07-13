@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class SyncManager : NetworkBehaviour
 {
+    public static SyncManager Instance;
+
     private static List<PropInfo> prop_info = new List<PropInfo>();
     /// <summary>
     /// 线索管理
@@ -28,15 +30,11 @@ public class SyncManager : NetworkBehaviour
     private Book book;
     private void Start()
     {
+        Instance = this;
         string[] str = {"Prop"};
         prop_info = GetComponent<PropLoad>().FindTextByName(str);
         for(int i = 1; i < prop_info.Count; i++)
             prop_info[i].prop_sprite = sprites[i - 1];
-    }
-
-    private void Awake()
-    {
-        GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().syncManager = this;
     }
 
     [Command(requiresAuthority =false)]
@@ -70,7 +68,7 @@ public class SyncManager : NetworkBehaviour
         return prop_temp;
     }
 
-    public static PropInfo GetPropInfoByNum(int num)
+    public PropInfo GetPropInfoByNum(int num)
     {
         return prop_info[num];
     }

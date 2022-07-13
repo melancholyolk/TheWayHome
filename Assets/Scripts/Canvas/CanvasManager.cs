@@ -14,7 +14,6 @@ public class CanvasManager : MonoBehaviour
     public PickUpShow pickUpShow;
     public PropPanel propPanel;
     public PlayerManager playerManager;
-    public SyncManager syncManager;
     public GameObject clue_menu;
     public PlayerMove player;
 
@@ -42,7 +41,7 @@ public class CanvasManager : MonoBehaviour
             propPanel.ChangeState();
             if (cluemenu_show)
             {
-                syncManager.ShowClue();
+                SyncManager.Instance.ShowClue();
             }
         }
     }
@@ -64,7 +63,7 @@ public class CanvasManager : MonoBehaviour
 
     public bool CanOperate()
     {
-        if (!is_decoding && !is_picking && !is_picking && !cluemenu_show && !is_setting)
+        if (!is_decoding && !is_picking && !cluemenu_show && !is_setting)
         {
             return true;
         }
@@ -100,7 +99,7 @@ public class CanvasManager : MonoBehaviour
     
     public void PickUpStart(int num, float size)
     {
-        PropInfo info = SyncManager.GetPropInfoByNum(num);
+        PropInfo info = SyncManager.Instance.GetPropInfoByNum(num);
         is_picking = true;
         pickUpShow.PickUpStart(info.prop_sprite , size, info.prop_name,info.prop_describe);
         if (info.prop_type == "t")
@@ -115,7 +114,7 @@ public class CanvasManager : MonoBehaviour
             }
         }else if(info.prop_type == "c")
         {
-            syncManager.SetOwnClue(num);
+            SyncManager.Instance.SetOwnClue(num);
             player.AddCondition(info.prop_name);
         }
     }

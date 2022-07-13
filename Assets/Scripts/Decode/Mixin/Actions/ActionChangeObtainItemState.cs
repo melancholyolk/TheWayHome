@@ -9,20 +9,9 @@ namespace Decode
 	/// </summary>
 	public class ActionChangeObtainItemState : Actions
 	{
-		public ObtainItems item;
-		public bool isUsing;
-		public bool isCompleted;
-
-		public ActionChangeObtainItemState(){}
-		public ActionChangeObtainItemState(bool isUsing = false, bool isCompleted = false)
-		{
-			this.isCompleted = isCompleted;
-			this.isUsing = isUsing;
-		}
 		protected override void DoAction()
 		{
-			item.isCompleted = isCompleted;
-			item.isUsing = isUsing;
+			MonoECSInteract.Instance.CmdComplete(item.Id);
 		}
 	}
 }

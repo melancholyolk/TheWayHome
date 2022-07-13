@@ -62,8 +62,6 @@ public class PlayerMove : NetworkBehaviour
 
     private NetworkAnimator m_NetworkAnimator;
 
-    private CanvasManager m_CanvasManager;
-
     private float curHp;
 
     private float curWarm;
@@ -77,10 +75,6 @@ public class PlayerMove : NetworkBehaviour
 
     private PlayerState m_CurrentState = PlayerState.NORMAL;
 
-    private void Awake()
-    {
-        m_CanvasManager = GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>();
-    }
 
 
     // Start is called before the first frame update
@@ -104,7 +98,7 @@ public class PlayerMove : NetworkBehaviour
             return;
         }
 
-        if (!m_CanvasManager.CanOperate())
+        if (!CanvasManager.Instance.CanOperate())
         {
             return;
         }
@@ -203,7 +197,7 @@ public class PlayerMove : NetworkBehaviour
     [ClientRpc]
     private void RpcDiscardProp(int num)
     {
-        GameObject obj = ObjectPool._instance.GetGO();
+        GameObject obj = ObjectPool._instance.GetGO(num);
         obj.GetComponent<PropPick>().SetPropInfo(num);
         obj.transform.position = objPosition.position;
         obj.transform.localEulerAngles = new Vector3(45, -45, 0);

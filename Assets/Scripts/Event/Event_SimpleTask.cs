@@ -16,7 +16,7 @@ public class Event_SimpleTask : Event
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canvas.GetComponent<CanvasManager>().CanOperate())
+        if (Input.GetKeyDown(KeyCode.E) && CanvasManager.Instance.CanOperate())
         {
             if (canUse)
             {
@@ -51,7 +51,7 @@ public class Event_SimpleTask : Event
         GameObject.Find("TaskLoader").SendMessage("CmdCompleteTask", _taskMessage);
         if (!string.IsNullOrEmpty(removeTool))
         {
-            canvas.GetComponent<CanvasManager>().RemovePropInfo(removeTool);
+            CanvasManager.Instance.RemovePropInfo(removeTool);
         }
     }
 }

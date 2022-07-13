@@ -302,7 +302,7 @@ public class TaskManager : NetworkBehaviour
             var reward = _taskInfos[index].taskInfo.taskReward;
             if (reward != null)
             {
-                GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player
+                CanvasManager.Instance.player
                     .SendMessage("AddCondition", reward[0].reward);
             }
         }

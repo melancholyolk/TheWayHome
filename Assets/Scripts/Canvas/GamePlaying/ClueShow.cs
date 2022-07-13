@@ -11,13 +11,10 @@ public class ClueShow : MonoBehaviour
     public Text describe;
 
     private List<PropInfo> prop_info = new List<PropInfo>();
-    private SyncManager prop_manager;
     private List<GameObject> clues = new List<GameObject>();
 
     public void OpenClue()
     {
-        if(!prop_manager)
-        prop_manager = GameObject.FindWithTag("SyncManager").GetComponent<SyncManager>();
         GetPropInfo();
     }
     private void GetPropInfo()
@@ -26,7 +23,7 @@ public class ClueShow : MonoBehaviour
         {
             Destroy(clue);
         }
-        prop_info = prop_manager.GetPropInfo();
+        prop_info = SyncManager.Instance.GetPropInfo();
         for(int i = 0; i < prop_info.Count; i++)
         {
             GameObject obj = Instantiate(panel_prefab, this.transform);

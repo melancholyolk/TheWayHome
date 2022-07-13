@@ -17,7 +17,7 @@ public class Event_FirePan : Event
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canvas.GetComponent<CanvasManager>().CanOperate())
+        if (Input.GetKeyDown(KeyCode.E) && CanvasManager.Instance.CanOperate())
         {
             if (canUse)
             {
@@ -43,7 +43,7 @@ public class Event_FirePan : Event
         {
             canvas.GetComponent<View_Control>().ShowDialog(_triggerDialog);
             // Debug.LogWarning(torch);
-            GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player.GetComponent<PlayerMove>().CmdHoldObject(0);
+            CanvasManager.Instance.player.GetComponent<PlayerMove>().CmdHoldObject(0);
         }
 
         if (eventType == EventType.TaskObject)
@@ -55,6 +55,6 @@ public class Event_FirePan : Event
     private void SendTaskManager()
     {
         GameObject.Find("TaskLoader").SendMessage("CmdCompleteTask", _taskMessage);
-        canvas.GetComponent<CanvasManager>().RemovePropInfo("木棒");
+        CanvasManager.Instance.RemovePropInfo("木棒");
     }
 }

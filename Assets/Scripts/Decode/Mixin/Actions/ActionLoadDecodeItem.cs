@@ -9,15 +9,15 @@ namespace Decode
 	{
 		public GameObject decodePrefab;
 		public Camera decodeCamera;
-		public ObtainItems parent;
 		protected override void DoAction()
 		{
 			var go = GameObject.Instantiate(decodePrefab, decodeCamera.transform.forward.normalized,
-				Quaternion.identity,parent.transform);
+				Quaternion.identity, item.transform);
 			go.transform.LookAt(decodeCamera.transform);
 			var input = go.GetComponent<BaseInput>();
-			input.Initialize(parent);
+			input.Initialize(item);
 			isDone = true;
+			MonoECSInteract.Instance.CmdIsUsing(item.Id,true);
 		}
 	}
 }

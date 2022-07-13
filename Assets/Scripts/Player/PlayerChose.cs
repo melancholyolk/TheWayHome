@@ -72,14 +72,14 @@ public class PlayerChose : NetworkBehaviour
         {
             playerMove.tag = "Player";
             Camera.main.GetComponent<CameraFollow>().SetPlayer(playerMove.transform);
-            GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player = playerMove.GetComponent<PlayerMove>();
+            CanvasManager.Instance.player = playerMove.GetComponent<PlayerMove>();
             if(player == 1)
             {
-                GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player_type = CanvasManager.Player.Player1;
+                CanvasManager.Instance.player_type = CanvasManager.Player.Player1;
             }
             else
             {
-                GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player_type = CanvasManager.Player.Player2;
+                CanvasManager.Instance.player_type = CanvasManager.Player.Player2;
             }
             playerMove.isLocal = true;
             Destroy(this.gameObject);

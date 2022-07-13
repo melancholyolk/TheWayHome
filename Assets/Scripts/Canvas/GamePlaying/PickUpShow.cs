@@ -25,12 +25,6 @@ public class PickUpShow : MonoBehaviour
     public Text describe;
 
 
-    private CanvasManager canvas;
-    private void Start()
-    {
-        canvas = GameObject.FindObjectOfType<CanvasManager>();
-    }
-
     private void Update()
     {
         if (!is_show)
@@ -100,7 +94,7 @@ public class PickUpShow : MonoBehaviour
         }
         else
         {
-            canvas.is_picking = false;
+            CanvasManager.Instance.is_picking = false;
         }
     }
 }

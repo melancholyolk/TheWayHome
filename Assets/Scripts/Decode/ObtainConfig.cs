@@ -17,6 +17,14 @@ namespace Decode
 			callBack.CallBack();
 		}
 
+		public void Init(ObtainItems obtain)
+		{
+			for(int i = 0; i < actions.Length; i++)
+			{
+				actions[i].item = obtain;
+			}
+		}
+
 		public void CheckKeyInput(KeyCode key)
 		{
 			foreach (var condition in conditions)

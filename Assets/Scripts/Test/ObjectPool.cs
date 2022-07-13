@@ -33,7 +33,7 @@ public class ObjectPool : MonoBehaviour
 
 	}
 
-	public GameObject GetGO()
+	public GameObject GetGO(int num)
 	{
 		GameObject go;
 		if(tObj.Count > 0)
@@ -45,6 +45,7 @@ public class ObjectPool : MonoBehaviour
 		{
 			go = Instantiate(prefab) as GameObject;
 		}
+		go.GetComponent<PropPick>().SetPropInfo(num);
 		return go;
 	}
 

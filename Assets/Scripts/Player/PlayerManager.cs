@@ -6,8 +6,20 @@ using UnityEngine;
 /// <summary>
 /// 玩家信息管理
 /// </summary>
-public class PlayerManager : NetworkBehaviour
+public class PlayerManager
 {
+    private static PlayerManager _instance;
+    public static PlayerManager Instance { 
+        get{
+            if(_instance == null)
+            {
+                _instance = new PlayerManager();
+            }
+            return _instance;
+        }
+        set{
+	    }
+    }
     //[SyncVar]
     //private PlayerInfo player1_info = new PlayerInfo();
     //[SyncVar]
@@ -17,10 +29,7 @@ public class PlayerManager : NetworkBehaviour
 
     private bool panel1_isusing = false;
     private bool panel2_isusing = false;
-    private void Awake()
-    {
-        GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().playerManager = this;
-    }
+
     public void SetNum(int num)
     {
         cur_num = num;

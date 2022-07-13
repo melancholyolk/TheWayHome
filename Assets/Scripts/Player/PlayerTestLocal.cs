@@ -66,8 +66,6 @@ public class PlayerTestLocal : MonoBehaviour
 
     private Animator _networkAnimator;
 
-    private CanvasManager _canvasManager;
-
     private enum PlayerState
     {
         NORMAL = 0,
@@ -104,7 +102,7 @@ public class PlayerTestLocal : MonoBehaviour
             return;
         }
 
-        if (!_canvasManager.CanOperate())
+        if (!CanvasManager.Instance.CanOperate())
         {
             return;
         }

@@ -20,8 +20,6 @@ namespace Decode
 		public void Initialize(ObtainItems parent)
 		{
 			m_Parent = parent;
-			m_Change = new ActionChangeObtainItemState(true);
-			m_Change.item = parent;
 			m_Change.CheckDoAction();
 		}
 
@@ -29,15 +27,12 @@ namespace Decode
 		{
 			if(m_Change == null)
 				return;
-			m_Change.isUsing = true;
-			m_Change.CheckDoAction();
 		}
 
 		public void OnDisable()
 		{
 			Debug.Assert(m_Change!=null,"检查Parent");
-			m_Change.isUsing = false;
-			m_Change.CheckDoAction();
+			MonoECSInteract.Instance.CmdIsUsing(m_Parent.Id,false);
 		}
 
 		public virtual void DoActions()

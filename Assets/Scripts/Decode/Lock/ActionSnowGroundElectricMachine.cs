@@ -31,7 +31,7 @@ namespace Decode
 				light.GetComponent<SpriteRenderer>().sprite = lightOn;
 				light.GetComponentInChildren<Light>().enabled = true;
 			}
-			GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player.GetComponent<PlayerMove>().AddCondition("电力");
+			CanvasManager.Instance.player.GetComponent<PlayerMove>().AddCondition("电力");
 		}
 	}
 

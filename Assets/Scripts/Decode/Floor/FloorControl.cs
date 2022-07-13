@@ -51,7 +51,7 @@ public class FloorControl : MonoBehaviour
         {
             cur = 0;
             next_num = num_list[0];
-            GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().player.transform.position = ori_pos.position;
+            CanvasManager.Instance.player.transform.position = ori_pos.position;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -9,6 +10,9 @@ namespace Decode
 	/// </summary>
 	public class ObtainItems : SerializedMonoBehaviour
 	{
+		[ReadOnly]
+		public string Id = Guid.NewGuid().ToString();
+
 		public bool canUse = false;
 		[Tooltip("这个物体是否正在被使用")]
 		[ReadOnly]
@@ -22,14 +26,22 @@ namespace Decode
 
 		[HideInInspector]
 		public GameObject pre;
-		
+
+		private void Awake()
+		{
+			for(int i = 0; i < configs.Count; i++)
+			{
+				configs[i].Init(this);
+			}
+		}
+
 		#region MonoAPI
 
 		private void OnTriggerEnter(Collider other)
 		{
 			if (other.CompareTag("Player"))
 			{
-				MonoECSInteract.Instance.AddScript(this);
+				MonoECSInteract.Instance.AddScript(Id,this);
 				foreach (var config in configs)
 				{
 					foreach (var condition in config.conditions)
@@ -44,7 +56,7 @@ namespace Decode
 		{
 			if (other.CompareTag("Player"))
 			{
-				MonoECSInteract.Instance.RemoveScript(this);
+				MonoECSInteract.Instance.RemoveScript(Id);
 			}
 		}
 

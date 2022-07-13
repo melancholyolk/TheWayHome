@@ -50,7 +50,7 @@ public class PropOperation : Click, IPointerExitHandler
 
     private void ButtonRightClick()
     {
-        GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>().DiscarderProp(prop_info);
+        CanvasManager.Instance.DiscarderProp(prop_info);
         prop_info = new PropInfo();
         can_use = true;
         prop_image.sprite = null;

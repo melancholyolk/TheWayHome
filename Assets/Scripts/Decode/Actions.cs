@@ -10,6 +10,7 @@ namespace Decode
 	/// </summary>
 	public abstract class Actions
 	{
+		public ObtainItems item;
 		public bool needDone;
 		[ReadOnly]
 		[ShowInInspector]

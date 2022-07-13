@@ -15,11 +15,8 @@ public class ToyChest : SyncItem
 
     private List<int> li_int = new List<int>();
     private GameObject ori;
-
-    private CanvasManager canvasManager;
     private void Start()
     {
-        canvasManager = GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>();
         li_int.Add(1);
         li_int.Add(2);
         li_int.Add(3);
@@ -27,7 +24,7 @@ public class ToyChest : SyncItem
     }
     private void Update()
     {
-        if (canUse && !isUsing && !isComplete && canvasManager.CanOperate() && Input.GetKeyDown(KeyCode.F))
+        if (canUse && !isUsing && !isComplete && CanvasManager.Instance.CanOperate() && Input.GetKeyDown(KeyCode.F))
         {
             if (ori)
                 Destroy(ori);
@@ -35,13 +32,13 @@ public class ToyChest : SyncItem
             ori.transform.parent = transform;
             ori.GetComponent<ToyManager>().Init(li_int);
             player.CmdDecodeIsUse(this, true);
-            canvasManager.is_decoding = true;
+            CanvasManager.Instance.is_decoding = true;
         }
         else if (ori && isUsing && canUse && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.F)))
         {
             Destroy(ori);
             player.CmdDecodeIsUse(this, false);
-            canvasManager.is_decoding = false;
+            CanvasManager.Instance.is_decoding = false;
         }
     }
     void PlayerNear()
@@ -65,7 +62,7 @@ public class ToyChest : SyncItem
 
     void Complete()
     {
-        canvasManager.is_decoding = false;
+        CanvasManager.Instance.is_decoding = false;
         isComplete = true;
     }
 }

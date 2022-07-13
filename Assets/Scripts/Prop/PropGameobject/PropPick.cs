@@ -9,17 +9,17 @@ public class PropPick : PropProperty
     [Space] public bool canUse = false;
 
     public SpriteRenderer sprite;
-    public CanvasManager canvasManager;
     private SyncManager syncManager;
     private PropInfo propInfo;
 
     [ContextMenu("GetInfo")]
     private void SetInfo()
     {
+        sprite = GetComponent<SpriteRenderer>();
         syncManager = GameObject.FindObjectOfType<SyncManager>();
         if (num != 0)
         {
-            propInfo = SyncManager.GetPropInfoByNum(num);
+            propInfo = syncManager.EditorGetPropInfoByNum(num);
             sprite.sprite = propInfo.prop_sprite;
             this.transform.name = propInfo.prop_name;
         }
@@ -27,8 +27,8 @@ public class PropPick : PropProperty
 
     public void SetPropInfo(int num1)
     {
-        syncManager = GameObject.FindObjectOfType<SyncManager>();
-        PropInfo info = SyncManager.GetPropInfoByNum(num1);
+        sprite = GetComponent<SpriteRenderer>();
+        PropInfo info = SyncManager.Instance.GetPropInfoByNum(num1);
         propInfo = info;
         sprite.sprite = info.prop_sprite;
         num = int.Parse(info.prop_number);
@@ -38,17 +38,16 @@ public class PropPick : PropProperty
     private void Start()
     {
         SetInfo();
-        canvasManager = GameObject.FindWithTag("Canvas").GetComponent<CanvasManager>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canvasManager.CanOperate() && canvasManager.CanPick())
+        if (Input.GetKeyDown(KeyCode.E) && CanvasManager.Instance.CanOperate() && CanvasManager.Instance.CanPick())
         {
             if (canUse && !is_pick)
             {
                 player.GetComponent<PlayerMove>().CmdDestory(this.transform.name);
-                canvasManager.PickUpStart(num, 1);
+                CanvasManager.Instance.PickUpStart(num, 1);
             }
         }
 
