@@ -6,8 +6,7 @@ public class PlayerControl : MonoBehaviour
     public float speed = 5f;
     public bool is_local = true;
     private Rigidbody rigidbody;
-    
-    private PlayerManager playerManager;
+
     public enum Player
     {
         None,
@@ -20,10 +19,6 @@ public class PlayerControl : MonoBehaviour
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
-    }
-    private void Start()
-    {
-        playerManager = GameObject.FindWithTag("PlayerManager").GetComponent<PlayerManager>();
     }
     private void Update()
     {

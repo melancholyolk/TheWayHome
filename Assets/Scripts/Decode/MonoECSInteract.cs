@@ -17,12 +17,14 @@ namespace Decode
 		public static MonoECSInteract Instance;
 
 		[SerializeField]
-		private Dictionary<string,ObtainItems> m_ObItems;
+		private List<ObtainItems> m_ObItems;
 
+		private Dictionary<string, ObtainItems> m_Items;
 		private void Awake()
 		{
 			Instance = this;
-			m_ObItems = new Dictionary<string, ObtainItems>();
+			m_ObItems = new List<ObtainItems>();
+			m_Items = new Dictionary<string, ObtainItems>();
 		}
 		
 		// Update is called once per frame
@@ -38,25 +40,30 @@ namespace Decode
 					{
 						if (Input.GetKeyDown(keyCode))
 						{
-							item.Value.CheckKeyInput(keyCode);
+							item.CheckKeyInput(keyCode);
 						}
 					}
 				}
-				item.Value.CheckAllConfigs();
+				item.CheckAllConfigs();
 			}
 		}
 
 
 		#region publicAPI
 
-		public void AddScript(string id,ObtainItems item)
+		public void AddScript(ObtainItems item)
 		{
-			m_ObItems.Add(id,item);
+			m_ObItems.Add(item);
 		}
 
-		public void RemoveScript(string id)
+		public void RemoveScript(ObtainItems item)
 		{
-			m_ObItems.Remove(id);
+			m_ObItems.Remove(item);
+		}
+
+		public void AddGScript(string id,ObtainItems item)
+		{
+			m_Items.Add(id,item);
 		}
 
 		#endregion
@@ -70,7 +77,7 @@ namespace Decode
 		[ClientRpc]
 		public void RpcComplete(string id)
 		{
-			m_ObItems[id].isCompleted = true;
+			m_Items[id].isCompleted = true;
 		}
 		[Command]
 		public void CmdIsUsing(string id, bool temp)
@@ -80,7 +87,7 @@ namespace Decode
 		[ClientRpc]
 		public void RpcIsUsing(string id, bool temp)
 		{
-			m_ObItems[id].isUsing = temp;
+			m_Items[id].isUsing = temp;
 		}
 
 		#endregion

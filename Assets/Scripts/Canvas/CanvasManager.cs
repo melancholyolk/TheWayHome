@@ -13,7 +13,6 @@ public class CanvasManager : MonoBehaviour
     public bool cluemenu_show = false;
     public PickUpShow pickUpShow;
     public PropPanel propPanel;
-    public PlayerManager playerManager;
     public GameObject clue_menu;
     public PlayerMove player;
 
@@ -73,12 +72,12 @@ public class CanvasManager : MonoBehaviour
 
     public bool CanPick()
     {
-        return playerManager.CanPick();
+        return PlayerManager.Instance.CanPick();
     }
 
     public void SetPropPanel(PropInfo info)
     {
-        playerManager.SetPropPanel(info);
+        PlayerManager.Instance.SetPropPanel(info);
         propPanel.SetPanel(info);
         player.AddCondition(info.prop_name);
     }
@@ -86,13 +85,13 @@ public class CanvasManager : MonoBehaviour
     public void DiscarderProp(PropInfo info)
     {
         player.DiscarderProp(info);
-        playerManager.RemovePropPanel(info.prop_name);
+        PlayerManager.Instance.RemovePropPanel(info.prop_name);
     }
 
 
     public void RemovePropInfo(string name)
     {
-        playerManager.RemovePropPanel(name);
+        PlayerManager.Instance.RemovePropPanel(name);
         propPanel.RemovePanel(name);
         player.RemoveCondition(name);
     }
@@ -104,7 +103,7 @@ public class CanvasManager : MonoBehaviour
         pickUpShow.PickUpStart(info.prop_sprite , size, info.prop_name,info.prop_describe);
         if (info.prop_type == "t")
         {
-            if (playerManager.CanPick())
+            if (PlayerManager.Instance.CanPick())
             {
                 SetPropPanel(info);
             }

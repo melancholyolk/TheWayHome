@@ -33,6 +33,7 @@ namespace Decode
 			{
 				configs[i].Init(this);
 			}
+			MonoECSInteract.Instance.AddGScript(Id,this);
 		}
 
 		#region MonoAPI
@@ -41,7 +42,7 @@ namespace Decode
 		{
 			if (other.CompareTag("Player"))
 			{
-				MonoECSInteract.Instance.AddScript(Id,this);
+				MonoECSInteract.Instance.AddScript(this);
 				foreach (var config in configs)
 				{
 					foreach (var condition in config.conditions)
@@ -56,7 +57,7 @@ namespace Decode
 		{
 			if (other.CompareTag("Player"))
 			{
-				MonoECSInteract.Instance.RemoveScript(Id);
+				MonoECSInteract.Instance.RemoveScript(this);
 			}
 		}
 
