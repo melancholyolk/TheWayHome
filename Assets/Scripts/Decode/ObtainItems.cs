@@ -10,6 +10,12 @@ namespace Decode
 	public class ObtainItems : SerializedMonoBehaviour
 	{
 		public bool canUse = false;
+		[Tooltip("这个物体是否正在被使用")]
+		[ReadOnly]
+		public bool isUsing = false;
+		[Tooltip("这个物体所有交互都已经完成")]
+		[ReadOnly]
+		public bool isCompleted = false;
 		[ListDrawerSettings(ShowIndexLabels = true, ListElementLabelName = "name")]
 		[Searchable]
 		public List<ObtainConfig> configs;
@@ -53,7 +59,7 @@ namespace Decode
 
 		public void CheckKeyInput(KeyCode key)
 		{
-			for (int i = configs.Count - 1; i >= 0; i--)
+			for (var i = configs.Count - 1; i >= 0; i--)
 			{
 				configs[i].CheckKeyInput(key);
 			}
@@ -61,7 +67,7 @@ namespace Decode
 
 		public void CheckAllConfigs()
 		{
-			for (int i = configs.Count - 1; i >= 0; i--)
+			for (var i = configs.Count - 1; i >= 0; i--)
 			{
 				configs[i].DoConditions();
 			}

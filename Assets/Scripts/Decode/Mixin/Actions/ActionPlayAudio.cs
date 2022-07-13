@@ -9,7 +9,7 @@ namespace Decode
 		public AudioSource audio;
 		public AudioClip clip;
 
-		public override void DoAction()
+		protected override void DoAction()
 		{
 			audio.PlayOneShot(clip);
 		}

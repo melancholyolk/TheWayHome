@@ -7,7 +7,7 @@ namespace Decode
 	public class ActionDebug : Actions
 	{
 		public string logInfo;
-		public override void DoAction()
+		protected override void DoAction()
 		{
 			Debug.Log(logInfo);
 		}

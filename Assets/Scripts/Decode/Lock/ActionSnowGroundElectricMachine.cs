@@ -11,7 +11,7 @@ namespace Decode
 
 		public Sprite lightOn;
 		public Sprite lightOff;
-		public override void DoAction()
+		protected override void DoAction()
 		{
 			CmdOpenLights();
 		}

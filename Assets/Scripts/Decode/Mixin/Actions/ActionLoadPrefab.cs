@@ -16,7 +16,7 @@ namespace Decode
 	{
 		public PrefabInfo[] prefabs;
 		private List<GameObject> m_Instances;
-		public override void DoAction()
+		protected override void DoAction()
 		{
 			m_Instances = new List<GameObject>();
 			foreach (var prefab in prefabs)

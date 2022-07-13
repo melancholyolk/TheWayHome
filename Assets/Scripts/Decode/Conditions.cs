@@ -24,7 +24,12 @@ namespace Decode
 			
 		}
 
-		public virtual bool KeyInput(KeyCode key)
+		
+		public virtual ConditionInput.InputResult CheckInput(KeyCode key)
+		{
+			return ConditionInput.InputResult.False;
+		}
+		public virtual bool DoInput(KeyCode key)
 		{
 			return false;
 		}

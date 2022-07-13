@@ -9,12 +9,14 @@ namespace Decode
 	{
 		public GameObject decodePrefab;
 		public Camera decodeCamera;
-
-		public override void DoAction()
+		public ObtainItems parent;
+		protected override void DoAction()
 		{
-			var go = GameObject.Instantiate(decodePrefab, decodeCamera.transform.forward.normalized * 1,
-				Quaternion.identity);
+			var go = GameObject.Instantiate(decodePrefab, decodeCamera.transform.forward.normalized,
+				Quaternion.identity,parent.transform);
 			go.transform.LookAt(decodeCamera.transform);
+			var input = go.GetComponent<BaseInput>();
+			input.Initialize(parent);
 			isDone = true;
 		}
 	}

@@ -1,34 +1,37 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CanvasManager : MonoBehaviour
 {
+	public static CanvasManager Instance;
     public bool is_picking = false;
     public bool is_setting = false;
     public bool is_decoding = false;
     public bool is_dialog = false;
     public bool cluemenu_show = false;
-
-
     public PickUpShow pickUpShow;
     public PropPanel propPanel;
-
-
     public PlayerManager playerManager;
     public SyncManager syncManager;
-
     public GameObject clue_menu;
-
     public PlayerMove player;
 
+    [Serializable]
     public enum Player
     {
         None,
         Player1 = 1,
         Player2 = 2
     }
-    public Player player_type = Player.None;
+    [SerializeField]
+    public Player player_type = Player.Player1;
+
+    private void Awake()
+    {
+	    Instance = this;
+    }
 
     private void Update()
     {

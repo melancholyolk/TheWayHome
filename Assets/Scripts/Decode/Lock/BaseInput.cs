@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
@@ -12,18 +13,48 @@ namespace Decode
 	public class BaseInput : SerializedMonoBehaviour
 	{
 		public Actions[] actions;
-		public virtual void CheckInput()
+		private ActionChangeObtainItemState m_Change;
+		private ObtainItems m_Parent;
+		
+
+		public void Initialize(ObtainItems parent)
 		{
-        
+			m_Parent = parent;
+			m_Change = new ActionChangeObtainItemState(true);
+			m_Change.item = parent;
+			m_Change.CheckDoAction();
+		}
+
+		private void OnEnable()
+		{
+			if(m_Change == null)
+				return;
+			m_Change.isUsing = true;
+			m_Change.CheckDoAction();
+		}
+
+		public void OnDisable()
+		{
+			Debug.Assert(m_Change!=null,"检查Parent");
+			m_Change.isUsing = false;
+			m_Change.CheckDoAction();
 		}
 
 		public virtual void DoActions()
 		{
 			foreach (var action in actions)
 			{
-				action.DoAction();
+				action.CheckDoAction();
 			}
 		}
+
+
+		public virtual void CheckInput()
+		{
+		}
+
+		
+
 		/// <summary>
 		/// 解密成功后调用
 		/// </summary>
@@ -33,4 +64,3 @@ namespace Decode
 		}
 	}
 }
-

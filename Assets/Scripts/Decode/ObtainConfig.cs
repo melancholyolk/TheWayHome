@@ -21,8 +21,13 @@ namespace Decode
 		{
 			foreach (var condition in conditions)
 			{
-				if(!condition.KeyInput(key))
-					return;
+				if (condition is not ConditionFeedBack) continue;
+				var feedback = (ConditionFeedBack) condition;
+				if (feedback.CheckInput(key) != ConditionInput.InputResult.True) continue;
+				foreach (var action in actions)
+				{
+					action.CheckDoAction();
+				}
 			}
 		}
 
@@ -30,7 +35,7 @@ namespace Decode
 		{
 			foreach (var condition in conditions)
 			{
-				if(!condition.Accept())
+				if (!condition.Accept())
 					return false;
 			}
 

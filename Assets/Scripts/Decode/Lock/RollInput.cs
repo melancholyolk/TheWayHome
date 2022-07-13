@@ -86,7 +86,7 @@ namespace Decode
 		{
 			foreach (var action in actions)
 			{
-				action.DoAction();
+				action.CheckDoAction();
 			}
 		}
 	}

@@ -29,7 +29,7 @@ namespace Decode
 				DoAction();
 			}
 		}
-		public virtual void DoAction()
+		protected virtual void DoAction()
 		{
 			
 		}

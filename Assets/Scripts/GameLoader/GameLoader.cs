@@ -15,14 +15,18 @@ public class GameLoader : MonoBehaviour
 	}
 
 	public Mode mode;
-	public GameObject MonoEcs;
+
+	public List<GameObject> loaded;
 	// Start is called before the first frame update
     void Start()
     {
 	    switch (mode)
 	    {
 		    case Mode.local:
-			    MonoEcs.SetActive(true);
+			    foreach (var l in loaded)
+			    {
+				    l.SetActive(true);
+			    }
 			    break;
 		    case Mode.network:
 			    break;

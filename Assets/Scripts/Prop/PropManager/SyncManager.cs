@@ -20,6 +20,7 @@ public class SyncManager : NetworkBehaviour
 
     public int public_dialogIndex = -1;
 
+    [SerializeField]
     public List<Sprite> sprites;
 
     public bool is_used =false;

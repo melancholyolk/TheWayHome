@@ -15,7 +15,7 @@ namespace Decode
 		public SpriteRenderer tar;
 		public Sprite ori;
 
-		public override void DoAction()
+		protected override void DoAction()
 		{
 			foreach (var VARIABLE in Lights)
 			{
