@@ -35,7 +35,7 @@ namespace Decode
 	{
 		public Roll[] rolls;
 		public string name;
-		public Actions[] actions;
+		
 #if UNITY_EDITOR
 		private void OnValidate()
 		{

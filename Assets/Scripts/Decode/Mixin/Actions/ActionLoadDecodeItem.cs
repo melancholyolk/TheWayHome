@@ -15,6 +15,7 @@ namespace Decode
 			var go = GameObject.Instantiate(decodePrefab, decodeCamera.transform.forward.normalized * 1,
 				Quaternion.identity);
 			go.transform.LookAt(decodeCamera.transform);
+			isDone = true;
 		}
 	}
 }

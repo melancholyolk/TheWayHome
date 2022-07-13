@@ -11,6 +11,7 @@ namespace Decode
 	/// </summary>
 	public class BaseInput : SerializedMonoBehaviour
 	{
+		public Actions[] actions;
 		public virtual void CheckInput()
 		{
         
@@ -18,7 +19,10 @@ namespace Decode
 
 		public virtual void DoActions()
 		{
-			
+			foreach (var action in actions)
+			{
+				action.DoAction();
+			}
 		}
 		/// <summary>
 		/// 解密成功后调用

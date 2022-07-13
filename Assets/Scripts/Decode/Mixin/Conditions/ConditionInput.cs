@@ -16,5 +16,10 @@ namespace Decode
 			else
 				return Input.GetKey(input);
 		}
+
+		public override bool KeyInput(KeyCode key)
+		{
+			return input == key;
+		}
 	}
 }

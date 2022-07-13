@@ -2,14 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mirror;
+using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Button = UnityEngine.UI.Button;
 
 namespace Decode
 {
 	/// <summary>
 	/// 获取循环
 	/// </summary>
-	public class MonoECSInteract : NetworkBehaviour
+	public class MonoECSInteract : SerializedMonoBehaviour
 	{
 		public static MonoECSInteract Instance;
 
@@ -25,18 +28,24 @@ namespace Decode
 			Instance = this;
 			m_ObItems = new List<ObtainItems>();
 		}
-
-		// Start is called before the first frame update
-		void Start()
-		{
-			
-		}
-
+		
 		// Update is called once per frame
 		void Update()
 		{
+			
+			
 			foreach (var item in m_ObItems)
 			{
+				if (Input.anyKeyDown)
+				{
+					foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
+					{
+						if (Input.GetKeyDown(keyCode))
+						{
+							item.CheckKeyInput(keyCode);
+						}
+					}
+				}
 				item.CheckAllConfigs();
 			}
 		}

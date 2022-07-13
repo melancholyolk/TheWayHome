@@ -3,24 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ComputerControl : MonoBehaviour
+namespace Decode
 {
-    private Image image;
-    public Sprite sprite;
-    public Text text;
-    public GameObject input;
-    private void Start()
-    {
-        image = GetComponent<Image>();
-    }
-    public void Complete()
-    {
-        image.sprite = sprite;
-        input.active = false;
-    }
+	public class ComputerControl : BaseInput
+	{
+		public Text text;
+		public void Complete()
+		{
+			DoActions();
+		}
+		
+		public void Wrong()
+		{
+			text.text = "";
+		}
 
-    public void Wrong()
-    {
-        text.text = "";
-    }
+	}
 }

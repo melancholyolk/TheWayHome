@@ -23,6 +23,11 @@ namespace Decode
 		{
 			
 		}
+
+		public virtual bool KeyInput(KeyCode key)
+		{
+			return false;
+		}
 	}
 }
 

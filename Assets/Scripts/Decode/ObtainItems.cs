@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 namespace Decode
@@ -11,7 +12,7 @@ namespace Decode
 		public bool canUse = false;
 		[ListDrawerSettings(ShowIndexLabels = true, ListElementLabelName = "name")]
 		[Searchable]
-		public ObtainConfig[] configs;
+		public List<ObtainConfig> configs;
 
 		[HideInInspector]
 		public GameObject pre;
@@ -50,11 +51,19 @@ namespace Decode
 
 		#region publicAPI
 
+		public void CheckKeyInput(KeyCode key)
+		{
+			for (int i = configs.Count - 1; i >= 0; i--)
+			{
+				configs[i].CheckKeyInput(key);
+			}
+		}
+
 		public void CheckAllConfigs()
 		{
-			foreach (var config in configs)
+			for (int i = configs.Count - 1; i >= 0; i--)
 			{
-				config.DoConditions();
+				configs[i].DoConditions();
 			}
 		}
 		

@@ -68,13 +68,14 @@ namespace GameUtil
 				return;
 			}
 
-#if UNITY_EDITOR
-			Mesh meshCopy = Mesh.Instantiate(meshFilter.sharedMesh) as Mesh; // Make a deep copy
-			meshCopy.name = "Cube";
-			m_mesh = meshFilter.mesh = meshCopy; // Assign the copy to the meshes
-#else
-		m_mesh = meshFilter.mesh;
-#endif
+
+			// Debug.Assert(meshFilter.sharedMesh!= null,"检查meshfilter");
+			// if(meshFilter.sharedMesh == null)
+			// 	return;
+			// Mesh meshCopy = Mesh.Instantiate(meshFilter.sharedMesh) as Mesh; // Make a deep copy
+			// meshCopy.name = "Cube";
+			// m_mesh = meshFilter.mesh = meshCopy; // Assign the copy to the meshes
+			m_mesh = meshFilter.sharedMesh;
 			if (m_mesh == null || m_mesh.uv.Length != 24)
 			{
 				Debug.LogError("Script needs to be attached to built-in cube");
@@ -449,14 +450,9 @@ namespace GameUtil
 				Debug.LogError("Script needs MeshFilter component");
 				return;
 			}
+			
+			m_mesh = meshFilter.mesh;
 
-#if UNITY_EDITOR
-			Mesh meshCopy = Mesh.Instantiate(meshFilter.sharedMesh) as Mesh; // Make a deep copy
-			meshCopy.name = "Cube";
-			m_mesh = meshFilter.mesh = meshCopy; // Assign the copy to the meshes
-#else
-		m_mesh = meshFilter.mesh;
-#endif
 			if (m_mesh == null || m_mesh.uv.Length != 24)
 			{
 				Debug.LogError("Script needs to be attached to built-in cube");
