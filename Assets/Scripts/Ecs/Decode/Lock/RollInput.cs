@@ -78,16 +78,16 @@ namespace Decode
 				}
 				
 			}
-			DoActions();
+			//DoActions();
 		}
 
 
-		public override void DoActions()
-		{
-			foreach (var action in actions)
-			{
-				action.CheckDoAction();
-			}
-		}
+		//public override void DoActions()
+		//{
+		//	foreach (var action in actions)
+		//	{
+		//		action.CheckDoAction();
+		//	}
+		//}
 	}
 }

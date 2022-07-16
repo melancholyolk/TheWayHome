@@ -15,16 +15,16 @@ namespace Decode
 		public SpriteRenderer tar;
 		public Sprite ori;
 
-		protected override void DoAction()
-		{
-			foreach (var VARIABLE in Lights)
-			{
-				VARIABLE.enabled = true;
-			}
+		//protected override void DoAction()
+		//{
+		//	foreach (var VARIABLE in Lights)
+		//	{
+		//		VARIABLE.enabled = true;
+		//	}
 
-			tar.sprite = ori;
-			tar.GetComponent<JudgePlayer>().enabled = true;
-		}
+		//	tar.sprite = ori;
+		//	tar.GetComponent<JudgePlayer>().enabled = true;
+		//}
 		
 	}
 }

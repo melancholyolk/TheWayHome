@@ -8,18 +8,10 @@ namespace Decode
 	/// 获得物品类
 	/// 挂在场景中的物体上
 	/// </summary>
-	public class ObtainItems : SerializedMonoBehaviour
+	public class ObtainItems : Item
 	{
-		[ReadOnly]
-		public string Id = Guid.NewGuid().ToString();
-
 		public bool canUse = false;
-		[Tooltip("这个物体是否正在被使用")]
-		[ReadOnly]
-		public bool isUsing = false;
-		[Tooltip("这个物体所有交互都已经完成")]
-		[ReadOnly]
-		public bool isCompleted = false;
+
 		[ListDrawerSettings(ShowIndexLabels = true, ListElementLabelName = "name")]
 		[Searchable]
 		public List<ObtainConfig> configs;
@@ -31,9 +23,9 @@ namespace Decode
 		{
 			for(int i = 0; i < configs.Count; i++)
 			{
+				configs[i].Awake();
 				configs[i].Init(this);
 			}
-			MonoECSInteract.Instance.AddGScript(Id,this);
 		}
 
 		#region MonoAPI
@@ -85,21 +77,16 @@ namespace Decode
 				configs[i].DoConditions();
 			}
 		}
-		
+
 
 		#endregion
-		
 
-		public void PlayerNear()
+		public override void DoAction(string actionId, string targetId)
 		{
-			canUse = true;
+			for(int i = 0; i < configs.Count; i++)
+			{
+				configs[i].DoActions(actionId,targetId);
+			}
 		}
-
-		public void PlayerLeave()
-		{
-			canUse = false;
-		}
-
-		
 	}
 }

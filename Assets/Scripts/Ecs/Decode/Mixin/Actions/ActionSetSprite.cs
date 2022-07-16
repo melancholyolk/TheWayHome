@@ -10,7 +10,7 @@ namespace Decode
 		public Image image;
 		public Sprite sprite;
 
-		protected override void DoAction()
+		public override void DoAction()
 		{
 			image.sprite = sprite;
 		}

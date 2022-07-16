@@ -13,7 +13,7 @@ namespace Decode
 		public uint PropertyID;
 		public PlayerControl.Player player;
 
-		protected override void DoAction()
+		public override void DoAction()
 		{
 			//获取道具实例
 			

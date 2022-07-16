@@ -6,24 +6,17 @@ using UnityEngine;
 
 namespace Decode
 {
-	public class ObtainConfig
+	public class ObtainConfig : Config
 	{
 		public string name;
 		public Conditions[] conditions;
-		public Actions[] actions;
 		
+
 		protected virtual void Complete(DecodeCallBack callBack)
 		{
 			callBack.CallBack();
 		}
-
-		public void Init(ObtainItems obtain)
-		{
-			for(int i = 0; i < actions.Length; i++)
-			{
-				actions[i].item = obtain;
-			}
-		}
+		
 
 		public void CheckKeyInput(KeyCode key)
 		{
@@ -34,7 +27,7 @@ namespace Decode
 				if (feedback.CheckInput(key) != ConditionInput.InputResult.True) continue;
 				foreach (var action in actions)
 				{
-					action.CheckDoAction();
+					//action.CheckDoAction();
 				}
 			}
 		}
@@ -49,7 +42,7 @@ namespace Decode
 
 			foreach (var action in actions)
 			{
-				action.CheckDoAction();
+				//action.CheckDoAction();
 			}
 
 			return true;

@@ -13,34 +13,12 @@ namespace Decode
 	public class BaseInput : SerializedMonoBehaviour
 	{
 		public Actions[] actions;
-		private ActionChangeObtainItemState m_Change;
 		private ObtainItems m_Parent;
 		
 
 		public void Initialize(ObtainItems parent)
 		{
 			m_Parent = parent;
-			m_Change.CheckDoAction();
-		}
-
-		private void OnEnable()
-		{
-			if(m_Change == null)
-				return;
-		}
-
-		public void OnDisable()
-		{
-			Debug.Assert(m_Change!=null,"检查Parent");
-			MonoECSInteract.Instance.CmdIsUsing(m_Parent.Id,false);
-		}
-
-		public virtual void DoActions()
-		{
-			foreach (var action in actions)
-			{
-				action.CheckDoAction();
-			}
 		}
 
 

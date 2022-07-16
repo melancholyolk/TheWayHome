@@ -11,7 +11,7 @@ namespace Decode
 	{
 		public View_Control dialogUI;
 		public List<string> dialogs;
-		protected override void DoAction()
+		public override void DoAction()
 		{
 			dialogUI.ShowDialog(dialogs);
 		}

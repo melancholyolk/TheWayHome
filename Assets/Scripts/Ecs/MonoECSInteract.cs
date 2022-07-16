@@ -19,18 +19,17 @@ namespace Decode
 		[SerializeField]
 		private List<ObtainItems> m_ObItems;
 
-		private Dictionary<string, ObtainItems> m_Items;
+		private Dictionary<string, Item> m_Items;
 		private void Awake()
 		{
 			Instance = this;
 			m_ObItems = new List<ObtainItems>();
-			m_Items = new Dictionary<string, ObtainItems>();
+			m_Items = new Dictionary<string, Item>();
 		}
 		
 		// Update is called once per frame
 		void Update()
 		{
-			
 			
 			foreach (var item in m_ObItems)
 			{
@@ -61,35 +60,30 @@ namespace Decode
 			m_ObItems.Remove(item);
 		}
 
-		public void AddGScript(string id,ObtainItems item)
+		public void AddGScript(string id,Item item)
 		{
 			m_Items.Add(id,item);
 		}
 
+		public Item GetItem(string id)
+		{
+			return m_Items[id];
+		}
 		#endregion
 
 		#region Cmd
-		[Command]
-		public void CmdComplete(string id)
-		{
-			RpcComplete(id);
-		}
-		[ClientRpc]
-		public void RpcComplete(string id)
-		{
-			m_Items[id].isCompleted = true;
-		}
-		[Command]
-		public void CmdIsUsing(string id, bool temp)
-		{
-			RpcIsUsing(id, temp);
-		}
-		[ClientRpc]
-		public void RpcIsUsing(string id, bool temp)
-		{
-			m_Items[id].isUsing = temp;
-		}
 
+		[Command]
+		public void CmdAction(string launchId, string actionId, string targetId)
+		{
+			RpcAction(launchId, actionId ,targetId);
+		}
+		[ClientRpc]
+		public void RpcAction(string launchId, string actionId, string targetId)
+		{
+			var launch = m_Items[launchId];
+			launch.DoAction(actionId ,targetId);
+		}
 		#endregion
 	}
 }
