@@ -22,11 +22,19 @@ namespace Decode
 		}
 
 
+		
 		public virtual void CheckInput()
 		{
+			
 		}
 
-		
+		public virtual void DoActions()
+		{
+			for (int i = 0; i < actions.Length; i++)
+			{
+				actions[i].SyncAction();
+			}
+		}
 
 		/// <summary>
 		/// 解密成功后调用

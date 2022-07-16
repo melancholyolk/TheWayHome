@@ -58,8 +58,7 @@ namespace Decode
 		#region PrivateFunction
 		
 		#endregion
-
-
+		
 		#region publicAPI
 
 		public void CheckKeyInput(KeyCode key)
@@ -77,16 +76,6 @@ namespace Decode
 				configs[i].DoConditions();
 			}
 		}
-
-
 		#endregion
-
-		public override void DoAction(string actionId, string targetId)
-		{
-			for(int i = 0; i < configs.Count; i++)
-			{
-				configs[i].DoActions(actionId,targetId);
-			}
-		}
 	}
 }

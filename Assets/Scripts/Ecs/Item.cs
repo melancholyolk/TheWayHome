@@ -5,7 +5,9 @@ namespace Decode
 {
 	public class Item : SerializedMonoBehaviour
 	{
+		[ReadOnly]
 		public bool isUsing;
+		[ReadOnly]
 		public bool disable;
 		[ReadOnly]
 		public string Id;

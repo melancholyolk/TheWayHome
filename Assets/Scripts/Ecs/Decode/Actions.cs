@@ -15,6 +15,7 @@ namespace Decode
 		public string itemId;
 		public string targetId;
 		public bool needSync;
+		[ReadOnly]
 		public string Id;
 		public void Awake()
 		{

@@ -42,7 +42,7 @@ namespace Decode
 
 			foreach (var action in actions)
 			{
-				//action.CheckDoAction();
+				action.SyncAction();
 			}
 
 			return true;
