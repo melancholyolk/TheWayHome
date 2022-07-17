@@ -6,9 +6,8 @@ namespace Decode
 {
     public class TrapItems : Item
     {
-        public List<Trap> TrapList = new List<Trap>();
 
-        [ListDrawerSettings(ShowIndexLabels = true, ListElementLabelName = "name")]
+        [ListDrawerSettings(ShowIndexLabels = true)]
         [Searchable]
         public List<TrapConfig> configs;
 

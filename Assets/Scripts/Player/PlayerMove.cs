@@ -438,7 +438,7 @@ public class PlayerMove : NetworkBehaviour
     /// <summary>
     /// 缓慢丢失温暖值，低于0则丢失血量
     /// </summary>
-    public void LossWarm()
+    public void LossWarm(float num)
     {
         if(curHp <= 0)
         {
@@ -447,67 +447,33 @@ public class PlayerMove : NetworkBehaviour
 		}
         if(curWarm > 0)
         {
-            curWarm -= Time.deltaTime * m_attribute.lossWarmSpeed;
+            curWarm -= num;
             return;
 		}
 
         if(curHp > 0)
         {
-            curHp -= Time.deltaTime * m_attribute.lossHpSpeed;
+            curHp -= num;
 		}
 	}
-    /// <summary>
-    /// 扣血
-    /// </summary>
-    /// <param name="lossNum"></param>
-    public void LossHp(int lossNum)
-    {
-        curHp -= lossNum;
-        if(curHp < 0)
-            curHp = 0;
-	}
-    /// <summary>
-    /// 缓慢恢复血量
-    /// </summary>
-    public void RecoveryHp()
-    {
-        if(curHp >= m_attribute.maxHp)
-        {
-            curHp = m_attribute.maxHp;
-            return;
-        }
 
-        curHp += Time.deltaTime * m_attribute.recoveryHpSpeed;
-	}
     /// <summary>
-    /// 缓慢恢复温暖值
-    /// </summary>
-    public void RecoveryWarm()
-    {
-        if (curWarm >= m_attribute.maxWarm)
-        {
-            curWarm = m_attribute.maxWarm;
-            return;
-        }
-        curHp += Time.deltaTime * m_attribute.recoveryWarmSpeed;
-	}
-    /// <summary>
-    /// 恢复一定数值的血量
+    /// 血量更改
     /// </summary>
     /// <param name="recoveryNum"></param>
-    public void RecoveryHp(float recoveryNum)
+    public void ChangeHp(float num)
     {
-        curHp += recoveryNum;
+        curHp += num;
         if (curHp >= m_attribute.maxHp)
             curHp = m_attribute.maxHp;
     }
     /// <summary>
-    /// 恢复一定数值的温暖值
+    /// 温暖值更改
     /// </summary>
     /// <param name="recoveryNum"></param>
-    public void RecoveryWarm(float recoveryNum)
+    public void ChangeWarm(float num)
     {
-        curWarm += recoveryNum;
+        curWarm += num;
         if (curWarm >= m_attribute.maxWarm)
             curWarm = m_attribute.maxWarm;
     }
@@ -573,13 +539,6 @@ public class PlayerAttribute
 
     public int maxHp;
 
-    public float lossHpSpeed;
-
-    public float recoveryHpSpeed;
-
     public int maxWarm;     //100
 
-    public float lossWarmSpeed;     //1 -> 2
-
-    public float recoveryWarmSpeed;
 }

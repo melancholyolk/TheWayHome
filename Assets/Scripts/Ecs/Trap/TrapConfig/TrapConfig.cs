@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Decode
 {
-    public class TrapConfig :Config
+    public class TrapConfig : Config
     {
 
         public virtual void Update()
