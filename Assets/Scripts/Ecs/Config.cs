@@ -1,24 +1,30 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 namespace Decode
 {
 	public class Config
 	{
 		public Actions[] actions;
-		public void Awake()
+		[PropertyOrder(-2)]
+		[ShowInInspector]
+		[ReadOnly]
+		private string m_Id;
+		public void Awake(string id)
 		{
+			m_Id = id;
 			for (int i = 0; i < actions.Length; i++)
 			{
-				actions[i].Awake();
+				actions[i].Init(m_Id+i.ToString());
 			}
 		}
 		public void Init(Item item)
 		{
 			for (int i = 0; i < actions.Length; i++)
 			{
-				actions[i].itemId = item.Id;
+				actions[i].itemId = item.id;
 			}
 		}
 
@@ -29,7 +35,6 @@ namespace Decode
 				Actions action = actions[i];
 			    if(action.Id.Equals(actionId) && action.needSync)
 				{
-					action.targetId = targetId;
 					action.DoAction();
 				}
 			}

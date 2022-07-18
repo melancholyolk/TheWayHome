@@ -6446,14 +6446,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d004071afd008044b4e9a7283bdd41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  player: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: configs
+      Entry: 6
+      Data: 
   isUsing: 0
-  isComplete: 0
+  disable: 0
+  id: 
   canUse: 0
   pre: {fileID: 0}
-  prop_num: 07000000
 --- !u!114 &398940105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7527,14 +7536,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d004071afd008044b4e9a7283bdd41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  player: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: configs
+      Entry: 6
+      Data: 
   isUsing: 0
-  isComplete: 0
+  disable: 0
+  id: 
   canUse: 0
   pre: {fileID: 0}
-  prop_num: 05000000
 --- !u!114 &507577251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10891,14 +10909,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d004071afd008044b4e9a7283bdd41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  player: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: configs
+      Entry: 6
+      Data: 
   isUsing: 0
-  isComplete: 0
+  disable: 0
+  id: 
   canUse: 0
   pre: {fileID: 0}
-  prop_num: 01000000
 --- !u!114 &1081180802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14479,14 +14506,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d004071afd008044b4e9a7283bdd41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  player: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: configs
+      Entry: 6
+      Data: 
   isUsing: 0
-  isComplete: 0
+  disable: 0
+  id: 
   canUse: 0
   pre: {fileID: 2293139959992891119, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
-  prop_num: 0300000004000000
 --- !u!114 &1384561884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15482,14 +15518,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d004071afd008044b4e9a7283bdd41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  player: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: configs
+      Entry: 6
+      Data: 
   isUsing: 0
-  isComplete: 0
+  disable: 0
+  id: 
   canUse: 0
   pre: {fileID: 0}
-  prop_num: 06000000
 --- !u!114 &1535289898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17910,6 +17955,10 @@ PrefabInstance:
       propertyPath: characters.Array.data[1]
       value: 
       objectReference: {fileID: 21300000, guid: 18dacfe8cf252cb4d8c40fac9c2f17a7, type: 3}
+    - target: {fileID: 51588957893671732, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 16375
+      objectReference: {fileID: 0}
     - target: {fileID: 51588957893671735, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -18243,6 +18292,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1828951526441407829, guid: 5352774735be07e4db2935f7757ab251, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 9.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828951526441407829, guid: 5352774735be07e4db2935f7757ab251, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 18.34
+      objectReference: {fileID: 0}
     - target: {fileID: 1828951526441407834, guid: 5352774735be07e4db2935f7757ab251, type: 3}
       propertyPath: m_Size.x
       value: 9.06
@@ -18260,6 +18317,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1828951527379569366, guid: 5352774735be07e4db2935f7757ab251, type: 3}
+      propertyPath: cg
+      value: 
+      objectReference: {fileID: 2114069062}
+    - target: {fileID: 1828951527379569366, guid: 5352774735be07e4db2935f7757ab251, type: 3}
       propertyPath: btn
       value: 
       objectReference: {fileID: 1970745676}
@@ -18267,6 +18328,18 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1970745677}
+    - target: {fileID: 1828951527379569366, guid: 5352774735be07e4db2935f7757ab251, type: 3}
+      propertyPath: cgAddress
+      value: Assets/Res/Texture/CG-1.mp4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828951528027184488, guid: 5352774735be07e4db2935f7757ab251, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 8.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828951528027184488, guid: 5352774735be07e4db2935f7757ab251, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 16.34
+      objectReference: {fileID: 0}
     - target: {fileID: 1828951528027184489, guid: 5352774735be07e4db2935f7757ab251, type: 3}
       propertyPath: m_Size.x
       value: 8.87
@@ -19485,6 +19558,11 @@ Transform:
   m_Father: {fileID: 1755744580}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!328 &2114069062 stripped
+VideoPlayer:
+  m_CorrespondingSourceObject: {fileID: 3199491859402046510, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+  m_PrefabInstance: {fileID: 1970745675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2124899627
 GameObject:
   m_ObjectHideFlags: 0

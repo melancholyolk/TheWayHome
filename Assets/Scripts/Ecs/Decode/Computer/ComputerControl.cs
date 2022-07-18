@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Decode
 {
-	public class ComputerControl : BaseInput
+	public class ComputerControl : DecodeBaseInput
 	{
 		public Text text;
 		public void Complete()

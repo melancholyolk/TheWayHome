@@ -73,7 +73,7 @@ namespace Decode
 
 		#region Cmd
 
-		[Command]
+		[Command(requiresAuthority = false)]
 		public void CmdAction(string launchId, string actionId, string targetId)
 		{
 			RpcAction(launchId, actionId ,targetId);

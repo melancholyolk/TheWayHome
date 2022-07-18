@@ -15,7 +15,7 @@ namespace Decode
 		{
 			for (int i = 0; i < configs.Count; i++)
 			{
-				configs[i].Awake();
+				configs[i].Awake(i.ToString());
 				configs[i].Init(this);
 			}
 		}

@@ -10,7 +10,7 @@ namespace Decode
 	/// 判断自己是否正确
 	/// 并执行action
 	/// </summary>
-	public class BaseInput : SerializedMonoBehaviour
+	public class DecodeBaseInput : SerializedMonoBehaviour
 	{
 		public Actions[] actions;
 		private ObtainItems m_Parent;

@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityEngine.Serialization;
+
 namespace Decode
 {
 	public class Item : SerializedMonoBehaviour
@@ -9,18 +11,19 @@ namespace Decode
 		public bool isUsing;
 		[ReadOnly]
 		public bool disable;
+		[FormerlySerializedAs("Id")] 
 		[ReadOnly]
-		public string Id;
+		public string id;
 
 		private void Reset()
 		{
 			Guid guid = Guid.NewGuid();
-			Id = guid.ToString().Replace("-", "").ToLower();
+			id = guid.ToString().Replace("-", "").ToLower();
 		}
 
 		private void Start()
 		{
-			MonoECSInteract.Instance.AddGScript(Id, this);
+			MonoECSInteract.Instance.AddGScript(id, this);
 		}
 
 		public virtual void DoAction(string actionId , string targetId)

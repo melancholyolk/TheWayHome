@@ -31,7 +31,7 @@ namespace Decode
 #if UNITY_EDITOR
 	[ExecuteAlways]
 #endif
-	public class RollInput : BaseInput
+	public class RollInput : DecodeBaseInput
 	{
 		public Roll[] rolls;
 		public string name;

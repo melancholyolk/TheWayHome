@@ -10,6 +10,7 @@ namespace Decode
 	/// <summary>
 	/// 动作
 	/// </summary>
+	
 	public class Actions
 	{
 		public string itemId;
@@ -17,10 +18,9 @@ namespace Decode
 		public bool needSync;
 		[ReadOnly]
 		public string Id;
-		public void Awake()
+		public void Init(string id)
 		{
-			Guid guid = Guid.NewGuid();
-			Id = guid.ToString().Replace("-", "").ToLower();
+			Id = id;
 		}
 		public void SyncAction()
 		{

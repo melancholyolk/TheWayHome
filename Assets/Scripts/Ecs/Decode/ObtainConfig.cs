@@ -8,6 +8,7 @@ namespace Decode
 {
 	public class ObtainConfig : Config
 	{
+		[PropertyOrder(-1)]
 		public string name;
 		public Conditions[] conditions;
 		
@@ -27,7 +28,7 @@ namespace Decode
 				if (feedback.CheckInput(key) != ConditionInput.InputResult.True) continue;
 				foreach (var action in actions)
 				{
-					//action.CheckDoAction();
+					action.SyncAction();
 				}
 			}
 		}
