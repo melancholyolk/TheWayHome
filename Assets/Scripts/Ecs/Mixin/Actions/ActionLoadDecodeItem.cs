@@ -12,8 +12,8 @@ namespace Decode
 		public override void DoAction()
 		{
 			var item = MonoECSInteract.Instance.GetItem(itemId);
-			var go = GameObject.Instantiate(decodePrefab, decodeCamera.transform.forward.normalized,
-				Quaternion.identity, item.transform);
+			var go = GameObject.Instantiate(decodePrefab,decodeCamera.transform.TransformPoint(Vector3.forward), Quaternion.identity);
+			go.transform.parent = item.transform;
 			go.transform.LookAt(decodeCamera.transform);
 			var input = go.GetComponent<DecodeBaseInput>();
 			input.Initialize(item as ObtainItems);

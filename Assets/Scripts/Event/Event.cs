@@ -16,7 +16,7 @@ public class Event : NetworkBehaviour
     public EventType eventType;
     public List<string> _notTriggerDialog = new List<string>();
     public List<string> _triggerDialog = new List<string>();
-    public List<string> _triggerCondition = new List<string>();
+    public List<int> _triggerCondition = new List<int>();
     public string _taskMessage = "";
 
     public GameObject player;
@@ -28,8 +28,7 @@ public class Event : NetworkBehaviour
     {
         foreach (var VARIABLE in _triggerCondition)
         {
-            if(string.IsNullOrEmpty(VARIABLE)) continue;
-            if(!player.GetComponent<PlayerMove>().JudgeCondition(VARIABLE))
+	        if(!player.GetComponent<PlayerMove>().JudgeCondition(VARIABLE))
             {
                 return false;
             }

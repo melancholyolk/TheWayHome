@@ -45,7 +45,7 @@ public class Event_WoodenCabin : Event
             canvas.GetComponent<View_Control>().ShowDialog(_triggerDialog);
             // _obtainItems.enabled = true;
             GameObject.FindWithTag("Player").SendMessage("RemoveCondition", "灰色钥匙");
-            CanvasManager.Instance.RemovePropInfo("灰色钥匙");   
+            // CanvasManager.Instance.RemovePropInfo("灰色钥匙");   
         }
     }
 }

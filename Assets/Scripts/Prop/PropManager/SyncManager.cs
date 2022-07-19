@@ -33,8 +33,11 @@ public class SyncManager : NetworkBehaviour
         Instance = this;
         string[] str = {"Prop"};
         prop_info = GetComponent<PropLoad>().FindTextByName(str);
-        for(int i = 1; i < prop_info.Count; i++)
-            prop_info[i].prop_sprite = sprites[i - 1];
+        for (int i = 1; i < prop_info.Count; i++)
+        {
+	        prop_info[i].prop_sprite = sprites[i - 1];
+	        prop_info[i].prop_id = i;
+        }
     }
 
     [Command(requiresAuthority =false)]

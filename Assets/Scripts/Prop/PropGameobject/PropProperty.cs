@@ -12,7 +12,6 @@ public class PropProperty : NetworkBehaviour
         Clue,
         Tool
     }
-    [Header("?????څ")]
     public PropType type = PropType.None;
 
     public PlayerMove player;

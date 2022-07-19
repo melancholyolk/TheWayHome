@@ -55,6 +55,6 @@ public class Event_FirePan : Event
     private void SendTaskManager()
     {
         GameObject.Find("TaskLoader").SendMessage("CmdCompleteTask", _taskMessage);
-        CanvasManager.Instance.RemovePropInfo("木棒");
+        // CanvasManager.Instance.RemovePropInfo("木棒");
     }
 }

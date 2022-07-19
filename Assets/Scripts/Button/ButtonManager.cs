@@ -19,7 +19,7 @@ public class ButtonManager : NetworkBehaviour
 		if (btn_isdown)
 		{
 			btn_isdown = false;
-			PlayCG();
+			// PlayCG();
 			Invoke("DestoryChild", 1);
 		}
 	}

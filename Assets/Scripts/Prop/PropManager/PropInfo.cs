@@ -10,6 +10,6 @@ public class PropInfo : MonoBehaviour
     public string prop_describe = "";
     public string prop_belong = "";
     public string prop_type = "";
-
+    public int prop_id;
     public Sprite prop_sprite;
 }

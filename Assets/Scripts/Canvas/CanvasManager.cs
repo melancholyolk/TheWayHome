@@ -79,21 +79,21 @@ public class CanvasManager : MonoBehaviour
     {
         PlayerManager.Instance.SetPropPanel(info);
         propPanel.SetPanel(info);
-        player.AddCondition(info.prop_name);
+        player.AddCondition(info.prop_id);
     }
 
     public void DiscarderProp(PropInfo info)
     {
         player.DiscarderProp(info);
-        PlayerManager.Instance.RemovePropPanel(info.prop_name);
+        PlayerManager.Instance.RemovePropPanel(info.prop_id);
     }
 
 
-    public void RemovePropInfo(string name)
+    public void RemovePropInfo(int id)
     {
-        PlayerManager.Instance.RemovePropPanel(name);
-        propPanel.RemovePanel(name);
-        player.RemoveCondition(name);
+        PlayerManager.Instance.RemovePropPanel(id);
+        propPanel.RemovePanel(id);
+        player.RemoveCondition(id);
     }
     
     public void PickUpStart(int num, float size)
@@ -114,7 +114,7 @@ public class CanvasManager : MonoBehaviour
         }else if(info.prop_type == "c")
         {
             SyncManager.Instance.SetOwnClue(num);
-            player.AddCondition(info.prop_name);
+            player.AddCondition(info.prop_id);
         }
     }
     

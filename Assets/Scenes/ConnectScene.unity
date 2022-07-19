@@ -514,6 +514,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4905229891764713277, guid: b0b81e2526709ae438138ac9cfd28209, type: 3}
+      propertyPath: onlineScene
+      value: Assets/Scenes/GroundScene.unity
+      objectReference: {fileID: 0}
     - target: {fileID: 8073064033603792692, guid: b0b81e2526709ae438138ac9cfd28209, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -830,7 +834,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 16375
 --- !u!114 &1385389460
 MonoBehaviour:
   m_ObjectHideFlags: 0

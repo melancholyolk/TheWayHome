@@ -20,9 +20,10 @@ public class PlayerMove : NetworkBehaviour
     
     public List<GameObject> handles;
 
-    [FormerlySerializedAs("is_local")] public bool isLocal;
-    
-    public List<string> condition;
+    [FormerlySerializedAs("is_local")]
+     public bool isLocal;
+    [ShowInInspector]
+    public List<int> condition;
 
     public float speed = 5f;
 
@@ -82,7 +83,7 @@ public class PlayerMove : NetworkBehaviour
     {
         m_OriginScale = transform.localScale;
         m_CurrentSpeed = speed;
-        condition = new List<string>();
+        condition = new List<int>();
         m_HoldObject = new GameObject[2];
         m_Rigidbody = GetComponent<Rigidbody>();
         m_NetworkAnimator = GetComponent<NetworkAnimator>();
@@ -403,17 +404,17 @@ public class PlayerMove : NetworkBehaviour
     #endregion
 
     #region PlayerCondition
-    public void AddCondition(string str)
+    public void AddCondition(int str)
     {
         condition.Add(str);
     }
 
-    public void RemoveCondition(string str)
+    public void RemoveCondition(int str)
     {
         condition.Remove(str);
     }
 
-    public bool JudgeCondition(string cdt)
+    public bool JudgeCondition(int cdt)
     {
         if (condition.Contains(cdt))
         {
@@ -516,7 +517,7 @@ public class PlayerMove : NetworkBehaviour
     public void DiscarderProp(PropInfo info)
     {
         CmdDiscardProp(int.Parse(info.prop_number));
-        RemoveCondition(info.prop_name);
+        RemoveCondition(info.prop_id);
     }
 
 }

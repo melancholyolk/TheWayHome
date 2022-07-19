@@ -33,16 +33,16 @@ namespace Decode
 			
 			foreach (var item in m_ObItems)
 			{
-				if (Input.anyKeyDown)
-				{
-					foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
-					{
-						if (Input.GetKeyDown(keyCode))
-						{
-							item.CheckKeyInput(keyCode);
-						}
-					}
-				}
+				// if (Input.anyKeyDown)
+				// {
+				// 	foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
+				// 	{
+				// 		if (Input.GetKeyDown(keyCode))
+				// 		{
+				// 			item.CheckKeyInput(keyCode);
+				// 		}
+				// 	}
+				// }
 				item.CheckAllConfigs();
 			}
 		}

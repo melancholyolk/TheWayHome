@@ -39,13 +39,13 @@ public class PropPanel : MonoBehaviour
         }
     }
 
-    public void RemovePanel(string name)
+    public void RemovePanel(int id)
     {
-        if (prop_panel1.prop_info.prop_name == name)
+        if (prop_panel1.prop_info.prop_id == id)
         {
             prop_panel1.InitPanel();
         }
-        else if(prop_panel2.prop_info.prop_name == name)
+        else if(prop_panel2.prop_info.prop_id == id)
         {
             prop_panel2.InitPanel();
         }

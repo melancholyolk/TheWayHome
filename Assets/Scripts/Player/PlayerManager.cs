@@ -62,14 +62,14 @@ public class PlayerManager
         }
     }
 
-    public void RemovePropPanel(string name)
+    public void RemovePropPanel(int id)
     {
-        if (panel1_isusing && cur_info.prop_panel[0].prop_name == name)
+        if (panel1_isusing && cur_info.prop_panel[0].prop_id == id)
         {
             cur_info.prop_panel[0] = null;
             panel1_isusing = false;
         }
-        else if (panel2_isusing &&cur_info.prop_panel[1].prop_name == name)
+        else if (panel2_isusing &&cur_info.prop_panel[1].prop_id == id)
         {
             cur_info.prop_panel[1] = null;
             panel2_isusing = false;

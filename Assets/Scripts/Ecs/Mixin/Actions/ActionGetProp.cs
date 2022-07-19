@@ -10,13 +10,14 @@ namespace Decode
 	/// </summary>
 	public class ActionGetProp : Actions
 	{
-		public uint PropertyID;
-		public PlayerControl.Player player;
+		public int PropertyID;
+		public float size;
+		// public CanvasManager.Player player = CanvasManager.Instance.player_type;
 
 		public override void DoAction()
 		{
 			//获取道具实例
-			
+			CanvasManager.Instance.PickUpStart(PropertyID, size);
 			//把道具给player
 		}
 	}

@@ -9,12 +9,23 @@ namespace Decode
 	/// </summary>
 	public class ConditionFeedBack : Conditions
 	{
-		public ConditionInput[] conditions;
+		public Conditions[] conditions;
 		public Actions[] actions;
 		private bool m_Result = false;
 		public override bool Accept()
 		{
-			return m_Result;
+			foreach (var condition in conditions)
+			{
+				if (!condition.Accept())
+				{
+					foreach (var action in actions)
+					{
+						action.SyncAction();
+					}
+					return false;
+				}
+			}
+			return true;
 		}
 
 		public override ConditionInput.InputResult CheckInput(KeyCode key)

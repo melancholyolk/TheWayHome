@@ -51,7 +51,7 @@ public class Event_SimpleTask : Event
         GameObject.Find("TaskLoader").SendMessage("CmdCompleteTask", _taskMessage);
         if (!string.IsNullOrEmpty(removeTool))
         {
-            CanvasManager.Instance.RemovePropInfo(removeTool);
+            // CanvasManager.Instance.RemovePropInfo(removeTool);
         }
     }
 }
