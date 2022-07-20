@@ -14,11 +14,12 @@ namespace Decode
 	{
 		public Actions[] actions;
 		private ObtainItems m_Parent;
-		
+		private Config m_Config;
 
-		public void Initialize(ObtainItems parent)
+		public void Initialize(ObtainItems parent,Config config)
 		{
 			m_Parent = parent;
+			m_Config = config;
 		}
 
 
@@ -26,6 +27,12 @@ namespace Decode
 		public virtual void CheckInput()
 		{
 			
+		}
+
+		public virtual void OnInterrupt()
+		{
+			m_Config.isComplete = false;
+			Destroy(gameObject);
 		}
 
 		public virtual void DoActions()

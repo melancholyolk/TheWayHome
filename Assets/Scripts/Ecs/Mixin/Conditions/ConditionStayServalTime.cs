@@ -13,7 +13,12 @@ namespace Decode
 		public override bool Accept()
 		{
 			m_Timer += Time.deltaTime;
-			return m_Timer > time;
+			if (m_Timer > time)
+			{
+				m_Timer = 0;
+				return true;
+			}
+			return false;
 		}
 	}
 }

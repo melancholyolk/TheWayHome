@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEngine.Serialization;
@@ -14,7 +15,6 @@ namespace Decode
 		[FormerlySerializedAs("Id")] 
 		[ReadOnly]
 		public string id;
-
 		private void Reset()
 		{
 			Guid guid = Guid.NewGuid();

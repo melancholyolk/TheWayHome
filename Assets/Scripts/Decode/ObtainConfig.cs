@@ -45,7 +45,7 @@ namespace Decode
 			{
 				action.SyncAction();
 			}
-
+			isComplete = true;
 			return true;
 		}
 	}

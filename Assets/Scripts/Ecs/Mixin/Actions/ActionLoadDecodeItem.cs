@@ -11,12 +11,13 @@ namespace Decode
 		public Camera decodeCamera;
 		public override void DoAction()
 		{
-			var item = MonoECSInteract.Instance.GetItem(itemId);
+			var item = MonoECSInteract.Instance.GetItem(itemId) as ObtainItems;
 			var go = GameObject.Instantiate(decodePrefab,decodeCamera.transform.TransformPoint(Vector3.forward), Quaternion.identity);
 			go.transform.parent = item.transform;
 			go.transform.LookAt(decodeCamera.transform);
 			var input = go.GetComponent<DecodeBaseInput>();
-			input.Initialize(item as ObtainItems);
+			item.decodes.Add(input);
+			input.Initialize(item,m_Config);
 		}
 	}
 }

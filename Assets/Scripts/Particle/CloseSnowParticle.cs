@@ -12,7 +12,6 @@ public class CloseSnowParticle : MonoBehaviour
             var manager = GameObject.Find("SnowVFXManager").GetComponent<SnowVFXManager>();
             manager.CloseAll();
             SnowVFXManager.IsAllClose = true;
-            other.transform.GetChild(2).GetComponent<Light>().intensity = 0.7f;
         }
     }
 }

@@ -199,7 +199,7 @@ public class PlayerMove : NetworkBehaviour
     private void RpcDiscardProp(int num)
     {
         GameObject obj = ObjectPool._instance.GetGO(num);
-        obj.GetComponent<PropPick>().SetPropInfo(num);
+        // obj.GetComponent<PropPick>().SetPropInfo(num);
         obj.transform.position = objPosition.position;
         obj.transform.localEulerAngles = new Vector3(45, -45, 0);
         obj.GetComponent<SpriteRenderer>().sortingOrder = players[0].GetComponent<SortingGroup>().sortingOrder;
@@ -516,7 +516,7 @@ public class PlayerMove : NetworkBehaviour
 
     public void DiscarderProp(PropInfo info)
     {
-        CmdDiscardProp(int.Parse(info.prop_number));
+        CmdDiscardProp(info.prop_id);
         RemoveCondition(info.prop_id);
     }
 

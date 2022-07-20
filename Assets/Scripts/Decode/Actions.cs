@@ -18,9 +18,11 @@ namespace Decode
 		public bool needSync;
 		[ReadOnly]
 		public string Id;
-		public void Init(string id)
+		protected Config m_Config;
+		public virtual void Init(string id,Config config)
 		{
 			Id = id;
+			m_Config = config;
 		}
 		public void SyncAction()
 		{

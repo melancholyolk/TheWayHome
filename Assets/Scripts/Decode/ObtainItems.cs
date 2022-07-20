@@ -19,8 +19,10 @@ namespace Decode
 		[HideInInspector]
 		public GameObject pre;
 
+		public List<DecodeBaseInput> decodes;
 		private void Awake()
 		{
+			decodes = new List<DecodeBaseInput>();
 			for(int i = 0; i < configs.Count; i++)
 			{
 				configs[i].Awake(i.ToString());
@@ -37,6 +39,8 @@ namespace Decode
 				MonoECSInteract.Instance.AddScript(this);
 				foreach (var config in configs)
 				{
+					if(config.isComplete)
+						continue;
 					foreach (var condition in config.conditions)
 					{
 						condition.Start();
@@ -73,6 +77,8 @@ namespace Decode
 		{
 			for (var i = configs.Count - 1; i >= 0; i--)
 			{
+				if(configs[i].isComplete) 
+					continue;
 				configs[i].DoConditions();
 			}
 		}
