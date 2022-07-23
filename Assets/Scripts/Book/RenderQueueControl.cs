@@ -7,12 +7,6 @@ public class RenderQueueControl : MonoBehaviour
 {
     [Range(2500,3000)]
     public int order;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {

@@ -20,13 +20,13 @@ namespace Decode
 		public GameObject pre;
 
 		public List<DecodeBaseInput> decodes;
-		private void Awake()
+		public override void Awake()
 		{
+			base.Awake();
 			decodes = new List<DecodeBaseInput>();
 			for(int i = 0; i < configs.Count; i++)
 			{
-				configs[i].Awake(i.ToString());
-				configs[i].Init(this);
+				configs[i].Awake(id,i.ToString());
 			}
 		}
 

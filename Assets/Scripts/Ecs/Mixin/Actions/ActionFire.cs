@@ -12,9 +12,9 @@ namespace Decode
 		public Animator animator;
 		
 		private ParticleSystem.EmissionModule _emissionModule;
-		public override void Init(string id, Config config)
+		public override void Init(string itemid,string id, Config config)
 		{
-			base.Init(id, config);
+			base.Init(itemid,id, config);
 			_emissionModule = fire.emission;
 		}
 

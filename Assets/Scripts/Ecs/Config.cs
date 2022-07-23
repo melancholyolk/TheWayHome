@@ -15,19 +15,12 @@ namespace Decode
 		[PropertyOrder(-2)]
 		[ReadOnly] 
 		public bool isComplete;
-		public void Awake(string id)
+		public void Awake(string itemid,string id)
 		{
 			m_Id = id;
 			for (int i = 0; i < actions.Length; i++)
 			{
-				actions[i].Init(m_Id+i.ToString(),this);
-			}
-		}
-		public void Init(Item item)
-		{
-			for (int i = 0; i < actions.Length; i++)
-			{
-				actions[i].itemId = item.id;
+				actions[i].Init(itemid, m_Id+i.ToString(),this);
 			}
 		}
 

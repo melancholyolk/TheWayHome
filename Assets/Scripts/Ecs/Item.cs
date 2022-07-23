@@ -14,11 +14,23 @@ namespace Decode
 		public bool disable;
 		[FormerlySerializedAs("Id")] 
 		[ReadOnly]
-		public string id;
-		private void Reset()
+		public string id = Guid.NewGuid().ToString().Replace("-", "").ToLower();
+
+		public virtual void Awake()
 		{
-			Guid guid = Guid.NewGuid();
-			id = guid.ToString().Replace("-", "").ToLower();
+			id = Guid.NewGuid().ToString().Replace("-", "").ToLower();
+		}
+		[ContextMenu("Reload")]
+		public void ReloadAll(){
+			Item[] items = GameObject.FindObjectsOfType<Item>();
+			for(int i = 0; i < items.Length; i++)
+			{
+				items[i].Reload();
+			}
+		}
+		public void Reload()
+		{
+			id = Guid.NewGuid().ToString().Replace("-", "").ToLower();
 		}
 
 		private void Start()

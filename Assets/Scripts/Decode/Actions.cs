@@ -19,8 +19,9 @@ namespace Decode
 		[ReadOnly]
 		public string Id;
 		protected Config m_Config;
-		public virtual void Init(string id,Config config)
+		public virtual void Init(string itemid,string id,Config config)
 		{
+			itemId = itemid;
 			Id = id;
 			m_Config = config;
 		}
@@ -28,6 +29,7 @@ namespace Decode
 		{
 			if (needSync)
 			{
+				Debug.Log(itemId + " 1 " + Id + " 2 " + targetId);
 				MonoECSInteract.Instance.CmdAction(itemId, Id, targetId);
 			}
 			else
