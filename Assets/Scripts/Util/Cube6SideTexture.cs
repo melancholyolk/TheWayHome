@@ -19,11 +19,17 @@ namespace GameUtil
 	public class Cube6SideTexture : MonoBehaviour
 	{
 		[Header("Textures")] 
+		[SerializeField]
 		public TextureData topTexture;
+		[SerializeField]
 		public TextureData bottomTexture;
+		[SerializeField]
 		public TextureData leftTexture;
+		[SerializeField]
 		public TextureData rightTexture;
+		[SerializeField]
 		public TextureData frontTexture;
+		[SerializeField]
 		public TextureData backTexture;
 		[Header("UVSplitPoints")]
 		public Vector2 topPoint;
