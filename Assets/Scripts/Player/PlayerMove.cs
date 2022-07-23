@@ -202,7 +202,6 @@ public class PlayerMove : NetworkBehaviour
         // obj.GetComponent<PropPick>().SetPropInfo(num);
         obj.transform.position = objPosition.position;
         obj.transform.localEulerAngles = new Vector3(45, -45, 0);
-        obj.GetComponent<SpriteRenderer>().sortingOrder = players[0].GetComponent<SortingGroup>().sortingOrder;
     }
 
     [Command]

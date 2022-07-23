@@ -73,6 +73,8 @@ public class SyncManager : NetworkBehaviour
 
     public PropInfo GetPropInfoByNum(int num)
     {
+        prop_info[num].prop_sprite = sprites[num - 1];
+        prop_info[num].prop_id = num;
         return prop_info[num];
     }
 

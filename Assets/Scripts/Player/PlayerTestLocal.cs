@@ -414,10 +414,8 @@ public class PlayerTestLocal : MonoBehaviour
     private void RpcDiscardProp(int num)
     {
         GameObject obj = Instantiate(propPrefab);
-        obj.GetComponent<PropPick>().SetPropInfo(num);
         obj.transform.position = obj_pos.position;
         obj.transform.localEulerAngles = new Vector3(45,-45,0);
-        obj.GetComponent<SpriteRenderer>().sortingOrder = playerSprites[0].GetComponent<SortingGroup>().sortingOrder;
     }
 
     public void AddCondition(string str)

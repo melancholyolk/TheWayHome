@@ -46,6 +46,7 @@ public class ObjectPool : MonoBehaviour
 			go = Instantiate(prefab) as GameObject;
 		}
 		go.GetComponent<PropPick>().SetPropInfo(num);
+		go.GetComponent<PropPick>().is_pick = false;
 		return go;
 	}
 
