@@ -424,8 +424,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 0
-    SerializedBytes: 01010700000061006300740069006f006e0073002f0000000001210000004400650063006f00640065002e0041006300740069006f006e0073005b005d002c00200041007300730065006d0062006c0079002d0043005300680061007200700000000000060000000000000000070501010500000072006f006c006c0073002f01000000011e0000004400650063006f00640065002e0052006f006c006c005b005d002c00200041007300730065006d0062006c0079002d0043005300680061007200700001000000060200000000000000042f02000000011c0000004400650063006f00640065002e0052006f006c006c002c00200041007300730065006d0062006c0079002d004300530068006100720070000b010b00000072006f006c006c0043006f006e00740072006f006c00000000001d0104000000740079007000650000000000000000001f010b00000061006e00730077006500720046006c006f00610074000000000017010b00000061006e00730077006500720049006e0064006500780000000000050430020000000b010b00000072006f006c006c0043006f006e00740072006f006c00010000001d0104000000740079007000650000000000000000001f010b00000061006e00730077006500720046006c006f00610074000000000017010b00000061006e00730077006500720049006e0064006500780000000000050705
+    SerializedFormat: 2
+    SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 155851381938841336}
     - {fileID: 3891887719510929688}
@@ -433,7 +433,68 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: actions
+      Entry: 7
+      Data: 0|Decode.Actions[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: rolls
+      Entry: 7
+      Data: 1|Decode.Roll[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: Decode.Roll, Assembly-CSharp
+    - Name: rollControl
+      Entry: 10
+      Data: 0
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: answerFloat
+      Entry: 4
+      Data: 0
+    - Name: answerIndex
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.Roll, Assembly-CSharp
+    - Name: rollControl
+      Entry: 10
+      Data: 1
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: answerFloat
+      Entry: 4
+      Data: 0
+    - Name: answerIndex
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  profile: {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
   name: "\u68CB \u8C31"
 --- !u!82 &5449994919825640844
 AudioSource:

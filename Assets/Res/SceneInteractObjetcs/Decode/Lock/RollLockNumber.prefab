@@ -4029,6 +4029,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  profile: {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
   name: 
 --- !u!95 &366899824721691616
 Animator:

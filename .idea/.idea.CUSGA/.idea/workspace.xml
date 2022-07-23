@@ -22,22 +22,47 @@
     <list default="true" id="38174f88-50f0-4ca8-91bc-2e93ef8abcab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CUSGA/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CUSGA/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CUSGA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CUSGA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RenderSet/New 2D Renderer Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RenderSet/New 2D Renderer Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/SpriteMaterial/2DOutLine.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/SpriteMaterial/2DOutLine.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/SpriteMaterial/CUSGA_Lit.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/SpriteMaterial/CUSGA_Lit.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/SpriteMaterial/Player.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/SpriteMaterial/Player.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Wall/Labin1 t.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Wall/Labin1 t.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Wall/Labin1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Wall/Labin1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Wall/Labin2'.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Wall/Labin2'.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Wall/Labin2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Wall/Labin2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Wall/Labin3''.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Wall/Labin3''.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Wall/Labin3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Wall/Labin3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Wall/Labin4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Wall/Labin4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Wall/lit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/Wall/lit.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Res/Prefab/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/Prefab/UI/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/Computer/Computer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/Computer/Computer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/Electric/ElectricMachine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/Electric/ElectricMachine.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/Image/Paint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/Image/Paint.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/IronBox/IronBox.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/IronBox/IronBox.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/Lock/RollLock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/Lock/RollLock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/Lock/RollLockNumber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/Lock/RollLockNumber.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/Toy/ToyDecode.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Res/SceneInteractObjetcs/Decode/Toy/ToyDecode.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GroundScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GroundScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Volume/Global Volume Profile.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Volume/Global Volume Profile.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Decode/Lock/DecodeBaseInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Decode/Lock/DecodeBaseInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Decode/ObtainItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Decode/ObtainItems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ecs/Mixin/Actions/ActionLoadDecodeItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ecs/Mixin/Actions/ActionLoadDecodeItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Map/LogCabinControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Map/LogCabinControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe10.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe11.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe8.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe9.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,12 +104,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Mixin/ImageRota.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/DecodeType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Res/TextInfo/TaskTxt/TaskSample 1.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Mixin/Conditions/DecodeConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/RegenerateTexture.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Util/Cube6SideTexture.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Decode/Mixin/Conditions/ConditionFeedBack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Decode/Lock/BaseInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Decode/Computer/ComputerControl.cs" />
@@ -119,10 +140,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Decode/ObtainConfig.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Config.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/ObtainItems.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Mixin/Actions/ActionLoadDecodeItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Mixin/Actions/ActionDestroyItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Lock/DecodeBaseInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Actions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Mixin/Actions/ActionFire.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Event/Event_Altar.cs" />
@@ -130,6 +148,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Prop/PropGameobject/PropPick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMove.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Particle/CloseSnowParticle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Util/Cube6SideTexture.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Map/LogCabinControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Mixin/Actions/ActionOpenLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/ObtainItems.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Decode/Lock/DecodeBaseInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Mixin/Actions/ActionLoadDecodeItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/ResetID.cs" />
       </list>
     </option>
   </component>
@@ -241,7 +266,9 @@
       <workItem from="1658202310284" duration="1305000" />
       <workItem from="1658215223887" duration="6512000" />
       <workItem from="1658277641216" duration="9350000" />
-      <workItem from="1658539796937" duration="273000" />
+      <workItem from="1658539796937" duration="1232000" />
+      <workItem from="1658563124037" duration="3442000" />
+      <workItem from="1658581957727" duration="4616000" />
     </task>
     <servers />
   </component>
@@ -364,12 +391,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1656579475846" />
-    <state x="2369" y="151" width="700" height="708" key="search.everywhere.popup" timestamp="1658283385718">
+    <state x="2369" y="151" width="700" height="708" key="search.everywhere.popup" timestamp="1658585445716">
       <screen x="1920" y="0" width="1600" height="860" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1656579011387" />
-    <state x="2369" y="151" width="700" height="708" key="search.everywhere.popup/0.0.1536.824/1920.0.1600.860@1920.0.1600.860" timestamp="1658283385718" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1649676470402" />
+    <state x="2369" y="151" width="700" height="708" key="search.everywhere.popup/0.0.1536.824/1920.0.1600.860@1920.0.1600.860" timestamp="1658585445716" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

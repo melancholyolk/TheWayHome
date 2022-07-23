@@ -508,8 +508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
+  m_RequiresDepthTextureOption: 1
+  m_RequiresOpaqueTextureOption: 1
   m_CameraType: 0
   m_Cameras:
   - {fileID: 868064501}
@@ -850,7 +850,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 96e655da02052804392ceee8da01cf06, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -925,7 +925,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.17
   m_Range: 20
   m_SpotAngle: 51.112045
   m_InnerSpotAngle: 0
@@ -1216,6 +1216,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: isComplete
+      Entry: 5
+      Data: false
     - Name: name
       Entry: 6
       Data: 
@@ -1260,6 +1263,7 @@ MonoBehaviour:
   id: 6a2d7d059f37495db19715963f3ee82b
   canUse: 0
   pre: {fileID: 0}
+  decodes: []
 --- !u!135 &982185855
 SphereCollider:
   m_ObjectHideFlags: 0

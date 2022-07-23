@@ -13,6 +13,7 @@
           <e p="EditorSetting.cs" t="Include" />
           <e p="ReadOnlyDrawer.cs" t="Include" />
           <e p="RegenerateTexture.cs" t="Include" />
+          <e p="ResetID.cs" t="Include" />
         </e>
         <e p="Material" t="Include">
           <e p="HightLight" t="Include">
@@ -768,6 +769,7 @@
                 <e p="ActionGetProp.cs" t="Include" />
                 <e p="ActionLoadDecodeItem.cs" t="Include" />
                 <e p="ActionLoadPrefab.cs" t="Include" />
+                <e p="ActionOpenLight.cs" t="Include" />
                 <e p="ActionPlayAudio.cs" t="Include" />
                 <e p="ActionPlayVideo.cs" t="Include" />
                 <e p="ActionSafeBox.cs" t="Include" />
