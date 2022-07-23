@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
 
 namespace Decode
 {
@@ -9,6 +11,7 @@ namespace Decode
 	{
 		public GameObject decodePrefab;
 		public Camera decodeCamera;
+		public VolumeProfile postProcessProfile;
 		public override void DoAction()
 		{
 			var item = MonoECSInteract.Instance.GetItem(itemId) as ObtainItems;
@@ -18,6 +21,8 @@ namespace Decode
 			var input = go.GetComponent<DecodeBaseInput>();
 			item.decodes.Add(input);
 			input.Initialize(item,m_Config);
+
+			postProcessProfile.components[0].active = true;
 		}
 	}
 }

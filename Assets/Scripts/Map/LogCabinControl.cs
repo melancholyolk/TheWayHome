@@ -6,10 +6,11 @@ using UnityEngine.Rendering;
 
 public class LogCabinControl : MonoBehaviour
 {
-    public List<SpriteRenderer> hide_wall;
-    public List<SpriteRenderer> show_wall;
-    public List<SpriteRenderer> show_room_obj;
-    public List<SpriteRenderer> hide_room_obj;
+    public List<GameObject> hide_wall;
+
+    private bool m_IsEntered = false;
+    // public List<SpriteRenderer> show_room_obj;
+    // public List<SpriteRenderer> hide_room_obj;
 
     private void Start()
     {
@@ -18,25 +19,27 @@ public class LogCabinControl : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag.Equals("Player"))
+        if (other.tag.Equals("Player")&&!m_IsEntered)
         {
             for (int i = 0; i < hide_wall.Count; i++)
             {
-                hide_wall[i].color = new Color(1, 1, 1, 0.4f);
-
+	            hide_wall[i].GetComponent<MeshRenderer>().enabled = false;
             }
+            m_IsEntered = true;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
 
-        if (other.tag.Equals("Player"))
+        if (other.tag.Equals("Player")&&m_IsEntered)
         {
             for (int i = 0; i < hide_wall.Count; i++)
             {
-                hide_wall[i].color = new Color(1, 1, 1, 1);
+	            hide_wall[i].GetComponent<MeshRenderer>().enabled = true;
             }
+
+            m_IsEntered = false;
         }
     }
 }

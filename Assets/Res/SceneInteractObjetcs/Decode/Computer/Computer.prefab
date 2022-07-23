@@ -516,6 +516,18 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|Decode.ActionSetSprite, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
     - Name: image
       Entry: 10
       Data: 0
@@ -531,6 +543,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  profile: {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
   text: {fileID: 8471780247084941906}
 --- !u!223 &216243556377264013
 Canvas:

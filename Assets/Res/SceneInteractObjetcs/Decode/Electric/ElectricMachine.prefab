@@ -169,7 +169,7 @@ MonoBehaviour:
       Data: 0|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 7
       Data: 1|Decode.ActionPlayAudio, Assembly-CSharp
@@ -195,11 +195,54 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 2|Decode.ActionOpenLight, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: light
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Decode.ActionOpenLight, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: light
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
+  profile: {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
   frames:
   - {fileID: 1801650297869483814}
   - {fileID: 1801650297602883667}
@@ -209,7 +252,6 @@ MonoBehaviour:
   - {fileID: 1801650297595991146}
   cur_num: 0
   count: 0
-  open: {fileID: 8300000, guid: 7fb6c965469a01e4ba64214f27267c18, type: 3}
   left: 113
   right: 101
   rotate: 114

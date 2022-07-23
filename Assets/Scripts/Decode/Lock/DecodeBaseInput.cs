@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering.Universal;
+using DepthOfField = UnityEngine.Rendering.PostProcessing.DepthOfField;
 
 namespace Decode
 {
@@ -13,9 +17,10 @@ namespace Decode
 	public class DecodeBaseInput : SerializedMonoBehaviour
 	{
 		public Actions[] actions;
+		public VolumeProfile profile;
 		private ObtainItems m_Parent;
 		private Config m_Config;
-
+		
 		public void Initialize(ObtainItems parent,Config config)
 		{
 			m_Parent = parent;
@@ -32,6 +37,7 @@ namespace Decode
 		public virtual void OnInterrupt()
 		{
 			m_Config.isComplete = false;
+			profile.components[0].active = false;
 			Destroy(gameObject);
 		}
 

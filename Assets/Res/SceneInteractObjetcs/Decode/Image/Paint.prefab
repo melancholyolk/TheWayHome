@@ -456,13 +456,13 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  profile: {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
   frames:
   - {fileID: 2175444826634011900}
   - {fileID: 2175444827278440179}
   - {fileID: 2175444827772341723}
   cur_num: 0
   count: 0
-  open: {fileID: 8300000, guid: 7fb6c965469a01e4ba64214f27267c18, type: 3}
   left: 0
   right: 0
   rotate: 0
