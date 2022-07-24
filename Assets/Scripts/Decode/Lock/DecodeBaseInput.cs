@@ -47,9 +47,9 @@ namespace Decode
 			{
 				actions[i].SyncAction();
 			}
+			profile.components[0].active = false;
 			Destroy(gameObject,1.5f);
 		}
-
 		/// <summary>
 		/// 解密成功后调用
 		/// </summary>

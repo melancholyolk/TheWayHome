@@ -169,7 +169,7 @@ MonoBehaviour:
       Data: 0|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 7
       Data: 1|Decode.ActionPlayAudio, Assembly-CSharp
@@ -191,48 +191,6 @@ MonoBehaviour:
     - Name: clip
       Entry: 10
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 2|Decode.ActionOpenLight, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: light
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|Decode.ActionOpenLight, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: light
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 

@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370516318}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 8.2, z: -10.5}
+  m_LocalPosition: {x: -3.97, y: 7.67, z: -10.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5228,10 +5228,10 @@ MonoBehaviour:
   - {fileID: 9090193530839892219}
   playerMaterial: {fileID: 2100000, guid: 61b51808cb862db4db6b159a0a73ccc1, type: 2}
   hand:
-    leftHandFront: {fileID: 0}
-    rightHandFront: {fileID: 0}
-    leftHandBack: {fileID: 0}
-    rightHandBack: {fileID: 0}
+    leftHandFront: {fileID: 4532666076532025875}
+    rightHandFront: {fileID: 4532666077043362904}
+    leftHandBack: {fileID: 8614202191191862965}
+    rightHandBack: {fileID: 8614202190987696309}
   m_attribute:
     moveSpeed: 0
     maxHp: 0

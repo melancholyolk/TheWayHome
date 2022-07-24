@@ -10,7 +10,7 @@ namespace Decode
 			{
 				decode.OnInterrupt();
 			}
-
+			item.decodes.Clear();
 			m_Config.isComplete = false;
 		}
 	}

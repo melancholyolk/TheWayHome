@@ -48,12 +48,7 @@ public class Event_SimpleObject : Event
     {
         if (_triggerDialog.Count > 0)
         {
-            canvas.GetComponent<View_Control>().ShowDialog(_triggerDialog);
-            CmdEventOver();
-            if (GetComponent<ObtainItems>().pre == null)
-            {
-                SendMessage("Complete");
-            }
+            
         }
     }
 

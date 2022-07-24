@@ -40,12 +40,12 @@ namespace Decode
 				if (!condition.Accept())
 					return false;
 			}
-
+			isComplete = true;
 			foreach (var action in actions)
 			{
 				action.SyncAction();
 			}
-			isComplete = true;
+			
 			return true;
 		}
 	}

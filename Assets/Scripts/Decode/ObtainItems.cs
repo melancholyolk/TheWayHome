@@ -10,15 +10,9 @@ namespace Decode
 	/// </summary>
 	public class ObtainItems : Item
 	{
-		public bool canUse = false;
-
 		[ListDrawerSettings(ShowIndexLabels = true, ListElementLabelName = "name")]
 		[Searchable]
 		public List<ObtainConfig> configs;
-
-		[HideInInspector]
-		public GameObject pre;
-
 		public List<DecodeBaseInput> decodes;
 		public override void Awake()
 		{
@@ -43,7 +37,7 @@ namespace Decode
 						continue;
 					foreach (var condition in config.conditions)
 					{
-						condition.Start();
+						condition.Start(config);
 					}
 				}
 			}

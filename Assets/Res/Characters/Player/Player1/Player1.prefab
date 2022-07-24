@@ -550,10 +550,10 @@ MonoBehaviour:
   - {fileID: 3924984994876960097}
   playerMaterial: {fileID: 2100000, guid: 61b51808cb862db4db6b159a0a73ccc1, type: 2}
   hand:
-    leftHandFront: {fileID: 0}
-    rightHandFront: {fileID: 0}
-    leftHandBack: {fileID: 0}
-    rightHandBack: {fileID: 0}
+    leftHandFront: {fileID: 4586349661405366118}
+    rightHandFront: {fileID: 4586349662013908379}
+    leftHandBack: {fileID: 108181841505712835}
+    rightHandBack: {fileID: 108181840807161704}
   m_attribute:
     moveSpeed: 0
     maxHp: 0

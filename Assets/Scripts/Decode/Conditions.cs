@@ -9,15 +9,16 @@ namespace Decode
 	public abstract class Conditions
 	{
 		public string name;
+		protected Config m_Config;
 		
 		public virtual bool Accept()
 		{
 			return false;
 		}
 
-		public virtual void Start()
+		public virtual void Start(Config config)
 		{
-			
+			m_Config = config;
 		}
 		public virtual void Update()
 		{

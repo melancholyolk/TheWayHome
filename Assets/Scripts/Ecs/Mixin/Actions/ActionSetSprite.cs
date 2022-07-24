@@ -7,12 +7,12 @@ namespace Decode
 {
 	public class ActionSetSprite : Actions
 	{
-		public Image image;
+		public SpriteRenderer renderer;
 		public Sprite sprite;
 
 		public override void DoAction()
 		{
-			image.sprite = sprite;
+			renderer.sprite = sprite;
 		}
 	}
 }
