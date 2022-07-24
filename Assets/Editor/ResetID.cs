@@ -4,13 +4,13 @@ using UnityEngine;
 [CustomEditor(typeof(Item))]
 public class ResetID : Editor
 {
-	public override void OnInspectorGUI()
+	[MenuItem("WayHome/ReloadItemID")]
+	public static void RealodAll()
 	{
-		DrawDefaultInspector();
-		Item myScript = (Item) target;
-		if (GUILayout.Button("重新生成ID"))
+		Item[] items = GameObject.FindObjectsOfType<Item>();
+		for(int i = 0; i < items.Length; i++)
 		{
-			
+			items[i].Reload();
 		}
 	}
 }

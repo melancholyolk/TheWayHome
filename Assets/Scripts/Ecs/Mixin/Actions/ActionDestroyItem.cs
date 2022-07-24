@@ -10,6 +10,8 @@ namespace Decode
 			{
 				decode.OnInterrupt();
 			}
+
+			m_Config.isComplete = false;
 		}
 	}
 }

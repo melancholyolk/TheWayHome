@@ -47,7 +47,7 @@ namespace Decode
 			{
 				actions[i].SyncAction();
 			}
-			Destroy(gameObject);
+			Destroy(gameObject,1.5f);
 		}
 
 		/// <summary>
