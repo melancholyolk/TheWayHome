@@ -5,117 +5,104 @@ using UnityEngine;
 
 public class DoorControl : NetworkBehaviour
 {
-    public bool is_v = false;
-    public AudioClip open;
-    private bool is_open = false;
+	public bool is_v = false;
 
-    private bool can_use = false;
+	private bool can_use = false;
 
-    private Animator animator;
-    private float time = 0;
-    private AudioSource _audioSource;
-    public bool is_positive = false;
-    
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-        _audioSource = GetComponent<AudioSource>();
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (can_use && Time.time - time > 1 && !is_open)
-            {
-                time = Time.time;
-                if (is_positive)
-                {
-                    CmdDoor("open");
-                    if (is_v)
-                    {
-                        GetComponent<SpriteRenderer>().sortingOrder = -1; 
-                    }
-                    else
-                    {
-                        GetComponent<SpriteRenderer>().sortingOrder = 1;
-                    }
-                }
-                else
-                {
-                    CmdDoor("openother"); 
-                    if (is_v)
-                    {
-                        GetComponent<SpriteRenderer>().sortingOrder = 1; 
-                    }
-                    else
-                    {
-                        GetComponent<SpriteRenderer>().sortingOrder = -1;
-                    }
-                }
+	public bool is_positive = false;
 
-                is_open = true;
-            }
-        }
-    }
+	public Material material;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.transform.tag.Equals("Player"))
-        {
-            can_use = true;
-            if (is_v)
-            {
-                if (other.transform.position.x - this.transform.position.x > 0)
-                {
-                    is_positive = true;
-                }
-                else
-                {
-                    is_positive = false;
-                }
-            }
-            else
-            {
-                if (other.transform.position.z - this.transform.position.z > 0)
-                {
-                    is_positive = true;
-                }
-                else
-                {
-                    is_positive = false;
-                }
-            }
-        }
-    }
+	// Update is called once per frame
+	void Update()
+	{
+		if (can_use)
+		{
+			if (is_positive)
+			{
+				if (is_v)
+				{
+					material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
+					material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
+					material.SetInt("_ZWrite", 1);
+					material.DisableKeyword("_ALPHATEST_ON");
+					material.DisableKeyword("_ALPHABLEND_ON");
+					material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+					material.renderQueue = -1;
+				}
+				else
+				{
+					material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
+					material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+					material.SetInt("_ZWrite", 0);
+					material.DisableKeyword("_ALPHATEST_ON");
+					material.DisableKeyword("_ALPHABLEND_ON");
+					material.EnableKeyword("_ALPHAPREMULTIPLY_ON");
+					material.renderQueue = 3000;
+				}
+			}
+			else
+			{
+				if (is_v)
+				{
+					material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
+					material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+					material.SetInt("_ZWrite", 0);
+					material.DisableKeyword("_ALPHATEST_ON");
+					material.DisableKeyword("_ALPHABLEND_ON");
+					material.EnableKeyword("_ALPHAPREMULTIPLY_ON");
+					material.renderQueue = 3000;
+				}
+				else
+				{
+					material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.One);
+					material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
+					material.SetInt("_ZWrite", 1);
+					material.DisableKeyword("_ALPHATEST_ON");
+					material.DisableKeyword("_ALPHABLEND_ON");
+					material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+					material.renderQueue = -1;
+				}
+			}
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.transform.tag.Equals("Player"))
-        {
-            can_use = false;
-            if (is_open)
-            {
-                if(is_positive)
-                    CmdDoor("close");
-                else
-                    CmdDoor("closeother");
-            }
+		}
+	}
 
-            is_open = false;
-        }
-    }
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.transform.tag.Equals("Player"))
+		{
+			can_use = true;
+			if (is_v)
+			{
+				if (other.transform.position.x - this.transform.position.x > 0)
+				{
+					is_positive = true;
+				}
+				else
+				{
+					is_positive = false;
+				}
+			}
+			else
+			{
+				if (other.transform.position.z - this.transform.position.z > 0)
+				{
+					is_positive = true;
+				}
+				else
+				{
+					is_positive = false;
+				}
+			}
+		}
+	}
 
-    [Command(requiresAuthority = false)]
-    private void CmdDoor(string name)
-    {
-        RpcDoor(name);
-    }
-
-    [ClientRpc]
-    private void RpcDoor(string name)
-    {
-        animator.SetTrigger(name);
-        _audioSource.PlayOneShot(open);
-    }
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.transform.tag.Equals("Player"))
+		{
+			can_use = false;
+		}
+	}
 }

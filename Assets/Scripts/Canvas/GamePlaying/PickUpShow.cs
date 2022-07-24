@@ -94,7 +94,7 @@ public class PickUpShow : MonoBehaviour
         }
         else
         {
-            CanvasManager.Instance.is_picking = false;
+            OperationControl.Instance.is_picking = false;
         }
     }
 }

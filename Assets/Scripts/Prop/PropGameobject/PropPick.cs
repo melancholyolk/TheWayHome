@@ -38,7 +38,7 @@ public class PropPick : PropProperty
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && CanvasManager.Instance.CanOperate() && CanvasManager.Instance.CanPick())
+        if (Input.GetKeyDown(KeyCode.E) && OperationControl.Instance.CanOperate() && CanvasManager.Instance.CanPick())
         {
             if (canUse && !is_pick)
             {
@@ -52,15 +52,4 @@ public class PropPick : PropProperty
             ObjectPool._instance.RecycleGo(this.gameObject);
         }
     }   
-
-
-    void PlayerNear()
-    {
-        canUse = true;
-    }
-
-    void PlayerLeave()
-    {
-        canUse = false;
-    }
 }

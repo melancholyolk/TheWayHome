@@ -76,9 +76,16 @@ public class PlayerMove : NetworkBehaviour
 
     private PlayerState m_CurrentState = PlayerState.NORMAL;
 
+    public enum dir
+    {
+        North,
+        Sorth,
+        East,
+        West,
+
+	}
 
 
-    // Start is called before the first frame update
     void Start()
     {
         m_OriginScale = transform.localScale;
@@ -99,7 +106,7 @@ public class PlayerMove : NetworkBehaviour
             return;
         }
 
-        if (!CanvasManager.Instance.CanOperate())
+        if (!OperationControl.Instance.CanOperate())
         {
             return;
         }
@@ -123,24 +130,6 @@ public class PlayerMove : NetworkBehaviour
     }
 
     #region Cmd
-    [Command]
-    public void CmdDecodeIsUse(SyncItem obj, bool temp)
-    {
-        obj.isUsing = temp;
-    }
-
-    [Command]
-    public void CmdDecodeIsComplete(SyncItem obj, bool temp)
-    {
-        obj.isComplete = temp;
-    }
-
-    [Command]
-    public void CmdPropIsPick(GameObject obj)
-    {
-        obj.GetComponent<PropProperty>().is_pick = true;
-    }
-
     [Command]
     private void CmdSetAnimation(PlayerAnimatorControl.AnimationName ani)
     {

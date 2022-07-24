@@ -14,9 +14,8 @@ namespace Decode
 		[Searchable]
 		public List<ObtainConfig> configs;
 		public List<DecodeBaseInput> decodes;
-		public override void Awake()
+		private void Awake()
 		{
-			base.Awake();
 			decodes = new List<DecodeBaseInput>();
 			for(int i = 0; i < configs.Count; i++)
 			{

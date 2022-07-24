@@ -22,7 +22,7 @@ namespace Decode
 			var input = go.GetComponent<DecodeBaseInput>();
 			item.decodes.Add(input);
 			input.Initialize(item,m_Config);
-
+			OperationControl.Instance.is_decoding = true;
 			postProcessProfile.components[0].active = true;
 		}
 	}

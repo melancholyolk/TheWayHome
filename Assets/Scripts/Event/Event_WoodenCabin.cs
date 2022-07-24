@@ -18,7 +18,7 @@ public class Event_WoodenCabin : Event
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && CanvasManager.Instance.CanOperate())
+        if (Input.GetKeyDown(KeyCode.E) && OperationControl.Instance.CanOperate())
         {
             if (canUse)
             {

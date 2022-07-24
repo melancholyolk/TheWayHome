@@ -28,7 +28,7 @@ public class Event_Altar_FirePan : Event_FirePan
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && CanvasManager.Instance.CanOperate())
+        if (Input.GetKeyDown(KeyCode.E) && OperationControl.Instance.CanOperate())
         {
             if (canUse)
             {

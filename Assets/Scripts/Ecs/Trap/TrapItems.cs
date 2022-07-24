@@ -11,9 +11,8 @@ namespace Decode
         [Searchable]
         public List<TrapConfig> configs;
 
-		public override void Awake()
+		private void Awake()
 		{
-			base.Awake();
 			for (int i = 0; i < configs.Count; i++)
 			{
 				configs[i].Awake(id,i.ToString());

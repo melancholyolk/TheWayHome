@@ -6,11 +6,9 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
 	public static CanvasManager Instance;
-    public bool is_picking = false;
-    public bool is_setting = false;
-    public bool is_decoding = false;
-    public bool is_dialog = false;
-    public bool cluemenu_show = false;
+
+    private bool cluemenu_show = false;
+
     public PickUpShow pickUpShow;
     public PropPanel propPanel;
     public GameObject clue_menu;
@@ -33,9 +31,10 @@ public class CanvasManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I) && (CanOperate() || cluemenu_show))
+        if (Input.GetKeyDown(KeyCode.I) && (OperationControl.Instance.CanOperate() || cluemenu_show))
         {
             cluemenu_show = !cluemenu_show;
+            OperationControl.Instance.ui_isOpening = cluemenu_show;
             clue_menu.SetActive(cluemenu_show);
             propPanel.ChangeState();
             if (cluemenu_show)
@@ -45,30 +44,6 @@ public class CanvasManager : MonoBehaviour
         }
     }
 
-    public void SetPickState(bool temp)
-    {
-        is_picking = temp;
-    }
-
-    public void SetSettingState(bool temp)
-    {
-        is_setting = temp;
-    }
-
-    public void SetDecodeState(bool temp)
-    {
-        is_decoding = temp;
-    }
-
-    public bool CanOperate()
-    {
-        if (!is_decoding && !is_picking && !cluemenu_show && !is_setting)
-        {
-            return true;
-        }
-
-        return false;
-    }
 
     public bool CanPick()
     {
@@ -99,7 +74,7 @@ public class CanvasManager : MonoBehaviour
     public void PickUpStart(int num, float size)
     {
         PropInfo info = SyncManager.Instance.GetPropInfoByNum(num);
-        is_picking = true;
+        OperationControl.Instance.is_picking = true;
         pickUpShow.PickUpStart(info.prop_sprite , size, info.prop_name,info.prop_describe);
         if (info.prop_type == "t")
         {

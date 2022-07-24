@@ -15,19 +15,6 @@ namespace Decode
 		[FormerlySerializedAs("Id")] 
 		[ReadOnly]
 		public string id = Guid.NewGuid().ToString().Replace("-", "").ToLower();
-
-		public virtual void Awake()
-		{
-			id = Guid.NewGuid().ToString().Replace("-", "").ToLower();
-		}
-		[ContextMenu("Reload")]
-		public void ReloadAll(){
-			Item[] items = GameObject.FindObjectsOfType<Item>();
-			for(int i = 0; i < items.Length; i++)
-			{
-				items[i].Reload();
-			}
-		}
 		public void Reload()
 		{
 			id = Guid.NewGuid().ToString().Replace("-", "").ToLower();

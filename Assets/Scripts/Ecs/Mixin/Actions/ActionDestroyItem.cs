@@ -11,6 +11,7 @@ namespace Decode
 				decode.OnInterrupt();
 			}
 			item.decodes.Clear();
+			OperationControl.Instance.is_decoding = false;
 			m_Config.isComplete = false;
 		}
 	}

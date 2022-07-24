@@ -24,7 +24,7 @@ public class Event_SimpleObject : Event
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && CanvasManager.Instance.CanOperate())
+        if (Input.GetKeyDown(KeyCode.E) && OperationControl.Instance.CanOperate())
         {
             if (canUse)
             {

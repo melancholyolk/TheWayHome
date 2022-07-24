@@ -24,21 +24,19 @@ public class ToyChest : SyncItem
     }
     private void Update()
     {
-        if (canUse && !isUsing && !isComplete && CanvasManager.Instance.CanOperate() && Input.GetKeyDown(KeyCode.F))
+        if (canUse && !isUsing && !isComplete && OperationControl.Instance.CanOperate() && Input.GetKeyDown(KeyCode.F))
         {
             if (ori)
                 Destroy(ori);
             ori = Instantiate(toyManager_prefab);
             ori.transform.parent = transform;
             ori.GetComponent<ToyManager>().Init(li_int);
-            player.CmdDecodeIsUse(this, true);
-            CanvasManager.Instance.is_decoding = true;
+            OperationControl.Instance.is_decoding = true;
         }
         else if (ori && isUsing && canUse && (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.F)))
         {
             Destroy(ori);
-            player.CmdDecodeIsUse(this, false);
-            CanvasManager.Instance.is_decoding = false;
+            OperationControl.Instance.is_decoding = false;
         }
     }
     void PlayerNear()
@@ -62,7 +60,7 @@ public class ToyChest : SyncItem
 
     void Complete()
     {
-        CanvasManager.Instance.is_decoding = false;
+        OperationControl.Instance.is_decoding = false;
         isComplete = true;
     }
 }

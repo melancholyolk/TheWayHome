@@ -22,18 +22,18 @@ public class EscControl : NetworkBehaviour
     private void Update()
     {
         time += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Escape) && (CanvasManager.Instance.CanOperate() || CanvasManager.Instance.is_setting))
+        if (Input.GetKeyDown(KeyCode.Escape) && (OperationControl.Instance.CanOperate() || OperationControl.Instance.is_setting))
         {
             if (time < 1f) return;
             if (!esc_menu.activeSelf)
             {
-                CanvasManager.Instance.is_setting = true;
+                OperationControl.Instance.is_setting = true;
                 esc_menu.SetActive(!esc_menu.activeSelf);
             }
             else
             {
                 escmenu_show = true;
-                CanvasManager.Instance.is_setting = false;
+                OperationControl.Instance.is_setting = false;
             }
             time = 0;
         }
@@ -69,7 +69,6 @@ public class EscControl : NetworkBehaviour
     {
         network.StopHost();
     }
-
     private void EndClientConnect()
     {
         network.StopClient();
