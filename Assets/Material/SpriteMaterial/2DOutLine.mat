@@ -10,6 +10,7 @@ Material:
   m_Name: 2DOutLine
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ValidKeywords:
+  - _ALPHATEST_ON
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -112,7 +113,7 @@ Material:
     - Vector1_8edb84d0b9024713aa78af14d816e7a6: 0
     - Vector1_d11240b67b7045a197c75de8e159b61a: 0.19
     - _Alpha: 1.77
-    - _AlphaClip: 0
+    - _AlphaClip: 1
     - _Blend: 0
     - _BumpScale: 1
     - _CastShadows: 1

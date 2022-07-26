@@ -23,7 +23,8 @@ public class LogCabinControl : MonoBehaviour
         {
             for (int i = 0; i < hide_wall.Count; i++)
             {
-	            hide_wall[i].GetComponent<MeshRenderer>().enabled = false;
+	            var material = hide_wall[i].GetComponent<MeshRenderer>().material;
+	            material.SetFloat("_Alpha",0.5f);
             }
             m_IsEntered = true;
         }
@@ -36,7 +37,8 @@ public class LogCabinControl : MonoBehaviour
         {
             for (int i = 0; i < hide_wall.Count; i++)
             {
-	            hide_wall[i].GetComponent<MeshRenderer>().enabled = true;
+	            var material = hide_wall[i].GetComponent<MeshRenderer>().material;
+	            material.SetFloat("_Alpha",1f);
             }
 
             m_IsEntered = false;
