@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 693163645}
   - component: {fileID: 693163646}
+  - component: {fileID: 4954933095610110093}
   m_Layer: 9
   m_Name: ColliderBody
   m_TagString: Untagged
@@ -46,6 +47,19 @@ CapsuleCollider:
   m_Height: 12.62
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &4954933095610110093
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693163644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.95
+  m_Center: {x: -5.67, y: 3.98, z: 5.14}
 --- !u!1 &1151183033
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +72,7 @@ GameObject:
   - component: {fileID: 1151183034}
   - component: {fileID: 5842466368810486635}
   m_Layer: 9
-  m_Name: Point Light
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,16 +102,16 @@ Light:
   m_GameObject: {fileID: 1151183033}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 2
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 200
+  m_Intensity: 100
   m_Range: 20
   m_SpotAngle: 78.553345
   m_InnerSpotAngle: 70.35542
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1

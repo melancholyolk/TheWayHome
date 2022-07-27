@@ -48,6 +48,8 @@ namespace Decode
 				actions[i].SyncAction();
 			}
 			profile.components[0].active = false;
+			m_Parent.isUsing = false;
+			OperationControl.Instance.is_decoding = false;
 			Destroy(gameObject,1.5f);
 		}
 		/// <summary>

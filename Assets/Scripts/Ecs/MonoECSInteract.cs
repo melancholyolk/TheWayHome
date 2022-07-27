@@ -23,7 +23,7 @@ namespace Decode
 		private void Awake()
 		{
 			Instance = this;
-			m_ObItems = new List<ObtainItems>();
+			// m_ObItems = new List<ObtainItems>();
 			m_Items = new Dictionary<string, Item>();
 		}
 		
@@ -43,7 +43,8 @@ namespace Decode
 				// 		}
 				// 	}
 				// }
-				item.CheckAllConfigs();
+				if(!item.isUsing)
+					item.CheckAllConfigs();
 			}
 		}
 

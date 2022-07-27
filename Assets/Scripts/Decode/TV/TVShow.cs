@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Decode;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TVShow : MonoBehaviour
+public class TVShow : DecodeBaseInput
 {
     public TVLetter letter;
     public Animator animator;
-
     public SpriteRenderer image;
 
     private bool is_changing = false;

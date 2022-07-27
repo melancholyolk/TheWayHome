@@ -12,14 +12,14 @@ public class ButtonManager : NetworkBehaviour
 	public GameObject[] btns;
 	public GameObject canvas;
 	public GameObject bg;
-	public VideoPlayer cg;
+	public GameState gameState;
 	// Update is called once per frame
 	void Update()
 	{
 		if (btn_isdown)
 		{
 			btn_isdown = false;
-			// PlayCG();
+			gameState.state = GameState.Chapter.Chapter0;
 			Invoke("DestoryChild", 1);
 		}
 	}
@@ -53,12 +53,7 @@ public class ButtonManager : NetworkBehaviour
 		btn_isdown = true;
 	}
 
-	private void PlayCG()
-	{
-		cg.gameObject.SetActive(true);
-		cg.loopPointReached += (vp) => { vp.playbackSpeed = vp.playbackSpeed / 10.0F;vp.gameObject.SetActive(false); };
-		cg.Play();
-	}
+	
 	private void DestoryChild()
 	{
 		Destroy(bg);

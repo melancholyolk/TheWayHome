@@ -21,7 +21,7 @@ public class WallChange : MonoBehaviour
         {
             foreach (GameObject obj in props)
             {
-                obj.layer = 9;
+                obj.layer = 7;
             }
             foreach (GameObject obj in hide_wall)
             {

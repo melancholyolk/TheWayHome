@@ -62,7 +62,7 @@ public class PlayerChose : NetworkBehaviour
         else if(!playerMove && GameObject.Find("Player" + player + "(Clone)"))
         {
             playerMove = GameObject.Find("Player" + player + "(Clone)").GetComponent<PlayerMove>();
-            GameObject.Find("TaskLoader").GetComponent<TaskManager>().InitTaskLoader(player);
+            // GameObject.Find("TaskLoader").GetComponent<TaskManager>().InitTaskLoader(player);
             playerMove.gameObject.AddComponent<AudioListener>();
             playerMove.gameObject.AddComponent<FowViewer>();
             playerMove.gameObject.GetComponent<FowViewer>().viewerRange = 20;

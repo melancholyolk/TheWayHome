@@ -65,10 +65,10 @@ public class TaskManager : NetworkBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            CmdCompleteTask(_unCompleteIndex[0]);
-        }
+        // if (Input.GetKeyDown(KeyCode.Return))
+        // {
+        //     CmdCompleteTask(_unCompleteIndex[0]);
+        // }
     }
 
     public void CompleteTask(string taskNumber)
@@ -264,7 +264,6 @@ public class TaskManager : NetworkBehaviour
     {
         int i = 0;
         int index = GetIndexFromTaskNumber(unit.taskInfo.taskNumber);
-        // print(index);
         while (true)
         {
             var unity = _taskInfos[index];
