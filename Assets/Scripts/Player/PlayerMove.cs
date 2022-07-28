@@ -2,6 +2,7 @@ using Mirror;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Decode;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Serialization;
@@ -36,6 +37,8 @@ public class PlayerMove : NetworkBehaviour
     public PlayerAttribute m_attribute;
 
     public bool useLocalPosition = false;
+
+    public PreConfigResource preConfig;
 
     private Rigidbody m_Rigidbody;
 
@@ -191,6 +194,13 @@ public class PlayerMove : NetworkBehaviour
         // obj.GetComponent<PropPick>().SetPropInfo(num);
         obj.transform.position = objPosition.position;
         obj.transform.localEulerAngles = new Vector3(45, -45, 0);
+
+        var script = obj.AddComponent<ObtainItems>();
+        var config = preConfig.pickConfig.Clone() as Config;
+        var action = config.actions[0] as Decode.ActionGetProp;
+        Debug.Assert(action!= null,"检查捡起预设");
+        action.PropertyID = num;
+        script.configs.Add(preConfig.pickConfig as ObtainConfig);
     }
 
     [Command]

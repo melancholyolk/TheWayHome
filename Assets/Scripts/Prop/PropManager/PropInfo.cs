@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PropInfo : MonoBehaviour
+public class PropInfo
 {
     public string prop_number = "";
     public string prop_name = "";

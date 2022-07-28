@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 namespace Decode
 {
-	public class Config
+	public class Config : ICloneable
 	{
 		public Actions[] actions;
 		[PropertyOrder(-3)]
@@ -36,5 +36,9 @@ namespace Decode
 			}
 		}
 
+		public object Clone()
+		{
+			return this.MemberwiseClone();
+		}
 	}
 }

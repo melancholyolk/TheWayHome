@@ -11,7 +11,7 @@ namespace Decode
 	/// 动作
 	/// </summary>
 	
-	public class Actions
+	public class Actions : ICloneable
 	{
 		public string itemId;
 		public string targetId;
@@ -41,6 +41,11 @@ namespace Decode
 		public virtual void DoAction()
 		{
 			
+		}
+
+		public object Clone()
+		{
+			return this.MemberwiseClone();
 		}
 	}
 }

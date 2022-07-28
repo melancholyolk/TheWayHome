@@ -21,7 +21,7 @@ public class PropJudgePlayer : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            SendMessage("PlayerNear");
+            // SendMessage("PlayerNear");
             player = other.gameObject;
             propInfo.player = player.GetComponent<PlayerMove>();
         }
@@ -30,7 +30,7 @@ public class PropJudgePlayer : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            SendMessage("PlayerLeave");
+            // SendMessage("PlayerLeave");
             player = other.gameObject;
         }
     }

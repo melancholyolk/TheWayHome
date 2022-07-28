@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -56,5 +59,18 @@ public class ObjectPool : MonoBehaviour
 		tObj.Push(go);
 		m_needReset = true;
 	}
+	public static T DeepCopyByXml<T>(T obj)
+    {
+    　　object retval;
+    　　using (MemoryStream ms = new MemoryStream())
+    　　{
+    　　　　XmlSerializer xml=new XmlSerializer(typeof(T));
+    　　　　xml.Serialize(ms, obj);
+    　　　　ms.Seek(0, SeekOrigin.Begin);
+    　　　　retval = xml.Deserialize(ms);
+    　　　　ms.Close();
+    　　}
+    　　return (T)retval;
+    }
 
 }

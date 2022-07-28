@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Decode;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -16,7 +17,6 @@ public class PropOperation : Click, IPointerExitHandler
     public GameObject text_panel;
     public GameObject info_panel;
     public bool can_use = true;
-
     public void SetPanelInfo(PropInfo prop)
     {
         prop_info = prop;

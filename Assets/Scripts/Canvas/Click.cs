@@ -1,9 +1,10 @@
 using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-public class Click : MonoBehaviour, IPointerClickHandler
+public class Click : SerializedMonoBehaviour, IPointerClickHandler
 {
 
     public UnityEvent leftClick;

@@ -1,6 +1,7 @@
 using Decode;
 using Mirror;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class ButtonManager : NetworkBehaviour
@@ -8,7 +9,7 @@ public class ButtonManager : NetworkBehaviour
 	[SyncVar] 
 	public bool btn_isdown = false;
 	public int chose_num = 0;
-	public GameObject btn;
+	public Button btn;
 	public GameObject[] btns;
 	public GameObject canvas;
 	public GameObject bg;
@@ -20,7 +21,7 @@ public class ButtonManager : NetworkBehaviour
 		{
 			btn_isdown = false;
 			gameState.state = GameState.Chapter.Chapter0;
-			Invoke("DestoryChild", 1);
+			DestoryChild();
 		}
 	}
 
@@ -40,11 +41,11 @@ public class ButtonManager : NetworkBehaviour
 	{
 		if (chose_num == 2 && isServer)
 		{
-			btn.SetActive(true);
+			btn.interactable = true;
 		}
 		else
 		{
-			btn.SetActive(false);
+			btn.interactable = false;
 		}
 	}
 
@@ -57,7 +58,7 @@ public class ButtonManager : NetworkBehaviour
 	private void DestoryChild()
 	{
 		Destroy(bg);
-		btn.SetActive(false);
+		btn.gameObject.SetActive(false);
 		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("PlayerChose"))
 		{
 			obj.GetComponent<PlayerChose>().is_ready = true;
@@ -68,6 +69,6 @@ public class ButtonManager : NetworkBehaviour
 			Destroy(obj);
 		}
 		
-		Destroy(this.gameObject);
+		Destroy(gameObject);
 	}
 }

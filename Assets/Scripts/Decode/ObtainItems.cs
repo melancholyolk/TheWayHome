@@ -12,11 +12,10 @@ namespace Decode
 	{
 		[ListDrawerSettings(ShowIndexLabels = true, ListElementLabelName = "name")]
 		[Searchable]
-		public List<ObtainConfig> configs;
-		public List<DecodeBaseInput> decodes;
+		public List<ObtainConfig> configs = new List<ObtainConfig>();
+		public List<DecodeBaseInput> decodes = new List<DecodeBaseInput>();
 		private void Awake()
 		{
-			decodes = new List<DecodeBaseInput>();
 			for(int i = 0; i < configs.Count; i++)
 			{
 				configs[i].Awake(id,i.ToString());

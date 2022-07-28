@@ -26,25 +26,25 @@ public class Test1 : NetworkBehaviour
 
     public bool CanPick()
     {
-        if (cur_info.prop_panel[0])
+        if (cur_info.prop_panel[0] != null)
         {
             return true;
         }
-        else if (cur_info.prop_panel[1])
+        else if (cur_info.prop_panel[1] != null)
         {
             return true;
         }
-        print("ÂúÁË");
+        print("æ»¡äº†");
         return false;
     }
 
     public void SetPropPanel(PropInfo i)
     {
-        if (cur_info.prop_panel[0])
+        if (cur_info.prop_panel[0] != null)
         {
             cur_info.prop_panel[0] = i;
         }
-        else if (cur_info.prop_panel[1])
+        else if (cur_info.prop_panel[1] != null)
         {
             cur_info.prop_panel[1] = i;
         }

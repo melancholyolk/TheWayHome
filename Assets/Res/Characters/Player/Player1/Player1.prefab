@@ -573,6 +573,7 @@ MonoBehaviour:
     maxHp: 0
     maxWarm: 0
   useLocalPosition: 0
+  preConfig: {fileID: 11400000, guid: 825b4f986d082ac45809cdf42ff18fd7, type: 2}
   curState: 0
 --- !u!54 &411410632
 Rigidbody:
