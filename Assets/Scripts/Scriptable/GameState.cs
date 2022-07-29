@@ -2,16 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/GameState", order = 2)]
-public class GameState : ScriptableObject
+public static class GameState
 {
+	[Serializable]
     public enum Chapter
     {
 	    None,
+	    Choosing,
 	    Chapter0,
 	    Chapter1,
 	    Chapter2,
     }
-	[NonSerialized]
-    public Chapter state;
+
+    public static Chapter state = Chapter.None;
 }

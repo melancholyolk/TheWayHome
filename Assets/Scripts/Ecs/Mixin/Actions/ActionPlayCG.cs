@@ -15,7 +15,6 @@ namespace Decode
 				{
 					action.SyncAction();
 				}
-				Debug.LogWarning("finish");
 			};
 			cg.Play();
 

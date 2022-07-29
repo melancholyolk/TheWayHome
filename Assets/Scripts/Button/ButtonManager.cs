@@ -13,15 +13,17 @@ public class ButtonManager : NetworkBehaviour
 	public GameObject[] btns;
 	public GameObject canvas;
 	public GameObject bg;
-	public GameState gameState;
+	public Animator fadeout;
 	// Update is called once per frame
 	void Update()
 	{
 		if (btn_isdown)
 		{
 			btn_isdown = false;
-			gameState.state = GameState.Chapter.Chapter0;
-			DestoryChild();
+			GameState.state = GameState.Chapter.Chapter0;
+			fadeout.enabled = true;
+			btn.gameObject.SetActive(false);
+			Invoke(nameof(DestoryChild),0.5f);
 		}
 	}
 
@@ -58,7 +60,7 @@ public class ButtonManager : NetworkBehaviour
 	private void DestoryChild()
 	{
 		Destroy(bg);
-		btn.gameObject.SetActive(false);
+		
 		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("PlayerChose"))
 		{
 			obj.GetComponent<PlayerChose>().is_ready = true;

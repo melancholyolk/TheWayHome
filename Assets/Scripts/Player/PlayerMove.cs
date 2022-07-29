@@ -13,7 +13,6 @@ using UnityEngine.Serialization;
 /// 0原速度
 /// 1二倍原速度
 /// </summary>
-[RequireComponent(typeof(Rigidbody))]
 public class PlayerMove : NetworkBehaviour
 {
     [FormerlySerializedAs("obj_pos")]
@@ -99,16 +98,18 @@ public class PlayerMove : NetworkBehaviour
         m_NetworkAnimator = GetComponent<NetworkAnimator>();
         m_AnimatorControl = GetComponent<PlayerAnimatorControl>();
         CmdInitComponent(m_CurrentPlayer, Vector3.one, m_IsHold);
+        
+        Debug.LogError(GetComponent<AudioListener>());
     }
 
 	// Update is called once per frame
 	void Update()
     {
-        if (!isLocal)
+	    if (!isLocal)
         {
             return;
         }
-
+     
         if (!OperationControl.Instance.CanOperate())
         {
             return;

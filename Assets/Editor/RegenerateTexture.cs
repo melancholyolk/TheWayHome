@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using GameUtil;
+using Util;
 using UnityEditor;
 using UnityEngine;
-[CustomEditor(typeof(Cube6SideTexture))]
+[CustomEditor(typeof(CubeSixSideTexture))]
 public class RegenerateTexture : Editor
 {
 	public override void OnInspectorGUI()
 	{
 		DrawDefaultInspector();
 
-		Cube6SideTexture myScript = (Cube6SideTexture) target;
+		CubeSixSideTexture myScript = (CubeSixSideTexture) target;
 		if (GUILayout.Button("获得当前材质贴图"))
 		{
 			myScript.GetCurrentMaterialTexture();

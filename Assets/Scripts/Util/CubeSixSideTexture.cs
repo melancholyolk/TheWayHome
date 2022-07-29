@@ -1,11 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace GameUtil
+namespace Util
 {
 	[Serializable]
 	public struct TextureData
@@ -16,7 +14,7 @@ namespace GameUtil
 	}
 
 	[ExecuteAlways]
-	public class Cube6SideTexture : MonoBehaviour
+	public class CubeSixSideTexture : MonoBehaviour
 	{
 		[Header("Textures")] 
 		[SerializeField]
@@ -444,8 +442,8 @@ namespace GameUtil
 			FileStream fileStream = File.Open(savePath, FileMode.OpenOrCreate);
 			fileStream.Write(dataBytes, 0, dataBytes.Length);
 			fileStream.Close();
-			UnityEditor.AssetDatabase.SaveAssets();
-			UnityEditor.AssetDatabase.Refresh();
+			// UnityEditor.AssetDatabase.SaveAssets();
+			// UnityEditor.AssetDatabase.Refresh();
 		}
 
 		public void GetCurrentMaterialTexture()
