@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-
+using UnityEditor;
 namespace Util
 {
 	[Serializable]
@@ -88,13 +88,12 @@ namespace Util
 
 			UpdateMeshUVS();
 		}
-#if UNITY_EDITOR
 		public void OnValidate()
 		{
 			// GenMergedTexture();
 			Start();
 		}
-#endif
+
 
 
 		public static Texture2D MergeMoreTex(Texture2D[] texs)
@@ -442,8 +441,8 @@ namespace Util
 			FileStream fileStream = File.Open(savePath, FileMode.OpenOrCreate);
 			fileStream.Write(dataBytes, 0, dataBytes.Length);
 			fileStream.Close();
-			// UnityEditor.AssetDatabase.SaveAssets();
-			// UnityEditor.AssetDatabase.Refresh();
+			// AssetDatabase.SaveAssets();
+			// AssetDatabase.Refresh();
 		}
 
 		public void GetCurrentMaterialTexture()

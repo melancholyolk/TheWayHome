@@ -19,12 +19,11 @@ namespace Decode
 		[SerializeField]
 		private List<ObtainItems> m_ObItems;
 
-		private Dictionary<string, Item> m_Items;
+		private Dictionary<string, Item> m_Items = new Dictionary<string, Item>();
 		private void Awake()
 		{
 			Instance = this;
 			// m_ObItems = new List<ObtainItems>();
-			m_Items = new Dictionary<string, Item>();
 		}
 		
 		// Update is called once per frame
@@ -63,12 +62,26 @@ namespace Decode
 
 		public void AddGScript(string id,Item item)
 		{
+			if(m_Items is null)
+				m_Items = new Dictionary<string, Item>();
 			m_Items.Add(id,item);
 		}
 
 		public Item GetItem(string id)
 		{
-			return m_Items[id];
+			m_Items.TryGetValue(id, out var v);
+			return v;
+		}
+
+		public List<string> GetAll()
+		{
+			List<string> items = new List<string>();
+			foreach (var VARIABLE in m_Items)
+			{
+				items.Add(VARIABLE.Value.id);
+			}
+
+			return items;
 		}
 		#endregion
 

@@ -98,7 +98,7 @@ PlayerSettings:
   useFontStreaming: 0
   autoStreamingId: 
   instantGameAppId: 
-  bakeCollisionMeshes: 0
+  bakeCollisionMeshes: 1
   forceSingleInstance: 0
   useFlipModelSwapchain: 1
   resizableWindow: 0
@@ -737,12 +737,13 @@ PlayerSettings:
     tvOS: UNITY_POST_PROCESSING_STACK_V2
   additionalCompilerArguments: {}
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Standalone: 0
   il2cppCompilerConfiguration: {}
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
   suppressCommonWarnings: 1
-  allowUnsafeCode: 1
+  allowUnsafeCode: 0
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
   additionalIl2CppArgs: 
@@ -754,16 +755,16 @@ PlayerSettings:
     Standalone: 6
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: 2D_BuiltInRenderer
-  metroPackageVersion: 
-  metroCertificatePath: E:\UnityProject\CUSGA\Assets\WSATestCertificate.pfx
+  metroPackageName: 2DBuiltInRenderer
+  metroPackageVersion: 1.0.0.0
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: WayHome
   metroCertificateIssuer: WayHome
   metroCertificateNotAfter: 00cbc53b54c2d901
   metroApplicationDescription: 2D_BuiltInRenderer
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: CUSGA
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

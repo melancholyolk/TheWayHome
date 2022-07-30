@@ -15,6 +15,8 @@ namespace Decode
 				{
 					action.SyncAction();
 				}
+
+				OperationControl.Instance.is_playingCG = false;
 			};
 			cg.Play();
 

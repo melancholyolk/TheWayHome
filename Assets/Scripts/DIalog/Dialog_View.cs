@@ -391,7 +391,6 @@ public class Dialog_View : MonoBehaviour
         switch (imgIndex)
         {
             case 0:
-                print(i_ori.GetComponent<Fade_Image>().FadeIsOver());
                 yield return new WaitUntil(i_ori.GetComponent<Fade_Image>().FadeIsOver);
                 HightLightImage(i_ori, ref i_oriOld);
                 if (i_tarOld != Color.clear)

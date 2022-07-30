@@ -25,8 +25,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914731516296213617}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 48, y: 58.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47,51 +47,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
+    SerializedFormat: 0
+    SerializedBytes: 01010700000061006300740069006f006e0073002f0000000001210000004400650063006f00640065002e0041006300740069006f006e0073005b005d002c00200041007300730065006d0062006c0079002d0043005300680061007200700000000000060100000000000000022f0100000001270000004400650063006f00640065002e0041006300740069006f006e0050006c006100790041007500640069006f002c00200041007300730065006d0062006c0079002d00430053006800610072007000010000002d01060000006900740065006d00490064002d0108000000740061007200670065007400490064002b01080000006e00650065006400530079006e006300002d0102000000490064000b010500000061007500640069006f00000000002d010400000063006c0069007000050705
     ReferencedUnityObjects:
     - {fileID: 8803574260061680581}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: actions
-      Entry: 7
-      Data: 0|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|Decode.ActionPlayAudio, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: audio
-      Entry: 10
-      Data: 0
-    - Name: clip
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
   profile: {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
   letter: {fileID: 7302731701543775047}
   animator: {fileID: 7302731702453371438}

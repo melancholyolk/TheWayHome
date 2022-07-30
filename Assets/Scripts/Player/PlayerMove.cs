@@ -88,7 +88,7 @@ public class PlayerMove : NetworkBehaviour
 	}
 
 
-    void Start()
+    void Awake()
     {
         m_OriginScale = transform.localScale;
         m_CurrentSpeed = speed;
@@ -98,8 +98,6 @@ public class PlayerMove : NetworkBehaviour
         m_NetworkAnimator = GetComponent<NetworkAnimator>();
         m_AnimatorControl = GetComponent<PlayerAnimatorControl>();
         CmdInitComponent(m_CurrentPlayer, Vector3.one, m_IsHold);
-        
-        Debug.LogError(GetComponent<AudioListener>());
     }
 
 	// Update is called once per frame
@@ -128,6 +126,8 @@ public class PlayerMove : NetworkBehaviour
         transform.localScale = scale;
         players[1 - cur].transform.localPosition = Vector3.down * 100;
         players[cur].transform.localPosition = Vector3.zero;
+        if (!m_AnimatorControl)
+	        m_AnimatorControl = GetComponent<PlayerAnimatorControl>();
         m_AnimatorControl.SetAnimator(cur);
         m_NetworkAnimator.animator = m_AnimatorControl.GetAnimator();
         CheckHold(hold);
@@ -159,7 +159,7 @@ public class PlayerMove : NetworkBehaviour
         m_AnimatorControl.SetAnimation(ani, time);
     }
 
-    [Command]
+    [Command(requiresAuthority =  false)]
     private void CmdInitComponent(int currentPlayer, Vector3 scale, bool hold)
     {
         RpcInitComponent(currentPlayer, scale, hold);

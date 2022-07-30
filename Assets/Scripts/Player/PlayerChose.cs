@@ -35,10 +35,10 @@ public class PlayerChose : NetworkBehaviour
             GameObject.Find("Button" + index).GetComponent<ChoseButton>().ChangeState(true, is_server);
         }
         player = index;
-        PrcPlayerChose(index);
+        RpcPlayerChose(index);
     }
     [ClientRpc]
-    private void PrcPlayerChose(int index)
+    private void RpcPlayerChose(int index)
     {
         player = index;
     }
@@ -63,7 +63,6 @@ public class PlayerChose : NetworkBehaviour
         {
             playerMove = GameObject.Find("Player" + player + "(Clone)").GetComponent<PlayerMove>();
             // GameObject.Find("TaskLoader").GetComponent<TaskManager>().InitTaskLoader(player);
-            playerMove.gameObject.AddComponent<AudioListener>();
             playerMove.gameObject.AddComponent<FowViewer>();
             playerMove.gameObject.GetComponent<FowViewer>().viewerRange = 20;
         }

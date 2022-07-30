@@ -9,12 +9,15 @@ namespace Decode
 	public class Item : SerializedMonoBehaviour
 	{
 		[ReadOnly]
-		public bool isUsing;
+		[NonSerialized]
+		public bool isUsing = false;
 		[ReadOnly]
-		public bool disable;
+		[NonSerialized]
+		public bool disable = false;
 		[FormerlySerializedAs("Id")] 
 		[ReadOnly]
-		public string id = Guid.NewGuid().ToString().Replace("-", "").ToLower();
+		[SerializeField]
+		public string id;
 		public void Reload()
 		{
 			id = Guid.NewGuid().ToString().Replace("-", "").ToLower();
@@ -23,6 +26,8 @@ namespace Decode
 		private void Start()
 		{
 			MonoECSInteract.Instance.AddGScript(id, this);
+			isUsing = false;
+			disable = false;
 		}
 
 		public virtual void DoAction(string actionId , string targetId)

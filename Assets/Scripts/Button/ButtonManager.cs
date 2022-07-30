@@ -6,7 +6,7 @@ using UnityEngine.Video;
 
 public class ButtonManager : NetworkBehaviour
 {
-	[SyncVar] 
+	[SyncVar(hook = nameof(GameStart))] 
 	public bool btn_isdown = false;
 	public int chose_num = 0;
 	public Button btn;
@@ -14,18 +14,15 @@ public class ButtonManager : NetworkBehaviour
 	public GameObject canvas;
 	public GameObject bg;
 	public Animator fadeout;
-	// Update is called once per frame
-	void Update()
+
+	void GameStart(bool newbtn,bool oldbtn)
 	{
-		if (btn_isdown)
-		{
-			btn_isdown = false;
-			GameState.state = GameState.Chapter.Chapter0;
-			fadeout.enabled = true;
-			btn.gameObject.SetActive(false);
-			Invoke(nameof(DestoryChild),0.5f);
-		}
+		GameState.state = GameState.Chapter.Chapter0;
+		fadeout.enabled = true;
+		btn.gameObject.SetActive(false);
+		Invoke(nameof(DestoryChild),0.5f);
 	}
+
 
 	public void ButtonDown()
 	{

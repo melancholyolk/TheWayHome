@@ -4389,6 +4389,9 @@ MonoBehaviour:
     - {fileID: 291641164}
     - {fileID: 1379143877}
     - {fileID: 8300000, guid: 8492aa5916007bd40926547d8e621c0e, type: 3}
+    - {fileID: 723748100}
+    - {fileID: 353699115}
+    - {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -4400,7 +4403,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 1|Decode.ObtainConfig, Assembly-CSharp
@@ -4609,13 +4612,89 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 15|Decode.ObtainConfig, Assembly-CSharp
+    - Name: actions
+      Entry: 7
+      Data: 16|Decode.Actions[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 17|Decode.ActionLoadDecodeItem, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: decodePrefab
+      Entry: 10
+      Data: 4
+    - Name: decodeCamera
+      Entry: 10
+      Data: 5
+    - Name: postProcessProfile
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: name
+      Entry: 6
+      Data: 
+    - Name: conditions
+      Entry: 7
+      Data: 18|Decode.Conditions[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 19|Decode.ConditionInput, Assembly-CSharp
+    - Name: name
+      Entry: 6
+      Data: 
+    - Name: input
+      Entry: 3
+      Data: 111
+    - Name: isConsist
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   id: c96d69d99ee749da8c4302f9d41a21fb
   decodes: []
 --- !u!4 &358702946
@@ -5429,8 +5508,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 7787fb1bde61477aaf0919b036b7ea51
   decodes: []
 --- !u!1 &411271018
@@ -6804,8 +6881,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 904e5923cdb24818a917c5e8047691aa
   decodes: []
 --- !u!135 &507577252
@@ -8154,6 +8229,11 @@ PrefabInstance:
 --- !u!224 &723748099 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8471780247350531313, guid: 8510c54271ed3c745a45d64563ae5634, type: 3}
+  m_PrefabInstance: {fileID: 723748098}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &723748100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8471780247350531318, guid: 8510c54271ed3c745a45d64563ae5634, type: 3}
   m_PrefabInstance: {fileID: 723748098}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &730155160
@@ -11090,8 +11170,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: ea71859665b84130b46bb1cdfecd1657
   decodes: []
 --- !u!1 &1091856723
@@ -15612,8 +15690,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 6f65bde459294ee1a4c91d7b19689cb2
   decodes: []
 --- !u!82 &1384561884
@@ -16481,7 +16557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e84dcb05944e134587e67e335ba22b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FogSizeX: 300
+  FogSizeX: 900
   FogSizeY: 1600
   MapTileSize: 5
   viewerList: []
@@ -16511,7 +16587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511552537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.9, y: 0, z: 84.6}
+  m_LocalPosition: {x: 308, y: 0, z: 84.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16861,8 +16937,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: be4da2d8180e44d0bddd6a1e4bd4d2f6
   decodes: []
 --- !u!1 &1540560809
@@ -19714,8 +19788,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 4ce57144a15e45c79927afa479728c2d
   decodes: []
 --- !u!114 &1860256564
@@ -19902,8 +19974,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 9fded356e6e04969b6a8b4a3ff1ac4ca
   decodes: []
 --- !u!1 &1860527841
@@ -21122,8 +21192,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: bf3a20c6b68d411c93b4031bacf089e0
   decodes: []
 --- !u!1001 &1945057945
@@ -21475,6 +21543,34 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: topTexture.texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: backTexture.texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: leftTexture.texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: frontTexture.texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: rightTexture.texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: bottomTexture.texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: rightTexture.reversVertical
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: topTexture.reversHorizontal
       value: 0
       objectReference: {fileID: 0}
@@ -21483,7 +21579,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: leftTexture.reversHorizontal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: frontTexture.reversHorizontal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: rightTexture.reversHorizontal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: bottomTexture.reversHorizontal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9174170106433736360, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
@@ -24297,8 +24405,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 3487ab45ebc545399c3dd77f4e70eec8
   decodes: []
 --- !u!95 &2717183818845734562
@@ -24516,8 +24622,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 338862d13c5a4f5687a262ddf3d9572e
   decodes: []
 --- !u!114 &2717183818845734565
@@ -24695,8 +24799,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 45eecb00a2e84e3cbd2baaa8c6e8f82c
   decodes: []
 --- !u!1 &3593983613446203112
@@ -25210,8 +25312,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 035f14823d064a73ba4dd7be4429a2fe
   decodes: []
 --- !u!1 &3593983613527897962
@@ -25437,8 +25537,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: adc28d0b7d5d419c81047735f1e903e6
   decodes: []
 --- !u!1 &3593983613575137182
@@ -26380,8 +26478,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 791bcee2a2944b7e80751132bfa10f24
   decodes: []
 --- !u!82 &3593983613661948544
@@ -26609,8 +26705,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 6270a4dd4c5241728edb5cf5916a2eb0
   decodes: []
 --- !u!65 &3593983613675004461
@@ -27245,8 +27339,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 3aad8e6626af4a7496d2c90809f64613
   decodes: []
 --- !u!4 &3593983613715568718
@@ -28023,8 +28115,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 14414082fccb4190a4c9355e687e0b4c
   decodes: []
 --- !u!1 &3593983613996907796
@@ -28433,8 +28523,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 03347dbc84224a60926c9a527856520f
   decodes: []
 --- !u!4 &3593983614049788588
@@ -29763,6 +29851,7 @@ MonoBehaviour:
     - {fileID: 914731516296213617, guid: 92da2b92df1457b41b765f5ae4ac44b1, type: 3}
     - {fileID: 353699115}
     - {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
+    - {fileID: 1836208465}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -29774,7 +29863,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 1|Decode.ObtainConfig, Assembly-CSharp
@@ -29783,7 +29872,7 @@ MonoBehaviour:
       Data: 2|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 3|Decode.ActionLoadDecodeItem, Assembly-CSharp
@@ -29812,6 +29901,42 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 4|Decode.ActionDialog, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: dialogUI
+      Entry: 10
+      Data: 3
+    - Name: dialogs
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: "\u8FD9\u4E2A\u7269\u4F53\u51FA\u53D1\u4E86"
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -29825,13 +29950,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 4|Decode.Conditions[], Assembly-CSharp
+      Data: 6|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 5|Decode.ConditionInput, Assembly-CSharp
+      Data: 7|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -29855,16 +29980,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|Decode.ObtainConfig, Assembly-CSharp
+      Data: 8|Decode.ObtainConfig, Assembly-CSharp
     - Name: actions
       Entry: 7
-      Data: 7|Decode.Actions[], Assembly-CSharp
+      Data: 9|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 8|Decode.ActionDestroyItem, Assembly-CSharp
+      Data: 10|Decode.ActionDestroyItem, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -29894,13 +30019,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 9|Decode.Conditions[], Assembly-CSharp
+      Data: 11|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 10|Decode.ConditionInput, Assembly-CSharp
+      Data: 12|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -29923,13 +30048,98 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 13|Decode.ObtainConfig, Assembly-CSharp
+    - Name: actions
+      Entry: 7
+      Data: 14|Decode.Actions[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 15|Decode.ActionDialog, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: dialogUI
+      Entry: 10
+      Data: 3
+    - Name: dialogs
+      Entry: 7
+      Data: 16|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: "\u6D4B\u8BD5\u4E00\u4E0B"
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: name
+      Entry: 6
+      Data: 
+    - Name: conditions
+      Entry: 7
+      Data: 17|Decode.Conditions[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 18|Decode.ConditionInput, Assembly-CSharp
+    - Name: name
+      Entry: 6
+      Data: 
+    - Name: input
+      Entry: 3
+      Data: 108
+    - Name: isConsist
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   id: 5ecd887a21884fb6b860694521285beb
   decodes: []
 --- !u!1 &3593983614295205006
@@ -30004,7 +30214,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f833357e1f1ee04da854fd6d3621428, type: 2}
+  - {fileID: 2100000, guid: 887b2c54d0204ab4681218c835b76150, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30625,8 +30835,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: d11cf1cce5ca48b7b965b6bb155229db
   decodes: []
 --- !u!1 &3593983614402207195
@@ -30967,8 +31175,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: fe06fd981c0e40e8a60c4a5f74dde1e2
   decodes: []
 --- !u!82 &3593983614471332655
@@ -31517,8 +31723,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: e65c6253d461488190054b42b0bed239
   decodes: []
 --- !u!65 &3593983614645005957
@@ -34658,8 +34862,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: 480ec9dae1f84af2a8199dc1fbfa8e76
   decodes: []
 --- !u!65 &3593983615395070063
@@ -35891,8 +36093,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  isUsing: 0
-  disable: 0
   id: a8a7f06d0fd9410f9015fad4cd754424
   decodes: []
 --- !u!1 &3593983615589597419
