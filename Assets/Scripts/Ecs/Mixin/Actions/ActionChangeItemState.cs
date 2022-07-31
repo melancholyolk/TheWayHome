@@ -14,6 +14,8 @@ namespace Decode
 			IsUing,
 			Disable
 		}
+
+		public int configIndexer;
 		public ItemState State = ItemState.IsUing;
 		public override void DoAction()
 		{
@@ -21,7 +23,7 @@ namespace Decode
 			{
 				case ItemState.IsUing:
 					var item = MonoECSInteract.Instance.GetItem(itemId) as ObtainItems;
-					var r = item.configs[Int32.Parse(m_Config.Id)];
+					var r = item.configs[configIndexer];
 					r.isUsing = !r.isUsing;
 					break;
 				case ItemState.Disable:

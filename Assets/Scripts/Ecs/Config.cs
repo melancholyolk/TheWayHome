@@ -15,7 +15,7 @@ namespace Decode
 		[PropertyOrder(-2)]
 		[ReadOnly] 
 		public bool isComplete;
-
+		[PropertyOrder(-1)]
 		[ReadOnly] 
 		public bool isUsing;
 		public void Awake(string itemid,string id)
