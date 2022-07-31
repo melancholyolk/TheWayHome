@@ -20104,7 +20104,7 @@ MonoBehaviour:
       Data: 2|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 5
     - Name: 
       Entry: 7
       Data: 3|Decode.ActionDialog, Assembly-CSharp
@@ -20211,6 +20211,27 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 8|Decode.ActionRemoveProp, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: propID
+      Entry: 3
+      Data: 13
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -20233,13 +20254,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 8|Decode.Conditions[], Assembly-CSharp
+      Data: 9|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 9|Decode.ConditionInput, Assembly-CSharp
+      Data: 10|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -20254,19 +20275,19 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 10|Decode.ConditionFeedBack, Assembly-CSharp
+      Data: 11|Decode.ConditionFeedBack, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 11|Decode.Conditions[], Assembly-CSharp
+      Data: 12|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 12|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
+      Data: 13|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -20284,13 +20305,13 @@ MonoBehaviour:
       Data: 
     - Name: actions
       Entry: 7
-      Data: 13|Decode.Actions[], Assembly-CSharp
+      Data: 14|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 14|Decode.ActionDialog, Assembly-CSharp
+      Data: 15|Decode.ActionDialog, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -20308,7 +20329,7 @@ MonoBehaviour:
       Data: 0
     - Name: dialogs
       Entry: 7
-      Data: 15|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 16|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
@@ -27659,7 +27680,7 @@ MonoBehaviour:
       Data: 2|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: 3|Decode.ActionGetProp, Assembly-CSharp
@@ -27733,6 +27754,27 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 6|Decode.ActionRemoveProp, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: propID
+      Entry: 3
+      Data: 11
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -27755,13 +27797,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 6|Decode.Conditions[], Assembly-CSharp
+      Data: 7|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 7|Decode.ConditionInput, Assembly-CSharp
+      Data: 8|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -27776,19 +27818,19 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 8|Decode.ConditionFeedBack, Assembly-CSharp
+      Data: 9|Decode.ConditionFeedBack, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 9|Decode.Conditions[], Assembly-CSharp
+      Data: 10|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 10|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
+      Data: 11|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -27806,13 +27848,13 @@ MonoBehaviour:
       Data: 
     - Name: actions
       Entry: 7
-      Data: 11|Decode.Actions[], Assembly-CSharp
+      Data: 12|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 12|Decode.ActionDialog, Assembly-CSharp
+      Data: 13|Decode.ActionDialog, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -27830,7 +27872,7 @@ MonoBehaviour:
       Data: 2
     - Name: dialogs
       Entry: 7
-      Data: 13|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 14|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
@@ -28827,7 +28869,7 @@ MonoBehaviour:
       Data: 2|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: 3|Decode.ActionDialog, Assembly-CSharp
@@ -28922,6 +28964,27 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 7|Decode.ActionRemoveProp, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: propID
+      Entry: 3
+      Data: 12
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -28944,13 +29007,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 7|Decode.Conditions[], Assembly-CSharp
+      Data: 8|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 8|Decode.ConditionInput, Assembly-CSharp
+      Data: 9|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -28965,19 +29028,19 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 9|Decode.ConditionFeedBack, Assembly-CSharp
+      Data: 10|Decode.ConditionFeedBack, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 10|Decode.Conditions[], Assembly-CSharp
+      Data: 11|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 11|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
+      Data: 12|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -28995,13 +29058,13 @@ MonoBehaviour:
       Data: 
     - Name: actions
       Entry: 7
-      Data: 12|Decode.Actions[], Assembly-CSharp
+      Data: 13|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 13|Decode.ActionDialog, Assembly-CSharp
+      Data: 14|Decode.ActionDialog, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -29019,7 +29082,7 @@ MonoBehaviour:
       Data: 0
     - Name: dialogs
       Entry: 7
-      Data: 14|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 15|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
@@ -29055,16 +29118,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 15|Decode.ObtainConfig, Assembly-CSharp
+      Data: 16|Decode.ObtainConfig, Assembly-CSharp
     - Name: actions
       Entry: 7
-      Data: 16|Decode.Actions[], Assembly-CSharp
+      Data: 17|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 17|Decode.ActionDestroyItem, Assembly-CSharp
+      Data: 18|Decode.ActionDestroyItem, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -29082,7 +29145,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 18|Decode.ActionChangeItemState, Assembly-CSharp
+      Data: 19|Decode.ActionChangeItemState, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -29127,13 +29190,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 19|Decode.Conditions[], Assembly-CSharp
+      Data: 20|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 20|Decode.ConditionInput, Assembly-CSharp
+      Data: 21|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -29157,16 +29220,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 21|Decode.ObtainConfig, Assembly-CSharp
+      Data: 22|Decode.ObtainConfig, Assembly-CSharp
     - Name: actions
       Entry: 7
-      Data: 22|Decode.Actions[], Assembly-CSharp
+      Data: 23|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 23|Decode.ActionOpenLight, Assembly-CSharp
+      Data: 24|Decode.ActionOpenLight, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -29187,7 +29250,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 24|Decode.ActionOpenLight, Assembly-CSharp
+      Data: 25|Decode.ActionOpenLight, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -29208,7 +29271,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 25|Decode.ActionPlayAudio, Assembly-CSharp
+      Data: 26|Decode.ActionPlayAudio, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -29253,13 +29316,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 26|Decode.Conditions[], Assembly-CSharp
+      Data: 27|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 27|Decode.ConditionItemComplete, Assembly-CSharp
+      Data: 28|Decode.ConditionItemComplete, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
