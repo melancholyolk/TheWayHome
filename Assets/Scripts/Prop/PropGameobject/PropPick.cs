@@ -38,7 +38,7 @@ public class PropPick : PropProperty
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && OperationControl.Instance.CanOperate() && CanvasManager.Instance.CanPick())
+        if (Input.GetKeyDown(KeyCode.F) && OperationControl.Instance.CanOperate() && CanvasManager.Instance.CanPick())
         {
             if (canUse && !is_pick)
             {

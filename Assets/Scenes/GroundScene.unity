@@ -15492,7 +15492,6 @@ GameObject:
   - component: {fileID: 1379143873}
   - component: {fileID: 1379143875}
   - component: {fileID: 1379143876}
-  - component: {fileID: 1379143872}
   - component: {fileID: 1379143877}
   m_Layer: 0
   m_Name: Main Camera
@@ -15501,14 +15500,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1379143872
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1379143871}
-  m_Enabled: 1
 --- !u!20 &1379143873
 Camera:
   m_ObjectHideFlags: 0
@@ -18990,14 +18981,14 @@ PrefabInstance:
     - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
       propertyPath: serializationData.Prefab
       value: 
-      objectReference: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 21
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
-      value: '"path":"actions","length":4'
+      value: '"path":"actions","length":5'
       objectReference: {fileID: 0}
     - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[1]
@@ -19084,6 +19075,33 @@ PrefabInstance:
     - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[20]
       value: '"path":"actions.[3].targetId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[21]
+      value: '"path":"actions.[4]","value":{"$id":0,"$type":"Decode.ActionCompleteTask,
+        Assembly-CSharp","itemId":null,"targetId":null,"needSync":false,"Id":null,"taskMessage":"[2-1-2]"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[22]
+      value: '"path":"actions.[4].Id","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[23]
+      value: '"path":"actions.[4].itemId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[24]
+      value: '"path":"actions.[4].needSync","value":{"$id":0,"$type":"System.Boolean,
+        mscorlib",false}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[25]
+      value: '"path":"actions.[4].targetId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[26]
+      value: '"path":"actions.[4].taskMessage","value":{"$id":0,"$type":"System.String,
+        mscorlib","[2-1-2]"}'
       objectReference: {fileID: 0}
     - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
@@ -20137,7 +20155,7 @@ MonoBehaviour:
       Data: 2|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 3|Decode.ActionDialog, Assembly-CSharp
@@ -20199,6 +20217,27 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 6|Decode.ActionCompleteTask, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: taskMessage
+      Entry: 1
+      Data: '[2-1-1]'
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -20212,13 +20251,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 6|Decode.Conditions[], Assembly-CSharp
+      Data: 7|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 7|Decode.ConditionInput, Assembly-CSharp
+      Data: 8|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -20233,19 +20272,19 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 8|Decode.ConditionFeedBack, Assembly-CSharp
+      Data: 9|Decode.ConditionFeedBack, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 9|Decode.Conditions[], Assembly-CSharp
+      Data: 10|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 10|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
+      Data: 11|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -20263,13 +20302,13 @@ MonoBehaviour:
       Data: 
     - Name: actions
       Entry: 7
-      Data: 11|Decode.Actions[], Assembly-CSharp
+      Data: 12|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 12|Decode.ActionDialog, Assembly-CSharp
+      Data: 13|Decode.ActionDialog, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -20287,7 +20326,7 @@ MonoBehaviour:
       Data: 0
     - Name: dialogs
       Entry: 7
-      Data: 13|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 14|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
@@ -26546,7 +26585,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 3593983613661948544}
+    - {fileID: 8300000, guid: a3cb1ffa514f40048954405da2a2b556, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -26567,7 +26608,7 @@ MonoBehaviour:
       Data: 2|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 3|Decode.ActionGetProp, Assembly-CSharp
@@ -26593,6 +26634,30 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 4|Decode.ActionPlayAudio, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: audio
+      Entry: 10
+      Data: 0
+    - Name: clip
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -26606,13 +26671,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 4|Decode.Conditions[], Assembly-CSharp
+      Data: 5|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 5|Decode.ConditionInput, Assembly-CSharp
+      Data: 6|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -26773,7 +26838,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 3593983613675004464}
+    - {fileID: 8300000, guid: a3cb1ffa514f40048954405da2a2b556, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -26794,7 +26861,7 @@ MonoBehaviour:
       Data: 2|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 3|Decode.ActionGetProp, Assembly-CSharp
@@ -26820,6 +26887,30 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 4|Decode.ActionPlayAudio, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: audio
+      Entry: 10
+      Data: 0
+    - Name: clip
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -26833,13 +26924,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 4|Decode.Conditions[], Assembly-CSharp
+      Data: 5|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 5|Decode.ConditionInput, Assembly-CSharp
+      Data: 6|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -27323,6 +27414,8 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
+    - {fileID: 3593983613715568720}
+    - {fileID: 8300000, guid: 7fb6c965469a01e4ba64214f27267c18, type: 3}
     - {fileID: 1836208465}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -27344,7 +27437,7 @@ MonoBehaviour:
       Data: 2|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 3|Decode.ActionGetProp, Assembly-CSharp
@@ -27370,6 +27463,30 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 4|Decode.ActionPlayAudio, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: audio
+      Entry: 10
+      Data: 0
+    - Name: clip
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -27383,13 +27500,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 4|Decode.Conditions[], Assembly-CSharp
+      Data: 5|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 5|Decode.ConditionInput, Assembly-CSharp
+      Data: 6|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -27404,19 +27521,19 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|Decode.ConditionFeedBack, Assembly-CSharp
+      Data: 7|Decode.ConditionFeedBack, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 7|Decode.Conditions[], Assembly-CSharp
+      Data: 8|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 8|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
+      Data: 9|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -27434,13 +27551,13 @@ MonoBehaviour:
       Data: 
     - Name: actions
       Entry: 7
-      Data: 9|Decode.Actions[], Assembly-CSharp
+      Data: 10|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 10|Decode.ActionDialog, Assembly-CSharp
+      Data: 11|Decode.ActionDialog, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -27455,10 +27572,10 @@ MonoBehaviour:
       Data: 
     - Name: dialogUI
       Entry: 10
-      Data: 0
+      Data: 2
     - Name: dialogs
       Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 12|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
@@ -29902,7 +30019,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -32333,6 +32450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3593983614692002736}
   - component: {fileID: 3593983614692002737}
+  - component: {fileID: 3593983614692002740}
   m_Layer: 0
   m_Name: "\u6444\u5F71\u673A"
   m_TagString: Untagged
@@ -32340,6 +32458,102 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!82 &3593983614692002740
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3593983614692002739}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ec48afc55c9d7f44ea2c149639e3c25c, type: 2}
+  m_audioClip: {fileID: 8300000, guid: e6f4bef1aaccbbc4fb1c15815ac7ed9e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3593983614695692177
 GameObject:
   m_ObjectHideFlags: 0
