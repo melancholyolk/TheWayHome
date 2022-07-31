@@ -13,7 +13,8 @@ public class MainMenuButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHa
 {
     public Text text;
     public Animator textAnimator;
-   
+
+    private Color m_color;
 
     public enum ButtonType
     { 
@@ -25,9 +26,16 @@ public class MainMenuButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHa
 
 
     private bool m_IsShow = false;
-    
-    
-    public void OnPointerEnter(PointerEventData eventData)
+
+	private void Start()
+	{
+        if (btn_type == ButtonType.Start)
+            m_color = new Color(1, 1, 1, 0);
+        else
+            m_color = new Color(0, 0, 0, 0);
+    }
+
+	public void OnPointerEnter(PointerEventData eventData)
     {
         m_IsShow = true;
         StartCoroutine(FadaIn());
@@ -77,7 +85,7 @@ public class MainMenuButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHa
             
             time += Time.deltaTime;
             rate = Mathf.Lerp(0, 1, time);
-            text.color = new Color(1,1,1,rate);
+            text.color = new Color(1,1,1,rate) - m_color;
             yield return new WaitForSeconds(Time.deltaTime);
         }
     }
@@ -96,7 +104,7 @@ public class MainMenuButton : MonoBehaviour,IPointerEnterHandler, IPointerExitHa
             time += Time.deltaTime*3;
             rate = Mathf.Lerp(1, 0, time);
             text.transform.position = Vector2.Lerp(text.transform.position, oriPos, time);
-            text.color = new Color(1, 1, 1, rate);
+            text.color = new Color(1, 1, 1, rate) - m_color;
             yield return new WaitForSeconds(Time.deltaTime);
         }
     }
