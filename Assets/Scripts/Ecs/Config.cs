@@ -11,16 +11,19 @@ namespace Decode
 		[PropertyOrder(-3)]
 		[ShowInInspector]
 		[ReadOnly]
-		private string m_Id;
+		public string Id;
 		[PropertyOrder(-2)]
 		[ReadOnly] 
 		public bool isComplete;
+
+		[ReadOnly] 
+		public bool isUsing;
 		public void Awake(string itemid,string id)
 		{
-			m_Id = id;
+			Id = id;
 			for (int i = 0; i < actions.Length; i++)
 			{
-				actions[i].Init(itemid, m_Id+i.ToString(),this);
+				actions[i].Init(itemid, Id+i.ToString(),this);
 			}
 		}
 

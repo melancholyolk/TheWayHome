@@ -42,8 +42,8 @@ namespace Decode
 				// 		}
 				// 	}
 				// }
-				if(!item.isUsing)
-					item.CheckAllConfigs();
+				// if(!item.isUsing)
+				item.CheckAllConfigs();
 			}
 		}
 

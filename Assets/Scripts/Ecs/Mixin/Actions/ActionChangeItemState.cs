@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,9 @@ namespace Decode
 			switch (State)
 			{
 				case ItemState.IsUing:
-					MonoECSInteract.Instance.GetItem(itemId).isUsing = !MonoECSInteract.Instance.GetItem(itemId).isUsing;
+					var item = MonoECSInteract.Instance.GetItem(itemId) as ObtainItems;
+					var r = item.configs[Int32.Parse(m_Config.Id)];
+					r.isUsing = !r.isUsing;
 					break;
 				case ItemState.Disable:
 					MonoECSInteract.Instance.GetItem(itemId).disable = !MonoECSInteract.Instance.GetItem(itemId).disable;

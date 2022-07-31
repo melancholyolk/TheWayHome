@@ -124,7 +124,7 @@ public class PlayerMove : NetworkBehaviour
     void InitComponent(int cur, Vector3 scale, bool hold)
     {
         transform.localScale = scale;
-        players[1 - cur].transform.localPosition = Vector3.down * 100;
+        players[1 - cur].transform.localPosition = Vector3.down * 10000;
         players[cur].transform.localPosition = Vector3.zero;
         m_AnimatorControl.SetAnimator(cur);
         m_NetworkAnimator.animator = m_AnimatorControl.GetAnimator();
@@ -141,7 +141,8 @@ public class PlayerMove : NetworkBehaviour
     [ClientRpc]
     private void RpcSetAnimation(PlayerAnimatorControl.AnimationName ani)
     {
-        m_AnimatorControl.SetAnimation(ani);
+        if(!isLocal)
+            m_AnimatorControl.SetAnimation(ani);
     }
 
 
@@ -154,7 +155,8 @@ public class PlayerMove : NetworkBehaviour
     [ClientRpc]
     private void RpcSetAnimation1(PlayerAnimatorControl.AnimationName ani, float time)
     {
-        m_AnimatorControl.SetAnimation(ani, time);
+        if (!isLocal)
+            m_AnimatorControl.SetAnimation(ani, time);
     }
 
     [Command(requiresAuthority =  false)]
@@ -166,6 +168,7 @@ public class PlayerMove : NetworkBehaviour
     [ClientRpc]
     private void RpcInitComponent(int currentPlayer, Vector3 scale, bool hold)
     {
+    if(!isLocal)
         InitComponent(currentPlayer, scale, hold);
     }
 
@@ -226,6 +229,7 @@ public class PlayerMove : NetworkBehaviour
         {
             if (m_IsWalking)
             {
+                m_AnimatorControl.SetAnimation(PlayerAnimatorControl.AnimationName.IDLE);
                 CmdSetAnimation(PlayerAnimatorControl.AnimationName.IDLE);
                 m_IsWalking = false;
             }
@@ -300,17 +304,21 @@ public class PlayerMove : NetworkBehaviour
 
             if (!m_IsWalking)
             {
+                m_AnimatorControl.SetAnimation(ChoosePlayerState(), 0.06f);
                 CmdSetAnimation1(ChoosePlayerState(), 0.06f);
                 m_IsWalking = true;
             }
 
             if (last != m_CurrentPlayer || lastDirect != m_CurrentDirection)
             {
+                InitComponent(m_CurrentPlayer, scale, m_IsHold);
+                m_AnimatorControl.SetAnimation(ChoosePlayerState(), 0);
                 CmdInitComponent(m_CurrentPlayer, scale, m_IsHold);
                 CmdSetAnimation1(ChoosePlayerState(), 0);
             }
             else if (m_ChangeMotion)
             {
+                m_AnimatorControl.SetAnimation(ChoosePlayerState());
                 CmdSetAnimation(ChoosePlayerState());
             }
             else
@@ -318,6 +326,7 @@ public class PlayerMove : NetworkBehaviour
                 var ani = ChoosePlayerState();
                 if (ani != m_AnimatorControl.currentAnimation)
                 {
+                    m_AnimatorControl.SetAnimation(ani);
                     CmdSetAnimation(ani);
                 }
             }
