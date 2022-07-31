@@ -18,6 +18,9 @@ namespace Decode
 		[PropertyOrder(-1)]
 		[ReadOnly] 
 		public bool isUsing;
+		[PropertyOrder(-1)]
+		[ReadOnly] 
+		public bool disable;
 		public void Awake(string itemid,string id)
 		{
 			Id = id;

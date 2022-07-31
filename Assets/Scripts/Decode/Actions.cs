@@ -29,7 +29,7 @@ namespace Decode
 		{
 			if (needSync)
 			{
-				Debug.Log(itemId + " 1 " + Id + " 2 " + targetId);
+				// Debug.Log(itemId + " 1 " + Id + " 2 " + targetId);
 				MonoECSInteract.Instance.CmdAction(itemId, Id, targetId);
 			}
 			else

@@ -69,7 +69,7 @@ namespace Decode
 		{
 			for (var i = configs.Count - 1; i >= 0; i--)
 			{
-				if(configs[i].isComplete||configs[i].isUsing) 
+				if(configs[i].isComplete||configs[i].isUsing||configs[i].disable) 
 					continue;
 				configs[i].DoConditions();
 			}

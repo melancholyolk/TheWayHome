@@ -97,6 +97,7 @@ namespace Decode
 		{
 			var launch = m_Items[launchId];
 			launch.DoAction(actionId ,targetId);
+			Debug.Log(launchId + " 1 " + actionId + " 2 " + targetId);
 		}
 		#endregion
 	}

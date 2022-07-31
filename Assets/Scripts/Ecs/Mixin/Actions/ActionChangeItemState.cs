@@ -19,15 +19,17 @@ namespace Decode
 		public ItemState State = ItemState.IsUing;
 		public override void DoAction()
 		{
+			var item = MonoECSInteract.Instance.GetItem(itemId) as ObtainItems;
+			var r = item.configs[configIndexer];
 			switch (State)
 			{
+					
 				case ItemState.IsUing:
-					var item = MonoECSInteract.Instance.GetItem(itemId) as ObtainItems;
-					var r = item.configs[configIndexer];
+					
 					r.isUsing = !r.isUsing;
 					break;
 				case ItemState.Disable:
-					MonoECSInteract.Instance.GetItem(itemId).disable = !MonoECSInteract.Instance.GetItem(itemId).disable;
+					r.disable = !r.disable;
 					break;
 			}
 		}

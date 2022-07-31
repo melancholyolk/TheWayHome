@@ -10,9 +10,11 @@ namespace Decode
 	{
 		[ReadOnly]
 		[NonSerialized]
+		[ShowInInspector]
 		public bool isUsing = false;
 		[ReadOnly]
 		[NonSerialized]
+		[ShowInInspector]
 		public bool disable = false;
 		[FormerlySerializedAs("Id")] 
 		[ReadOnly]
