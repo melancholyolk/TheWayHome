@@ -4502,6 +4502,9 @@ MonoBehaviour:
     - Name: isUsing
       Entry: 5
       Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
     - Name: name
       Entry: 6
       Data: 
@@ -4620,6 +4623,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -5436,6 +5442,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -6807,6 +6816,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -11198,6 +11210,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -16124,6 +16139,9 @@ MonoBehaviour:
     - Name: isUsing
       Entry: 5
       Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
     - Name: name
       Entry: 6
       Data: 
@@ -16197,6 +16215,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -17467,6 +17488,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -19032,154 +19056,31 @@ PrefabInstance:
       objectReference: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
     - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 28
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
-      value: '"path":"actions","length":5'
+      value: '"path":"actions","length":1'
       objectReference: {fileID: 0}
     - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[1]
-      value: '"path":"actions.[0].audio","value":$eref:0'
+      value: '"path":"actions.[0]","value":{"$id":0,"$type":"Decode.ActionCompleteTask,
+        Assembly-CSharp","itemId":null,"targetId":null,"needSync":false,"Id":null,"taskMessage":"[2-1-2]"}'
       objectReference: {fileID: 0}
     - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[2]
       value: '"path":"actions.[0].needSync","value":{"$id":0,"$type":"System.Boolean,
-        mscorlib",true}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[3]
-      value: '"path":"actions.[1]","value":{"$id":0,"$type":"Decode.ActionOpenLight,
-        Assembly-CSharp","itemId":null,"targetId":null,"needSync":true,"Id":null,"light":$eref:1}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[4]
-      value: '"path":"actions.[1].Id","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[5]
-      value: '"path":"actions.[1].itemId","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[6]
-      value: '"path":"actions.[1].light","value":$eref:1'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[7]
-      value: '"path":"actions.[1].needSync","value":{"$id":0,"$type":"System.Boolean,
-        mscorlib",true}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[8]
-      value: '"path":"actions.[1].targetId","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[9]
-      value: '"path":"actions.[2]","value":{"$id":0,"$type":"Decode.ActionOpenLight,
-        Assembly-CSharp","itemId":null,"targetId":null,"needSync":true,"Id":null,"light":$eref:2}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[10]
-      value: '"path":"actions.[2].Id","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[11]
-      value: '"path":"actions.[2].itemId","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[12]
-      value: '"path":"actions.[2].light","value":$eref:2'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[13]
-      value: '"path":"actions.[2].needSync","value":{"$id":0,"$type":"System.Boolean,
-        mscorlib",true}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[14]
-      value: '"path":"actions.[2].targetId","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[15]
-      value: '"path":"actions.[3]","value":{"$id":0,"$type":"Decode.ActionPlayAudio,
-        Assembly-CSharp","itemId":null,"targetId":null,"needSync":true,"Id":null,"audio":$eref:3,"clip":$eref:4}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[16]
-      value: '"path":"actions.[3].audio","value":$eref:3'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[17]
-      value: '"path":"actions.[3].clip","value":$eref:4'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[18]
-      value: '"path":"actions.[3].Id","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[19]
-      value: '"path":"actions.[3].itemId","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[20]
-      value: '"path":"actions.[3].needSync","value":{"$id":0,"$type":"System.Boolean,
-        mscorlib",true}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[21]
-      value: '"path":"actions.[3].targetId","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[22]
-      value: '"path":"actions.[4]","value":{"$id":0,"$type":"Decode.ActionCompleteTask,
-        Assembly-CSharp","itemId":null,"targetId":null,"needSync":false,"Id":null,"taskMessage":"[2-1-2]"}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[23]
-      value: '"path":"actions.[4].Id","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[24]
-      value: '"path":"actions.[4].itemId","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[25]
-      value: '"path":"actions.[4].needSync","value":{"$id":0,"$type":"System.Boolean,
         mscorlib",false}'
       objectReference: {fileID: 0}
     - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[26]
-      value: '"path":"actions.[4].targetId","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[27]
-      value: '"path":"actions.[4].taskMessage","value":{"$id":0,"$type":"System.String,
+      propertyPath: serializationData.PrefabModifications.Array.data[3]
+      value: '"path":"actions.[0].taskMessage","value":{"$id":0,"$type":"System.String,
         mscorlib","[2-1-2]"}'
       objectReference: {fileID: 0}
     - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 1713374901}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 3593983615510958177}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[2]
-      value: 
-      objectReference: {fileID: 3593983614650261573}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[3]
-      value: 
-      objectReference: {fileID: 153413733}
-    - target: {fileID: 7877715373628594755, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: 18a0b16ccb6c823439d137f61cebd6b5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
 --- !u!4 &1713374899 stripped
@@ -19190,11 +19091,6 @@ Transform:
 --- !u!1 &1713374900 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1801650296464552494, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-  m_PrefabInstance: {fileID: 1713374898}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1713374901 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: -5099450848982015402, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
   m_PrefabInstance: {fileID: 1713374898}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1720041405
@@ -20329,6 +20225,9 @@ MonoBehaviour:
     - Name: isUsing
       Entry: 5
       Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
     - Name: name
       Entry: 6
       Data: 
@@ -20557,6 +20456,9 @@ MonoBehaviour:
     - Name: isUsing
       Entry: 5
       Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
     - Name: name
       Entry: 6
       Data: 
@@ -20654,6 +20556,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -21836,6 +21741,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -25584,6 +25492,9 @@ MonoBehaviour:
     - Name: isUsing
       Entry: 5
       Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
     - Name: name
       Entry: 6
       Data: 
@@ -25681,6 +25592,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -25936,6 +25850,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -26935,6 +26852,9 @@ MonoBehaviour:
     - Name: isUsing
       Entry: 5
       Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
     - Name: name
       Entry: 6
       Data: 
@@ -27216,6 +27136,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -27822,6 +27745,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -28717,6 +28643,9 @@ MonoBehaviour:
     - Name: isUsing
       Entry: 5
       Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
     - Name: name
       Entry: 6
       Data: 
@@ -28873,6 +28802,11 @@ MonoBehaviour:
     - {fileID: 1713374900}
     - {fileID: 353699115}
     - {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
+    - {fileID: 3593983615510958177}
+    - {fileID: 3593983614650261573}
+    - {fileID: 153413733}
+    - {fileID: 8300000, guid: 18a0b16ccb6c823439d137f61cebd6b5, type: 3}
+    - {fileID: 3593983614049788576}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -28884,7 +28818,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 1|Decode.ObtainConfig, Assembly-CSharp
@@ -29000,6 +28934,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -29182,6 +29119,9 @@ MonoBehaviour:
     - Name: isUsing
       Entry: 5
       Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
     - Name: name
       Entry: 6
       Data: 
@@ -29203,6 +29143,129 @@ MonoBehaviour:
     - Name: isConsist
       Entry: 5
       Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 21|Decode.ObtainConfig, Assembly-CSharp
+    - Name: actions
+      Entry: 7
+      Data: 22|Decode.Actions[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 23|Decode.ActionOpenLight, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: true
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: light
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 24|Decode.ActionOpenLight, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: true
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: light
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 25|Decode.ActionPlayAudio, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: audio
+      Entry: 10
+      Data: 6
+    - Name: clip
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: name
+      Entry: 6
+      Data: 
+    - Name: conditions
+      Entry: 7
+      Data: 26|Decode.Conditions[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 27|Decode.ConditionItemComplete, Assembly-CSharp
+    - Name: name
+      Entry: 6
+      Data: 
+    - Name: item
+      Entry: 10
+      Data: 8
     - Name: 
       Entry: 8
       Data: 
@@ -30636,6 +30699,9 @@ MonoBehaviour:
     - Name: isUsing
       Entry: 5
       Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
     - Name: name
       Entry: 6
       Data: 
@@ -30733,6 +30799,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -31460,6 +31529,9 @@ MonoBehaviour:
     - Name: isUsing
       Entry: 5
       Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
     - Name: name
       Entry: 6
       Data: 
@@ -31828,6 +31900,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -32406,6 +32481,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -35609,6 +35687,9 @@ MonoBehaviour:
     - Name: isUsing
       Entry: 5
       Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
     - Name: name
       Entry: 6
       Data: 
@@ -35706,6 +35787,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
@@ -36908,6 +36992,9 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
       Entry: 5
       Data: false
     - Name: name
