@@ -439,7 +439,55 @@ MonoBehaviour:
       Data: 0|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|Decode.ActionGetProp, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: PropertyID
+      Entry: 3
+      Data: 4
+    - Name: size
+      Entry: 4
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Decode.ActionGetProp, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: PropertyID
+      Entry: 3
+      Data: 3
+    - Name: size
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -448,7 +496,7 @@ MonoBehaviour:
       Data: 
     - Name: rolls
       Entry: 7
-      Data: 1|Decode.Roll[], Assembly-CSharp
+      Data: 3|Decode.Roll[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2

@@ -80,7 +80,7 @@ public class Book : MonoBehaviour
     //current flip mode
     FlipMode mode;
 
-    void Awake()
+    void Start()
     {
         if (!canvas) canvas = GetComponentInParent<Canvas>();
         if (!canvas) Debug.LogError("Book should be a child to canvas");
@@ -394,10 +394,10 @@ public class Book : MonoBehaviour
     Coroutine currentCoroutine;
     void UpdateSprites()
     {
-	    LeftObj.SetPageInfo((currentPage > 0) ? bookPages[currentPage - 1] : new PropInfo());
-	    RightObj.SetPageInfo((currentPage < bookPages.Count) ? bookPages[currentPage] : new PropInfo());
-        LeftNext.sprite = (currentPage > 0) ? Left_Sprite : background;
+	    LeftNext.sprite = (currentPage > 0) ? Left_Sprite : background;
         RightNext.sprite = (currentPage < bookPages.Count) ? Right_Sprite : background;
+        LeftObj.SetPageInfo((currentPage > 0) ? bookPages[currentPage - 1] : new PropInfo());
+        RightObj.SetPageInfo((currentPage < bookPages.Count) ? bookPages[currentPage] : new PropInfo());
     }
     public void TweenForward()
     {

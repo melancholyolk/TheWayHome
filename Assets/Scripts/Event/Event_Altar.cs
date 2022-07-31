@@ -17,7 +17,7 @@ public class Event_Altar : Event
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && OperationControl.Instance.CanOperate())
+        if (Input.GetKeyDown(KeyCode.F) && OperationControl.Instance.CanOperate())
         {
             if (canUse)
             {

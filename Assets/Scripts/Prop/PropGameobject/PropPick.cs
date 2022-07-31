@@ -52,4 +52,13 @@ public class PropPick : PropProperty
             ObjectPool._instance.RecycleGo(this.gameObject);
         }
     }   
+    void PlayerNear()
+    {
+	    canUse = true;
+    }
+
+    void PlayerLeave()
+    {
+	    canUse = false;
+    }
 }

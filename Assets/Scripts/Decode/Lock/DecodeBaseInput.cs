@@ -26,8 +26,6 @@ namespace Decode
 			m_Parent = parent;
 			m_Config = config;
 		}
-
-
 		
 		public virtual void CheckInput()
 		{
@@ -48,6 +46,7 @@ namespace Decode
 				actions[i].SyncAction();
 			}
 			profile.components[0].active = false;
+			m_Parent.disable = true;
 			m_Parent.isUsing = false;
 			OperationControl.Instance.is_decoding = false;
 			Destroy(gameObject,1.5f);

@@ -88,7 +88,7 @@ public class PlayerMove : NetworkBehaviour
 	}
 
 
-    void Awake()
+    public void Awake()
     {
         m_OriginScale = transform.localScale;
         m_CurrentSpeed = speed;
@@ -126,8 +126,6 @@ public class PlayerMove : NetworkBehaviour
         transform.localScale = scale;
         players[1 - cur].transform.localPosition = Vector3.down * 100;
         players[cur].transform.localPosition = Vector3.zero;
-        if (!m_AnimatorControl)
-	        m_AnimatorControl = GetComponent<PlayerAnimatorControl>();
         m_AnimatorControl.SetAnimator(cur);
         m_NetworkAnimator.animator = m_AnimatorControl.GetAnimator();
         CheckHold(hold);
@@ -196,12 +194,12 @@ public class PlayerMove : NetworkBehaviour
         obj.transform.position = objPosition.position;
         obj.transform.localEulerAngles = new Vector3(45, -45, 0);
 
-        var script = obj.AddComponent<ObtainItems>();
-        var config = preConfig.pickConfig.Clone() as Config;
-        var action = config.actions[0] as Decode.ActionGetProp;
-        Debug.Assert(action!= null,"检查捡起预设");
-        action.PropertyID = num;
-        script.configs.Add(preConfig.pickConfig as ObtainConfig);
+        // var script = obj.AddComponent<ObtainItems>();
+        // var config = preConfig.pickConfig.Clone() as Config;
+        // var action = config.actions[0] as Decode.ActionGetProp;
+        // Debug.Assert(action!= null,"检查捡起预设");
+        // action.PropertyID = num;
+        // script.configs.Add(preConfig.pickConfig as ObtainConfig);
     }
 
     [Command]
@@ -213,6 +211,7 @@ public class PlayerMove : NetworkBehaviour
     [ClientRpc]
     private void RpcDestory(string obj)
     {
+	    Debug.LogError( GameObject.Find(obj));
         GameObject.Find(obj).GetComponent<PropPick>().is_pick = true;
     }
     #endregion

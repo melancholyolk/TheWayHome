@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform player;
+    public Vector3 offset;
     public void SetPlayer(Transform p)
     {
         player = p;
@@ -14,7 +15,9 @@ public class CameraFollow : MonoBehaviour
     {
         if(player != null)
         {
-            this.transform.position = new Vector3(player.position.x+ 25.0f, player.position.y + 50.0f, player.position.z - 25.0f);
+	        // this.transform.position = player.TransformPoint(offset);
+	        var position = player.position;
+            this.transform.position = position + offset;
         }
     }
 }

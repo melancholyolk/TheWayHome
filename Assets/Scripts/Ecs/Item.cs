@@ -25,11 +25,14 @@ namespace Decode
 
 		private void Start()
 		{
-			MonoECSInteract.Instance.AddGScript(id, this);
-			isUsing = false;
-			disable = false;
+			// CanvasManager.Instance.GetComponent<View_Control>().ShowDialog(new List<string>(){id});
+			Invoke(nameof(AddListener),1);
 		}
 
+		private void AddListener()
+		{
+			MonoECSInteract.Instance.AddGScript(id, this);
+		}
 		public virtual void DoAction(string actionId , string targetId)
 		{
 			

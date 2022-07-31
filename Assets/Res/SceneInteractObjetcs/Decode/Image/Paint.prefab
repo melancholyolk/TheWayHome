@@ -463,6 +463,6 @@ MonoBehaviour:
   - {fileID: 2175444827772341723}
   cur_num: 0
   count: 0
-  left: 0
-  right: 0
-  rotate: 0
+  left: 113
+  right: 101
+  rotate: 114

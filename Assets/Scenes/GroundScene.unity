@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6797541}
   - component: {fileID: 6797542}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: "Collider\u706B\u76C6 (3)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3952793922791451414, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.1077
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 3952793922791451414, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -472,9 +472,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5720912735991854353, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: m_Size.x
+      value: 0.42198303
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720912735991854353, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: m_Size.z
+      value: 0.9999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720912735991854353, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: m_Center.x
+      value: 0.28900865
+      objectReference: {fileID: 0}
     - target: {fileID: 6060148915299177220, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_Size.x
-      value: 0.41925994
+      value: 0.2674167
       objectReference: {fileID: 0}
     - target: {fileID: 6060148915299177220, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_Size.z
@@ -482,7 +494,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6060148915299177220, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_Center.x
-      value: -0.29037002
+      value: -0.36629164
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: topTexture.texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: backTexture.texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: leftTexture.texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: frontTexture.texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: rightTexture.texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: bottomTexture.texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: backTexture.reversHorizontal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
+      propertyPath: frontTexture.reversHorizontal
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9174170106433736360, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_RootOrder
@@ -1474,7 +1518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 96791032}
   - component: {fileID: 96791033}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "\u5B57"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1489,7 +1533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96791031}
   m_LocalRotation: {x: 0.02669468, y: 0.3817513, z: -0.921629, w: 0.06444672}
-  m_LocalPosition: {x: -2.66, y: 5.12, z: 10.11}
+  m_LocalPosition: {x: -2.42, y: 5.67, z: 9.48}
   m_LocalScale: {x: 7.1672673, y: 7.167268, z: 7.167268}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1538,7 +1582,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -3822400036598141961, guid: 8e8139d8486b17b4da536dbbea13dd8a, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2350,8 +2394,9 @@ GameObject:
   - component: {fileID: 156588707}
   - component: {fileID: 2717183818845734559}
   - component: {fileID: 156588709}
-  - component: {fileID: 2717183818845734560}
-  m_Layer: 9
+  - component: {fileID: 1521121524}
+  - component: {fileID: 2717183818845734561}
+  m_Layer: 7
   m_Name: "\u706B\u76C6 (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2815,6 +2860,11 @@ Transform:
   m_Father: {fileID: 1155241412}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 45, y: -45, z: 0}
+--- !u!95 &225869077 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1910851880, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+  m_PrefabInstance: {fileID: 1368550757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &228716582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3236,8 +3286,9 @@ GameObject:
   - component: {fileID: 252447543}
   - component: {fileID: 2717183818845734562}
   - component: {fileID: 252447545}
-  - component: {fileID: 2717183818845734564}
-  m_Layer: 9
+  - component: {fileID: 2717183818845734567}
+  - component: {fileID: 2717183818845734566}
+  m_Layer: 7
   m_Name: "\u706B\u76C6 (3)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3724,17 +3775,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef4dc979e3722144e9af3d81ed64471e, type: 3}
---- !u!114 &291641164 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3992378182812166227, guid: ef4dc979e3722144e9af3d81ed64471e, type: 3}
-  m_PrefabInstance: {fileID: 291641163}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b73703c5c183814a86c7e2414c16e60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &305137217
 GameObject:
   m_ObjectHideFlags: 0
@@ -3747,7 +3787,7 @@ GameObject:
   - component: {fileID: 305137220}
   - component: {fileID: 305137219}
   - component: {fileID: 305137221}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4084,6 +4124,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 156588704}
     m_Modifications:
     - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: m_SortMode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: m_SortingFudge
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -4097,7 +4149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 543568278693029602, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 543568278693029602, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_IsActive
@@ -4176,11 +4228,6 @@ PrefabInstance:
 --- !u!4 &328498140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8728613029737635795, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
-  m_PrefabInstance: {fileID: 328498139}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &328498141 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
   m_PrefabInstance: {fileID: 328498139}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &352451759
@@ -4386,12 +4433,6 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 2114069062}
-    - {fileID: 291641164}
-    - {fileID: 1379143877}
-    - {fileID: 8300000, guid: 8492aa5916007bd40926547d8e621c0e, type: 3}
-    - {fileID: 723748100}
-    - {fileID: 353699115}
-    - {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -4403,7 +4444,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 1
     - Name: 
       Entry: 7
       Data: 1|Decode.ObtainConfig, Assembly-CSharp
@@ -4415,133 +4456,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 3|Decode.ActionPlayCG, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: cg
-      Entry: 10
-      Data: 0
-    - Name: actions
-      Entry: 7
-      Data: 4|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 5|Decode.ActionLoadTask, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: taskManager
-      Entry: 10
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 6|Decode.ActionPlayAudio, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: audio
-      Entry: 10
-      Data: 2
-    - Name: clip
-      Entry: 10
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 1
-      Data: PlayCG
-    - Name: conditions
-      Entry: 7
-      Data: 7|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 8|Decode.ConditionGameState, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: chapter
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 9|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 10|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 11|Decode.ActionSkipCG, Assembly-CSharp
+      Data: 3|Decode.ActionSkipCG, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -4574,13 +4489,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 12|Decode.Conditions[], Assembly-CSharp
+      Data: 4|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 13|Decode.ConditionInput, Assembly-CSharp
+      Data: 5|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -4595,88 +4510,10 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 14|Decode.ConditionOperationPlayCG, Assembly-CSharp
+      Data: 6|Decode.ConditionOperationPlayCG, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 15|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 16|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 17|Decode.ActionLoadDecodeItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: decodePrefab
-      Entry: 10
-      Data: 4
-    - Name: decodeCamera
-      Entry: 10
-      Data: 5
-    - Name: postProcessProfile
-      Entry: 10
-      Data: 6
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 18|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 19|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 111
-    - Name: isConsist
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -6174,7 +6011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6161314490742343613, guid: 33465135847e91c4092bb37f5ef6d56f, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[5]
-      value: '"path":"configs.[0].actions.[0].decodePrefab","value":$eref:0'
+      value: '"path":"configs.[0].actions.[0].decodePrefab","value":$eref:3'
       objectReference: {fileID: 0}
     - target: {fileID: 6161314490742343613, guid: 33465135847e91c4092bb37f5ef6d56f, type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[6]
@@ -6303,7 +6140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6161314490742343613, guid: 33465135847e91c4092bb37f5ef6d56f, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6161314490742343613, guid: 33465135847e91c4092bb37f5ef6d56f, type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
@@ -6317,6 +6154,10 @@ PrefabInstance:
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
+    - target: {fileID: 6161314490742343613, guid: 33465135847e91c4092bb37f5ef6d56f, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 1368550759}
     - target: {fileID: 6161314490742343615, guid: 33465135847e91c4092bb37f5ef6d56f, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -8231,11 +8072,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8471780247350531313, guid: 8510c54271ed3c745a45d64563ae5634, type: 3}
   m_PrefabInstance: {fileID: 723748098}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &723748100 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8471780247350531318, guid: 8510c54271ed3c745a45d64563ae5634, type: 3}
-  m_PrefabInstance: {fileID: 723748098}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &730155160
 GameObject:
   m_ObjectHideFlags: 0
@@ -8722,7 +8558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776080060}
   - component: {fileID: 776080061}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "\u5B57"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8737,7 +8573,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776080059}
   m_LocalRotation: {x: 0.28909189, y: -0.25074393, z: 0.60534954, w: 0.6979293}
-  m_LocalPosition: {x: 11.12, y: -2.96, z: 2.43}
+  m_LocalPosition: {x: 11.68, y: -2.91, z: 0.62}
   m_LocalScale: {x: 7.167268, y: 7.167266, z: 7.1672688}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8786,7 +8622,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 8541865341472898449, guid: 8e8139d8486b17b4da536dbbea13dd8a, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9293,7 +9129,7 @@ GameObject:
   - component: {fileID: 954767297}
   - component: {fileID: 954767296}
   - component: {fileID: 954767298}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9996,11 +9832,100 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[0]
+      value: '"path":"actions.[0].size","value":{"$id":0,"$type":"System.Single,
+        mscorlib",3}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[1]
+      value: '"path":"actions.[1].size","value":{"$id":0,"$type":"System.Single,
+        mscorlib",3}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[2]
+      value: '"path":"rolls.[0]","value":{"$id":0,"$type":"Decode.Roll, Assembly-CSharp","rollControl":$eref:0,"type":0,"answerFloat":0,"answerIndex":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[3]
+      value: '"path":"rolls.[0].answerIndex","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",3}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[4]
+      value: '"path":"rolls.[0].rollControl","value":$eref:0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[5]
+      value: '"path":"rolls.[0].type","value":{"$id":0,"$type":"Decode.Roll+AnswerType,
+        Assembly-CSharp",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[6]
+      value: '"path":"rolls.[1]","value":{"$id":0,"$type":"Decode.Roll, Assembly-CSharp","rollControl":$eref:1,"type":0,"answerFloat":0,"answerIndex":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[7]
+      value: '"path":"rolls.[1].answerIndex","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",4}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[8]
+      value: '"path":"rolls.[1].rollControl","value":$eref:1'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[9]
+      value: '"path":"rolls.[1].type","value":{"$id":0,"$type":"Decode.Roll+AnswerType,
+        Assembly-CSharp",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 980779648}
+    - target: {fileID: 7221646919491342402, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 980779647}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
 --- !u!4 &980779646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2293139959992891118, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+  m_PrefabInstance: {fileID: 980779645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &980779647 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3891887719510929688, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+  m_PrefabInstance: {fileID: 980779645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &980779648 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 155851381938841336, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+  m_PrefabInstance: {fileID: 980779645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &980779649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2293139959992891119, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
   m_PrefabInstance: {fileID: 980779645}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &982148491
@@ -10436,7 +10361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1003822857}
   - component: {fileID: 1003822858}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: "Collider\u706B\u76C6 (1)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11379,6 +11304,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 1366838846}
     m_Modifications:
     - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: m_SortMode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: m_SortingFudge
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -11388,7 +11325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 543568278693029602, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 543568278693029602, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_IsActive
@@ -11467,11 +11404,6 @@ PrefabInstance:
 --- !u!4 &1116038993 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8728613029737635795, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
-  m_PrefabInstance: {fileID: 1116038992}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1116038994 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
   m_PrefabInstance: {fileID: 1116038992}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1132393935
@@ -12855,14 +12787,14 @@ MonoBehaviour:
   - "\u597D\u50CF\u8FD8\u7F3A\u5C11\u4E00\u4E9B\u4E1C\u897F"
   _triggerDialog:
   - "\u662F\u4E0D\u662F\u53EF\u4EE5\u56DE\u5BB6\u4E86"
-  _triggerCondition: 000000000000000000000000
+  _triggerCondition: 030000000500000002000000
   _taskMessage: '[1-1-3]'
   player: {fileID: 0}
   canUse: 0
   fireStack:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2717183818845734561}
+  - {fileID: 2717183818845734568}
+  - {fileID: 2717183818845734566}
 --- !u!65 &1213381558
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13007,7 +12939,7 @@ GameObject:
   - component: {fileID: 1235845880}
   - component: {fileID: 1235845879}
   - component: {fileID: 1235845881}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13505,7 +13437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277853961}
   - component: {fileID: 1277853962}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "\u5B57"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13520,7 +13452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277853960}
   m_LocalRotation: {x: 0.28454566, y: 0.25589138, z: -0.6177764, w: 0.686954}
-  m_LocalPosition: {x: -13.576457, y: -6.0869503, z: -2.1130505}
+  m_LocalPosition: {x: -13.58, y: -5.4, z: -2.8}
   m_LocalScale: {x: 7.167266, y: 7.167267, z: 7.1672664}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13569,7 +13501,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1176438073002978177, guid: 8e8139d8486b17b4da536dbbea13dd8a, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -14698,8 +14630,9 @@ GameObject:
   - component: {fileID: 1366838849}
   - component: {fileID: 2717183818845734563}
   - component: {fileID: 1366838851}
-  - component: {fileID: 2717183818845734565}
-  m_Layer: 9
+  - component: {fileID: 2717183818845734569}
+  - component: {fileID: 2717183818845734568}
+  m_Layer: 7
   m_Name: "\u706B\u76C6 (2)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14905,6 +14838,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1028889714}
     m_Modifications:
+    - target: {fileID: 4548816240324709093, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: ec48afc55c9d7f44ea2c149639e3c25c, type: 2}
     - target: {fileID: 8579770461440581408, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -14961,6 +14898,298 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.size
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[0]
+      value: '"path":"actions","length":5'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[1]
+      value: '"path":"actions.[0]","value":{"$id":0,"$type":"Decode.ActionOpenLight,
+        Assembly-CSharp","itemId":null,"targetId":null,"needSync":false,"Id":null,"light":$eref:0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[2]
+      value: '"path":"actions.[0].Id","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[3]
+      value: '"path":"actions.[0].itemId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[4]
+      value: '"path":"actions.[0].light","value":$eref:0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[5]
+      value: '"path":"actions.[0].needSync","value":{"$id":0,"$type":"System.Boolean,
+        mscorlib",false}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[6]
+      value: '"path":"actions.[0].targetId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[7]
+      value: '"path":"actions.[1]","value":{"$id":0,"$type":"Decode.ActionOpenLight,
+        Assembly-CSharp","itemId":null,"targetId":null,"needSync":false,"Id":null,"light":$eref:1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[8]
+      value: '"path":"actions.[1].Id","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[9]
+      value: '"path":"actions.[1].itemId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[10]
+      value: '"path":"actions.[1].light","value":$eref:1'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[11]
+      value: '"path":"actions.[1].needSync","value":{"$id":0,"$type":"System.Boolean,
+        mscorlib",false}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[12]
+      value: '"path":"actions.[1].targetId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[13]
+      value: '"path":"actions.[2]","value":{"$id":0,"$type":"Decode.ActionOpenLight,
+        Assembly-CSharp","itemId":null,"targetId":null,"needSync":false,"Id":null,"light":$eref:2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[14]
+      value: '"path":"actions.[2].Id","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[15]
+      value: '"path":"actions.[2].itemId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[16]
+      value: '"path":"actions.[2].light","value":$eref:2'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[17]
+      value: '"path":"actions.[2].needSync","value":{"$id":0,"$type":"System.Boolean,
+        mscorlib",false}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[18]
+      value: '"path":"actions.[2].targetId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[19]
+      value: '"path":"actions.[3]","value":{"$id":0,"$type":"Decode.ActionSetSprite,
+        Assembly-CSharp","itemId":null,"targetId":null,"needSync":false,"Id":null,"renderer":$eref:3,"sprite":$eref:4}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[20]
+      value: '"path":"actions.[3].Id","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[21]
+      value: '"path":"actions.[3].itemId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[22]
+      value: '"path":"actions.[3].needSync","value":{"$id":0,"$type":"System.Boolean,
+        mscorlib",false}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[23]
+      value: '"path":"actions.[3].renderer","value":$eref:3'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[24]
+      value: '"path":"actions.[3].sprite","value":$eref:4'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[25]
+      value: '"path":"actions.[3].targetId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[26]
+      value: '"path":"actions.[4]","value":{"$id":0,"$type":"Decode.ActionPlayAnimation,
+        Assembly-CSharp","itemId":null,"targetId":null,"needSync":false,"Id":null,"animator":$eref:5}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[27]
+      value: '"path":"actions.[4].animator","value":$eref:5'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[28]
+      value: '"path":"actions.[4].Id","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[29]
+      value: '"path":"actions.[4].itemId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[30]
+      value: '"path":"actions.[4].needSync","value":{"$id":0,"$type":"System.Boolean,
+        mscorlib",false}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[31]
+      value: '"path":"actions.[4].targetId","value":null'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[32]
+      value: '"path":"rolls.[0]","value":{"$id":0,"$type":"Decode.Roll, Assembly-CSharp","rollControl":$eref:6,"type":1,"answerFloat":0,"answerIndex":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[33]
+      value: '"path":"rolls.[0].answerIndex","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[34]
+      value: '"path":"rolls.[0].rollControl","value":$eref:6'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[35]
+      value: '"path":"rolls.[1]","value":{"$id":0,"$type":"Decode.Roll, Assembly-CSharp","rollControl":$eref:7,"type":0,"answerFloat":0,"answerIndex":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[36]
+      value: '"path":"rolls.[1].rollControl","value":$eref:7'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[37]
+      value: '"path":"rolls.[1].type","value":{"$id":0,"$type":"Decode.Roll+AnswerType,
+        Assembly-CSharp",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[38]
+      value: '"path":"rolls.[2]","value":{"$id":0,"$type":"Decode.Roll, Assembly-CSharp","rollControl":$eref:8,"type":0,"answerFloat":0,"answerIndex":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[39]
+      value: '"path":"rolls.[2].answerFloat","value":{"$id":0,"$type":"System.Single,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[40]
+      value: '"path":"rolls.[2].answerIndex","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[41]
+      value: '"path":"rolls.[2].rollControl","value":$eref:8'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[42]
+      value: '"path":"rolls.[2].type","value":{"$id":0,"$type":"Decode.Roll+AnswerType,
+        Assembly-CSharp",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[43]
+      value: '"path":"rolls.[3]","value":{"$id":0,"$type":"Decode.Roll, Assembly-CSharp","rollControl":$eref:9,"type":0,"answerFloat":0,"answerIndex":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[44]
+      value: '"path":"rolls.[3].rollControl","value":$eref:9'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[45]
+      value: '"path":"rolls.[3].type","value":{"$id":0,"$type":"Decode.Roll+AnswerType,
+        Assembly-CSharp",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[46]
+      value: '"path":"rolls.[4]","value":{"$id":0,"$type":"Decode.Roll, Assembly-CSharp","rollControl":$eref:10,"type":0,"answerFloat":0,"answerIndex":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[47]
+      value: '"path":"rolls.[4].answerFloat","value":{"$id":0,"$type":"System.Single,
+        mscorlib",11}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[48]
+      value: '"path":"rolls.[4].answerIndex","value":{"$id":0,"$type":"System.Int32,
+        mscorlib",11}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[49]
+      value: '"path":"rolls.[4].rollControl","value":$eref:10'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[50]
+      value: '"path":"rolls.[4].type","value":{"$id":0,"$type":"Decode.Roll+AnswerType,
+        Assembly-CSharp",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[51]
+      value: '"path":"rolls.[5]","value":{"$id":0,"$type":"Decode.Roll, Assembly-CSharp","rollControl":$eref:11,"type":0,"answerFloat":0,"answerIndex":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[52]
+      value: '"path":"rolls.[5].rollControl","value":$eref:11'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[53]
+      value: '"path":"rolls.[5].type","value":{"$id":0,"$type":"Decode.Roll+AnswerType,
+        Assembly-CSharp",1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 452125671}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 452125669}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 452125668}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 507577248}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7466c4199a6bfb648a481a119451b7b0, type: 3}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[5]
+      value: 
+      objectReference: {fileID: 225869077}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[6]
+      value: 
+      objectReference: {fileID: 1368550765}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[7]
+      value: 
+      objectReference: {fileID: 1368550764}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[8]
+      value: 
+      objectReference: {fileID: 1368550763}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[9]
+      value: 
+      objectReference: {fileID: 1368550762}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[10]
+      value: 
+      objectReference: {fileID: 1368550761}
+    - target: {fileID: 8579770461440581410, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[11]
+      value: 
+      objectReference: {fileID: 1368550760}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
 --- !u!4 &1368550758 stripped
@@ -14968,6 +15197,77 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8579770461440581408, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
   m_PrefabInstance: {fileID: 1368550757}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1368550759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8579770461440581409, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+  m_PrefabInstance: {fileID: 1368550757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1368550760 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6027645503183818139, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+  m_PrefabInstance: {fileID: 1368550757}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1368550761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 101881334115707129, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+  m_PrefabInstance: {fileID: 1368550757}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1368550762 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6143796677133326973, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+  m_PrefabInstance: {fileID: 1368550757}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1368550763 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6352578172805422051, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+  m_PrefabInstance: {fileID: 1368550757}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1368550764 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5174792724306947200, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+  m_PrefabInstance: {fileID: 1368550757}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1368550765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6819467779414207228, guid: 5ccad7820177b304f8f6cae571ffaa38, type: 3}
+  m_PrefabInstance: {fileID: 1368550757}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1369220840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15118,7 +15418,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -15200,6 +15500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  offset: {x: 36.99, y: 68, z: -34.04}
 --- !u!82 &1379143877
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15359,6 +15660,62 @@ PrefabInstance:
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[0]
+      value: '"path":"rolls.[0]","value":{"$id":0,"$type":"Decode.Roll, Assembly-CSharp","rollControl":$eref:0,"type":1,"answerFloat":0,"answerIndex":0}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[1]
+      value: '"path":"rolls.[0].rollControl","value":$eref:0'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[2]
+      value: '"path":"rolls.[1]","value":{"$id":0,"$type":"Decode.Roll, Assembly-CSharp","rollControl":$eref:1,"type":1,"answerFloat":0,"answerIndex":1}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[3]
+      value: '"path":"rolls.[1].rollControl","value":$eref:1'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[4]
+      value: '"path":"rolls.[2]","value":{"$id":0,"$type":"Decode.Roll, Assembly-CSharp","rollControl":$eref:2,"type":1,"answerFloat":0,"answerIndex":2}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[5]
+      value: '"path":"rolls.[2].rollControl","value":$eref:2'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[6]
+      value: '"path":"rolls.[3]","value":{"$id":0,"$type":"Decode.Roll, Assembly-CSharp","rollControl":$eref:3,"type":1,"answerFloat":0,"answerIndex":3}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModifications.Array.data[7]
+      value: '"path":"rolls.[3].rollControl","value":$eref:3'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1384380842}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 1384380841}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 1384380840}
+    - target: {fileID: 7444833108618763672, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 1384380839}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
 --- !u!4 &1384380838 stripped
@@ -15366,6 +15723,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1969068478193584104, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
   m_PrefabInstance: {fileID: 1384380837}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1384380839 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1475695127500501663, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+  m_PrefabInstance: {fileID: 1384380837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1384380840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1806359411082883841, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+  m_PrefabInstance: {fileID: 1384380837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1384380841 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 497947858006672482, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+  m_PrefabInstance: {fileID: 1384380837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1384380842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2277136620241306142, guid: 1d349c9a717d1d34f848e0e65d651edb, type: 3}
+  m_PrefabInstance: {fileID: 1384380837}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1384561877
 GameObject:
   m_ObjectHideFlags: 0
@@ -15496,7 +15897,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 2293139959992891119, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
+    - {fileID: 980779649}
     - {fileID: 353699115}
     - {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
     - {fileID: 1384561884}
@@ -16595,6 +16996,23 @@ Transform:
   m_Father: {fileID: 1797061965}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1521121524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156588702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1677678808
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1523434325
 GameObject:
   m_ObjectHideFlags: 0
@@ -17966,6 +18384,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 252447540}
     m_Modifications:
     - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: m_SortMode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: m_SortingFudge
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -17975,7 +18405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 543568278693029602, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 543568278693029602, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_IsActive
@@ -18054,11 +18484,6 @@ PrefabInstance:
 --- !u!4 &1633508444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8728613029737635795, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
-  m_PrefabInstance: {fileID: 1633508443}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1633508445 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
   m_PrefabInstance: {fileID: 1633508443}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1634602185
@@ -20429,7 +20854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1903677563}
   - component: {fileID: 1903677564}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: "Collider\u706B\u76C6 (2)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20960,7 +21385,7 @@ MonoBehaviour:
       Data: 2|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 5
     - Name: 
       Entry: 7
       Data: 3|Decode.ActionDialog, Assembly-CSharp
@@ -20999,28 +21424,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|Decode.ActionCompleteTask, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: taskMessage
-      Entry: 1
-      Data: '[1-1-1]'
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 6|Decode.ActionHoldTorch, Assembly-CSharp
+      Data: 5|Decode.ActionHoldTorch, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -21038,7 +21442,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 7|Decode.ActionPlayAudio, Assembly-CSharp
+      Data: 6|Decode.ActionPlayAudio, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -21061,6 +21465,48 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 7|Decode.ActionCompleteTask, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: taskMessage
+      Entry: 1
+      Data: '[1-1-1]'
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|Decode.ActionSetLocalPlayerCondition, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: propId
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -21074,13 +21520,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 8|Decode.Conditions[], Assembly-CSharp
+      Data: 9|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 9|Decode.ConditionInput, Assembly-CSharp
+      Data: 10|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -21095,19 +21541,19 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 10|Decode.ConditionFeedBack, Assembly-CSharp
+      Data: 11|Decode.ConditionFeedBack, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 11|Decode.Conditions[], Assembly-CSharp
+      Data: 12|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 12|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
+      Data: 13|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -21125,13 +21571,13 @@ MonoBehaviour:
       Data: 
     - Name: actions
       Entry: 7
-      Data: 13|Decode.Actions[], Assembly-CSharp
+      Data: 14|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 14|Decode.ActionDialog, Assembly-CSharp
+      Data: 15|Decode.ActionDialog, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -21149,7 +21595,7 @@ MonoBehaviour:
       Data: 0
     - Name: dialogs
       Entry: 7
-      Data: 15|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 16|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
@@ -21464,7 +21910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3952793922791451414, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.8041
+      value: -4.91
       objectReference: {fileID: 0}
     - target: {fileID: 3952793922791451414, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21516,27 +21962,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5720912735991854353, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_Size.x
-      value: 0.2040497
+      value: 0.5048598
       objectReference: {fileID: 0}
     - target: {fileID: 5720912735991854353, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_Center.x
-      value: 0.39797527
+      value: 0.24756986
       objectReference: {fileID: 0}
     - target: {fileID: 5720912735991854353, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_Center.z
-      value: 0.000000027130612
+      value: -0.00000006519968
       objectReference: {fileID: 0}
     - target: {fileID: 6060148915299177220, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_Size.x
-      value: 0.4707634
+      value: 0.22694482
       objectReference: {fileID: 0}
     - target: {fileID: 6060148915299177220, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_Center.x
-      value: -0.2646183
+      value: -0.38652745
       objectReference: {fileID: 0}
     - target: {fileID: 6060148915299177220, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_Center.z
-      value: 0.000000011298686
+      value: -0.00000006353845
       objectReference: {fileID: 0}
     - target: {fileID: 6854559625804778504, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: m_Enabled
@@ -21584,7 +22030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: frontTexture.reversHorizontal
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7522470838119082347, guid: a446643090ca9b94e842d95a43ba86cd, type: 3}
       propertyPath: rightTexture.reversHorizontal
@@ -24218,7 +24664,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156588702}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 793f4d2b6c8c62349b89aad15aac517f, type: 2}
   m_CullingMode: 0
@@ -24230,7 +24676,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2717183818845734560
+--- !u!114 &2717183818845734561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24239,174 +24685,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 156588702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d004071afd008044b4e9a7283bdd41f, type: 3}
+  m_Script: {fileID: 11500000, guid: 05f6573a4f049ab45b877d46a40d300f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 1213381557}
-    - {fileID: 328498141}
-    - {fileID: 1235845880}
-    - {fileID: 156588709}
-    - {fileID: 2717183818845734559}
-    - {fileID: 1836208465}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: configs
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Decode.ObtainConfig, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 2|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 3|Decode.ActionFire, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: order
-      Entry: 3
-      Data: 0
-    - Name: altar
-      Entry: 10
-      Data: 0
-    - Name: fire
-      Entry: 10
-      Data: 1
-    - Name: light
-      Entry: 10
-      Data: 2
-    - Name: audioSource
-      Entry: 10
-      Data: 3
-    - Name: animator
-      Entry: 10
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|Decode.ActionDialog, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: dialogUI
-      Entry: 10
-      Data: 5
-    - Name: dialogs
-      Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: Onfire
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 6|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 7|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 102
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 8|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: propId
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  id: 3487ab45ebc545399c3dd77f4e70eec8
-  decodes: []
+  syncMode: 0
+  syncInterval: 0.1
+  eventType: 0
+  _notTriggerDialog:
+  - "\u6CA1\u6709\u706B"
+  _triggerDialog:
+  - "\u4EAE\u4E86"
+  _triggerCondition: 02000000
+  _taskMessage: 
+  player: {fileID: 0}
+  canUse: 0
+  torch: {fileID: 0}
+  order: 0
+  altar: {fileID: 1213381557}
 --- !u!95 &2717183818845734562
 Animator:
   serializedVersion: 4
@@ -24415,7 +24710,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252447538}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 793f4d2b6c8c62349b89aad15aac517f, type: 2}
   m_CullingMode: 0
@@ -24435,7 +24730,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366838844}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 793f4d2b6c8c62349b89aad15aac517f, type: 2}
   m_CullingMode: 0
@@ -24447,7 +24742,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2717183818845734564
+--- !u!114 &2717183818845734566
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24456,175 +24751,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 252447538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d004071afd008044b4e9a7283bdd41f, type: 3}
+  m_Script: {fileID: 11500000, guid: 05f6573a4f049ab45b877d46a40d300f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 1213381557}
-    - {fileID: 1633508445}
-    - {fileID: 954767297}
-    - {fileID: 252447545}
-    - {fileID: 2717183818845734562}
-    - {fileID: 1836208465}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: configs
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Decode.ObtainConfig, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 2|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 3|Decode.ActionFire, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: order
-      Entry: 3
-      Data: 2
-    - Name: altar
-      Entry: 10
-      Data: 0
-    - Name: fire
-      Entry: 10
-      Data: 1
-    - Name: light
-      Entry: 10
-      Data: 2
-    - Name: audioSource
-      Entry: 10
-      Data: 3
-    - Name: animator
-      Entry: 10
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|Decode.ActionDialog, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: dialogUI
-      Entry: 10
-      Data: 5
-    - Name: dialogs
-      Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: Onfire
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 6|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 7|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 102
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 8|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: propId
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  id: 338862d13c5a4f5687a262ddf3d9572e
-  decodes: []
---- !u!114 &2717183818845734565
+  syncMode: 0
+  syncInterval: 0.1
+  eventType: 0
+  _notTriggerDialog:
+  - "\u6CA1\u6709\u706B"
+  _triggerDialog:
+  - "\u4EAE\u4E86"
+  _triggerCondition: 02000000
+  _taskMessage: 
+  player: {fileID: 0}
+  canUse: 0
+  torch: {fileID: 0}
+  order: 2
+  altar: {fileID: 1213381557}
+--- !u!114 &2717183818845734567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252447538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3509768617
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
+--- !u!114 &2717183818845734568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24633,174 +24794,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 1366838844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d004071afd008044b4e9a7283bdd41f, type: 3}
+  m_Script: {fileID: 11500000, guid: 05f6573a4f049ab45b877d46a40d300f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 1213381557}
-    - {fileID: 1116038994}
-    - {fileID: 305137220}
-    - {fileID: 1366838851}
-    - {fileID: 2717183818845734563}
-    - {fileID: 1836208465}
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: configs
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Decode.ObtainConfig, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 2|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 3|Decode.ActionFire, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: order
-      Entry: 3
-      Data: 1
-    - Name: altar
-      Entry: 10
-      Data: 0
-    - Name: fire
-      Entry: 10
-      Data: 1
-    - Name: light
-      Entry: 10
-      Data: 2
-    - Name: audioSource
-      Entry: 10
-      Data: 3
-    - Name: animator
-      Entry: 10
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|Decode.ActionDialog, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: dialogUI
-      Entry: 10
-      Data: 5
-    - Name: dialogs
-      Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: Onfire
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 6|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 7|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 102
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 8|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: propId
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  id: 45eecb00a2e84e3cbd2baaa8c6e8f82c
-  decodes: []
+  syncMode: 0
+  syncInterval: 0.1
+  eventType: 0
+  _notTriggerDialog:
+  - "\u6CA1\u6709\u706B"
+  _triggerDialog:
+  - "\u4EAE\u4E86"
+  _triggerCondition: 02000000
+  _taskMessage: 
+  player: {fileID: 0}
+  canUse: 0
+  torch: {fileID: 0}
+  order: 1
+  altar: {fileID: 1213381557}
+--- !u!114 &2717183818845734569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366838844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2923393932
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &3593983613446203112
 GameObject:
   m_ObjectHideFlags: 0
@@ -29851,7 +29878,6 @@ MonoBehaviour:
     - {fileID: 914731516296213617, guid: 92da2b92df1457b41b765f5ae4ac44b1, type: 3}
     - {fileID: 353699115}
     - {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
-    - {fileID: 1836208465}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -29863,7 +29889,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 2
     - Name: 
       Entry: 7
       Data: 1|Decode.ObtainConfig, Assembly-CSharp
@@ -29872,7 +29898,7 @@ MonoBehaviour:
       Data: 2|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 3|Decode.ActionLoadDecodeItem, Assembly-CSharp
@@ -29901,42 +29927,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 4|Decode.ActionDialog, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: dialogUI
-      Entry: 10
-      Data: 3
-    - Name: dialogs
-      Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: "\u8FD9\u4E2A\u7269\u4F53\u51FA\u53D1\u4E86"
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -29950,13 +29940,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 6|Decode.Conditions[], Assembly-CSharp
+      Data: 4|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 7|Decode.ConditionInput, Assembly-CSharp
+      Data: 5|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -29980,16 +29970,16 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 8|Decode.ObtainConfig, Assembly-CSharp
+      Data: 6|Decode.ObtainConfig, Assembly-CSharp
     - Name: actions
       Entry: 7
-      Data: 9|Decode.Actions[], Assembly-CSharp
+      Data: 7|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 10|Decode.ActionDestroyItem, Assembly-CSharp
+      Data: 8|Decode.ActionDestroyItem, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -30019,106 +30009,19 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 11|Decode.Conditions[], Assembly-CSharp
+      Data: 9|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 12|Decode.ConditionInput, Assembly-CSharp
+      Data: 10|Decode.ConditionInput, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
     - Name: input
       Entry: 3
       Data: 32
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 13|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 14|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 15|Decode.ActionDialog, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: dialogUI
-      Entry: 10
-      Data: 3
-    - Name: dialogs
-      Entry: 7
-      Data: 16|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: "\u6D4B\u8BD5\u4E00\u4E0B"
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 17|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 18|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 108
     - Name: isConsist
       Entry: 5
       Data: false
@@ -31948,6 +31851,10 @@ PrefabInstance:
     - target: {fileID: 975380335054178149, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 975380335054178149, guid: 1379577012fe5164299b5518f6c16987, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 11767
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_RootOrder
@@ -35272,6 +35179,10 @@ PrefabInstance:
     - target: {fileID: 975380335054178149, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 975380335054178149, guid: 1379577012fe5164299b5518f6c16987, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 11767
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_RootOrder

@@ -14,7 +14,7 @@ namespace Decode
 		public VolumeProfile postProcessProfile;
 		public override void DoAction()
 		{
-			CanvasManager.Instance.GetComponent<View_Control>().ShowDialog(new List<string>(){MonoECSInteract.Instance.GetAll().Count.ToString()});
+			
 			var item = MonoECSInteract.Instance.GetItem(itemId) as ObtainItems;
 			var go = GameObject.Instantiate(decodePrefab,decodeCamera.transform.TransformPoint(Vector3.forward * 10), Quaternion.identity);
 			// go.transform.parent = item.transform;

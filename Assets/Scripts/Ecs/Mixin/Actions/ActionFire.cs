@@ -22,6 +22,7 @@ namespace Decode
 		{
 			_emissionModule.enabled = true;
 			light.enabled = true;
+			animator.enabled = true;
 			animator.SetTrigger("show");
 			audioSource.Play();
 			

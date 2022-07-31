@@ -28,7 +28,7 @@ public class Event_Altar_FirePan : Event_FirePan
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && OperationControl.Instance.CanOperate())
+        if (Input.GetKeyDown(KeyCode.F) && OperationControl.Instance.CanOperate())
         {
             if (canUse)
             {
@@ -62,6 +62,7 @@ public class Event_Altar_FirePan : Event_FirePan
     {
         _emissionModule.enabled = false;
         _light.enabled = false;
+        
         _animator.SetTrigger("hide");
         _audioSource.Stop();
     }

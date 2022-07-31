@@ -112,10 +112,11 @@ public class PlayerChose : NetworkBehaviour
         }
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     public void CmdPlayerSame()
     {
         GameObject obj = GameObject.Instantiate(player_prefab[player - 1]);
         NetworkServer.Spawn(obj, GetComponent<NetworkIdentity>().connectionToClient);
+        obj.GetComponent<PlayerMove>().Awake();
     }
 }
