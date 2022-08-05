@@ -22,8 +22,8 @@ public class PlayerMove : NetworkBehaviour
 
     [FormerlySerializedAs("is_local")]
      public bool isLocal;
-    [ShowInInspector]
-    public List<int> condition;
+    [ShowInInspector,SerializeField]
+    private List<int> condition;
 
     public float speed = 5f;
 
@@ -36,9 +36,7 @@ public class PlayerMove : NetworkBehaviour
     public PlayerAttribute m_attribute;
 
     public bool useLocalPosition = false;
-
-    public PreConfigResource preConfig;
-
+    
     private Rigidbody m_Rigidbody;
 
     private PlayerAnimatorControl m_AnimatorControl;
@@ -98,6 +96,7 @@ public class PlayerMove : NetworkBehaviour
         m_NetworkAnimator = GetComponent<NetworkAnimator>();
         m_AnimatorControl = GetComponent<PlayerAnimatorControl>();
         CmdInitComponent(m_CurrentPlayer, Vector3.one, m_IsHold);
+        PlayerManager.Instance.SetCondition(condition);
     }
 
 	// Update is called once per frame
@@ -196,13 +195,6 @@ public class PlayerMove : NetworkBehaviour
         // obj.GetComponent<PropPick>().SetPropInfo(num);
         obj.transform.position = objPosition.position;
         obj.transform.localEulerAngles = new Vector3(45, -45, 0);
-
-        // var script = obj.AddComponent<ObtainItems>();
-        // var config = preConfig.pickConfig.Clone() as Config;
-        // var action = config.actions[0] as Decode.ActionGetProp;
-        // Debug.Assert(action!= null,"检查捡起预设");
-        // action.PropertyID = num;
-        // script.configs.Add(preConfig.pickConfig as ObtainConfig);
     }
 
     [Command]
@@ -416,6 +408,15 @@ public class PlayerMove : NetworkBehaviour
         condition.Add(str);
     }
 
+    public void AddCondition(List<int> c)
+    {
+	    condition.AddRange(c);
+    }
+    public void SetCondition(List<int> c)
+    {
+	    condition.Clear();
+	    c.CopyTo(condition);
+    }
     public void RemoveCondition(int str)
     {
         condition.Remove(str);

@@ -1,7 +1,9 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 /// <summary>
@@ -9,6 +11,8 @@ using UnityEngine.UI;
 /// </summary>
 public class Panel_Setting : MonoBehaviour
 {
+	public DistinguishSetting distinguish;
+	
     public Animator ani;
 
     public Animator aniBK;
@@ -19,21 +23,35 @@ public class Panel_Setting : MonoBehaviour
 
     public AudioMixerGroup sfx;
 
-    public float volumeBGM = 0;
+    public Setting setting;
+	    
+    private float volumeBGM = 0;
 
-    public float volumeSFX = 0;
+    private float volumeSFX = 0;
 
+    [FormerlySerializedAs("Setting")] 
+    public GameSetting gameSetting;
+
+    public VolumePicture volumePicture;
+
+    public Slider volumeSlider;
     private float _aniSpeed0,_aniSpeed1;
     // Update is called once per frame
-    private void Start()
+    public void Start()
     {
         ani = GetComponent<Animator>();
-        aniBK = GameObject.Find("background_setting").GetComponent<Animator>();
-
         _aniSpeed0 = ani.speed;
         _aniSpeed1 = aniBK.speed;
+        volumeBGM = gameSetting.volume;
+        
+        InitSetting();
     }
 
+    public void InitSetting()
+    {
+	    SetVolume();
+	    distinguish.SetDistinguish();
+    }
    
 
     IEnumerator DisablePanelAfterAni()
@@ -47,7 +65,8 @@ public class Panel_Setting : MonoBehaviour
         ani.speed = _aniSpeed0;
         aniBK.StartPlayback();
         aniBK.speed = _aniSpeed1;
-        transform.parent.SendMessage("HideSetting");
+        setting.HideSetting();
+        SceneTransition.IsOperatable = true;
     }
 
     public void Show()
@@ -57,14 +76,15 @@ public class Panel_Setting : MonoBehaviour
         ani.Play("ShowPanel", 0, 0);
         aniBK.Play("ShowPanel", 0, 0);
         bgm.audioMixer.GetFloat("BGMVolume", out volumeBGM);
-        transform.GetChild(3).GetComponent<Slider>().value = volumeBGM;
+       volumeSlider.value = volumeBGM;
 
-        sfx.audioMixer.GetFloat("SfXVolume", out volumeSFX);
-        transform.GetChild(5).GetComponent<Slider>().value = volumeSFX;
+        // sfx.audioMixer.GetFloat("SfXVolume", out volumeSFX);
+        // transform.GetChild(5).GetComponent<Slider>().value = volumeSFX;
     }
 
     public void Hide()
     {
+	    SceneTransition.IsOperatable = false;
         ani.StartPlayback();
         ani.speed = -_aniSpeed0;
         aniBK.StartPlayback();
@@ -82,10 +102,12 @@ public class Panel_Setting : MonoBehaviour
     {
         float temp = volumeBGM;
 
-        volumeBGM = transform.GetChild(3).GetComponent<Slider>().value;
+        volumeBGM = volumeSlider.value;
         bgm.audioMixer.SetFloat("BGMVolume", volumeBGM);
 
-        ChangeVolumeSprite("Text_BGM", temp, volumeBGM);
+        ChangeVolumeSprite("Text_BGM", volumeBGM);
+        //序列化
+        gameSetting.volume = volumeBGM;
     }
 
     public void ChangeSFXVolume()
@@ -94,20 +116,26 @@ public class Panel_Setting : MonoBehaviour
         volumeSFX = transform.GetChild(5).GetComponent<Slider>().value;
         sfx.audioMixer.SetFloat("SfXVolume", volumeSFX);
 
-        ChangeVolumeSprite("Text_SFX", temp, volumeSFX);
+        ChangeVolumeSprite("Text_SFX", volumeSFX);
     }
 
-    private void ChangeVolumeSprite(string name, float oldVolume, float newVolume)
+    public void SetVolume()
     {
-        if (newVolume <= -80 && oldVolume > -80)
-            GameObject.Find(name).transform.GetChild(0).SendMessage("SetSprite", "none");
-        else if (newVolume >= 0 && oldVolume < 0)
+	    bgm.audioMixer.SetFloat("BGMVolume", volumeBGM);
+
+	    ChangeVolumeSprite("Text_BGM", volumeBGM);
+    }
+    private void ChangeVolumeSprite(string name, float newVolume)
+    {
+	    if (newVolume <= -80)
+            volumePicture.SetSprite("none");
+        else if (newVolume >= 0 )
         {
-            GameObject.Find(name).transform.GetChild(0).SendMessage("SetSprite", "normal");
+	        volumePicture.SetSprite("normal");
         }
-        else if (newVolume < 0 && (oldVolume <= -80 || oldVolume >= 0))
+        else if (newVolume < 0)
         {
-            GameObject.Find(name).transform.GetChild(0).SendMessage("SetSprite", "little");
+	        volumePicture.SetSprite("little");
         }
     }
 }

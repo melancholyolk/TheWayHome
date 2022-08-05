@@ -24,7 +24,7 @@ public class PlayerManager
     //private PlayerInfo player1_info = new PlayerInfo();
     //[SyncVar]
     //private PlayerInfo player2_info = new PlayerInfo();
-    public PlayerInfo cur_info = new PlayerInfo();
+    private PlayerInfo cur_info = new PlayerInfo();
     public int cur_num;
 
     private bool panel1_isusing = false;
@@ -76,6 +76,16 @@ public class PlayerManager
         }
     }
 
+    public void SetCondition(List<int> c)
+    {
+	    cur_info.conditions = c;
+    }
+
+    public PlayerInfo GetPlayerInfo()
+    {
+	    cur_info.position = CanvasManager.Instance.player.transform.position;
+	    return cur_info.Clone() as PlayerInfo;
+    }
     //private void SetInfo(PlayerInfo info)
     //{
     //    if (cur_num == 1)

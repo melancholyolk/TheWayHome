@@ -11,11 +11,9 @@ public class Setting : MonoBehaviour
 
     public void ShowSetting()
     {
-        //bkPanel.SetActive(true);
-        //settingPanel.SetActive(true);
+        
         settingPanel.GetComponent<Panel_Setting>().Show();
         isActive = true;
-        // GameObject.Find("StopToggle").SendMessage("Pause");
     }
 
     public void HideSetting()
@@ -23,7 +21,6 @@ public class Setting : MonoBehaviour
         bkPanel.SetActive(false);
         settingPanel.SetActive(false);
         isActive = false;
-        // GameObject.Find("StopToggle").SendMessage("Run");
     }
 
     /// <summary>
@@ -33,8 +30,7 @@ public class Setting : MonoBehaviour
     /// <param name="l"></param>
     private void IsShow(Scene s, LoadSceneMode l)
     {
-        print("isShow" + s.buildIndex);
-        if (s.buildIndex == 0)
+	    if (s.buildIndex == 0)
         {
             returnStartScene.SetActive(false);
         }

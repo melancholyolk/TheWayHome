@@ -617,7 +617,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.24
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3941,8 +3941,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9811321, g: 0.69673944, b: 0.1425418, a: 1}
-  m_Intensity: 3
-  m_Range: 10
+  m_Intensity: 100
+  m_Range: 1000
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4346,6 +4346,10 @@ PrefabInstance:
     - target: {fileID: 603979724681331889, guid: 63e441645cba6ab4180bbe09e036bd6d, type: 3}
       propertyPath: m_Name
       value: DecodeCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 603979724681331889, guid: 63e441645cba6ab4180bbe09e036bd6d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 603979724681331890, guid: 63e441645cba6ab4180bbe09e036bd6d, type: 3}
       propertyPath: m_HDR
@@ -7780,6 +7784,61 @@ CapsuleCollider:
   m_Height: 7.39
   m_Direction: 1
   m_Center: {x: -0.9, y: -0.17, z: 1.19}
+--- !u!1 &667019982
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 667019984}
+  - component: {fileID: 667019983}
+  m_Layer: 0
+  m_Name: Decal Projector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &667019983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667019982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 31d0dcc6f2dd4e4408d18036a2c93862, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 0.5}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_FadeFactor: 1
+--- !u!4 &667019984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667019982}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &672472165
 GameObject:
   m_ObjectHideFlags: 0
@@ -9422,8 +9481,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9811321, g: 0.69673944, b: 0.1425418, a: 1}
-  m_Intensity: 3
-  m_Range: 10
+  m_Intensity: 100
+  m_Range: 1000
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -9849,8 +9908,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9811321, g: 0.69673944, b: 0.1425418, a: 1}
-  m_Intensity: 30
-  m_Range: 20
+  m_Intensity: 100
+  m_Range: 1000
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -10073,11 +10132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &980779649 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2293139959992891119, guid: 3ab603b2aa33a70478fc17879a182567, type: 3}
-  m_PrefabInstance: {fileID: 980779645}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &982148491
 GameObject:
   m_ObjectHideFlags: 0
@@ -12284,6 +12338,17 @@ Transform:
   m_Father: {fileID: 1155241412}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 45, y: -45, z: 0}
+--- !u!114 &1183849460 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2646282644087060691, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+  m_PrefabInstance: {fileID: 1970745675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfc2d5ac66381c9418b14cdd670742df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196961532
 GameObject:
   m_ObjectHideFlags: 0
@@ -13241,8 +13306,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9811321, g: 0.69673944, b: 0.1425418, a: 1}
-  m_Intensity: 3
-  m_Range: 10
+  m_Intensity: 100
+  m_Range: 1000
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -14534,17 +14599,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8879753, y: 3.43, z: 1.8879753}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1355742000 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 51588957734496692, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
-  m_PrefabInstance: {fileID: 1970745675}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1358213048
 GameObject:
   m_ObjectHideFlags: 0
@@ -15538,6 +15592,8 @@ GameObject:
   - component: {fileID: 1379143875}
   - component: {fileID: 1379143876}
   - component: {fileID: 1379143877}
+  - component: {fileID: 1379143878}
+  - component: {fileID: 1379143879}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -15568,7 +15624,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -15596,7 +15652,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379143871}
   m_LocalRotation: {x: -0.36960077, y: 0.37715632, z: -0.1676332, w: -0.8324948}
-  m_LocalPosition: {x: 460.4, y: 566, z: -289.6}
+  m_LocalPosition: {x: 433.6, y: 528.8, z: -322.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15747,6 +15803,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!81 &1379143878
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379143871}
+  m_Enabled: 1
+--- !u!114 &1379143879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379143871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35c02a2c6230584391703bf32006791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1384380837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16046,12 +16122,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 980779649}
-    - {fileID: 353699115}
-    - {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
-    - {fileID: 1384561884}
-    - {fileID: 8300000, guid: c3f846d2329c9364ab2be554187fd947, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -16063,196 +16134,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 2|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 3|Decode.ActionLoadDecodeItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: decodePrefab
-      Entry: 10
       Data: 0
-    - Name: decodeCamera
-      Entry: 10
-      Data: 1
-    - Name: postProcessProfile
-      Entry: 10
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|Decode.ActionPlayAudio, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: audio
-      Entry: 10
-      Data: 3
-    - Name: clip
-      Entry: 10
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 5|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 6|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 102
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 8|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 9|Decode.ActionDestroyItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 10|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 11|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 32
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -17082,6 +16964,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1491863227 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3079661341721919328, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+  m_PrefabInstance: {fileID: 1970745675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f397a8833687db541ba4b41ca0fcd87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1511552537
 GameObject:
   m_ObjectHideFlags: 0
@@ -19088,11 +18981,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1801650296464552493, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
   m_PrefabInstance: {fileID: 1713374898}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1713374900 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1801650296464552494, guid: 20c1e6701f377c442a494ec2641e3a83, type: 3}
-  m_PrefabInstance: {fileID: 1713374898}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1720041405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20386,10 +20274,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 6189913143888506359, guid: 3c033e7697ce56742b5deba98e8a6384, type: 3}
-    - {fileID: 353699115}
-    - {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -20401,220 +20286,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 2|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 3|Decode.ActionLoadDecodeItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: decodePrefab
-      Entry: 10
       Data: 0
-    - Name: decodeCamera
-      Entry: 10
-      Data: 1
-    - Name: postProcessProfile
-      Entry: 10
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|Decode.ActionChangeItemState, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: true
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: configIndexer
-      Entry: 3
-      Data: 0
-    - Name: State
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 5|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 6|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 102
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 8|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 9|Decode.ActionDestroyItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 10|Decode.ActionChangeItemState, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: true
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: configIndexer
-      Entry: 3
-      Data: 0
-    - Name: State
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 11|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 12|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 32
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -21111,6 +20783,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.3567238, y: 5.439801, z: 2.863659}
   m_Center: {x: -0.15237425, y: -0.42180395, z: -0.112712845}
+--- !u!114 &1917588913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 51588957734496692, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+  m_PrefabInstance: {fileID: 1970745675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970745676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1921587120
 Transform:
   m_ObjectHideFlags: 0
@@ -22398,7 +22081,7 @@ PrefabInstance:
     - target: {fileID: 51588957734496683, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
       propertyPath: m_TargetGraphic
       value: 
-      objectReference: {fileID: 1355742000}
+      objectReference: {fileID: 1917588913}
     - target: {fileID: 51588957734496683, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
       propertyPath: m_SpriteState.m_PressedSprite
       value: 
@@ -22463,6 +22146,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 51588957893671728, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: save
+      value: 
+      objectReference: {fileID: 11400000, guid: 61003baf7fb925543bc7bb0e57354d54, type: 2}
+    - target: {fileID: 51588957893671728, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: setting
+      value: 
+      objectReference: {fileID: 1491863227}
     - target: {fileID: 51588957893671729, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
       propertyPath: dialogView
       value: 
@@ -22595,6 +22286,14 @@ PrefabInstance:
       propertyPath: m_FontData.m_HorizontalOverflow
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 106267398906115166, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1974834695}
+    - target: {fileID: 106267398906115166, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CmdBtnClick
+      objectReference: {fileID: 0}
     - target: {fileID: 637703971665566815, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
       propertyPath: info_panel
       value: 
@@ -22603,6 +22302,10 @@ PrefabInstance:
       propertyPath: text_panel
       value: 
       objectReference: {fileID: 1225402763}
+    - target: {fileID: 637703971665566815, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 637703971665566815, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
     - target: {fileID: 637703972356720386, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
       propertyPath: info_panel
       value: 
@@ -22611,6 +22314,10 @@ PrefabInstance:
       propertyPath: text_panel
       value: 
       objectReference: {fileID: 1225402763}
+    - target: {fileID: 637703972356720386, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 637703972356720386, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
     - target: {fileID: 697126114407202466, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -22622,6 +22329,10 @@ PrefabInstance:
     - target: {fileID: 697126114407202466, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 853414847280746029, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2530636859225794482, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
       propertyPath: m_CullTransparentMesh
@@ -22667,12 +22378,36 @@ PrefabInstance:
       propertyPath: sfx
       value: 
       objectReference: {fileID: -7094134697506934886, guid: ec48afc55c9d7f44ea2c149639e3c25c, type: 2}
+    - target: {fileID: 3079661341721919328, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: aniBK
+      value: 
+      objectReference: {fileID: 2111878200}
+    - target: {fileID: 3079661341721919328, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: setting
+      value: 
+      objectReference: {fileID: 1183849460}
+    - target: {fileID: 3079661341721919328, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: volumeSlider
+      value: 
+      objectReference: {fileID: 2111878198}
+    - target: {fileID: 3079661341721919328, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: volumePicture
+      value: 
+      objectReference: {fileID: 2111878199}
+    - target: {fileID: 3079661341721919329, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3079661341954428524, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
       propertyPath: m_MaxValue
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3114981165115277858, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3114981166292675709, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3114981166292675711, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
@@ -22786,17 +22521,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3114981166584691841, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
---- !u!114 &1970745676 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 51588957734496683, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+--- !u!1 &1970745676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 51588957734496681, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
   m_PrefabInstance: {fileID: 1970745675}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1970745677 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 51588957893671722, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
@@ -22839,6 +22568,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1709ee4ec1041034b9677a6fdf27176e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1970745681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970745676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 16375
+--- !u!223 &1970745682
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970745676}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &1974834694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22945,7 +22712,7 @@ PrefabInstance:
     - target: {fileID: 1828951527379569366, guid: 5352774735be07e4db2935f7757ab251, type: 3}
       propertyPath: btn
       value: 
-      objectReference: {fileID: 1970745676}
+      objectReference: {fileID: 2081705306}
     - target: {fileID: 1828951527379569366, guid: 5352774735be07e4db2935f7757ab251, type: 3}
       propertyPath: canvas
       value: 
@@ -24048,6 +23815,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ae4d0413d2cc847b284d78db70b534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2081705306 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 51588957734496683, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+  m_PrefabInstance: {fileID: 1970745675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970745676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2088487400
 GameObject:
   m_ObjectHideFlags: 0
@@ -24382,6 +24160,33 @@ Transform:
   m_Father: {fileID: 1755744580}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &2111878198 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3079661341954428524, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+  m_PrefabInstance: {fileID: 1970745675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2111878199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6737743346552332505, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+  m_PrefabInstance: {fileID: 1970745675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fef4a1cc4045f4a4892ffc86a52adff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &2111878200 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 51588957084874651, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
+  m_PrefabInstance: {fileID: 1970745675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!328 &2114069062 stripped
 VideoPlayer:
   m_CorrespondingSourceObject: {fileID: 3199491859402046510, guid: 8835e14cc89e5f047a845a7669b0b9c4, type: 3}
@@ -25422,10 +25227,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 2847963609844986583, guid: a04ae9ab8dc78a041a343b445b07c76b, type: 3}
-    - {fileID: 353699115}
-    - {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -25437,220 +25239,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 2|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 3|Decode.ActionLoadDecodeItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: decodePrefab
-      Entry: 10
       Data: 0
-    - Name: decodeCamera
-      Entry: 10
-      Data: 1
-    - Name: postProcessProfile
-      Entry: 10
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|Decode.ActionChangeItemState, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: true
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: configIndexer
-      Entry: 3
-      Data: 0
-    - Name: State
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 5|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 6|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 102
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 8|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 9|Decode.ActionDestroyItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 10|Decode.ActionChangeItemState, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: true
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: configIndexer
-      Entry: 3
-      Data: 0
-    - Name: State
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 11|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 12|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 32
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -28839,16 +28428,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 1836208465}
-    - {fileID: 1713374900}
-    - {fileID: 353699115}
-    - {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
-    - {fileID: 3593983615510958177}
-    - {fileID: 3593983614650261573}
-    - {fileID: 153413733}
-    - {fileID: 8300000, guid: 18a0b16ccb6c823439d137f61cebd6b5, type: 3}
-    - {fileID: 3593983614049788576}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -28860,487 +28440,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: 1|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 2|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 4
-    - Name: 
-      Entry: 7
-      Data: 3|Decode.ActionDialog, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: dialogUI
-      Entry: 10
       Data: 0
-    - Name: dialogs
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 1
-      Data: "\u52A0\u6CB9\u4E86\u600E\u4E48\u6CA1\u6709\u542F\u52A8"
-    - Name: 
-      Entry: 1
-      Data: "....\u539F\u6765\u662F\u7535\u7EBF\u65AD\u4E86"
-    - Name: 
-      Entry: 1
-      Data: "\u6211\u9700\u8981\u628A\u7535\u7EBF\u91CD\u65B0\u8FDE\u8D77\u6765"
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 5|Decode.ActionLoadDecodeItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: decodePrefab
-      Entry: 10
-      Data: 1
-    - Name: decodeCamera
-      Entry: 10
-      Data: 2
-    - Name: postProcessProfile
-      Entry: 10
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 6|Decode.ActionChangeItemState, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: true
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: configIndexer
-      Entry: 3
-      Data: 0
-    - Name: State
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|Decode.ActionRemoveProp, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: propID
-      Entry: 3
-      Data: 12
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 8|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 9|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 102
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 10|Decode.ConditionFeedBack, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 11|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 12|Decode.ConditionCheckLocalPlayer, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: propId
-      Entry: 3
-      Data: 12
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actions
-      Entry: 7
-      Data: 13|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 14|Decode.ActionDialog, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: dialogUI
-      Entry: 10
-      Data: 0
-    - Name: dialogs
-      Entry: 7
-      Data: 15|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 1
-      Data: "\u53D1\u7535\u673A\u597D\u50CF\u6CA1\u6709\u6C7D\u6CB9"
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 16|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 17|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 18|Decode.ActionDestroyItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 19|Decode.ActionChangeItemState, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: true
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: configIndexer
-      Entry: 3
-      Data: 0
-    - Name: State
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 20|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 21|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 32
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 22|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 23|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: 24|Decode.ActionOpenLight, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: true
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: light
-      Entry: 10
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 25|Decode.ActionOpenLight, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: true
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: light
-      Entry: 10
-      Data: 5
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 26|Decode.ActionPlayAudio, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: audio
-      Entry: 10
-      Data: 6
-    - Name: clip
-      Entry: 10
-      Data: 7
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 27|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 28|Decode.ConditionItemComplete, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: item
-      Entry: 10
-      Data: 8
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -30671,10 +29771,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 914731516296213617, guid: 92da2b92df1457b41b765f5ae4ac44b1, type: 3}
-    - {fileID: 353699115}
-    - {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -30686,220 +29783,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 2|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 3|Decode.ActionLoadDecodeItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: decodePrefab
-      Entry: 10
       Data: 0
-    - Name: decodeCamera
-      Entry: 10
-      Data: 1
-    - Name: postProcessProfile
-      Entry: 10
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|Decode.ActionChangeItemState, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: true
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: configIndexer
-      Entry: 3
-      Data: 0
-    - Name: State
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 5|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 6|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 102
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 8|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 9|Decode.ActionDestroyItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 10|Decode.ActionChangeItemState, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: true
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: configIndexer
-      Entry: 3
-      Data: 0
-    - Name: State
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 11|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 12|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 32
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -32796,7 +31680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178149, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178149, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_Intensity
@@ -32824,7 +31708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.97015595
+      value: 0.9701561
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalScale.y
@@ -32832,19 +31716,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.0738398
+      value: 1.0738397
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.15397185
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.38567063
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.46692216
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32856,7 +31740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.50000006
+      value: -0.5000001
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalRotation.z
@@ -33075,11 +31959,6 @@ PrefabInstance:
 --- !u!4 &3593983614650261572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
-  m_PrefabInstance: {fileID: 3593983614650261571}
-  m_PrefabAsset: {fileID: 0}
---- !u!108 &3593983614650261573 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 975380335054178149, guid: 1379577012fe5164299b5518f6c16987, type: 3}
   m_PrefabInstance: {fileID: 3593983614650261571}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &3593983614692002736
@@ -35633,12 +34512,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 8471780247350531318, guid: 8510c54271ed3c745a45d64563ae5634, type: 3}
-    - {fileID: 353699115}
-    - {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
-    - {fileID: 3593983615395070064}
-    - {fileID: 8300000, guid: 76c7861591d65984aaaca1c3179e2c71, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -35650,244 +34524,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 2|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: 3|Decode.ActionLoadDecodeItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: decodePrefab
-      Entry: 10
       Data: 0
-    - Name: decodeCamera
-      Entry: 10
-      Data: 1
-    - Name: postProcessProfile
-      Entry: 10
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|Decode.ActionPlayAudio, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: audio
-      Entry: 10
-      Data: 3
-    - Name: clip
-      Entry: 10
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 5|Decode.ActionChangeItemState, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: true
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: configIndexer
-      Entry: 3
-      Data: 0
-    - Name: State
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 6|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 7|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 102
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 8|Decode.ObtainConfig, Assembly-CSharp
-    - Name: actions
-      Entry: 7
-      Data: 9|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 10|Decode.ActionDestroyItem, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 11|Decode.ActionChangeItemState, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: true
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: configIndexer
-      Entry: 3
-      Data: 0
-    - Name: State
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: isUsing
-      Entry: 5
-      Data: false
-    - Name: disable
-      Entry: 5
-      Data: false
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: conditions
-      Entry: 7
-      Data: 12|Decode.Conditions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 13|Decode.ConditionInput, Assembly-CSharp
-    - Name: name
-      Entry: 6
-      Data: 
-    - Name: input
-      Entry: 3
-      Data: 32
-    - Name: isConsist
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -36287,7 +34924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178149, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178149, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_Intensity
@@ -36315,43 +34952,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.0673293
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7657553
+      value: 0.77107424
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.3059
+      value: 1.217037
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.95
+      value: 2.054512
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.36
+      value: 6.82649
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5
+      value: -7.0923095
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.38268346
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000000074505797
+      value: 0.000000014901159
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071069
+      value: 0.6532815
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.70710677
+      value: -0.65328145
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -36359,7 +34996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 135
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -36570,11 +35207,6 @@ PrefabInstance:
 --- !u!4 &3593983615510958176 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 975380335054178150, guid: 1379577012fe5164299b5518f6c16987, type: 3}
-  m_PrefabInstance: {fileID: 3593983615510958175}
-  m_PrefabAsset: {fileID: 0}
---- !u!108 &3593983615510958177 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 975380335054178149, guid: 1379577012fe5164299b5518f6c16987, type: 3}
   m_PrefabInstance: {fileID: 3593983615510958175}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3593983615521009696

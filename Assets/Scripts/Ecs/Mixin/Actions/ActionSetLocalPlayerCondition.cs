@@ -5,7 +5,7 @@
 		public int propId;
 		public override void DoAction()
 		{
-			CanvasManager.Instance.player.condition.Add(propId);
+			CanvasManager.Instance.player.AddCondition(propId);
 		}
 	}
 }

@@ -6,73 +6,62 @@ using UnityEngine.SceneManagement;
 
 public class EscControl : NetworkBehaviour
 {
-    NetworkManager network;
-    public GameObject esc_menu;
+	NetworkManager network;
+	public GameObject esc_menu;
 
-    private bool escmenu_show = false;
+	private bool escmenu_show = false;
+	
+	// Start is called before the first frame update
+	void Start()
+	{
+		network = GameObject.FindWithTag("NetworkManager").GetComponent<NetworkManager>();
+	}
 
-    private float time = 0;
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Escape) &&
+		    (OperationControl.Instance.CanOperate() || OperationControl.Instance.is_setting))
+		{
+			if (!esc_menu.activeSelf)
+			{
+				OperationControl.Instance.is_setting = true;
+				esc_menu.SetActive(!esc_menu.activeSelf);
+			}
+			else
+			{
+				escmenu_show = true;
+				OperationControl.Instance.is_setting = false;
+			}
+		}
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        network = GameObject.FindWithTag("NetworkManager").GetComponent<NetworkManager>();
-    }
+		if (escmenu_show)
+		{
+			escmenu_show = false;
+			esc_menu.SetActive(!esc_menu.activeSelf);
+		}
+	}
 
-    private void Update()
-    {
-        time += Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.Escape) && (OperationControl.Instance.CanOperate() || OperationControl.Instance.is_setting))
-        {
-            if (time < 1f) return;
-            if (!esc_menu.activeSelf)
-            {
-                OperationControl.Instance.is_setting = true;
-                esc_menu.SetActive(!esc_menu.activeSelf);
-            }
-            else
-            {
-                escmenu_show = true;
-                OperationControl.Instance.is_setting = false;
-            }
-            time = 0;
-        }
+	public void EndConnect()
+	{
+		if (isServer)
+		{
+			EndHostConnect();
+		}
+		else
+		{
+			EndClientConnect();
+		}
 
-        if (escmenu_show)
-        {
-            if (time > 1)
-            {
-                time = 0;
-                escmenu_show = false;
-                esc_menu.SetActive(!esc_menu.activeSelf);
-            }
-        }
+		SceneManager.LoadScene("ConnectScene");
+	}
 
-        
-    }
+	private void EndHostConnect()
+	{
+		network.StopHost();
+	}
 
-    public void EndConnect()
-    {
-        if (isServer)
-        {
-            EndHostConnect();
-        }
-        else
-        {
-            EndClientConnect();
-        }
-
-        SceneManager.LoadScene("ConnectScene");
-    }
-
-    private void EndHostConnect()
-    {
-        network.StopHost();
-    }
-    private void EndClientConnect()
-    {
-        network.StopClient();
-    }
-
-
+	private void EndClientConnect()
+	{
+		network.StopClient();
+	}
 }

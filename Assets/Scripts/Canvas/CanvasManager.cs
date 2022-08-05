@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Scriptable;
 using UnityEngine;
 
 public class CanvasManager : MonoBehaviour
@@ -8,12 +9,13 @@ public class CanvasManager : MonoBehaviour
 	public static CanvasManager Instance;
 
     private bool cluemenu_show = false;
-
+    private string path = "Assets/Res/ScriptableObjects";
     public PickUpShow pickUpShow;
     public PropPanel propPanel;
     public GameObject clue_menu;
     public PlayerMove player;
-
+    public Panel_Setting setting;
+    public PlayerInfoSave save;
     [Serializable]
     public enum Player
     {
@@ -27,6 +29,7 @@ public class CanvasManager : MonoBehaviour
     private void Awake()
     {
 	    Instance = this;
+	    setting.Start();
     }
 
     private void Update()
@@ -41,6 +44,15 @@ public class CanvasManager : MonoBehaviour
             {
                 SyncManager.Instance.ShowClue();
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+	        SaveData();
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+	        LoadData();
         }
     }
 
@@ -101,5 +113,17 @@ public class CanvasManager : MonoBehaviour
         GameObject.FindObjectOfType<TaskManager>().ReadTaskLists(out uncomplet, out complete);
 
         GameObject.FindObjectOfType<TaskManager>().CmdSyncTask(uncomplet, complete);
+    }
+
+    private void SaveData()
+    {
+	    save.playerInfo = PlayerManager.Instance.GetPlayerInfo();
+    }
+
+    private void LoadData()
+    {
+	    var info = save.playerInfo;
+	    player.SetCondition(info.conditions);
+	    player.transform.position = info.position;
     }
 }
