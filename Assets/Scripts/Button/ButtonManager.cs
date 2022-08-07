@@ -1,3 +1,4 @@
+using System;
 using Decode;
 using Mirror;
 using UnityEngine;
@@ -15,6 +16,14 @@ public class ButtonManager : NetworkBehaviour
 	public GameObject bg;
 	public Animator fadeout;
 
+	private void Awake()
+	{
+		if (GameState.state != GameState.Chapter.None || GameState.state != GameState.Chapter.Choosing)
+		{
+			
+		}
+	}
+
 	void GameStart(bool newbtn,bool oldbtn)
 	{
 		GameState.state = GameState.Chapter.Chapter0;
@@ -22,7 +31,7 @@ public class ButtonManager : NetworkBehaviour
 		btn.gameObject.SetActive(false);
 		Invoke(nameof(DestoryChild),0.5f);
 	}
-
+	
 
 	public void ButtonDown()
 	{

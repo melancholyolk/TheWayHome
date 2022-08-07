@@ -1,6 +1,9 @@
 using System;
+using Scriptable;
+
 public static class GameState
 {
+	[Serializable]
     public enum Chapter
     {
 	    None,
@@ -10,4 +13,5 @@ public static class GameState
 	    Chapter2,
     }
     public static Chapter state = Chapter.None;
+    public static GameInfoSave currentSave;
 }

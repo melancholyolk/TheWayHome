@@ -9,13 +9,12 @@ public class CanvasManager : MonoBehaviour
 	public static CanvasManager Instance;
 
     private bool cluemenu_show = false;
-    private string path = "Assets/Res/ScriptableObjects";
     public PickUpShow pickUpShow;
     public PropPanel propPanel;
     public GameObject clue_menu;
     public PlayerMove player;
     public Panel_Setting setting;
-    public PlayerInfoSave save;
+    public GameInfoSave save;
     [Serializable]
     public enum Player
     {
@@ -29,6 +28,7 @@ public class CanvasManager : MonoBehaviour
     private void Awake()
     {
 	    Instance = this;
+	    save = GameState.currentSave;
 	    setting.Start();
     }
 
@@ -117,12 +117,19 @@ public class CanvasManager : MonoBehaviour
 
     private void SaveData()
     {
-	    save.playerInfo = PlayerManager.Instance.GetPlayerInfo();
+	    if(player_type == Player.Player1)
+			save.playerInfo1 = PlayerManager.Instance.GetPlayerInfo();
+	    else
+		    save.playerInfo2 = PlayerManager.Instance.GetPlayerInfo();
     }
 
     private void LoadData()
     {
-	    var info = save.playerInfo;
+	    PlayerInfo info;
+	    if (player_type == Player.Player1)
+		    info = save.playerInfo1;
+	    else
+		    info = save.playerInfo2;
 	    player.SetCondition(info.conditions);
 	    player.transform.position = info.position;
     }
