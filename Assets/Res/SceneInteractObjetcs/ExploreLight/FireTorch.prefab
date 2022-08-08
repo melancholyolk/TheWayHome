@@ -45,8 +45,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.8065398, b: 0.04150939, a: 1}
-  m_Intensity: 100
-  m_Range: 800
+  m_Intensity: 1
+  m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -127,7 +127,6 @@ GameObject:
   - component: {fileID: 2764430479758950022}
   - component: {fileID: 9024498395488138996}
   - component: {fileID: 8690796127574061594}
-  - component: {fileID: -9066512474887458070}
   m_Layer: 7
   m_Name: FireTorch
   m_TagString: Untagged
@@ -143,7 +142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2764430479758950020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.48, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -232,61 +231,6 @@ MonoBehaviour:
   visible: 0
   m_AssetId: 5601d7262756fb3479d5d751a3720871
   hasSpawned: 0
---- !u!114 &-9066512474887458070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2764430479758950020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdd7015692436be4cbbd543e87c66e82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interval: 1
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0.008333841
-      value: 1.0070912
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.21227232
-      value: 0.45042628
-      inSlope: -0.8540665
-      outSlope: -0.8540665
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.36007443
-    - serializedVersion: 3
-      time: 0.7336303
-      value: 0.54811156
-      inSlope: -3.8150768
-      outSlope: -3.8150768
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.18659428
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &2764430479716004384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -306,10 +250,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 57011617121685149, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3cd423cca9a6c47ceb2f768bbbe890da, type: 2}
     - target: {fileID: 543568278693029602, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_Name
       value: ParticleSystem_Fire_RateOverTime_Torch
@@ -319,27 +259,7 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
-      propertyPath: TrailModule.mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
-      propertyPath: TrailModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
-      propertyPath: TrailModule.worldSpace
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
-      propertyPath: TrailModule.lifetime.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
-      propertyPath: TrailModule.minVertexDistance
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
@@ -368,7 +288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8728613029737635795, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.841
+      value: -3.05
       objectReference: {fileID: 0}
     - target: {fileID: 8728613029737635795, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -376,7 +296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8728613029737635795, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.003
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8728613029737635795, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_LocalRotation.w
