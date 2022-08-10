@@ -14,4 +14,11 @@ public static class GameState
     }
     public static Chapter state = Chapter.None;
     public static GameInfoSave currentSave;
+
+
+    public static void Reset()
+    {
+	    state = Chapter.None;
+	    currentSave = null;
+    }
 }

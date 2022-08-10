@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6de5732f6b8d40989de4022a8b651dea, type: 3}
-  m_Name: GameSave_112
+  m_Name: GameSave4
   m_EditorClassIdentifier: 
+  isUsing: 1
+  saveName: "\u5B58\u68632022/8/10 0:00:00"
   playerInfo1:
     test: 0
     clues: 
     conditions: 
-    position: {x: 0, y: 0, z: 0}
+    position: {x: 38.249985, y: -0.0004553795, z: -20.833132}
   playerInfo2:
     test: 0
     clues: 

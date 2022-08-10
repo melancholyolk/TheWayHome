@@ -45,13 +45,13 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.8065398, b: 0.04150939, a: 1}
-  m_Intensity: 1
+  m_Intensity: 50
   m_Range: 30
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 2764430479758950022}
   - component: {fileID: 9024498395488138996}
   - component: {fileID: 8690796127574061594}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: FireTorch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,8 +259,16 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: simulationSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: moveWithTransform
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: InheritVelocityModule.enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -272,15 +280,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: InitialModule.startColor.maxColor.a
       value: 0.16470589
       objectReference: {fileID: 0}
     - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: InheritVelocityModule.m_Curve.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617979389234507284, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8728613029737635795, guid: 280d7025bd96749f7b7221997033b26f, type: 3}
       propertyPath: m_RootOrder

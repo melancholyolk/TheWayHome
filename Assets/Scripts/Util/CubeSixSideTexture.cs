@@ -441,8 +441,11 @@ namespace Util
 			FileStream fileStream = File.Open(savePath, FileMode.OpenOrCreate);
 			fileStream.Write(dataBytes, 0, dataBytes.Length);
 			fileStream.Close();
-			// AssetDatabase.SaveAssets();
-			// AssetDatabase.Refresh();
+#if UNITY_EDITOR
+			AssetDatabase.SaveAssets();
+			AssetDatabase.Refresh();
+#endif
+			
 		}
 
 		public void GetCurrentMaterialTexture()

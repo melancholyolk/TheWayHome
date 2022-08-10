@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Decode;
 using Scriptable;
 using UnityEngine;
 
@@ -121,6 +122,9 @@ public class CanvasManager : MonoBehaviour
 			save.playerInfo1 = PlayerManager.Instance.GetPlayerInfo();
 	    else
 		    save.playerInfo2 = PlayerManager.Instance.GetPlayerInfo();
+
+	    save.isUsing = true;
+	    save.obtainItemses = MonoECSInteract.Instance.GetObtainItems();
     }
 
     private void LoadData()
@@ -130,6 +134,7 @@ public class CanvasManager : MonoBehaviour
 		    info = save.playerInfo1;
 	    else
 		    info = save.playerInfo2;
+	    MonoECSInteract.Instance.SetObtainItems(save.obtainItemses);
 	    player.SetCondition(info.conditions);
 	    player.transform.position = info.position;
     }

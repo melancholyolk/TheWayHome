@@ -30,7 +30,7 @@ RectTransform:
   m_Children:
   - {fileID: 5052508305093309378}
   m_Father: {fileID: 51588957893671735}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -70,7 +70,7 @@ RectTransform:
   m_Children:
   - {fileID: 51588958600297092}
   m_Father: {fileID: 51588957893671735}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -213,8 +213,8 @@ RectTransform:
   - {fileID: 637703973012764479}
   - {fileID: 965721314}
   - {fileID: 1588286553093236107}
-  - {fileID: 51588956819960191}
   - {fileID: 51588957734496682}
+  - {fileID: 51588956819960191}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -325,15 +325,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c4c6d654f12894791e771bb7179feb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  is_picking: 0
-  is_setting: 0
-  is_decoding: 0
-  is_dialog: 0
-  cluemenu_show: 0
   pickUpShow: {fileID: 2530636859902472217}
   propPanel: {fileID: 637703973012764467}
   clue_menu: {fileID: 953906526}
   player: {fileID: 0}
+  setting: {fileID: 0}
+  save: {fileID: 0}
   player_type: 0
 --- !u!114 &6863406652512226277
 MonoBehaviour:
@@ -875,6 +872,10 @@ PrefabInstance:
       propertyPath: info_panel
       value: 
       objectReference: {fileID: 2611899612040237870}
+    - target: {fileID: 637703970961889253, guid: 3b332163048308a489cd61635623983d, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 637703970961889253, guid: 3b332163048308a489cd61635623983d, type: 3}
     - target: {fileID: 637703971454085080, guid: 3b332163048308a489cd61635623983d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -967,6 +968,10 @@ PrefabInstance:
       propertyPath: info_panel
       value: 
       objectReference: {fileID: 2611899612040237870}
+    - target: {fileID: 637703972821191864, guid: 3b332163048308a489cd61635623983d, type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 637703972821191864, guid: 3b332163048308a489cd61635623983d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b332163048308a489cd61635623983d, type: 3}
 --- !u!114 &637703973012764467 stripped

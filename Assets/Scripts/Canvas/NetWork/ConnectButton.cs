@@ -1,17 +1,12 @@
-﻿
-using Mirror;
+﻿using Mirror;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using Scriptable;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ConnectButton : MonoBehaviour
@@ -23,9 +18,11 @@ public class ConnectButton : MonoBehaviour
     public GameObject uiClient;
     public GameObject uiNewGame;
     public GameObject uiLoadGame;
+    public GameObject uiBack;
+    public GameObject uiSaves;
     public InputField field;
     public Text text;
-
+	public GameInfoSave[] saves;
     private string m_SavePath = "Assets/Res/ScriptableObjects/Resources";
     void Start()
     {
@@ -38,6 +35,16 @@ public class ConnectButton : MonoBehaviour
 	    uiClient.SetActive(false);
 	    uiNewGame.SetActive(true);
 	    uiLoadGame.SetActive(true);
+	    uiBack.SetActive(true);
+    }
+
+    public void BackToRoom()
+    {
+	    uiHostRoom.SetActive(true);
+	    uiClient.SetActive(true);
+	    uiNewGame.SetActive(false);
+	    uiLoadGame.SetActive(false);
+	    uiBack.SetActive(false);
     }
     public void CreateHost()
     {
@@ -67,22 +74,19 @@ public class ConnectButton : MonoBehaviour
 	    string scriptableObjectName = "GameSave_" + DateTime.Now.Millisecond;
 	    // ScriptableObject对象要用ScriptableObject.CreateInstance创建
 	    var ddata = ScriptableObject.CreateInstance(nameof(GameInfoSave));
-
+	    string json = JsonUtility.ToJson(ddata,true);
+	    Debug.LogError(json);
 	    // 创建一个asset文件
 	    string assetPath = string.Format("{0}/{1}.asset", m_SavePath, scriptableObjectName);
+#if UNITY_EDITOR
 	    AssetDatabase.CreateAsset(ddata, assetPath);
+#endif
+
 	    GameState.currentSave = ddata as GameInfoSave;
 	    Debug.Log("Finish!");
     }
 
-    public void LoadSave()
-    {
-	    var save = AssetDatabase.LoadAssetAtPath<GameInfoSave>(m_SavePath+"/GameSave.asset");
-	    Debug.Assert(save,"检查资源地址是否正确");
-	    GameState.currentSave = save;
-	    GameState.state = save.process;
-	    //do something
-    }
+    
     private void HideConnectButton()
     {
         uiConnect.SetActive(false);
@@ -90,6 +94,15 @@ public class ConnectButton : MonoBehaviour
     public void ReturnMainInterface()
     {
         SceneManager.LoadScene("OfflineScene");
+    }
+
+    public void ShowSaves()
+    {
+	    uiSaves.GetComponent<Animator>().SetTrigger("show");
+    }
+    public void HideSaves()
+    {
+	    uiSaves.GetComponent<Animator>().SetTrigger("hide");
     }
     public static string GetLocalIP()
     {
