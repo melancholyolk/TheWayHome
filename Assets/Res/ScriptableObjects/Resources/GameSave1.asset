@@ -20,41 +20,1016 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  isUsing: 1
-  saveName: "\u5B58\u68632022/8/10 0:00:00"
+    SerializationNodes:
+    - Name: obtainItemses
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Decode.ObtainItemInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 23
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: b548ddafc23a4a63a1427a8d2c1332e6
+    - Name: configInfos
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: true
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: true
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: c3ccfebee3304b82b9262bc3ab282e2b
+    - Name: configInfos
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 56b884a44bdb4047b41071e26b51ac1f
+    - Name: configInfos
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 75715aca746444ed9e90ab222fd07c20
+    - Name: configInfos
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: b7a6042f23844bc7b7e213b3736f74df
+    - Name: configInfos
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 7ae7e093d0434807b0ae1f695b93f0f3
+    - Name: configInfos
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 1b9362acef714b8c98772304a21b515f
+    - Name: configInfos
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 3487e3ebd0e84fefae532805ad3bfd2b
+    - Name: configInfos
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 929d2761da584667a3a336062c10f023
+    - Name: configInfos
+      Entry: 7
+      Data: 9|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 174b76d556ac451fbab24e347cfba244
+    - Name: configInfos
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 4f758f4fa02a40899b91347d3181d263
+    - Name: configInfos
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 7a5c478052bf4bcaa67896c1dab28f41
+    - Name: configInfos
+      Entry: 7
+      Data: 12|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 4a29dd3b3b23441ba9c96e03b5ee2481
+    - Name: configInfos
+      Entry: 7
+      Data: 13|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: be8ce5e8b8f348b1867107019d25998e
+    - Name: configInfos
+      Entry: 7
+      Data: 14|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: e46c1bc4e55045cab1b744da5a2800da
+    - Name: configInfos
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: b521fdeefcc94d45b11f6512d0f8e967
+    - Name: configInfos
+      Entry: 7
+      Data: 16|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 742db105e02840b4a0e1a62beecb3e87
+    - Name: configInfos
+      Entry: 7
+      Data: 17|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 3bd76ae17d464b7e860eb78d8d792811
+    - Name: configInfos
+      Entry: 7
+      Data: 18|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: c12e126477d64ac48a966401d440573f
+    - Name: configInfos
+      Entry: 7
+      Data: 19|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: true
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 0c44c61334064133bad88580b3c11f24
+    - Name: configInfos
+      Entry: 7
+      Data: 20|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 171051daf46b429aa469f176a12caa07
+    - Name: configInfos
+      Entry: 7
+      Data: 21|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 71e5f687db1c40b89567e27300ec29c4
+    - Name: configInfos
+      Entry: 7
+      Data: 22|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ObtainItemInfo, Assembly-CSharp
+    - Name: id
+      Entry: 1
+      Data: 3758d119a83d4764936a2aa84ea71a49
+    - Name: configInfos
+      Entry: 7
+      Data: 23|System.Collections.Generic.List`1[[Decode.ConfigInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.ConfigInfo, Assembly-CSharp
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  isUsing: 0
+  saveName: "\u5B58\u68631"
   playerInfo1:
     test: 0
     clues: 
-    conditions: 
-    position: {x: 132.89, y: 0.9657874, z: 40.579964}
+    conditions: 0800000009000000
+    position: {x: 49.67765, y: 0.94673204, z: 78.02562}
   playerInfo2:
     test: 0
     clues: 
     conditions: 
     position: {x: 0, y: 0, z: 0}
   process: 0
-  obtainItemses:
-  - id: c96d69d99ee749da8c4302f9d41a21fb
-  - id: 7787fb1bde61477aaf0919b036b7ea51
-  - id: 904e5923cdb24818a917c5e8047691aa
-  - id: 
-  - id: ea71859665b84130b46bb1cdfecd1657
-  - id: 6f65bde459294ee1a4c91d7b19689cb2
-  - id: be4da2d8180e44d0bddd6a1e4bd4d2f6
-  - id: 4ce57144a15e45c79927afa479728c2d
-  - id: 9fded356e6e04969b6a8b4a3ff1ac4ca
-  - id: bf3a20c6b68d411c93b4031bacf089e0
-  - id: 035f14823d064a73ba4dd7be4429a2fe
-  - id: adc28d0b7d5d419c81047735f1e903e6
-  - id: 791bcee2a2944b7e80751132bfa10f24
-  - id: 6270a4dd4c5241728edb5cf5916a2eb0
-  - id: 3aad8e6626af4a7496d2c90809f64613
-  - id: 14414082fccb4190a4c9355e687e0b4c
-  - id: 03347dbc84224a60926c9a527856520f
-  - id: 5ecd887a21884fb6b860694521285beb
-  - id: d11cf1cce5ca48b7b965b6bb155229db
-  - id: fe06fd981c0e40e8a60c4a5f74dde1e2
-  - id: e65c6253d461488190054b42b0bed239
-  - id: 480ec9dae1f84af2a8199dc1fbfa8e76
-  - id: a8a7f06d0fd9410f9015fad4cd754424

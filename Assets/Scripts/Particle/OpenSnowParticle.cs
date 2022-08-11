@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class OpenSnowParticle : MonoBehaviour
 {
+	public AudioSource wind;
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player"&&SnowVFXManager.IsAllClose)
@@ -12,6 +13,7 @@ public class OpenSnowParticle : MonoBehaviour
             var manager = GameObject.Find("SnowVFXManager").GetComponent<SnowVFXManager>();
             manager.OpenAll();
             SnowVFXManager.IsAllClose = false;
+            wind.volume = 1;
         }
     }
 }

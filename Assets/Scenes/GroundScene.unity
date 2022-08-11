@@ -2924,6 +2924,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6058812727084599963, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
+      propertyPath: wind
+      value: 
+      objectReference: {fileID: 228716583}
     - target: {fileID: 6058812727324933880, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
       propertyPath: m_Size.z
       value: 17.500294
@@ -2932,9 +2936,33 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.63469887
       objectReference: {fileID: 0}
+    - target: {fileID: 6058812727324933883, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
+      propertyPath: wind
+      value: 
+      objectReference: {fileID: 228716583}
+    - target: {fileID: 6058812727939311039, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 447.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058812727939311041, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
+      propertyPath: wind
+      value: 
+      objectReference: {fileID: 228716583}
+    - target: {fileID: 6058812728722280784, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 463.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6058812728722280786, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
+      propertyPath: wind
+      value: 
+      objectReference: {fileID: 228716583}
+    - target: {fileID: 6058812728908834274, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: ec48afc55c9d7f44ea2c149639e3c25c, type: 2}
     - target: {fileID: 6058812728908834274, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6058812728940333938, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
       propertyPath: m_SortingOrder
@@ -2972,6 +3000,11 @@ PrefabInstance:
     - {fileID: 6058812728722280789, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
     - {fileID: 6058812727084599958, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
+--- !u!82 &228716583 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6058812728908834274, guid: 4fd0e63519f55c94da8eb7c92c5ef10d, type: 3}
+  m_PrefabInstance: {fileID: 228716582}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &236808188 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 975380335054178148, guid: 1379577012fe5164299b5518f6c16987, type: 3}
@@ -4540,6 +4573,8 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 2114069062}
     - {fileID: 291641164}
+    - {fileID: 1379143877}
+    - {fileID: 8300000, guid: 8492aa5916007bd40926547d8e621c0e, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -4674,7 +4709,7 @@ MonoBehaviour:
       Data: 10|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 11|Decode.ActionLoadTask, Assembly-CSharp
@@ -4693,6 +4728,30 @@ MonoBehaviour:
     - Name: taskManager
       Entry: 10
       Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 12|Decode.ActionPlayAudio, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: audio
+      Entry: 10
+      Data: 2
+    - Name: clip
+      Entry: 10
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -4728,13 +4787,13 @@ MonoBehaviour:
       Data: 
     - Name: conditions
       Entry: 7
-      Data: 12|Decode.Conditions[], Assembly-CSharp
+      Data: 13|Decode.Conditions[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 13|Decode.ConditionGameState, Assembly-CSharp
+      Data: 14|Decode.ConditionGameState, Assembly-CSharp
     - Name: name
       Entry: 6
       Data: 
@@ -20548,6 +20607,7 @@ MonoBehaviour:
     - {fileID: 1836208465}
     - {fileID: 3593983614289027415}
     - {fileID: 8300000, guid: f1634c2024af22d45aef47a7e90962af, type: 3}
+    - {fileID: 1860256563}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -20559,7 +20619,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 1|Decode.ObtainConfig, Assembly-CSharp
@@ -20815,6 +20875,105 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 17|Decode.ObtainConfig, Assembly-CSharp
+    - Name: actions
+      Entry: 7
+      Data: 18|Decode.Actions[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 19|Decode.Actions, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: true
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 20|Decode.ActionPlayAudio, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: true
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: audio
+      Entry: 10
+      Data: 1
+    - Name: clip
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: isUsing
+      Entry: 5
+      Data: false
+    - Name: disable
+      Entry: 5
+      Data: false
+    - Name: name
+      Entry: 6
+      Data: 
+    - Name: conditions
+      Entry: 7
+      Data: 21|Decode.Conditions[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 22|Decode.ConditionItemComplete, Assembly-CSharp
+    - Name: name
+      Entry: 6
+      Data: 
+    - Name: item
+      Entry: 10
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -26864,12 +27023,12 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3593983613591277995}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.37396696, b: 0, a: 1}
-  m_Intensity: 3
+  m_Intensity: 100
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -29844,7 +30003,7 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 7
-      Data: 24|Decode.ActionOpenLight, Assembly-CSharp
+      Data: 24|Decode.ActionSetComponentState, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -29857,15 +30016,18 @@ MonoBehaviour:
     - Name: Id
       Entry: 6
       Data: 
-    - Name: light
+    - Name: component
       Entry: 10
       Data: 4
+    - Name: state
+      Entry: 5
+      Data: true
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 25|Decode.ActionOpenLight, Assembly-CSharp
+      Data: 25|Decode.ActionSetComponentState, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -29878,9 +30040,12 @@ MonoBehaviour:
     - Name: Id
       Entry: 6
       Data: 
-    - Name: light
+    - Name: component
       Entry: 10
       Data: 5
+    - Name: state
+      Entry: 5
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -29895,7 +30060,7 @@ MonoBehaviour:
       Data: 
     - Name: needSync
       Entry: 5
-      Data: false
+      Data: true
     - Name: Id
       Entry: 6
       Data: 
