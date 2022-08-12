@@ -36,7 +36,6 @@ namespace Decode
 			{ 
 				DoAction(); 
 			}
-				
 		}
 		public virtual void DoAction()
 		{
@@ -46,6 +45,14 @@ namespace Decode
 		public object Clone()
 		{
 			return this.MemberwiseClone();
+		}
+	}
+
+	public class ActionChangeObjectState : Actions
+	{
+		public override void DoAction()
+		{
+			GameState.currentSave.actions.Enqueue(this);
 		}
 	}
 }

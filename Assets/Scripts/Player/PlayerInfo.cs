@@ -9,9 +9,7 @@ using UnityEngine;
 [Serializable]
 public class PlayerInfo : ICloneable
 {
-    public int test = 0;
-
-    public List<int> clues;
+	public List<int> clues;
 
     public List<int> conditions;
 
@@ -28,7 +26,6 @@ public class PlayerInfo : ICloneable
     public object Clone()
     {
         PlayerInfo newDc = new PlayerInfo();
-        newDc.test = test;
         clues.CopyTo(newDc.clues);
         conditions.CopyTo(newDc.conditions);
         newDc.prop_panel = prop_panel.Clone() as PropInfo[];
@@ -42,8 +39,7 @@ public static class PlayerInfoSerializer
     {
         if (info is PlayerInfo player_info)
         {
-            writer.WriteInt(player_info.test);
-            writer.WriteList<int>(player_info.clues);
+	        writer.WriteList<int>(player_info.clues);
             writer.WriteList<int>(player_info.conditions);
             writer.WriteArray<PropInfo>(player_info.prop_panel);
             writer.WriteVector3(player_info.position);
@@ -55,8 +51,7 @@ public static class PlayerInfoSerializer
     {
         return new PlayerInfo
         {
-            test = reader.ReadInt(),
-            clues = reader.ReadList<int>(),
+	        clues = reader.ReadList<int>(),
             conditions = reader.ReadList<int>(),
             prop_panel = reader.ReadArray<PropInfo>(),
             position = reader.ReadVector3()

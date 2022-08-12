@@ -2,12 +2,14 @@
 
 namespace Decode
 {
-	public class ActionOpenLight<T>:Actions where T:Behaviour 
+	public class ActionSetComponentState:ActionChangeObjectState
 	{
-		public T component;
+		public Behaviour component;
+		public bool state;
 		public override void DoAction()
 		{
-			component.enabled = true;
+			base.DoAction();
+			component.enabled = state;
 		}
 	}
 }

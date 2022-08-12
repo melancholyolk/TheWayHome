@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 namespace Decode
 {
-	public class ActionSetSprite : Actions
+	public class ActionSetSprite : ActionChangeObjectState
 	{
 		public SpriteRenderer renderer;
 		public Sprite sprite;
 
 		public override void DoAction()
 		{
+			base.DoAction();
 			renderer.sprite = sprite;
 		}
 	}

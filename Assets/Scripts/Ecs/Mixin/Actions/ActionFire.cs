@@ -2,7 +2,7 @@
 
 namespace Decode
 {
-	public class ActionFire:Actions
+	public class ActionFire:ActionChangeObjectState
 	{
 		public int order;
 		public Event_Altar altar;

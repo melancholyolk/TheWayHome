@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Decode
 {
-	public class ActionPlayAudio : Actions
+	public class ActionPlayAudioEffect : Actions
 	{
 		public AudioSource audio;
 		public AudioClip clip;

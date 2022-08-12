@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class LoadSaveManager : MonoBehaviour
 {
+	public string name;
 	public GameInfoSave save;
 
 	private void Awake()
@@ -27,7 +28,7 @@ public class LoadSaveManager : MonoBehaviour
 	{
 		if (!save.isUsing)
 		{
-			save.saveName = "存档" + DateTime.Today;
+			save.saveName = this.name;
 		}
 		GameState.currentSave = save;
 		GameState.state = save.process;

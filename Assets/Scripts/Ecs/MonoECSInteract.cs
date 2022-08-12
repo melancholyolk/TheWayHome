@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Mirror;
+using Scriptable;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -30,7 +31,6 @@ namespace Decode
 		[SerializeField]
 		private List<ObtainItems> m_ObItems;
 		private Dictionary<string, Item> m_Items = new Dictionary<string, Item>();
-
 		private static MonoECSInteract m_Instance;
 		private void Awake()
 		{
@@ -83,6 +83,18 @@ namespace Decode
 			return v;
 		}
 
+		public Actions GetParcificAction(string itemID,string actionIndex)
+		{
+			m_Items.TryGetValue(itemID, out var v);
+			Debug.Assert(v,"没有目标Item");
+			if (v)
+			{
+				var obtain = v as ObtainItems;
+				return obtain.GetAction(actionIndex);
+			}
+
+			return default;
+		}
 		public List<string> GetAll()
 		{
 			List<string> items = new List<string>();
@@ -160,18 +172,5 @@ namespace Decode
 		#endregion
 	}
 	
-	public struct ObtainItemInfo
-	{
-		public string id;
-		public List<ConfigInfo> configInfos;
-	}
-
-	public struct ConfigInfo
-	{
-		public bool isComplete;
-		
-		public bool isUsing;
-		
-		public bool disable;
-	}
+	
 }

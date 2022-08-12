@@ -3006,19 +3006,27 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 2277136620241306142}
-    - {fileID: 497947858006672482}
-    - {fileID: 1806359411082883841}
-    - {fileID: 1475695127500501663}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: actions
+      Entry: 7
+      Data: 0|Decode.Actions[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: rolls
       Entry: 7
-      Data: 0|Decode.Roll[], Assembly-CSharp
+      Data: 1|Decode.Roll[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 4
@@ -3026,8 +3034,8 @@ MonoBehaviour:
       Entry: 7
       Data: Decode.Roll, Assembly-CSharp
     - Name: rollControl
-      Entry: 10
-      Data: 0
+      Entry: 6
+      Data: 
     - Name: type
       Entry: 3
       Data: 1
@@ -3044,8 +3052,8 @@ MonoBehaviour:
       Entry: 7
       Data: Decode.Roll, Assembly-CSharp
     - Name: rollControl
-      Entry: 10
-      Data: 1
+      Entry: 6
+      Data: 
     - Name: type
       Entry: 3
       Data: 1
@@ -3062,17 +3070,17 @@ MonoBehaviour:
       Entry: 7
       Data: Decode.Roll, Assembly-CSharp
     - Name: rollControl
-      Entry: 10
+      Entry: 6
+      Data: 
+    - Name: type
+      Entry: 3
+      Data: 1
+    - Name: answerFloat
+      Entry: 4
+      Data: 0
+    - Name: answerIndex
+      Entry: 3
       Data: 2
-    - Name: type
-      Entry: 3
-      Data: 1
-    - Name: answerFloat
-      Entry: 4
-      Data: 0
-    - Name: answerIndex
-      Entry: 3
-      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -3080,8 +3088,8 @@ MonoBehaviour:
       Entry: 7
       Data: Decode.Roll, Assembly-CSharp
     - Name: rollControl
-      Entry: 10
-      Data: 3
+      Entry: 6
+      Data: 
     - Name: type
       Entry: 3
       Data: 1
@@ -3100,18 +3108,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: actions
-      Entry: 7
-      Data: 1|Decode.Actions[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+  profile: {fileID: 11400000, guid: 8874eb54d72306e408503669583a3171, type: 2}
   name: 
 --- !u!1 &2276341106469683901
 GameObject:
@@ -3349,11 +3346,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  minAngel: 0
   roll: {fileID: 8300000, guid: 352e72a6f9f55ff4a87244ac24203042, type: 3}
   currentAngel: 0
-  index: 0
   total: 0
+  index: 0
   input: {fileID: 7444833108618763672}
 --- !u!1 &2364433209896504806
 GameObject:
@@ -5046,11 +5042,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  minAngel: 0
   roll: {fileID: 8300000, guid: 352e72a6f9f55ff4a87244ac24203042, type: 3}
   currentAngel: 0
-  index: 0
   total: 0
+  index: 0
   input: {fileID: 7444833108618763672}
 --- !u!1 &3255571015347264126
 GameObject:
@@ -6743,11 +6738,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  minAngel: 0
   roll: {fileID: 8300000, guid: 352e72a6f9f55ff4a87244ac24203042, type: 3}
   currentAngel: 0
-  index: 0
   total: 0
+  index: 0
   input: {fileID: 7444833108618763672}
 --- !u!1 &4589431509581836882
 GameObject:
@@ -11178,11 +11172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  minAngel: 0
   roll: {fileID: 8300000, guid: 352e72a6f9f55ff4a87244ac24203042, type: 3}
   currentAngel: 0
-  index: 0
   total: 0
+  index: 0
   input: {fileID: 7444833108618763672}
 --- !u!1 &8172805674738351013
 GameObject:

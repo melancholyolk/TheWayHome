@@ -12,14 +12,14 @@ public class BaseUI
     public bool needSyncLoad = false;
     public bool needAnimation = false;
     public bool isFullScreen = false;
-    //只执行一次
+    //???????
     public virtual void Ctor()
     {
         name = "BookView";
         needBlackBg = true;
 
     }
-    //只执行一次
+    //???????
     public virtual void Init()
     {
 
@@ -47,6 +47,6 @@ public class BaseUI
 
     public virtual void Destory()
     {
-
+		
     }
 }

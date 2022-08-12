@@ -3924,8 +3924,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 366899824721691616}
-    - {fileID: 1329570958552584142}
+    - {fileID: 21300000, guid: 7466c4199a6bfb648a481a119451b7b0, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -3936,10 +3935,10 @@ MonoBehaviour:
       Data: 0|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 6
     - Name: 
       Entry: 7
-      Data: 1|Decode.ActionOpenLight, Assembly-CSharp
+      Data: 1|Decode.Actions, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -3950,9 +3949,6 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: Id
-      Entry: 6
-      Data: 
-    - Name: light
       Entry: 6
       Data: 
     - Name: 
@@ -3960,7 +3956,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 2|Decode.ActionOpenLight, Assembly-CSharp
+      Data: 2|Decode.Actions, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -3971,9 +3967,6 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: Id
-      Entry: 6
-      Data: 
-    - Name: light
       Entry: 6
       Data: 
     - Name: 
@@ -3981,7 +3974,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 3|Decode.ActionOpenLight, Assembly-CSharp
+      Data: 3|Decode.Actions, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -3992,9 +3985,6 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: Id
-      Entry: 6
-      Data: 
-    - Name: light
       Entry: 6
       Data: 
     - Name: 
@@ -4016,8 +4006,53 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: animator
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|Decode.ActionSetSprite, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: renderer
+      Entry: 6
+      Data: 
+    - Name: sprite
       Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|Decode.ActionPlayAnimation, Assembly-CSharp
+    - Name: itemId
+      Entry: 6
+      Data: 
+    - Name: targetId
+      Entry: 6
+      Data: 
+    - Name: needSync
+      Entry: 5
+      Data: false
+    - Name: Id
+      Entry: 6
+      Data: 
+    - Name: animator
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -4029,7 +4064,7 @@ MonoBehaviour:
       Data: 
     - Name: rolls
       Entry: 7
-      Data: 5|Decode.Roll[], Assembly-CSharp
+      Data: 7|Decode.Roll[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 4
@@ -4037,8 +4072,8 @@ MonoBehaviour:
       Entry: 7
       Data: Decode.Roll, Assembly-CSharp
     - Name: rollControl
-      Entry: 10
-      Data: 1
+      Entry: 6
+      Data: 
     - Name: type
       Entry: 3
       Data: 0
@@ -4744,14 +4779,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 887698817253667973, guid: 210f998ce31d47a47a2c5da369d68bcd, type: 3}
   m_PrefabInstance: {fileID: 1119418402846061672}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1329570958552584142 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2160439903532317606, guid: 210f998ce31d47a47a2c5da369d68bcd, type: 3}
-  m_PrefabInstance: {fileID: 1119418402846061672}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6612421fec635441ae703ee6c6cfa78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
