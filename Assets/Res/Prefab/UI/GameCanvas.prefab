@@ -735,6 +735,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 748130631535748986, guid: e0daae31ba1a3e1429f355addc4cf37f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.9999924
+      objectReference: {fileID: 0}
     - target: {fileID: 2407038712159117577, guid: e0daae31ba1a3e1429f355addc4cf37f, type: 3}
       propertyPath: PageFlipTime
       value: 0.3
@@ -746,6 +750,22 @@ PrefabInstance:
     - target: {fileID: 2407038712159117577, guid: e0daae31ba1a3e1429f355addc4cf37f, type: 3}
       propertyPath: AnimationFramesCount
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4118093165676475164, guid: e0daae31ba1a3e1429f355addc4cf37f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.9999924
+      objectReference: {fileID: 0}
+    - target: {fileID: 5693379424757609234, guid: e0daae31ba1a3e1429f355addc4cf37f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.9999924
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490891669251066657, guid: e0daae31ba1a3e1429f355addc4cf37f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.9999924
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698107928869170504, guid: e0daae31ba1a3e1429f355addc4cf37f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.9999924
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0daae31ba1a3e1429f355addc4cf37f, type: 3}
