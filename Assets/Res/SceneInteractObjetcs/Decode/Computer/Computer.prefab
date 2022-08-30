@@ -500,6 +500,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
+    - {fileID: 8471780247350531312}
     - {fileID: 21300000, guid: 8d87ba51e82737a4b83ec51339ec4532, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -527,12 +528,12 @@ MonoBehaviour:
     - Name: Id
       Entry: 6
       Data: 
-    - Name: renderer
-      Entry: 6
-      Data: 
-    - Name: sprite
+    - Name: image
       Entry: 10
       Data: 0
+    - Name: sprite
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

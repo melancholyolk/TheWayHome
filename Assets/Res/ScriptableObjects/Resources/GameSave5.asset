@@ -12,48 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6de5732f6b8d40989de4022a8b651dea, type: 3}
   m_Name: GameSave5
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: obtainItemses
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Scriptable.ObtainItemInfo, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actions
-      Entry: 7
-      Data: 1|System.Collections.Generic.Queue`1[[Decode.Actions, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  isUsing: 0
-  saveName: "\u5B58\u68635"
+  isUsing: 1
+  saveName: "\u5B58\u68632022/8/10 0:00:00"
   playerInfo1:
+    test: 0
     clues: 
     conditions: 
     position: {x: -0.000007033348, y: -0.000010967255, z: 0.0000034570694}
   playerInfo2:
+    test: 0
     clues: 
     conditions: 
     position: {x: 0, y: 0, z: 0}

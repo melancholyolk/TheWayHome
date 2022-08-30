@@ -2,7 +2,7 @@
 
 namespace Decode
 {
-	public class ActionCompleteTask:ActionChangeObjectState
+	public class ActionCompleteTask:Actions
 	{
 		public string taskMessage;
 		public override void DoAction()

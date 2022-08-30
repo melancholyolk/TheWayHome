@@ -4,14 +4,12 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 using UnityEngine.Pool;
 
 public class ObjectPool : MonoBehaviour
 {
 	public static ObjectPool _instance;
 	public GameObject prefab;
-	public string[] precache;
 	Stack tObj = new Stack();
 
 	const float m_ReleaseInterval = 30;
@@ -21,10 +19,6 @@ public class ObjectPool : MonoBehaviour
 	private void Start()
 	{
 		_instance = this;
-		for (int i = 0; i < precache.Length; i++)
-		{
-			Addressables.LoadAssetAsync<GameObject>(precache[i]);
-		}
 	}
 	private void Update()
 	{
@@ -65,6 +59,18 @@ public class ObjectPool : MonoBehaviour
 		tObj.Push(go);
 		m_needReset = true;
 	}
-	
+	public static T DeepCopyByXml<T>(T obj)
+    {
+    　　object retval;
+    　　using (MemoryStream ms = new MemoryStream())
+    　　{
+    　　　　XmlSerializer xml=new XmlSerializer(typeof(T));
+    　　　　xml.Serialize(ms, obj);
+    　　　　ms.Seek(0, SeekOrigin.Begin);
+    　　　　retval = xml.Deserialize(ms);
+    　　　　ms.Close();
+    　　}
+    　　return (T)retval;
+    }
 
 }

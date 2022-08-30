@@ -20,7 +20,8 @@ public class Test1 : NetworkBehaviour
 
     public void Num()
     {
-	    SetInfo(cur_info);
+        cur_info.test++;
+        SetInfo(cur_info);
     }
 
     public bool CanPick()
@@ -72,7 +73,10 @@ public class Test1 : NetworkBehaviour
     {
         player1_info = info;
     }
-    
+
+
+
+
     [Command(requiresAuthority = false)]
     private void CmdPlayer2Info(PlayerInfo info)
     {

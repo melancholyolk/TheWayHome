@@ -1,11 +1,10 @@
 ﻿namespace Decode
 {
-	public class ActionLoadTask : ActionChangeObjectState
+	public class ActionLoadTask : Actions
 	{
 		public TaskManager taskManager;
 		public override void DoAction()
 		{
-			base.DoAction();
 			taskManager.InitTaskLoader((int)CanvasManager.Instance.player_type);
 		}
 	}

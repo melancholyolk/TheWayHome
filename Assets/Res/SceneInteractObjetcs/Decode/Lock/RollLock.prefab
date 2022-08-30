@@ -2301,7 +2301,12 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 21300000, guid: 7466c4199a6bfb648a481a119451b7b0, type: 3}
+    - {fileID: 6819467779414207228}
+    - {fileID: 5174792724306947200}
+    - {fileID: 6352578172805422051}
+    - {fileID: 6143796677133326973}
+    - {fileID: 101881334115707129}
+    - {fileID: 6027645503183818139}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -2312,61 +2317,7 @@ MonoBehaviour:
       Data: 0|Decode.Actions[], Assembly-CSharp
     - Name: 
       Entry: 12
-      Data: 5
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 1|Decode.ActionSetSprite, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: renderer
-      Entry: 6
-      Data: 
-    - Name: sprite
-      Entry: 10
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 2|Decode.ActionPlayAnimation, Assembly-CSharp
-    - Name: itemId
-      Entry: 6
-      Data: 
-    - Name: targetId
-      Entry: 6
-      Data: 
-    - Name: needSync
-      Entry: 5
-      Data: false
-    - Name: Id
-      Entry: 6
-      Data: 
-    - Name: animator
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -2375,7 +2326,7 @@ MonoBehaviour:
       Data: 
     - Name: rolls
       Entry: 7
-      Data: 3|Decode.Roll[], Assembly-CSharp
+      Data: 1|Decode.Roll[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 6
@@ -2383,8 +2334,8 @@ MonoBehaviour:
       Entry: 7
       Data: Decode.Roll, Assembly-CSharp
     - Name: rollControl
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: type
       Entry: 3
       Data: 1
@@ -2393,19 +2344,37 @@ MonoBehaviour:
       Data: 0
     - Name: answerIndex
       Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.Roll, Assembly-CSharp
+    - Name: rollControl
+      Entry: 10
+      Data: 1
+    - Name: type
+      Entry: 3
+      Data: 0
+    - Name: answerFloat
+      Entry: 4
+      Data: 0
+    - Name: answerIndex
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: Decode.Roll, Assembly-CSharp
+    - Name: rollControl
+      Entry: 10
       Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Decode.Roll, Assembly-CSharp
-    - Name: rollControl
-      Entry: 6
-      Data: 
     - Name: type
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: answerFloat
       Entry: 4
       Data: 0
@@ -2419,29 +2388,11 @@ MonoBehaviour:
       Entry: 7
       Data: Decode.Roll, Assembly-CSharp
     - Name: rollControl
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 3
     - Name: type
       Entry: 3
-      Data: 1
-    - Name: answerFloat
-      Entry: 4
-      Data: 1
-    - Name: answerIndex
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: Decode.Roll, Assembly-CSharp
-    - Name: rollControl
-      Entry: 6
-      Data: 
-    - Name: type
-      Entry: 3
-      Data: 1
+      Data: 0
     - Name: answerFloat
       Entry: 4
       Data: 0
@@ -2455,17 +2406,17 @@ MonoBehaviour:
       Entry: 7
       Data: Decode.Roll, Assembly-CSharp
     - Name: rollControl
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 4
     - Name: type
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: answerFloat
       Entry: 4
-      Data: 11
+      Data: 0
     - Name: answerIndex
       Entry: 3
-      Data: 11
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -2473,11 +2424,11 @@ MonoBehaviour:
       Entry: 7
       Data: Decode.Roll, Assembly-CSharp
     - Name: rollControl
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 5
     - Name: type
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: answerFloat
       Entry: 4
       Data: 0
@@ -2524,7 +2475,7 @@ AudioSource:
   m_GameObject: {fileID: 8579770461440581409}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: ec48afc55c9d7f44ea2c149639e3c25c, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

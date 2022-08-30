@@ -1,9 +1,12 @@
-
+using System;
 using System.Collections;
-
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
-
+using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering.Universal;
+using DepthOfField = UnityEngine.Rendering.PostProcessing.DepthOfField;
 
 namespace Decode
 {
@@ -42,16 +45,11 @@ namespace Decode
 			{
 				actions[i].SyncAction();
 			}
-			Invoke(nameof(ReleaseDecodeItem),1.5f);
-		}
-
-		private void ReleaseDecodeItem()
-		{
 			profile.components[0].active = false;
 			m_Parent.disable = true;
 			m_Parent.isUsing = false;
 			OperationControl.Instance.is_decoding = false;
-			Destroy(gameObject);
+			Destroy(gameObject,1.5f);
 		}
 		/// <summary>
 		/// 解密成功后调用

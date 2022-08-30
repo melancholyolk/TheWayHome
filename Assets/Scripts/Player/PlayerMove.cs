@@ -2,7 +2,6 @@ using Mirror;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Decode;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Serialization;
@@ -24,9 +23,7 @@ public class PlayerMove : NetworkBehaviour
      public bool isLocal;
     [ShowInInspector,SerializeField]
     private List<int> condition;
-
-    public float speed = 5f;
-
+    
     public GameObject[] players;
 
     public Material playerMaterial;
@@ -37,7 +34,20 @@ public class PlayerMove : NetworkBehaviour
 
     public bool useLocalPosition = false;
     
+    public CharacterProperty property;
+    
+    public State curState = State.None;
+    public enum State
+    {
+        None,
+        LossHp,
+        LossWarm,
+        NeedHelp
+    }
+    
     private Rigidbody m_Rigidbody;
+
+    private float m_TempSpeed;
 
     private PlayerAnimatorControl m_AnimatorControl;
 
@@ -53,8 +63,6 @@ public class PlayerMove : NetworkBehaviour
 
     private float m_CurrentWindForce = 0;
 
-    private float m_CurrentSpeed;
-
     private bool m_ChangeMotion;
 
     private GameObject[] m_HoldObject;
@@ -63,10 +71,7 @@ public class PlayerMove : NetworkBehaviour
 
     private NetworkAnimator m_NetworkAnimator;
 
-    private float curHp;
-
-    private float curWarm;
-
+    
     private enum PlayerState
     {
         NORMAL = 0,
@@ -76,7 +81,7 @@ public class PlayerMove : NetworkBehaviour
 
     private PlayerState m_CurrentState = PlayerState.NORMAL;
 
-    public enum dir
+    public enum Dir
     {
         North,
         Sorth,
@@ -89,7 +94,7 @@ public class PlayerMove : NetworkBehaviour
     public void Awake()
     {
         m_OriginScale = transform.localScale;
-        m_CurrentSpeed = speed;
+        m_TempSpeed = property.curMoveSpeed;
         condition = new List<int>();
         m_HoldObject = new GameObject[2];
         m_Rigidbody = GetComponent<Rigidbody>();
@@ -116,7 +121,7 @@ public class PlayerMove : NetworkBehaviour
         Vector3 move_speed = new Vector3(moveX, 0, moveY).normalized;
         if(useLocalPosition)
             move_speed = Quaternion.AngleAxis(-45,Vector3.up) * move_speed ;
-        m_Rigidbody.velocity = move_speed * m_CurrentSpeed;
+        m_Rigidbody.velocity = move_speed * m_TempSpeed;
         PlayAnimation(move_speed);
     }
 
@@ -383,20 +388,20 @@ public class PlayerMove : NetworkBehaviour
     {
         if (m_CurrentWindDirection == -1)
         {
-            m_CurrentSpeed = speed;
+            m_TempSpeed = property.curMoveSpeed;
             return PlayerAnimatorControl.AnimationName.WALK;
         }
 
         if (m_CurrentDirection == m_CurrentWindDirection || m_CurrentDirection == m_CurrentWindDirection + 1 ||
             m_CurrentDirection == m_CurrentWindDirection + 7)
         {
-            m_CurrentSpeed = speed + m_CurrentWindForce * speed;
+            m_TempSpeed = property.curMoveSpeed + m_CurrentWindForce * property.curMoveSpeed;
             return PlayerAnimatorControl.AnimationName.TRAILWIND;
         }
 
         else
         {
-            m_CurrentSpeed = speed - m_CurrentWindForce * speed;
+            m_TempSpeed = property.curMoveSpeed - m_CurrentWindForce * property.curMoveSpeed;
             return PlayerAnimatorControl.AnimationName.WALKHARD;
         }
     }
@@ -432,63 +437,6 @@ public class PlayerMove : NetworkBehaviour
         return false;
     }
     #endregion
-
-    #region Hp Warm
-
-    public State curState = State.None;
-    public enum State
-    {
-        None,
-        LossHp,
-        LossWarm,
-        NeedHelp
-	}
-
-    /// <summary>
-    /// 缓慢丢失温暖值，低于0则丢失血量
-    /// </summary>
-    public void LossWarm(float num)
-    {
-        if(curHp <= 0)
-        {
-            curHp = 0;
-            return;
-		}
-        if(curWarm > 0)
-        {
-            curWarm -= num;
-            return;
-		}
-
-        if(curHp > 0)
-        {
-            curHp -= num;
-		}
-	}
-
-    /// <summary>
-    /// 血量更改
-    /// </summary>
-    /// <param name="recoveryNum"></param>
-    public void ChangeHp(float num)
-    {
-        curHp += num;
-        if (curHp >= m_attribute.maxHp)
-            curHp = m_attribute.maxHp;
-    }
-    /// <summary>
-    /// 温暖值更改
-    /// </summary>
-    /// <param name="recoveryNum"></param>
-    public void ChangeWarm(float num)
-    {
-        curWarm += num;
-        if (curWarm >= m_attribute.maxWarm)
-            curWarm = m_attribute.maxWarm;
-    }
-
-    #endregion
-
     private void HoldObject(int index)
     {
         if (m_IsHold)
@@ -512,7 +460,7 @@ public class PlayerMove : NetworkBehaviour
     {
         if (!m_IsHold)
         {
-            print("还没有持有道具");
+            Debug.LogError("还没有持有道具");
             return;
         }
 
@@ -544,10 +492,22 @@ public class Hand
 [Serializable]
 public class PlayerAttribute 
 {
-    public float moveSpeed;
+    [FormerlySerializedAs("moveSpeed")] 
+    public float maxMoveSpeed;
 
     public int maxHp;
 
     public int maxWarm;     //100
 
+}
+[Serializable]
+public struct CharacterProperty
+{
+    public float curMoveSpeed;
+    public int curHP;
+    public int curWarm;
+    public int curOutsideTemperature;
+
+    public float warmChangeSpeed;
+    public float healthChangeSpeed;
 }

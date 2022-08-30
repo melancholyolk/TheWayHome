@@ -426,7 +426,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 155851381938841336}
+    - {fileID: 3891887719510929688}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -458,7 +460,7 @@ MonoBehaviour:
       Data: 4
     - Name: size
       Entry: 4
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -482,7 +484,7 @@ MonoBehaviour:
       Data: 3
     - Name: size
       Entry: 4
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -502,17 +504,17 @@ MonoBehaviour:
       Entry: 7
       Data: Decode.Roll, Assembly-CSharp
     - Name: rollControl
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: type
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: answerFloat
       Entry: 4
       Data: 0
     - Name: answerIndex
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -520,17 +522,17 @@ MonoBehaviour:
       Entry: 7
       Data: Decode.Roll, Assembly-CSharp
     - Name: rollControl
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
     - Name: type
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: answerFloat
       Entry: 4
       Data: 0
     - Name: answerIndex
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 

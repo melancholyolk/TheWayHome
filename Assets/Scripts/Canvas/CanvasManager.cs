@@ -125,7 +125,6 @@ public class CanvasManager : MonoBehaviour
 
 	    save.isUsing = true;
 	    save.obtainItemses = MonoECSInteract.Instance.GetObtainItems();
-	    save.process = GameState.state;
     }
 
     private void LoadData()
@@ -138,7 +137,5 @@ public class CanvasManager : MonoBehaviour
 	    MonoECSInteract.Instance.SetObtainItems(save.obtainItemses);
 	    player.SetCondition(info.conditions);
 	    player.transform.position = info.position;
-	    
-	    save.DoActions();
     }
 }

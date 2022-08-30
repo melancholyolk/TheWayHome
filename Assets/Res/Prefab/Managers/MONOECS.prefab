@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 717455304645376706}
   - component: {fileID: 717455304645376709}
   - component: {fileID: 717455304645376707}
+  - component: {fileID: 4527675638793842971}
   m_Layer: 0
   m_Name: MONOECS
   m_TagString: Untagged
@@ -48,7 +49,6 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   m_ObItems: []
-  resourcesData: {fileID: 11400000, guid: 7f16e42ba83a3674382b5cd564d7cfe2, type: 2}
 --- !u!114 &717455304645376707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,3 +66,79 @@ MonoBehaviour:
   visible: 0
   m_AssetId: 5492cda446901264b966faa14b75330b
   hasSpawned: 0
+--- !u!114 &4527675638793842971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717455304645376708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844b21857b91459ba64cc4afef2cc3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: temperatureTable
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[TemperatureTable, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: TemperatureTable, Assembly-CSharp
+    - Name: maxOutside
+      Entry: 3
+      Data: 0
+    - Name: minOutside
+      Entry: 3
+      Data: 0
+    - Name: warmChangeSpeed
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: warmTable
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[WarmTable, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: WarmTable, Assembly-CSharp
+    - Name: maxWarm
+      Entry: 3
+      Data: 0
+    - Name: minWarm
+      Entry: 3
+      Data: 0
+    - Name: hpChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

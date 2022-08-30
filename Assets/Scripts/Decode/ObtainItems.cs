@@ -89,23 +89,6 @@ namespace Decode
 			}
 		}
 
-		public Actions GetAction(string id)
-		{
-			Actions res = null;
-			foreach (var config in configs)
-			{
-				foreach (var action in config.actions)
-				{
-					if (action.Id == id)
-					{
-						res = action;
-					}
-				}
-			}
-
-			return res;
-		}
-
 		#endregion
 	}
 }

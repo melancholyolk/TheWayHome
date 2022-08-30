@@ -753,7 +753,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290b28df1bfb2b8498249ec676d8e963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: "\u5B58\u68633"
   save: {fileID: 11400000, guid: 7285f7aece3a80e49a051a14bb9e02c2, type: 2}
 --- !u!1 &537682486
 GameObject:
@@ -867,6 +866,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0b81e2526709ae438138ac9cfd28209, type: 3}
+--- !u!1 &540885793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8073064033603792703, guid: b0b81e2526709ae438138ac9cfd28209, type: 3}
+  m_PrefabInstance: {fileID: 540885792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &582177756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,7 +1489,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290b28df1bfb2b8498249ec676d8e963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: "\u5B58\u68632"
   save: {fileID: 11400000, guid: 6efa6fc5e4702a24c8c56e34579ce6e6, type: 2}
 --- !u!1 &1047064155
 GameObject:
@@ -1646,7 +1649,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290b28df1bfb2b8498249ec676d8e963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: "\u5B58\u68635"
   save: {fileID: 11400000, guid: 32d838799cb139748acf94e1af44de18, type: 2}
 --- !u!1 &1283599391
 GameObject:
@@ -1794,6 +1796,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283599391}
   m_CullTransparentMesh: 1
+--- !u!1 &1285422510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1285422512}
+  - component: {fileID: 1285422511}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1285422511
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285422510}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ec48afc55c9d7f44ea2c149639e3c25c, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 9916d687ede64aa4eaee2a78ce871e30, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1285422512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285422510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 343.83215, y: 42.867065, z: 70.00873}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1334604824
 GameObject:
   m_ObjectHideFlags: 0
@@ -2700,19 +2830,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290b28df1bfb2b8498249ec676d8e963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: "\u5B58\u68631"
   save: {fileID: 11400000, guid: 50da915db44ba6642a3c93d5b4185ad4, type: 2}
 --- !u!114 &1598406314 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4905229891764713277, guid: b0b81e2526709ae438138ac9cfd28209, type: 3}
   m_PrefabInstance: {fileID: 540885792}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 540885793}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a6f22043ecfa894098be1670d124dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1598406315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540885793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844b21857b91459ba64cc4afef2cc3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: temperatureTable
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[TemperatureTable, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: TemperatureTable, Assembly-CSharp
+    - Name: maxOutside
+      Entry: 3
+      Data: 0
+    - Name: minOutside
+      Entry: 3
+      Data: 0
+    - Name: warmChangeSpeed
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: warmTable
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[WarmTable, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: WarmTable, Assembly-CSharp
+    - Name: maxWarm
+      Entry: 3
+      Data: 0
+    - Name: minWarm
+      Entry: 3
+      Data: 0
+    - Name: hpChange
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!1 &1604916449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3721,7 +3926,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290b28df1bfb2b8498249ec676d8e963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: "\u5B58\u68634"
   save: {fileID: 11400000, guid: fd051e22f58c52d4d96e7d7aeb796e8e, type: 2}
 --- !u!1 &2136349593
 GameObject:

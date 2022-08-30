@@ -156,7 +156,9 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: -5099450848982015402}
+    - {fileID: 8300000, guid: 7fb6c965469a01e4ba64214f27267c18, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -170,7 +172,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|Decode.ActionCompleteTask, Assembly-CSharp
+      Data: 1|Decode.ActionPlayAudio, Assembly-CSharp
     - Name: itemId
       Entry: 6
       Data: 
@@ -183,9 +185,12 @@ MonoBehaviour:
     - Name: Id
       Entry: 6
       Data: 
-    - Name: taskMessage
-      Entry: 1
-      Data: '[2-1-2]'
+    - Name: audio
+      Entry: 10
+      Data: 0
+    - Name: clip
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

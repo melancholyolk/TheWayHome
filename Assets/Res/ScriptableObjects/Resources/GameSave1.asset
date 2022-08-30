@@ -20,43 +20,41 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: obtainItemses
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Scriptable.ObtainItemInfo, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: actions
-      Entry: 7
-      Data: 1|System.Collections.Generic.Queue`1[[Decode.Actions, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  isUsing: 0
-  saveName: "\u5B58\u68631"
+    SerializationNodes: []
+  isUsing: 1
+  saveName: "\u5B58\u68632022/8/10 0:00:00"
   playerInfo1:
     test: 0
     clues: 
-    conditions: 0800000009000000
-    position: {x: 49.67765, y: 0.94673204, z: 78.02562}
+    conditions: 
+    position: {x: 132.89, y: 0.9657874, z: 40.579964}
   playerInfo2:
     test: 0
     clues: 
     conditions: 
     position: {x: 0, y: 0, z: 0}
   process: 0
+  obtainItemses:
+  - id: c96d69d99ee749da8c4302f9d41a21fb
+  - id: 7787fb1bde61477aaf0919b036b7ea51
+  - id: 904e5923cdb24818a917c5e8047691aa
+  - id: 
+  - id: ea71859665b84130b46bb1cdfecd1657
+  - id: 6f65bde459294ee1a4c91d7b19689cb2
+  - id: be4da2d8180e44d0bddd6a1e4bd4d2f6
+  - id: 4ce57144a15e45c79927afa479728c2d
+  - id: 9fded356e6e04969b6a8b4a3ff1ac4ca
+  - id: bf3a20c6b68d411c93b4031bacf089e0
+  - id: 035f14823d064a73ba4dd7be4429a2fe
+  - id: adc28d0b7d5d419c81047735f1e903e6
+  - id: 791bcee2a2944b7e80751132bfa10f24
+  - id: 6270a4dd4c5241728edb5cf5916a2eb0
+  - id: 3aad8e6626af4a7496d2c90809f64613
+  - id: 14414082fccb4190a4c9355e687e0b4c
+  - id: 03347dbc84224a60926c9a527856520f
+  - id: 5ecd887a21884fb6b860694521285beb
+  - id: d11cf1cce5ca48b7b965b6bb155229db
+  - id: fe06fd981c0e40e8a60c4a5f74dde1e2
+  - id: e65c6253d461488190054b42b0bed239
+  - id: 480ec9dae1f84af2a8199dc1fbfa8e76
+  - id: a8a7f06d0fd9410f9015fad4cd754424

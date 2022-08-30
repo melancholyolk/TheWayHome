@@ -16,7 +16,6 @@ namespace Scriptable
 		public PlayerInfo playerInfo2;
 		public GameState.Chapter process;
 		public List<ObtainItemInfo> obtainItemses;
-		public Queue<Actions> actions;
 		private void OnValidate()
 		{
 			Debug.Log("Loaded");
@@ -29,29 +28,5 @@ namespace Scriptable
 			playerInfo2 = new PlayerInfo();
 			process = GameState.Chapter.None;
 		}
-
-		public void DoActions()
-		{
-			foreach (var action in actions)
-			{
-				var tar = MonoECSInteract.Instance.GetParcificAction(action.itemId, action.Id);
-				tar.SyncAction();
-			}
-			
-		}
-	}
-	public struct ObtainItemInfo
-	{
-		public string id;
-		public List<ConfigInfo> configInfos;
-	}
-
-	public struct ConfigInfo
-	{
-		public bool isComplete;
-		
-		public bool isUsing;
-		
-		public bool disable;
 	}
 }

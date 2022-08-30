@@ -24,7 +24,7 @@ public class LogCabinControl : MonoBehaviour
             for (int i = 0; i < hide_wall.Count; i++)
             {
 	            var material = hide_wall[i].GetComponent<MeshRenderer>().material;
-	            material.SetFloat("_Alpha",0.4f);
+	            material.SetFloat("_Alpha",0.5f);
             }
             m_IsEntered = true;
         }
